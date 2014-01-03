@@ -7,21 +7,21 @@ using System.Data.SqlClient;
 
 namespace Manager_Book_Store.Data_Access_Layer
 {
-    class CDataExecute:CDataConnection
+    class CDataExecute : CDataConnection
     {
         #region "variable"
-        private SqlDataAdapter      m_sqlDataAdapter;
-        private DataTable           m_dataResult;
-        private SqlTransaction      m_sqlTransaction;
+        private SqlDataAdapter m_sqlDataAdapter;
+        private DataTable m_dataResult;
+        private SqlTransaction m_sqlTransaction;
         //private SqlCommandBuilder   m_sqlCommandBuilder;
         #endregion
         #region "method"
         public CDataExecute()
         {
             this.openConnection();
-            this.m_sqlDataAdapter       = new SqlDataAdapter();
-            this.m_dataResult           = new DataTable();
-            this.m_sqlTransaction       = null;
+            this.m_sqlDataAdapter = new SqlDataAdapter();
+            this.m_dataResult = new DataTable();
+            this.m_sqlTransaction = null;
             //this.m_sqlCommandBuilder    = null;
         }
         public DataTable getData(SqlCommand _sqlCommand)
@@ -90,6 +90,7 @@ namespace Manager_Book_Store.Data_Access_Layer
             }
             return _maxId;
         }
+
         public int updateData(SqlCommand _sqlCommand)
         {
             int _countRowChange = 0;
@@ -121,7 +122,29 @@ namespace Manager_Book_Store.Data_Access_Layer
             }
             return _countRowChange;
         }
+
+        //Ham tra ve mot chuoi String co parameter
+        public String getStringExecuter(SqlCommand _sqlCommand)
+        {
+            try
+            {
+                String str = null;
+                if (this.openConnection())
+                {
+                    this.m_cmd = _sqlCommand;
+                    this.m_cmd.Connection = this.m_conn;
+                    str = this.m_cmd.ExecuteScalar().ToString();
+                }
+                return str;
+            }
+            catch (SqlException ex)
+            {
+                return null;
+            }
+        }
+
         #endregion
-        
+
     }
 }
+

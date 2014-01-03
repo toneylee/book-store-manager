@@ -134,7 +134,7 @@
             this.repositoryItemCheckedComboBoxEdit1,
             this.rtxtAuthorName,
             this.rtxtBookGenreName});
-            this.grdListBookTitles.Size = new System.Drawing.Size(675, 261);
+            this.grdListBookTitles.Size = new System.Drawing.Size(675, 239);
             this.grdListBookTitles.TabIndex = 8;
             this.grdListBookTitles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListBookTitles,
@@ -271,7 +271,7 @@
             this.panelBookTitlesExecute.Controls.Add(this.btnUpdate);
             this.panelBookTitlesExecute.Controls.Add(this.btnCancel);
             this.panelBookTitlesExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBookTitlesExecute.Location = new System.Drawing.Point(0, 408);
+            this.panelBookTitlesExecute.Location = new System.Drawing.Point(0, 386);
             this.panelBookTitlesExecute.Name = "panelBookTitlesExecute";
             this.panelBookTitlesExecute.Size = new System.Drawing.Size(933, 53);
             this.panelBookTitlesExecute.TabIndex = 8;
@@ -279,9 +279,9 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(244, 6);
+            this.btnAdd.Location = new System.Drawing.Point(290, 6);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(89, 37);
+            this.btnAdd.Size = new System.Drawing.Size(93, 36);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -289,7 +289,7 @@
             // btnCancelOfUpdate
             // 
             this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelOfUpdate.Location = new System.Drawing.Point(364, 5);
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(418, 6);
             this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
             this.btnCancelOfUpdate.Size = new System.Drawing.Size(93, 37);
             this.btnCancelOfUpdate.TabIndex = 6;
@@ -300,9 +300,9 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(596, 7);
+            this.btnSave.Location = new System.Drawing.Point(651, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(83, 36);
+            this.btnSave.Size = new System.Drawing.Size(75, 37);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu xuống";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -310,9 +310,9 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(483, 6);
+            this.btnDelete.Location = new System.Drawing.Point(548, 6);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 36);
+            this.btnDelete.Size = new System.Drawing.Size(75, 36);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -320,7 +320,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(364, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(418, 5);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(93, 37);
             this.btnUpdate.TabIndex = 9;
@@ -330,9 +330,9 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(244, 6);
+            this.btnCancel.Location = new System.Drawing.Point(290, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 37);
+            this.btnCancel.Size = new System.Drawing.Size(93, 38);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Hủy thao tác";
             this.btnCancel.Visible = false;
@@ -345,7 +345,7 @@
             this.panelDataDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDataDetails.Location = new System.Drawing.Point(0, 39);
             this.panelDataDetails.Name = "panelDataDetails";
-            this.panelDataDetails.Size = new System.Drawing.Size(933, 369);
+            this.panelDataDetails.Size = new System.Drawing.Size(933, 347);
             this.panelDataDetails.TabIndex = 9;
             // 
             // panelBookTitleView
@@ -355,7 +355,7 @@
             this.panelBookTitleView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBookTitleView.Location = new System.Drawing.Point(2, 2);
             this.panelBookTitleView.Name = "panelBookTitleView";
-            this.panelBookTitleView.Size = new System.Drawing.Size(679, 365);
+            this.panelBookTitleView.Size = new System.Drawing.Size(679, 343);
             this.panelBookTitleView.TabIndex = 1;
             // 
             // panelBookTitlesDetail
@@ -481,7 +481,7 @@
             this.navBarBookTitlesLookAt.Name = "navBarBookTitlesLookAt";
             this.navBarBookTitlesLookAt.OptionsNavPane.ExpandedWidth = 250;
             this.navBarBookTitlesLookAt.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarBookTitlesLookAt.Size = new System.Drawing.Size(250, 365);
+            this.navBarBookTitlesLookAt.Size = new System.Drawing.Size(250, 343);
             this.navBarBookTitlesLookAt.StoreDefaultPaintStyleName = true;
             this.navBarBookTitlesLookAt.TabIndex = 0;
             this.navBarBookTitlesLookAt.Text = "navBarControl1";
@@ -500,7 +500,7 @@
             this.navBarGroupControlContainer1.Controls.Add(this.labBooktitlesNameLA);
             this.navBarGroupControlContainer1.Controls.Add(this.txtBootitlesNameLA);
             this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(250, 262);
+            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(250, 240);
             this.navBarGroupControlContainer1.TabIndex = 0;
             // 
             // labBooktitlesNameLA
@@ -522,7 +522,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 461);
+            this.ClientSize = new System.Drawing.Size(933, 439);
             this.Controls.Add(this.panelDataDetails);
             this.Controls.Add(this.panelBookTitlesExecute);
             this.Controls.Add(this.panelBooTitlesT);

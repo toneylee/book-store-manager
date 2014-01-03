@@ -32,7 +32,6 @@
             this.panBookTitles = new DevExpress.XtraEditors.PanelControl();
             this.labBookTitles = new DevExpress.XtraEditors.LabelControl();
             this.panBookExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -144,7 +143,6 @@
             // 
             // panBookExecute
             // 
-            this.panBookExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panBookExecute.Controls.Add(this.btnUpdate);
             this.panBookExecute.Controls.Add(this.btnSave);
             this.panBookExecute.Controls.Add(this.btnCancel);
@@ -156,21 +154,10 @@
             this.panBookExecute.Size = new System.Drawing.Size(725, 57);
             this.panBookExecute.TabIndex = 1;
             // 
-            // btnCancelOfUpdate
-            // 
-            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelOfUpdate.Location = new System.Drawing.Point(411, 13);
-            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
-            this.btnCancelOfUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnCancelOfUpdate.TabIndex = 15;
-            this.btnCancelOfUpdate.Text = "Hủy thao tác";
-            this.btnCancelOfUpdate.Visible = false;
-            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(411, 13);
+            this.btnUpdate.Location = new System.Drawing.Point(405, 13);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 31);
             this.btnUpdate.TabIndex = 14;
@@ -180,7 +167,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(627, 13);
+            this.btnSave.Location = new System.Drawing.Point(620, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 13;
@@ -190,19 +177,19 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(299, 13);
+            this.btnCancel.Location = new System.Drawing.Point(280, 13);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 31);
+            this.btnCancel.Size = new System.Drawing.Size(93, 31);
             this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Hủy thao tác";
+            this.btnCancel.Text = "Hủy thêm mới";
             this.btnCancel.Visible = false;
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(299, 13);
+            this.btnAdd.Location = new System.Drawing.Point(280, 13);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 31);
+            this.btnAdd.Size = new System.Drawing.Size(93, 31);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -582,7 +569,6 @@
             this.btnAddPublisher.Size = new System.Drawing.Size(75, 23);
             this.btnAddPublisher.TabIndex = 4;
             this.btnAddPublisher.Text = "Thêm mới";
-            this.btnAddPublisher.Click += new System.EventHandler(this.btnAddPublisher_Click);
             // 
             // lkPublisherName
             // 
@@ -858,6 +844,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn BooksSno;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rtxtBookId;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rxtBookName;
-        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
     }
 }

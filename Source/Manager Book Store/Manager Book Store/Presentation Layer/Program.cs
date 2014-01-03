@@ -21,7 +21,7 @@ namespace Manager_Book_Store.Presentation_Layer
             DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Tohoma", 10);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBook());
+            Application.Run(new frmMenu());
         }
     }
 }

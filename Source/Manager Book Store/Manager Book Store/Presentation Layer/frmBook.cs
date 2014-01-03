@@ -23,8 +23,6 @@ namespace Manager_Book_Store.Presentation_Layer
         private CPublisherBUS m_PublisherExecute;
         private DataTable m_BookTitlesData;
         private CBookTitlesBUS m_BookTitlesExecute;
-        public delegate void addPublisher();
-        public addPublisher m_addPublisher;
         private GridCheckMarksSelection m_BookMultiSelect;
         #endregion
         public frmBook()
@@ -42,7 +40,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            updateEnableButtonAndResetValueOfControl(ref btnAdd);
+            txtBookId.Text = "SA0000000";
 
         }
 
@@ -79,12 +77,9 @@ namespace Manager_Book_Store.Presentation_Layer
             //lkBookTitlesName.RefreshEditValue();
             //lkBooTitles.RefreshEditValue();
             //MessageBox.Show((lkBooTitles.Properties.DataSource as DataTable).Rows.Count.ToString());
-            DataRowView _rowValue = lkBooTitles.Properties.GetDataSourceRowByKeyValue(lkBooTitles.EditValue) as DataRowView;
-            if (_rowValue != null)
-            {
-                txtBookGenre.Text = _rowValue["TenTL"].ToString();
-                txtAuthorName.Text = _rowValue["NhomTG"].ToString();
-            }
+            DataRowView row = lkBooTitles.Properties.GetDataSourceRowByKeyValue(lkBooTitles.EditValue) as DataRowView;
+            txtBookGenre.Text = row["TenTL"].ToString();
+            txtAuthorName.Text = row["NhomTG"].ToString();
         }
 
         private void grdvListBook_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -105,42 +100,24 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (m_IsAdd)
-                {
-                    m_BookObject = new CBookDTO(txtBookId.Text,
-                                                lkBookTitlesName.EditValue.ToString(),
-                                                lkPublisherName.EditValue.ToString(),
-                                                (int)spBookRealeaseYear.Value,
-                                                spBookPrices.Value, 0);
-                    m_BookExecute.AddBookToDatabase(m_BookObject);
-                    m_BookData = m_BookExecute.getBookDataFromDatabase();
-                }
-                else
-                {
-                    m_BookObject = new CBookDTO(txtBookId.Text,
-                                                lkBookTitlesName.EditValue.ToString(),
-                                                lkPublisherName.EditValue.ToString(),
-                                                (int)spBookRealeaseYear.Value,
-                                                spBookPrices.Value,
-                                                (int)spBookCount.Value);
-                    m_BookExecute.UpdateBookToDatabase(m_BookObject);
-                }
-            }
-            catch (System.Exception)
-            {
-
-            }
-            finally
-            {
-                updateEnableButtonAndResetValueOfControl(ref btnUpdate);
-            }
+            m_BookObject = new CBookDTO(txtBookId.Text, lkBookTitlesName.EditValue.ToString(), lkPublisherName.EditValue.ToString(), (int)spBookRealeaseYear.Value, spBookPrices.Value, 0);
+            m_BookExecute.AddBookToDatabase(m_BookObject);
+            m_BookData = m_BookExecute.getBookDataFromDatabase();
+            grdListBook.DataSource = m_BookData;
+            grdListBookView.DataSource = m_BookData;
+            grdvListBook.FocusedRowHandle = grdvListBook.DataRowCount - 1;
+            grdvListBookView.FocusedRowHandle = grdvListBookView.DataRowCount - 1;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            m_BookObject = new CBookDTO(txtBookId.Text, lkBookTitlesName.EditValue.ToString(), lkPublisherName.EditValue.ToString(), (int)spBookRealeaseYear.Value, spBookPrices.Value, (int)spBookCount.Value);
+            m_BookExecute.UpdateBookToDatabase(m_BookObject);
+            m_BookData = m_BookExecute.getBookDataFromDatabase();
+            grdListBook.DataSource = m_BookData;
+            grdListBookView.DataSource = m_BookData;
+            grdvListBook.FocusedRowHandle = grdvListBook.DataRowCount - 1;
+            grdvListBookView.FocusedRowHandle = grdvListBookView.DataRowCount - 1;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -152,159 +129,12 @@ namespace Manager_Book_Store.Presentation_Layer
                 //m_BookObject = new CBookDTO(_rowObjectDetail.Row["MaSach"].ToString(), _rowObjectDetail.Row["TenSach"].ToString(), _rowObjectDetail.Row["DiaChi"].ToString());
                 //m_BookObject = new CBookDTO(txtBookId.Text, lkBookTitlesName.EditValue.ToString(), lkPublisherName.EditValue.ToString(), (int)spBookRealeaseYear.Value, spBookPrices.Value, (int)spBookCount.Value);
                 m_BookExecute.DeleteBookToDatabase(m_BookObject);
-                updateEnableButtonAndResetValueOfControl(ref btnDelete);
+                m_BookData = m_BookExecute.getBookDataFromDatabase();
+                grdListBook.DataSource = m_BookData;
+                grdListBookView.DataSource = m_BookData;
+                grdvListBook.FocusedRowHandle = grdvListBook.DataRowCount - 1;
+                grdvListBookView.FocusedRowHandle = grdvListBookView.DataRowCount - 1;
             }
-        }
-
-        private void btnAddPublisher_Click(object sender, EventArgs e)
-        {
-            m_addPublisher();
-        }
-        private bool m_IsAdd = true;
-        private void updateEnableButtonAndResetValueOfControl(ref SimpleButton _btnControl)
-        {
-            switch (_btnControl.Name)
-            {
-                case "btnAdd":
-                    {
-                        btnAdd.Visible = false;
-                        btnCancel.Visible = true;
-                        //
-                        btnSave.Enabled = true;
-                        btnUpdate.Enabled = false;
-                        btnDelete.Enabled = false;
-                        //grdListBookTitles.Enabled = false;
-                        //
-                        txtBookId.Text = "SA0000**";
-                        lkBookTitlesName.EditValue  = null;
-                        lkPublisherName.EditValue   = null;
-                        spBookCount.EditValue       = 0;
-                        spBookPrices.EditValue      = 0;
-                        spBookRealeaseYear.EditValue = 0;
-                        lkBookTitlesName.Properties.ReadOnly = false;
-                        lkBookTitlesName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        lkPublisherName.Properties.ReadOnly = false;
-                        lkPublisherName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        spBookRealeaseYear.Properties.ReadOnly = false;
-                        spBookRealeaseYear.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        //
-                        m_IsAdd = true;
-                        break;
-                    }
-                case "btnCancel":
-                    {
-                        //
-                        btnAdd.Visible = true;
-                        btnCancel.Visible = false;
-                        btnCancelOfUpdate.Visible = false;
-                        btnUpdate.Visible = true;
-                        //
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
-                        btnAdd.Enabled = true;
-                        btnSave.Enabled = false;
-                        //
-                        lkBookTitlesName.Properties.ReadOnly = true;
-                        lkBookTitlesName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        lkPublisherName.Properties.ReadOnly = true;
-                        lkPublisherName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        spBookRealeaseYear.Properties.ReadOnly = true;
-                        spBookRealeaseYear.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        //
-                        m_BookData = m_BookExecute.getBookDataFromDatabase();
-                        grdListBook.DataSource = m_BookData;
-                        grdListBookView.DataSource = m_BookData;
-                        break;
-                    }
-                case "btnCancelOfUpdate":
-                    {
-                        //
-                        btnAdd.Visible = true;
-                        btnCancel.Visible = false;
-                        btnCancelOfUpdate.Visible = false;
-                        btnUpdate.Visible = true;
-                        //
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
-                        btnAdd.Enabled = true;
-                        btnSave.Enabled = false;
-                        //
-                        lkBookTitlesName.Properties.ReadOnly = true;
-                        lkBookTitlesName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        lkPublisherName.Properties.ReadOnly = true;
-                        lkPublisherName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        spBookRealeaseYear.Properties.ReadOnly = true;
-                        spBookRealeaseYear.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        //
-                        m_BookData = m_BookExecute.getBookDataFromDatabase();
-                        grdListBook.DataSource = m_BookData;
-                        grdListBookView.DataSource = m_BookData;
-                        break;
-                    }
-                case "btnDelete":
-                    {
-                        lkBookTitlesName.Properties.ReadOnly = false;
-                        lkBookTitlesName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        lkPublisherName.Properties.ReadOnly = false;
-                        lkPublisherName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        spBookRealeaseYear.Properties.ReadOnly = false;
-                        spBookRealeaseYear.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        //
-                        m_BookData = m_BookExecute.getBookDataFromDatabase();
-                        grdListBook.DataSource = m_BookData;
-                        grdListBookView.DataSource = m_BookData;
-                        m_BookMultiSelect.ClearSelection();
-                        break;
-                    }
-                case "btnUpdate":
-                    {
-                        m_IsAdd = false;
-                        //
-                        btnUpdate.Visible = false;
-                        btnCancelOfUpdate.Visible = true;
-                        //
-                        lkBookTitlesName.Properties.ReadOnly = false;
-                        lkBookTitlesName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        lkPublisherName.Properties.ReadOnly = false;
-                        lkPublisherName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        spBookRealeaseYear.Properties.ReadOnly = false;
-                        spBookRealeaseYear.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        //
-                        btnDelete.Enabled = false;
-                        btnAdd.Enabled = false;
-                        btnSave.Enabled = true;
-                        break;
-                    }
-                case "btnSave":
-                    {
-                        btnAdd.Enabled = true;
-                        btnDelete.Enabled = true;
-                        btnUpdate.Enabled = true;
-                        btnSave.Enabled = false;
-                        //
-                        btnUpdate.Visible = true;
-                        btnAdd.Visible = true;
-                        btnCancel.Visible = false;
-                        btnCancelOfUpdate.Visible = false;
-                        //
-                        lkBookTitlesName.Properties.ReadOnly = true;
-                        lkBookTitlesName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        lkPublisherName.Properties.ReadOnly = true;
-                        lkPublisherName.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        spBookRealeaseYear.Properties.ReadOnly = true;
-                        spBookRealeaseYear.Properties.AppearanceReadOnly.BackColor = Color.WhiteSmoke;
-                        //
-                        m_BookData = m_BookExecute.getBookDataFromDatabase();
-                        grdListBook.DataSource = m_BookData;
-                        grdListBookView.DataSource = m_BookData;
-                        break;
-                    }
-            }
-        }
-
-        private void btnCancelOfUpdate_Click(object sender, EventArgs e)
-        {
-            updateEnableButtonAndResetValueOfControl(ref btnCancelOfUpdate);
         }
     }
 }

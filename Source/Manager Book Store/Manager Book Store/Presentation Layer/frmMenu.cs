@@ -53,10 +53,31 @@ namespace Manager_Book_Store.Presentation_Layer
         private void windowUIMenu_QueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
         {
             if (e.Document == docLogin)
-                e.Control = new ucLogin();
+            {
+                ucLogin _ucLogin = new ucLogin();
+                _ucLogin._loginClose = new ucLogin.closeLogin(closeMenu);
+                _ucLogin._loginHide = new ucLogin.closeLogin(hideMenu);
+                e.Control = _ucLogin;
+            }
+
             else
                 e.Control = new PanelControl();
         }
 
+        public void hideMenu()
+        {
+            this.Hide();
+        }
+
+        public void closeMenu()
+        {
+            this.Dispose();
+            Application.Exit();
+        }
+
+        public void showMenu()
+        {
+            this.Show();
+        }
     }
 }
