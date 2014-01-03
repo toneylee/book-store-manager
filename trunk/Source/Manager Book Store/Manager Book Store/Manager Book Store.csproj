@@ -106,7 +106,6 @@
     <Compile Include="Data Access Layer\BookTitlesDAL.cs" />
     <Compile Include="Data Access Layer\CashReceiptVoucherDAL.cs" />
     <Compile Include="Data Access Layer\ChargeDAL.cs" />
-    <Compile Include="Data Access Layer\CodeDTO.cs" />
     <Compile Include="Data Access Layer\CustomerDAL.cs" />
     <Compile Include="Data Access Layer\DataConnection.cs" />
     <Compile Include="Data Access Layer\DataExecute.cs" />
@@ -127,6 +126,7 @@
     <Compile Include="Data Tranfer Object\BookTitlesDTO.cs" />
     <Compile Include="Data Tranfer Object\CashReceiptVoucherDTO.cs" />
     <Compile Include="Data Tranfer Object\ChargeDTO.cs" />
+    <Compile Include="Data Tranfer Object\CodeDTO.cs" />
     <Compile Include="Data Tranfer Object\CustomerDTO.cs" />
     <Compile Include="Data Tranfer Object\DeliveryNoteDetailDTO.cs" />
     <Compile Include="Data Tranfer Object\DeliveryNoteDTO.cs" />

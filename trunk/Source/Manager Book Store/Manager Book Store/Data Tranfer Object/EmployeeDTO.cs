@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Manager_Book_Store.Data_Tranfer_Object
 {
-    class CEmployeeDTO
+    public class CEmployeeDTO
     {
         #region "Variable"
         private String m_maNhanVien;

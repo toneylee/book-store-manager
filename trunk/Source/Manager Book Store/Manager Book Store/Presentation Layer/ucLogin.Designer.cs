@@ -34,9 +34,9 @@
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.txtUser = new DevExpress.XtraEditors.TextEdit();
-            this.txtpass = new DevExpress.XtraEditors.TextEdit();
+            this.txtPass = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labUser
@@ -95,18 +95,19 @@
             this.txtUser.Size = new System.Drawing.Size(215, 22);
             this.txtUser.TabIndex = 5;
             // 
-            // txtpass
+            // txtPass
             // 
-            this.txtpass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpass.EditValue = "";
-            this.txtpass.Location = new System.Drawing.Point(274, 155);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txtpass.Properties.Appearance.Options.UseFont = true;
-            this.txtpass.Properties.NullText = "matkhau";
-            this.txtpass.Properties.UseSystemPasswordChar = true;
-            this.txtpass.Size = new System.Drawing.Size(216, 22);
-            this.txtpass.TabIndex = 6;
+            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPass.EditValue = "";
+            this.txtPass.Location = new System.Drawing.Point(274, 155);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtPass.Properties.Appearance.Options.UseFont = true;
+            this.txtPass.Properties.NullText = "matkhau";
+            this.txtPass.Properties.UseSystemPasswordChar = true;
+            this.txtPass.Size = new System.Drawing.Size(216, 22);
+            this.txtPass.TabIndex = 6;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // ucLogin
             // 
@@ -116,7 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.txtpass);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
@@ -126,7 +127,7 @@
             this.Name = "ucLogin";
             this.Size = new System.Drawing.Size(687, 447);
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +140,6 @@
         private DevExpress.XtraEditors.SimpleButton btnOk;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.TextEdit txtUser;
-        private DevExpress.XtraEditors.TextEdit txtpass;
+        private DevExpress.XtraEditors.TextEdit txtPass;
     }
 }

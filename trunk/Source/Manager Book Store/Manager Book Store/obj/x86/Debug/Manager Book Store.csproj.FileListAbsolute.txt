@@ -117,3 +117,41 @@ F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Bo
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.csprojResolveAssemblyReference.cache
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmHome.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.csproj.GenerateResource.Cache
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
