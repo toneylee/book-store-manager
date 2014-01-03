@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD14C0A4-F56A-4B4C-AE16-95818CB32C7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Manager_Book_Store</RootNamespace>
+    <AssemblyName>Manager Book Store</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.RichEdit.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Layer\AuthorBUS.cs" />
+    <Compile Include="Business Layer\AuthorDetailBUS.cs" />
+    <Compile Include="Business Layer\BookBUS.cs" />
+    <Compile Include="Business Layer\BookGenreBUS.cs" />
+    <Compile Include="Business Layer\BookTitlesBUS.cs" />
+    <Compile Include="Business Layer\CashReceiptVoucherBUS.cs" />
+    <Compile Include="Business Layer\ChargeBUS.cs" />
+    <Compile Include="Business Layer\CustomerBUS.cs" />
+    <Compile Include="Business Layer\DeliveryNoteBUS.cs" />
+    <Compile Include="Business Layer\DeliveryNoteDetailBUS.cs" />
+    <Compile Include="Business Layer\PublisherBUS.cs" />
+    <Compile Include="Business Layer\ReceiptNoteBUS.cs" />
+    <Compile Include="Business Layer\ReceiptNoteDetailBUS.cs" />
+    <Compile Include="Business Layer\RegulationsBUS.cs" />
+    <Compile Include="Business Layer\SurvivalBUS.cs" />
+    <Compile Include="Data Access Layer\AuthorDAL.cs" />
+    <Compile Include="Data Access Layer\AuthorDetailDAL.cs" />
+    <Compile Include="Data Access Layer\BookDAL.cs" />
+    <Compile Include="Data Access Layer\BookGenreDAL.cs" />
+    <Compile Include="Data Access Layer\BookTitlesDAL.cs" />
+    <Compile Include="Data Access Layer\CashReceiptVoucherDAL.cs" />
+    <Compile Include="Data Access Layer\ChargeDAL.cs" />
+    <Compile Include="Data Access Layer\CustomerDAL.cs" />
+    <Compile Include="Data Access Layer\DataConnection.cs" />
+    <Compile Include="Data Access Layer\DataExecute.cs" />
+    <Compile Include="Business Layer\EmployeeBUS.cs" />
+    <Compile Include="Data Access Layer\DeliveryNoteDAL.cs" />
+    <Compile Include="Data Access Layer\DeliveryNoteDetailDAL.cs" />
+    <Compile Include="Data Access Layer\EmployeeDAL.cs" />
+    <Compile Include="Data Access Layer\GetSetConnectString.cs" />
+    <Compile Include="Data Access Layer\PublisherDAL.cs" />
+    <Compile Include="Data Access Layer\ReceiptNoteDAL.cs" />
+    <Compile Include="Data Access Layer\ReceiptNoteDetailDAL.cs" />
+    <Compile Include="Data Access Layer\RegulationsDAL.cs" />
+    <Compile Include="Data Access Layer\SurvivalDAL.cs" />
+    <Compile Include="Data Tranfer Object\AuthorDetailDTO.cs" />
+    <Compile Include="Data Tranfer Object\AuthorDTO.cs" />
+    <Compile Include="Data Tranfer Object\BookDTO.cs" />
+    <Compile Include="Data Tranfer Object\BookGenreDTO.cs" />
+    <Compile Include="Data Tranfer Object\BookTitlesDTO.cs" />
+    <Compile Include="Data Tranfer Object\CashReceiptVoucherDTO.cs" />
+    <Compile Include="Data Tranfer Object\ChargeDTO.cs" />
+    <Compile Include="Data Tranfer Object\CustomerDTO.cs" />
+    <Compile Include="Data Tranfer Object\DeliveryNoteDetailDTO.cs" />
+    <Compile Include="Data Tranfer Object\DeliveryNoteDTO.cs" />
+    <Compile Include="Data Tranfer Object\EmployeeDTO.cs" />
+    <Compile Include="Data Tranfer Object\LiabilitiesDTO.cs" />
+    <Compile Include="Data Tranfer Object\PublisherDTO.cs" />
+    <Compile Include="Data Tranfer Object\ReceiptNodeDetailDTO.cs" />
+    <Compile Include="Data Tranfer Object\ReceiptNoteDTO.cs" />
+    <Compile Include="Data Tranfer Object\RegulationsDTO.cs" />
+    <Compile Include="Data Tranfer Object\SurvivalDTO.cs" />
+    <Compile Include="General\CheckInformationEntered.cs" />
+    <Compile Include="General\CheckMarkSelection.cs" />
+    <Compile Include="Presentation Layer\frmBookSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBookSearch.Designer.cs">
+      <DependentUpon>frmBookSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBookTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBookTitle.Designer.cs">
+      <DependentUpon>frmBookTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBookGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBookGenre.Designer.cs">
+      <DependentUpon>frmBookGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCashReceiptVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCashReceiptVoucher.Designer.cs">
+      <DependentUpon>frmCashReceiptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCharge.Designer.cs">
+      <DependentUpon>frmCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCustomerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmCustomerSearch.Designer.cs">
+      <DependentUpon>frmCustomerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmDeliveryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmDeliveryNote.Designer.cs">
+      <DependentUpon>frmDeliveryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmEmployeeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmEmployeeSearch.Designer.cs">
+      <DependentUpon>frmEmployeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmReceiptNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmReceiptNote.Designer.cs">
+      <DependentUpon>frmReceiptNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmDeliveryNoteSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmDeliveryNoteSearch.Designer.cs">
+      <DependentUpon>frmDeliveryNoteSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmRegulations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmRegulations.Designer.cs">
+      <DependentUpon>frmRegulations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ucLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ucLogin.Designer.cs">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBook.Designer.cs">
+      <DependentUpon>frmBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmAuthor.Designer.cs">
+      <DependentUpon>frmAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMyForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMyForm.designer.cs">
+      <DependentUpon>frmMyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmPublisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmPublisher.Designer.cs">
+      <DependentUpon>frmPublisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Program.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\frmCashReceiptVoucherReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmCashReceiptVoucherReport.Designer.cs">
+      <DependentUpon>frmCashReceiptVoucherReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmDeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmDeliveryReport.Designer.cs">
+      <DependentUpon>frmDeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReceiptNoteReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReceiptNoteReport.Designer.cs">
+      <DependentUpon>frmReceiptNoteReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmSurvivalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmSurvivalReport.Designer.cs">
+      <DependentUpon>frmSurvivalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptCashReceiptVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCashReceiptVoucher.Designer.cs">
+      <DependentUpon>rptCashReceiptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptDeliveryNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptDeliveryNote.designer.cs">
+      <DependentUpon>rptDeliveryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptReceiptNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptReceiptNote.Designer.cs">
+      <DependentUpon>rptReceiptNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptSurvival.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptSurvival.Designer.cs">
+      <DependentUpon>rptSurvival.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation Layer\frmBookSearch.resx">
+      <DependentUpon>frmBookSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmBookTitle.resx">
+      <DependentUpon>frmBookTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmBookGenre.resx">
+      <DependentUpon>frmBookGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmCashReceiptVoucher.resx">
+      <DependentUpon>frmCashReceiptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmCharge.resx">
+      <DependentUpon>frmCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmCustomerSearch.resx">
+      <DependentUpon>frmCustomerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmDeliveryNote.resx">
+      <DependentUpon>frmDeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmEmployeeSearch.resx">
+      <DependentUpon>frmEmployeeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmReceiptNote.resx">
+      <DependentUpon>frmReceiptNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmDeliveryNoteSearch.resx">
+      <DependentUpon>frmDeliveryNoteSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmRegulations.resx">
+      <DependentUpon>frmRegulations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ucLogin.resx">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmBook.resx">
+      <DependentUpon>frmBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmAuthor.resx">
+      <DependentUpon>frmAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmMyForm.resx">
+      <DependentUpon>frmMyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmPublisher.resx">
+      <DependentUpon>frmPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\frmCashReceiptVoucherReport.resx">
+      <DependentUpon>frmCashReceiptVoucherReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmDeliveryReport.resx">
+      <DependentUpon>frmDeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmReceiptNoteReport.resx">
+      <DependentUpon>frmReceiptNoteReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmSurvivalReport.resx">
+      <DependentUpon>frmSurvivalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCashReceiptVoucher.resx">
+      <DependentUpon>rptCashReceiptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptDeliveryNote.resx">
+      <DependentUpon>rptDeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptReceiptNote.resx">
+      <DependentUpon>rptReceiptNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptSurvival.resx">
+      <DependentUpon>rptSurvival.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\backGround_bookStore_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\recycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\agt_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\Option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\Desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Picture\book.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

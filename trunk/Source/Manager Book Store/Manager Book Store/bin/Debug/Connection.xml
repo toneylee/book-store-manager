@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<!--
+Khong duoc thay doi noi dung file nay!
+Thong so co ban:
+	costatus = true : quyen Windows
+	costatus = false: quyen SQL Server
+	servname: ten server
+	username: ten dang nhap he thong
+	password: mat khau dang nhap he thong
+	database: ten co so du lieu
+-->
+<config>
+  <authorities>true</authorities>
+  <servname>TONEYLEE-PC</servname>
+  <username />
+  <password />
+  <database>MANAGERBOOKSTORE</database>
+</config>

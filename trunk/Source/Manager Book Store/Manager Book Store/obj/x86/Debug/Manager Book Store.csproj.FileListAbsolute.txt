@@ -1,0 +1,39 @@
+E:\Do An Game\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
+E:\Do An Game\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
+E:\Do An Game\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmHome.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
+E:\Do An Game\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
