@@ -57,6 +57,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 ucLogin _ucLogin = new ucLogin();
                 _ucLogin._loginClose = new ucLogin.closeLogin(closeMenu);
                 _ucLogin._loginHide = new ucLogin.closeLogin(hideMenu);
+                _ucLogin._loginShow = new ucLogin.showLogin(showMenu);
                 e.Control = _ucLogin;
             }
 
@@ -75,9 +76,14 @@ namespace Manager_Book_Store.Presentation_Layer
             Application.Exit();
         }
 
-        public void showMenu()
+        public void showMenu(object sender, FormClosedEventArgs e)
         {
             this.Show();
+        }
+
+        private void tileExit_Click(object sender, TileClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }

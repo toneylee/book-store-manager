@@ -17,11 +17,13 @@ namespace Manager_Book_Store.Presentation_Layer
         //delegate exit menu + application
         public delegate void closeLogin();
         public closeLogin _loginClose, _loginHide;
+        public delegate void showLogin(object sender, FormClosedEventArgs e);
+        public showLogin _loginShow;
         //
 
 
         public static bool loginSuccessFully = false;
-        private MaHoaDTO md5 = new MaHoaDTO();
+        private CodeDTO md5 = new CodeDTO();
         private CDataConnection connectData = new CDataConnection();
         private CDataExecute userExecute = new CDataExecute();
 
@@ -51,6 +53,7 @@ namespace Manager_Book_Store.Presentation_Layer
                         frmMain _frmMain = new frmMain();
                         _frmMain.WindowState = FormWindowState.Maximized;
                         _frmMain.Show();
+                        _frmMain._loginShow = new frmMain.showLogin(loginShow);
                         _loginHide();
                     }
                 }
@@ -65,6 +68,8 @@ namespace Manager_Book_Store.Presentation_Layer
             {
                 if (checkLogin(_userName, _passWord))
                 {
+                    txtpass.Text = null;
+                    txtUser.Text = null;
                     return true;
                 }
                 else
@@ -103,7 +108,7 @@ namespace Manager_Book_Store.Presentation_Layer
                     temp = false;
                 return temp;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -135,9 +140,14 @@ namespace Manager_Book_Store.Presentation_Layer
             return userExecute.getStringExecuter(cmd);
         }
 
-        private void btnCancel_Click_1(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             _loginClose();
+        }
+
+        private void loginShow(object sender, FormClosedEventArgs e)
+        {
+            _loginShow(sender,e);
         }
     }
 }

@@ -11,7 +11,7 @@ Thong so co ban:
 -->
 <config>
   <authorities>true</authorities>
-  <servname>RAY_JASON\SQLEXPRESS</servname>
+  <servname>TONEYLEE-PC</servname>
   <username />
   <password />
   <database>MANAGERBOOKSTORE</database>
