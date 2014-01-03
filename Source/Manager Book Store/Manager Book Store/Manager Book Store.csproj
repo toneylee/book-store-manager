@@ -106,6 +106,7 @@
     <Compile Include="Data Access Layer\BookTitlesDAL.cs" />
     <Compile Include="Data Access Layer\CashReceiptVoucherDAL.cs" />
     <Compile Include="Data Access Layer\ChargeDAL.cs" />
+    <Compile Include="Data Access Layer\CodeDTO.cs" />
     <Compile Include="Data Access Layer\CustomerDAL.cs" />
     <Compile Include="Data Access Layer\DataConnection.cs" />
     <Compile Include="Data Access Layer\DataExecute.cs" />
@@ -114,7 +115,6 @@
     <Compile Include="Data Access Layer\DeliveryNoteDetailDAL.cs" />
     <Compile Include="Data Access Layer\EmployeeDAL.cs" />
     <Compile Include="Data Access Layer\GetSetConnectString.cs" />
-    <Compile Include="Data Access Layer\MaHoaDTO.cs" />
     <Compile Include="Data Access Layer\PublisherDAL.cs" />
     <Compile Include="Data Access Layer\ReceiptNoteDAL.cs" />
     <Compile Include="Data Access Layer\ReceiptNoteDetailDAL.cs" />

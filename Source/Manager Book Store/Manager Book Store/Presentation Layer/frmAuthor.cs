@@ -85,7 +85,7 @@ namespace Manager_Book_Store.Presentation_Layer
                     XtraMessageBox.Show(_erroContent);
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 //XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             }

@@ -137,7 +137,7 @@ namespace Manager_Book_Store.Data_Access_Layer
                 }
                 return str;
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 return null;
             }

@@ -29,40 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucLogin));
-            this.txtUser = new DevExpress.XtraEditors.TextEdit();
-            this.txtpass = new DevExpress.XtraEditors.TextEdit();
             this.labUser = new DevExpress.XtraEditors.LabelControl();
             this.labPass = new DevExpress.XtraEditors.LabelControl();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.txtUser = new DevExpress.XtraEditors.TextEdit();
+            this.txtpass = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpass.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtUser
-            // 
-            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUser.EditValue = "Tên đăng nhập";
-            this.txtUser.Location = new System.Drawing.Point(274, 115);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txtUser.Properties.Appearance.Options.UseFont = true;
-            this.txtUser.Properties.NullText = "ThanhTrang";
-            this.txtUser.Size = new System.Drawing.Size(215, 22);
-            this.txtUser.TabIndex = 0;
-            // 
-            // txtpass
-            // 
-            this.txtpass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpass.EditValue = "Mật khẩu";
-            this.txtpass.Location = new System.Drawing.Point(274, 155);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txtpass.Properties.Appearance.Options.UseFont = true;
-            this.txtpass.Properties.NullText = "thanhtrang";
-            this.txtpass.Properties.UseSystemPasswordChar = true;
-            this.txtpass.Size = new System.Drawing.Size(216, 22);
-            this.txtpass.TabIndex = 1;
             // 
             // labUser
             // 
@@ -106,7 +81,32 @@
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Hủy ";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUser.EditValue = "";
+            this.txtUser.Location = new System.Drawing.Point(274, 115);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtUser.Properties.Appearance.Options.UseFont = true;
+            this.txtUser.Properties.NullText = "Tên đăng nhập";
+            this.txtUser.Size = new System.Drawing.Size(215, 22);
+            this.txtUser.TabIndex = 5;
+            // 
+            // txtpass
+            // 
+            this.txtpass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpass.EditValue = "";
+            this.txtpass.Location = new System.Drawing.Point(274, 155);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtpass.Properties.Appearance.Options.UseFont = true;
+            this.txtpass.Properties.NullText = "matkhau";
+            this.txtpass.Properties.UseSystemPasswordChar = true;
+            this.txtpass.Size = new System.Drawing.Size(216, 22);
+            this.txtpass.TabIndex = 6;
             // 
             // ucLogin
             // 
@@ -116,12 +116,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.txtpass);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.labPass);
             this.Controls.Add(this.labUser);
-            this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.txtUser);
             this.DoubleBuffered = true;
             this.Name = "ucLogin";
             this.Size = new System.Drawing.Size(687, 447);
@@ -134,11 +134,11 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit txtUser;
-        private DevExpress.XtraEditors.TextEdit txtpass;
         private DevExpress.XtraEditors.LabelControl labUser;
         private DevExpress.XtraEditors.LabelControl labPass;
         private DevExpress.XtraEditors.SimpleButton btnOk;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.TextEdit txtUser;
+        private DevExpress.XtraEditors.TextEdit txtpass;
     }
 }

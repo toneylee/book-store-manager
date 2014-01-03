@@ -78,3 +78,42 @@ G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manage
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmHome.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb

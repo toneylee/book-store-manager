@@ -65,6 +65,13 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame15 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame16 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame17 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame18 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
             this.docManagerMenu = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.imgMenu = new DevExpress.Utils.ImageCollection(this.components);
             this.windowUIMenu = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
@@ -81,6 +88,7 @@
             this.flyoutMenu = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout(this.components);
             this.picminimize = new DevExpress.XtraEditors.PictureEdit();
             this.picClose = new DevExpress.XtraEditors.PictureEdit();
+            this.tileExit = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.docManagerMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowUIMenu)).BeginInit();
@@ -97,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flyoutMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tileExit)).BeginInit();
             this.SuspendLayout();
             // 
             // docManagerMenu
@@ -134,7 +143,8 @@
             this.tileAbout,
             this.tileHelp,
             this.tileLogin,
-            this.tileDesktop});
+            this.tileDesktop,
+            this.tileExit});
             this.windowUIMenu.NavigationBarsShowing += new DevExpress.XtraBars.Docking2010.Views.WindowsUI.NavigationBarsCancelEventHandler(this.windowsUIView1_NavigationBarsShowing);
             this.windowUIMenu.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.windowUIMenu_QueryControl);
             // 
@@ -148,8 +158,10 @@
             this.tileDesktop,
             this.tileOption,
             this.tileAbout,
-            this.tileHelp});
+            this.tileHelp,
+            this.tileExit});
             this.tileContainMenu.Name = "tileContainMenu";
+            this.tileContainMenu.Position = 31;
             this.tileContainMenu.Properties.AllowSelectedItem = DevExpress.Utils.DefaultBoolean.True;
             this.tileContainMenu.Properties.ItemCheckMode = DevExpress.XtraEditors.TileItemCheckMode.Single;
             this.tileContainMenu.Properties.ItemImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
@@ -492,9 +504,9 @@
             // 
             // picminimize
             // 
-            this.picminimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picminimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.picminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picminimize.EditValue = global::Manager_Book_Store.Properties.Resources.minimize;
             this.picminimize.Location = new System.Drawing.Point(695, 12);
@@ -508,9 +520,9 @@
             // 
             // picClose
             // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picClose.EditValue = global::Manager_Book_Store.Properties.Resources.close;
             this.picClose.Location = new System.Drawing.Point(730, 12);
@@ -521,6 +533,61 @@
             this.picClose.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picClose.Size = new System.Drawing.Size(34, 29);
             this.picClose.TabIndex = 3;
+            // 
+            // tileExit
+            // 
+            tileItemElement21.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement21.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement21.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement21.Appearance.Normal.Options.UseFont = true;
+            tileItemElement21.Image = global::Manager_Book_Store.Properties.Resources.close;
+            tileItemElement21.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement21.Text = "Exit";
+            tileItemElement21.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileExit.Elements.Add(tileItemElement21);
+            tileItemFrame16.AnimateBackgroundImage = false;
+            tileItemFrame16.AnimateText = false;
+            tileItemElement22.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement22.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement22.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement22.Appearance.Normal.Options.UseFont = true;
+            tileItemElement22.Image = global::Manager_Book_Store.Properties.Resources.close;
+            tileItemElement22.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement22.Text = "Exit";
+            tileItemElement22.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            tileItemFrame16.Elements.Add(tileItemElement22);
+            tileItemFrame16.Image = global::Manager_Book_Store.Properties.Resources.close;
+            tileItemFrame17.AnimateBackgroundImage = false;
+            tileItemFrame17.AnimateText = false;
+            tileItemElement23.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement23.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement23.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement23.Appearance.Normal.Options.UseFont = true;
+            tileItemElement23.Image = global::Manager_Book_Store.Properties.Resources.close;
+            tileItemElement23.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement23.Text = "Exit";
+            tileItemElement23.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            tileItemFrame17.Elements.Add(tileItemElement23);
+            tileItemFrame17.Image = global::Manager_Book_Store.Properties.Resources.close;
+            tileItemFrame18.AnimateBackgroundImage = false;
+            tileItemFrame18.AnimateText = false;
+            tileItemElement24.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement24.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement24.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 10F);
+            tileItemElement24.Appearance.Normal.Options.UseFont = true;
+            tileItemElement24.Image = global::Manager_Book_Store.Properties.Resources.close;
+            tileItemElement24.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement24.Text = "Exit";
+            tileItemElement24.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            tileItemFrame18.Elements.Add(tileItemElement24);
+            tileItemFrame18.Image = global::Manager_Book_Store.Properties.Resources.close;
+            this.tileExit.Frames.Add(tileItemFrame16);
+            this.tileExit.Frames.Add(tileItemFrame17);
+            this.tileExit.Frames.Add(tileItemFrame18);
+            this.tileExit.Group = "1";
+            this.tileContainMenu.SetID(this.tileExit, 5);
+            this.tileExit.Name = "tileExit";
+            this.tileExit.Click += new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileClickEventHandler(this.tileExit_Click);
             // 
             // frmMenu
             // 
@@ -552,6 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flyoutMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tileExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,5 +642,6 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tileLogin;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout flyoutMenu;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tileDesktop;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tileExit;
     }
 }

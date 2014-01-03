@@ -15,8 +15,6 @@ namespace Manager_Book_Store.Presentation_Layer
     {
         //delegate Show Menu when closed Main
         //delegate exit menu + application
-        public delegate void showMenu();
-        public showMenu _showMenu;
 
         //Valids
         private frmBook m_BookFormObject;
@@ -277,9 +275,16 @@ namespace Manager_Book_Store.Presentation_Layer
                 m_RegulationFormObject.Activate();
         }
 
+        public delegate void showLogin(object sender, FormClosedEventArgs e);
+        public showLogin _loginShow;
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _showMenu();
+            _loginShow(null,null);
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _loginShow(null, null);
         }
  
     }

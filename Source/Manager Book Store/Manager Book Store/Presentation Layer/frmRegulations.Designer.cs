@@ -57,7 +57,7 @@
             this.navbgOption = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItemBookRegulation = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemCustomerRegulation = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmployee = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.panRegulationsTitles)).BeginInit();
             this.panRegulationsTitles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panRegulationExecute)).BeginInit();
@@ -160,11 +160,12 @@
             this.grpEmployeeRelations.Controls.Add(this.spMaximumAge);
             this.grpEmployeeRelations.Controls.Add(this.labMaximumAge);
             this.grpEmployeeRelations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpEmployeeRelations.Location = new System.Drawing.Point(2, 195);
+            this.grpEmployeeRelations.Location = new System.Drawing.Point(2, 2);
             this.grpEmployeeRelations.Name = "grpEmployeeRelations";
-            this.grpEmployeeRelations.Size = new System.Drawing.Size(531, 110);
+            this.grpEmployeeRelations.Size = new System.Drawing.Size(531, 383);
             this.grpEmployeeRelations.TabIndex = 4;
             this.grpEmployeeRelations.Text = "Thông tin quy đinh về nhân viên";
+            this.grpEmployeeRelations.Visible = false;
             // 
             // labMinimumAge
             // 
@@ -185,6 +186,7 @@
             this.spMinimumAge.Name = "spMinimumAge";
             this.spMinimumAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spMinimumAge.Properties.Mask.EditMask = "n0";
             this.spMinimumAge.Size = new System.Drawing.Size(241, 20);
             this.spMinimumAge.TabIndex = 14;
             // 
@@ -199,6 +201,7 @@
             this.spMaximumAge.Name = "spMaximumAge";
             this.spMaximumAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spMaximumAge.Properties.Mask.EditMask = "n0";
             this.spMaximumAge.Size = new System.Drawing.Size(241, 20);
             this.spMaximumAge.TabIndex = 16;
             // 
@@ -221,10 +224,10 @@
             this.grpBookRelations.Controls.Add(this.labMaximumSurvival);
             this.grpBookRelations.Controls.Add(this.labMinimumSurvival);
             this.grpBookRelations.Controls.Add(this.spMinimumSurvival);
-            this.grpBookRelations.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpBookRelations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpBookRelations.Location = new System.Drawing.Point(2, 2);
             this.grpBookRelations.Name = "grpBookRelations";
-            this.grpBookRelations.Size = new System.Drawing.Size(531, 193);
+            this.grpBookRelations.Size = new System.Drawing.Size(531, 383);
             this.grpBookRelations.TabIndex = 3;
             this.grpBookRelations.Text = "Thông tin quy định về sách";
             // 
@@ -333,12 +336,13 @@
             // 
             this.grpCustomerRelations.Controls.Add(this.labDebitMaximum);
             this.grpCustomerRelations.Controls.Add(this.spDebitMaximum);
-            this.grpCustomerRelations.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpCustomerRelations.Location = new System.Drawing.Point(2, 305);
+            this.grpCustomerRelations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpCustomerRelations.Location = new System.Drawing.Point(2, 2);
             this.grpCustomerRelations.Name = "grpCustomerRelations";
-            this.grpCustomerRelations.Size = new System.Drawing.Size(531, 80);
+            this.grpCustomerRelations.Size = new System.Drawing.Size(531, 383);
             this.grpCustomerRelations.TabIndex = 2;
             this.grpCustomerRelations.Text = "Thông tin quy đinh về khách hàng";
+            this.grpCustomerRelations.Visible = false;
             // 
             // labDebitMaximum
             // 
@@ -359,6 +363,7 @@
             this.spDebitMaximum.Name = "spDebitMaximum";
             this.spDebitMaximum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spDebitMaximum.Properties.Mask.EditMask = "n0";
             this.spDebitMaximum.Size = new System.Drawing.Size(241, 20);
             this.spDebitMaximum.TabIndex = 14;
             // 
@@ -371,7 +376,7 @@
             this.navBarCRegulations.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItemBookRegulation,
             this.navBarItemCustomerRegulation,
-            this.navBarItem1});
+            this.navBarItemEmployee});
             this.navBarCRegulations.Location = new System.Drawing.Point(2, 2);
             this.navBarCRegulations.Name = "navBarCRegulations";
             this.navBarCRegulations.OptionsNavPane.ExpandedWidth = 215;
@@ -387,23 +392,26 @@
             this.navbgOption.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemBookRegulation),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemCustomerRegulation),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmployee)});
             this.navbgOption.Name = "navbgOption";
             // 
             // navBarItemBookRegulation
             // 
             this.navBarItemBookRegulation.Caption = "Quy định về sách";
             this.navBarItemBookRegulation.Name = "navBarItemBookRegulation";
+            this.navBarItemBookRegulation.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemBookRegulation_LinkClicked);
             // 
             // navBarItemCustomerRegulation
             // 
-            this.navBarItemCustomerRegulation.Caption = "Quy định về nhân viên";
+            this.navBarItemCustomerRegulation.Caption = "Quy định về khách hàng";
             this.navBarItemCustomerRegulation.Name = "navBarItemCustomerRegulation";
+            this.navBarItemCustomerRegulation.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemCustomerRegulation_LinkClicked);
             // 
-            // navBarItem1
+            // navBarItemEmployee
             // 
-            this.navBarItem1.Caption = "Quy định về khách hàng";
-            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItemEmployee.Caption = "Quy định về  nhân viên";
+            this.navBarItemEmployee.Name = "navBarItemEmployee";
+            this.navBarItemEmployee.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmployeeRegulation_LinkClicked);
             // 
             // frmRegulations
             // 
@@ -473,7 +481,7 @@
         private DevExpress.XtraEditors.LabelControl labMinimumSurvival;
         private DevExpress.XtraEditors.SpinEdit spMinimumSurvival;
         private DevExpress.XtraEditors.GroupControl grpCustomerRelations;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmployee;
         private DevExpress.XtraEditors.LabelControl labDebitMaximum;
         private DevExpress.XtraEditors.SpinEdit spDebitMaximum;
         private DevExpress.XtraEditors.SimpleButton btnAdd;

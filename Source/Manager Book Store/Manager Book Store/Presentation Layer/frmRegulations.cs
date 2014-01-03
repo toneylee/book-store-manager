@@ -74,5 +74,26 @@ namespace Manager_Book_Store.Presentation_Layer
                 btnUpdate.Visible = true;
             }
         }
+
+        private void navBarItemBookRegulation_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            grpBookRelations.Visible = true;
+            grpCustomerRelations.Visible = false;
+            grpEmployeeRelations.Visible = false;
+        }
+
+        private void navBarItemCustomerRegulation_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            grpBookRelations.Visible = false;
+            grpCustomerRelations.Visible = true;
+            grpEmployeeRelations.Visible = false;
+        }
+
+        private void navBarItemEmployeeRegulation_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            grpBookRelations.Visible = false;
+            grpCustomerRelations.Visible = false;
+            grpEmployeeRelations.Visible = true;
+        }
     }
 }
