@@ -38,6 +38,13 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             InitializeComponent();
         }
+   
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            barStaticItem_TenNV.Caption = "Nhân viên: " + ucLogin.m_EmployeeObject.tenNhanVien;
+            barStaticItem_Date.Caption = "   " + DateTime.Now.ToShortDateString();
+            setTime();
+        }
 
         private void bbtnBook_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -286,6 +293,19 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             _loginShow(null, null);
         }
- 
+
+        private void setTime()
+        {
+            Timer _timer = new Timer();
+            _timer.Interval = 1000;
+            _timer.Start();
+            _timer.Tick += _timer_Tick;
+        }
+
+        void _timer_Tick(object sender, EventArgs e)
+        {
+            barStaticItem_Time.Caption = DateTime.Now.ToShortTimeString();
+        }
+
     }
 }

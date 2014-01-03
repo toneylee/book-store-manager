@@ -85,10 +85,10 @@
             this.docAbout = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.tileHelp = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.docHelp = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.tileExit = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.flyoutMenu = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout(this.components);
             this.picminimize = new DevExpress.XtraEditors.PictureEdit();
             this.picClose = new DevExpress.XtraEditors.PictureEdit();
-            this.tileExit = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.docManagerMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowUIMenu)).BeginInit();
@@ -102,10 +102,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.docAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docHelp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tileExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tileExit)).BeginInit();
             this.SuspendLayout();
             // 
             // docManagerMenu
@@ -494,46 +494,6 @@
             this.docHelp.Caption = "Trợ giúp";
             this.docHelp.ControlName = "docHelp";
             // 
-            // flyoutMenu
-            // 
-            this.flyoutMenu.AppearanceSubtitle.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.flyoutMenu.AppearanceSubtitle.Options.UseBackColor = true;
-            this.flyoutMenu.Name = "flyoutMenu";
-            this.flyoutMenu.Properties.Appearance.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.flyoutMenu.Properties.Appearance.Options.UseBackColor = true;
-            // 
-            // picminimize
-            // 
-            this.picminimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.picminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picminimize.EditValue = global::Manager_Book_Store.Properties.Resources.minimize;
-            this.picminimize.Location = new System.Drawing.Point(695, 12);
-            this.picminimize.Name = "picminimize";
-            this.picminimize.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.picminimize.Properties.Appearance.Options.UseBackColor = true;
-            this.picminimize.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picminimize.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.picminimize.Size = new System.Drawing.Size(34, 29);
-            this.picminimize.TabIndex = 2;
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picClose.EditValue = global::Manager_Book_Store.Properties.Resources.close;
-            this.picClose.Location = new System.Drawing.Point(730, 12);
-            this.picClose.Name = "picClose";
-            this.picClose.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.picClose.Properties.Appearance.Options.UseBackColor = true;
-            this.picClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picClose.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.picClose.Size = new System.Drawing.Size(34, 29);
-            this.picClose.TabIndex = 3;
-            // 
             // tileExit
             // 
             tileItemElement21.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -589,6 +549,46 @@
             this.tileExit.Name = "tileExit";
             this.tileExit.Click += new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileClickEventHandler(this.tileExit_Click);
             // 
+            // flyoutMenu
+            // 
+            this.flyoutMenu.AppearanceSubtitle.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.flyoutMenu.AppearanceSubtitle.Options.UseBackColor = true;
+            this.flyoutMenu.Name = "flyoutMenu";
+            this.flyoutMenu.Properties.Appearance.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.flyoutMenu.Properties.Appearance.Options.UseBackColor = true;
+            // 
+            // picminimize
+            // 
+            this.picminimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picminimize.EditValue = global::Manager_Book_Store.Properties.Resources.minimize;
+            this.picminimize.Location = new System.Drawing.Point(695, 12);
+            this.picminimize.Name = "picminimize";
+            this.picminimize.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.picminimize.Properties.Appearance.Options.UseBackColor = true;
+            this.picminimize.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picminimize.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picminimize.Size = new System.Drawing.Size(34, 29);
+            this.picminimize.TabIndex = 2;
+            // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.EditValue = global::Manager_Book_Store.Properties.Resources.close;
+            this.picClose.Location = new System.Drawing.Point(730, 12);
+            this.picClose.Name = "picClose";
+            this.picClose.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.picClose.Properties.Appearance.Options.UseBackColor = true;
+            this.picClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picClose.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picClose.Size = new System.Drawing.Size(34, 29);
+            this.picClose.TabIndex = 3;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,10 +616,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.docAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docHelp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tileExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tileExit)).EndInit();
             this.ResumeLayout(false);
 
         }

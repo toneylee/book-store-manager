@@ -22,45 +22,42 @@ namespace Manager_Book_Store.Presentation_Layer
         //
 
 
-        public static bool loginSuccessFully = false;
         private CodeDTO md5 = new CodeDTO();
-        private CDataConnection connectData = new CDataConnection();
+        public static CEmployeeDTO m_EmployeeObject;
         private CDataExecute userExecute = new CDataExecute();
 
         public ucLogin()
         {
             InitializeComponent();
+            initLogin();
+        }
+
+        private void initLogin()
+        {
+            md5 = new CodeDTO();
+            m_EmployeeObject = new CEmployeeDTO();
+            userExecute = new CDataExecute();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtUser.Text.Equals("") || txtpass.Text.Equals(""))
-                {
-                    XtraMessageBox.Show("Tên đăng nhập hoặc password chưa được nhập. Vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    /* if (login(txtUser.Text, md5.getMD5Hash(txtpass.Text)))
-                     {
-                         frmMain _frmMain = new frmMain();
-                         _frmMain.Show();
-                     }
-                     */
-                    if (login(txtUser.Text, txtpass.Text))
-                    {
-                        frmMain _frmMain = new frmMain();
-                        _frmMain.WindowState = FormWindowState.Maximized;
-                        _frmMain.Show();
-                        _frmMain._loginShow = new frmMain.showLogin(loginShow);
-                        _loginHide();
-                    }
-                }
-            }
-            catch (Exception) { }
+            actionLogin();
         }
 
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                actionLogin();
+            }
+        }
+        
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            _loginClose();
+        }
+        
+        
         //CAC HAM
         private bool login(String _userName, String _passWord)
         {
@@ -68,7 +65,7 @@ namespace Manager_Book_Store.Presentation_Layer
             {
                 if (checkLogin(_userName, _passWord))
                 {
-                    txtpass.Text = null;
+                    txtPass.Text = null;
                     txtUser.Text = null;
                     return true;
                 }
@@ -76,7 +73,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 {
                     XtraMessageBox.Show("Tên đăng nhập hoặc password không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUser.Text = null;
-                    txtpass.Text = null;
+                    txtPass.Text = null;
                     return false;
                 }
             }
@@ -100,8 +97,21 @@ namespace Manager_Book_Store.Presentation_Layer
 
                     if (txtUser.Text.Equals(User))
                     {
-                        if (txtpass.Text.Equals(Pass))
+                        if (txtPass.Text.Equals(Pass))
+                        {
                             temp = true;
+                            m_EmployeeObject.maNhanVien = dt.Rows[0]["MaNV"].ToString();
+                            m_EmployeeObject.tenNhanVien = dt.Rows[0]["TenNV"].ToString();
+                            m_EmployeeObject.gioiTinh = dt.Rows[0]["GioiTinh"].ToString();
+                            m_EmployeeObject.ngaySinh = Convert.ToDateTime(dt.Rows[0]["NgaySinh"].ToString());
+                            m_EmployeeObject.email = dt.Rows[0]["Email"].ToString();
+                            m_EmployeeObject.soDienThoai = dt.Rows[0]["DienThoai"].ToString();
+                            m_EmployeeObject.diaChi = dt.Rows[0]["DiaChi"].ToString();
+                            m_EmployeeObject.ngayVaoLam = Convert.ToDateTime(dt.Rows[0]["NgayVaoLam"].ToString());
+                            m_EmployeeObject.maChucVu = dt.Rows[0]["MaCV"].ToString();
+                            m_EmployeeObject.tenDangNhap = dt.Rows[0]["UserName"].ToString();
+                            m_EmployeeObject.matKhau = dt.Rows[0]["Password"].ToString();
+                        }
                     }
                 }
                 else
@@ -114,6 +124,11 @@ namespace Manager_Book_Store.Presentation_Layer
             }
         }
 
+        private void loginShow(object sender, FormClosedEventArgs e)
+        {
+            _loginShow(sender, e);
+        }
+
         public DataTable getEmployee_UserName_Pass()
         {
             SqlCommand cmd = new SqlCommand();
@@ -122,7 +137,7 @@ namespace Manager_Book_Store.Presentation_Layer
             SqlParameter pram;
             pram = new SqlParameter("@UserName", txtUser.Text.Trim());
             SqlParameter pram1;
-            pram1 = new SqlParameter("@PassWord", txtpass.Text.Trim());
+            pram1 = new SqlParameter("@PassWord", txtPass.Text.Trim());
             cmd.Parameters.Add(pram);
             cmd.Parameters.Add(pram1);
 
@@ -140,15 +155,36 @@ namespace Manager_Book_Store.Presentation_Layer
             return userExecute.getStringExecuter(cmd);
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        //Ham thuc hien dang nhap
+        private void actionLogin()
         {
-            _loginClose();
+            try
+            {
+                if (txtUser.Text.Equals("") || txtPass.Text.Equals(""))
+                {
+                    XtraMessageBox.Show("Tên đăng nhập hoặc password chưa được nhập. Vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    /* if (login(txtUser.Text, md5.getMD5Hash(txtpass.Text)))
+                     {
+                         frmMain _frmMain = new frmMain();
+                         _frmMain.Show();
+                     }
+                     */
+                    if (login(txtUser.Text, txtPass.Text))
+                    {
+                        frmMain _frmMain = new frmMain();
+                        _frmMain.WindowState = FormWindowState.Maximized;
+                        _frmMain.Show();
+                        _frmMain._loginShow = new frmMain.showLogin(loginShow);
+                        _loginHide();
+                    }
+                }
+            }
+            catch (Exception) { }
         }
 
-        private void loginShow(object sender, FormClosedEventArgs e)
-        {
-            _loginShow(sender,e);
-        }
     }
 }
 
