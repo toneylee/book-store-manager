@@ -13,6 +13,12 @@ namespace Manager_Book_Store.Presentation_Layer
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        //delegate Show Menu when closed Main
+        //delegate exit menu + application
+        public delegate void showMenu();
+        public showMenu _showMenu;
+
+        //Valids
         private frmBook m_BookFormObject;
         private frmBookGenre m_BookGenreFormObject;
         private frmAuthor m_AuthorFormObject;
@@ -269,6 +275,11 @@ namespace Manager_Book_Store.Presentation_Layer
             }
             else
                 m_RegulationFormObject.Activate();
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _showMenu();
         }
  
     }

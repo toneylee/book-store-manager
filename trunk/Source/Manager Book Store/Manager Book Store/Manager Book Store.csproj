@@ -114,6 +114,7 @@
     <Compile Include="Data Access Layer\DeliveryNoteDetailDAL.cs" />
     <Compile Include="Data Access Layer\EmployeeDAL.cs" />
     <Compile Include="Data Access Layer\GetSetConnectString.cs" />
+    <Compile Include="Data Access Layer\MaHoaDTO.cs" />
     <Compile Include="Data Access Layer\PublisherDAL.cs" />
     <Compile Include="Data Access Layer\ReceiptNoteDAL.cs" />
     <Compile Include="Data Access Layer\ReceiptNoteDetailDAL.cs" />

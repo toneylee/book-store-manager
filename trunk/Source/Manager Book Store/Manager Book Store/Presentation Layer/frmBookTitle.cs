@@ -117,10 +117,6 @@ namespace Manager_Book_Store.Presentation_Layer
                             _listBookTitleObjectInDelibility.Add(_rowObjectDetail["MaDauSach"]);
                         }
                     }
-                    else
-                    {
-                        _listBookTitleObjectInDelibility.Add(_rowObjectDetail["MaDauSach"]);
-                    }
                 }
                 if (_listBookTitleObjectInDelibility.Count != 0)
                 {
