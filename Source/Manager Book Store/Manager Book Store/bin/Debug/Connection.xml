@@ -1,9 +1,9 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <!--
 Khong duoc thay doi noi dung file nay!
 Thong so co ban:
-	costatus = true : quyen Windows
-	costatus = false: quyen SQL Server
+	authorities = true : quyen Windows
+	authorities = false: quyen SQL Server
 	servname: ten server
 	username: ten dang nhap he thong
 	password: mat khau dang nhap he thong
@@ -11,8 +11,8 @@ Thong so co ban:
 -->
 <config>
   <authorities>true</authorities>
-  <servname>RAY_JASON\SQLEXPRESS</servname>
+  <servname>TONEYLEE-PC</servname>
   <username />
   <password />
-  <database>MANAGERBOOKSTORE</database>
+  <database>QUANLYNHASACH</database>
 </config>

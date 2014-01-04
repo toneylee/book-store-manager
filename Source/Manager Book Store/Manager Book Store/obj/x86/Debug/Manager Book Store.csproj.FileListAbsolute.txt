@@ -155,3 +155,7 @@ G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager 
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\TableStructure.sql
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmConnectionSQL.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\StoredProcdure.sql
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\ViewStructure.sql
