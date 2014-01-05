@@ -20,23 +20,17 @@ namespace Manager_Book_Store.Presentation_Layer
         public delegate void showLogin(object sender, FormClosedEventArgs e);
         public showLogin _loginShow;
         //
-
-
-        private CodeDTO md5 = new CodeDTO();
+        private CodeDTO md5;
         public static CEmployeeDTO m_EmployeeObject;
-        private CDataExecute userExecute = new CDataExecute();
+        private CLoginBUS m_loginExecute;
+        private DataTable          m_EmployeeData;
 
         public ucLogin()
         {
             InitializeComponent();
-            initLogin();
-        }
-
-        private void initLogin()
-        {
-            md5 = new CodeDTO();
             m_EmployeeObject = new CEmployeeDTO();
-            userExecute = new CDataExecute();
+            m_loginExecute = new CLoginBUS();
+            md5 = new CodeDTO();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -88,35 +82,32 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             try
             {
-                bool temp = false;
-                DataTable dt = getEmployee_UserName_Pass();
-                if (dt != null)
+                m_EmployeeData = m_loginExecute.getEmployee_UserName_Pass(txtUser.Text, txtPass.Text);
+                if (m_EmployeeData != null)
                 {
-                    String User = dt.Rows[0]["UserName"].ToString();
-                    String Pass = dt.Rows[0]["PassWord"].ToString();
+                    String User = m_EmployeeData.Rows[0]["UserName"].ToString();
+                    String Pass = m_EmployeeData.Rows[0]["PassWord"].ToString();
 
                     if (txtUser.Text.Equals(User))
                     {
                         if (txtPass.Text.Equals(Pass))
                         {
-                            temp = true;
-                            m_EmployeeObject.maNhanVien = dt.Rows[0]["MaNV"].ToString();
-                            m_EmployeeObject.tenNhanVien = dt.Rows[0]["TenNV"].ToString();
-                            m_EmployeeObject.gioiTinh = dt.Rows[0]["GioiTinh"].ToString();
-                            m_EmployeeObject.ngaySinh = Convert.ToDateTime(dt.Rows[0]["NgaySinh"].ToString());
-                            m_EmployeeObject.email = dt.Rows[0]["Email"].ToString();
-                            m_EmployeeObject.soDienThoai = dt.Rows[0]["DienThoai"].ToString();
-                            m_EmployeeObject.diaChi = dt.Rows[0]["DiaChi"].ToString();
-                            m_EmployeeObject.ngayVaoLam = Convert.ToDateTime(dt.Rows[0]["NgayVaoLam"].ToString());
-                            m_EmployeeObject.maChucVu = dt.Rows[0]["MaCV"].ToString();
-                            m_EmployeeObject.tenDangNhap = dt.Rows[0]["UserName"].ToString();
-                            m_EmployeeObject.matKhau = dt.Rows[0]["Password"].ToString();
+                            m_EmployeeObject.maNhanVien = m_EmployeeData.Rows[0]["MaNV"].ToString();
+                            m_EmployeeObject.tenNhanVien = m_EmployeeData.Rows[0]["TenNV"].ToString();
+                            m_EmployeeObject.gioiTinh = m_EmployeeData.Rows[0]["GioiTinh"].ToString();
+                            m_EmployeeObject.ngaySinh = Convert.ToDateTime(m_EmployeeData.Rows[0]["NgaySinh"].ToString());
+                            m_EmployeeObject.email = m_EmployeeData.Rows[0]["Email"].ToString();
+                            m_EmployeeObject.soDienThoai = m_EmployeeData.Rows[0]["DienThoai"].ToString();
+                            m_EmployeeObject.diaChi = m_EmployeeData.Rows[0]["DiaChi"].ToString();
+                            m_EmployeeObject.ngayVaoLam = Convert.ToDateTime(m_EmployeeData.Rows[0]["NgayVaoLam"].ToString());
+                            m_EmployeeObject.maChucVu = m_EmployeeData.Rows[0]["MaCV"].ToString();
+                            m_EmployeeObject.tenDangNhap = m_EmployeeData.Rows[0]["UserName"].ToString();
+                            m_EmployeeObject.matKhau = m_EmployeeData.Rows[0]["Password"].ToString();
+                            return true;
                         }
                     }
                 }
-                else
-                    temp = false;
-                return temp;
+                return false;
             }
             catch (Exception)
             {
@@ -127,32 +118,6 @@ namespace Manager_Book_Store.Presentation_Layer
         private void loginShow(object sender, FormClosedEventArgs e)
         {
             _loginShow(sender, e);
-        }
-
-        public DataTable getEmployee_UserName_Pass()
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "GetEmployeeUserNamePassWord";
-            SqlParameter pram;
-            pram = new SqlParameter("@UserName", txtUser.Text.Trim());
-            SqlParameter pram1;
-            pram1 = new SqlParameter("@PassWord", txtPass.Text.Trim());
-            cmd.Parameters.Add(pram);
-            cmd.Parameters.Add(pram1);
-
-            return userExecute.getData(cmd);
-        }
-
-        public String getStringEmployee_UserName()
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "GetEmployeeUserName";
-            SqlParameter pram = new SqlParameter("@UserName", txtUser.Text.Trim());
-            cmd.Parameters.Add(pram);
-
-            return userExecute.getStringExecuter(cmd);
         }
 
         //Ham thuc hien dang nhap
@@ -182,7 +147,10 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                 }
             }
-            catch (Exception) { }
+            catch (Exception)
+            {
+
+            }
         }
 
     }

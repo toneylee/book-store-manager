@@ -64,6 +64,16 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.Parameters.Add("TienNo", SqlDbType.Money).Value = _CustomerObject.tienNo;
             return m_CustomerExecute.updateData(m_cmd) > 0;
         }
+        public bool UpdateLiabilitiesDataToDataBase(String _customerID, int _debits, DateTime _date)
+        {
+            m_cmd = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.CommandText = "UpdateLiabilitiesDataToDataBase";
+            m_cmd.Parameters.Add("MaKH", SqlDbType.NVarChar).Value = _customerID;
+            m_cmd.Parameters.Add("TienNo", SqlDbType.NVarChar).Value = _debits;
+            m_cmd.Parameters.Add("NgayThu", SqlDbType.DateTime).Value = _date;
+            return m_CustomerExecute.updateData(m_cmd) > 0;
+        }
         public DataTable getCustomerDataFromDatabase()
         {
             m_cmd = new SqlCommand();

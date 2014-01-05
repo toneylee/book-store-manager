@@ -53,10 +53,11 @@ namespace Manager_Book_Store.Presentation_Layer
                 txtData.Enabled = true;
             }
         }
-        public void getSeverConnection()
+        public bool getSeverConnection()
         {
-            //Start service when it was not running
+            ////Start service when it was not running
             ManagedComputer managerCmp = new ManagedComputer();
+            /*
             // Service service = default(Service);
             foreach (Service service in managerCmp.Services)
             {
@@ -73,7 +74,7 @@ namespace Manager_Book_Store.Presentation_Layer
                     service.Refresh();
                 }
 
-            }
+            }*/
             //Get Instance of Sqlsever
             RegistryView registryView = Environment.Is64BitOperatingSystem ? RegistryView.Registry64 : RegistryView.Registry32;
             using (RegistryKey hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView))
@@ -94,15 +95,22 @@ namespace Manager_Book_Store.Presentation_Layer
                             cmbServerName.Properties.Items.Add(temp);
                         }
                     }
+                    return true;
                 }
                 else
                 {
-                    foreach (ServerInstance sever in managerCmp.ServerInstances)
-                    {
-                        object temp = managerCmp.Name + @"\" + sever.Name;
-                        cmbServerName.Properties.Items.Add(temp);
-                    }
+                    XtraMessageBox.Show("Microsoft SQL server chưa được cài đặt trên máy của bạn!\nXin vui cài đặt và thử lại!");
+                    return false;
                 }
+                //else
+                //{
+                //    foreach (ServerInstance sever in managerCmp.ServerInstances)
+                //    {
+                //        object temp = managerCmp.Name + @"\" + sever.Name;
+                //        cmbServerName.Properties.Items.Add(temp);
+                //    }
+                //    return true;
+                //}
             }
 
         }
@@ -173,17 +181,17 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             try
             {
-                using (m_conn)
-                {
+                //using (m_conn)
+                //{
                     
-                    Server server = new Server(new ServerConnection(m_conn));
-                    if(alowCreatNewDataBase)
-                        server.ConnectionContext.ExecuteNonQuery("Create Database " + dataBaseNameToPrepend);
-                    server.ConnectionContext.ExecuteNonQuery("Use [" + dataBaseNameToPrepend + "]");
-                    server.ConnectionContext.ExecuteNonQuery(sql);
-                    server.ConnectionContext.Disconnect();
-                    return true;
-                }
+                Server server = new Server(new ServerConnection(m_conn));
+                if(alowCreatNewDataBase)
+                    server.ConnectionContext.ExecuteNonQuery("Create Database " + dataBaseNameToPrepend);
+                server.ConnectionContext.ExecuteNonQuery("Use [" + dataBaseNameToPrepend + "]");
+                server.ConnectionContext.ExecuteNonQuery(sql);
+                server.ConnectionContext.Disconnect();
+                return true;
+                //}
             }
             catch (SqlException)
             {
@@ -207,6 +215,7 @@ namespace Manager_Book_Store.Presentation_Layer
                                                         txtUserName.Text,
                                                         txtPass.Text,
                                                         "false");
+                this.Dispose();
                 this.Close();
 
             }

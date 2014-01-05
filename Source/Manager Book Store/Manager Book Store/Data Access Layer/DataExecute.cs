@@ -18,7 +18,17 @@ namespace Manager_Book_Store.Data_Access_Layer
         #region "method"
         public CDataExecute()
         {
-            this.openConnection();
+            do 
+            {
+                if (!this.openConnection())
+                {
+
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Lỗi kết nối đến cơ sở dữ liệu !\nXin vui lòng thiết lập lại kết nối...", "Thông báo");
+                    Manager_Book_Store.Presentation_Layer.frmConnectionSQL _frmConnectionSQL = new Manager_Book_Store.Presentation_Layer.frmConnectionSQL();
+                    _frmConnectionSQL.ShowDialog();
+                }
+            } while (!this.openConnection());
+
             this.m_sqlDataAdapter = new SqlDataAdapter();
             this.m_dataResult = new DataTable();
             this.m_sqlTransaction = null;

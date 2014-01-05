@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Xml;
+using DevExpress.XtraEditors;
 
 namespace Manager_Book_Store.Data_Access_Layer
 {
@@ -37,9 +38,8 @@ namespace Manager_Book_Store.Data_Access_Layer
                 return true;
             }
             catch
-            {
+            {   
                 return false;
-                //XtraCustomMessageBox.Show("Lỗi kết nối đến cơ sở dữ liệu ! Xin vui lòng thiết lập lại kết nối...","Thông báo","Vâng");
             }
         }
         public bool openConnection()
@@ -78,6 +78,7 @@ namespace Manager_Book_Store.Data_Access_Layer
                 m_conn.Close();
             }
         }
+
         #endregion
     }
 }

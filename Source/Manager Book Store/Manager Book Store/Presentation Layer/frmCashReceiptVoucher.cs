@@ -102,8 +102,8 @@ namespace Manager_Book_Store.Presentation_Layer
             m_CashReceiptVoucherExecute.AddCashReceiptVoucherToDatabase(m_CashReceiptVoucherObject);
             //
             decimal _sotienno = 0;
-            if(spRemain.Value > 0)
-                _sotienno = spRemain.Value;
+            if(spRemain.Value < 0)
+                _sotienno = -(spRemain.Value);
             m_CustomerObject                = new CCustomerDTO();
             m_CustomerObject.maKhachHang    = lkCustomerName.EditValue.ToString();
             m_CustomerObject.tenKhachHang   = lkCustomerName.Text;
@@ -112,6 +112,7 @@ namespace Manager_Book_Store.Presentation_Layer
             m_CustomerObject.Email          = txtCustomerEmail.Text;
             m_CustomerObject.tienNo         = (int)_sotienno;
             m_CustomerExecute.UpdateDebitOfCustomerDataToDatabase(m_CustomerObject);
+            m_CustomerExecute.UpdateLiabilitiesDataToDataBase(m_CustomerObject.maKhachHang, (int)_sotienno, DateTime.ParseExact(labCRVDateValue.Text, "dd/MM/yyyy", null));
         }
 
         private void btnView_Click(object sender, EventArgs e)
