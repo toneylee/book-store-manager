@@ -218,6 +218,7 @@
             this.Controls.Add(this.labServerName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConnectionSQL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Kết nối cơ sở dữ liệu";
             ((System.ComponentModel.ISupportInitialize)(this.cmbServerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();

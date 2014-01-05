@@ -34,6 +34,7 @@ namespace Manager_Book_Store.Presentation_Layer
         private frmDeliveryNoteSearch m_DeliveryNoteSearchFormObject;
         private frmSurvivalReport m_SurvivalReportFormObject;
         private frmRegulations m_RegulationFormObject;
+        private frmLiabilitiesReport m_LiabilitiesReportObject;
         public frmMain()
         {
             InitializeComponent();
@@ -305,6 +306,19 @@ namespace Manager_Book_Store.Presentation_Layer
         void _timer_Tick(object sender, EventArgs e)
         {
             barStaticItem_Time.Caption = DateTime.Now.ToShortTimeString();
+        }
+
+        private void bbtnLiabilities_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_LiabilitiesReportObject))
+            {
+                m_LiabilitiesReportObject = new frmLiabilitiesReport();
+                xtraTabbedMdiManagerMenu.FloatForms.Add(m_LiabilitiesReportObject);
+                m_LiabilitiesReportObject.MdiParent = this;
+                m_LiabilitiesReportObject.Show();
+            }
+            else
+                m_LiabilitiesReportObject.Activate();
         }
 
     }

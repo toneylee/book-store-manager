@@ -24,7 +24,10 @@ namespace Manager_Book_Store.Data_Access_Layer
             try
             {
                 m_xmlR = new XmlDocument();
-                m_xmlR.Load(_fileName);
+                if (System.IO.File.Exists(_fileName))
+                {
+                    m_xmlR.Load(_fileName);
+                }
             }
             catch (XmlException)
             {

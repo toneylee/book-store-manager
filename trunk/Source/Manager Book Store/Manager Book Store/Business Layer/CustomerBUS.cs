@@ -44,5 +44,9 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_CustomerDAL.getCustomerDataByRuleFromDatabase(_tenKH, _diaChi, _gioiTinh, _email, _soDienThoai, _tienNo);
         }
+        public bool UpdateLiabilitiesDataToDataBase(String _customerID, int _debits, DateTime _date)
+        {
+            return m_CustomerDAL.UpdateLiabilitiesDataToDataBase(_customerID, _debits, _date);
+        }
     }
 }

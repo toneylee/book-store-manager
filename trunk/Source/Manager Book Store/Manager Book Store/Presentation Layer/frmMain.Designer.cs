@@ -49,6 +49,10 @@
             this.bbtnNoteSearch = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnSurvival = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnRegulation = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem_TenNV = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem_Time = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem_Date = new DevExpress.XtraBars.BarStaticItem();
+            this.bbtnLiabilities = new DevExpress.XtraBars.BarButtonItem();
             this.ribpSystem = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpRule = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -64,7 +68,6 @@
             this.ribpgSearchGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribgReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribgStatistics = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribgHelp = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribgSoftwareInfo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,9 +80,6 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barStaticItem_TenNV = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem_Time = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem_Date = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
@@ -114,9 +114,10 @@
             this.bbtnRegulation,
             this.barStaticItem_TenNV,
             this.barStaticItem_Time,
-            this.barStaticItem_Date});
+            this.barStaticItem_Date,
+            this.bbtnLiabilities});
             this.ribbMain.Location = new System.Drawing.Point(0, 0);
-            this.ribbMain.MaxItemId = 22;
+            this.ribbMain.MaxItemId = 23;
             this.ribbMain.Name = "ribbMain";
             this.ribbMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribpSystem,
@@ -189,8 +190,8 @@
             this.bbtnemploye.Id = 6;
             this.bbtnemploye.ImageIndex = 5;
             this.bbtnemploye.Name = "bbtnemploye";
-            this.bbtnemploye.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnemploye.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnemploye.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnemploye_ItemClick);
             // 
             // bbtnOffice
@@ -207,8 +208,8 @@
             this.bbtnCustomer.Id = 8;
             this.bbtnCustomer.ImageIndex = 4;
             this.bbtnCustomer.Name = "bbtnCustomer";
-            this.bbtnCustomer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnCustomer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnCustomer_ItemClick);
             // 
             // bbtnImportProduct
@@ -217,8 +218,8 @@
             this.bbtnImportProduct.Id = 9;
             this.bbtnImportProduct.ImageIndex = 9;
             this.bbtnImportProduct.Name = "bbtnImportProduct";
-            this.bbtnImportProduct.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnImportProduct.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnImportProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnImportProduct_ItemClick);
             // 
             // bbtnExportProduct
@@ -228,8 +229,8 @@
             this.bbtnExportProduct.Id = 10;
             this.bbtnExportProduct.ImageIndex = 10;
             this.bbtnExportProduct.Name = "bbtnExportProduct";
-            this.bbtnExportProduct.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnExportProduct.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnExportProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnExportProduct_ItemClick);
             // 
             // bbtnReceipts
@@ -238,8 +239,8 @@
             this.bbtnReceipts.Id = 11;
             this.bbtnReceipts.ImageIndex = 11;
             this.bbtnReceipts.Name = "bbtnReceipts";
-            this.bbtnReceipts.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnReceipts.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnReceipts.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnReceipts_ItemClick);
             // 
             // bbtnBookTitles
@@ -255,8 +256,8 @@
             this.bbtnBookSearch.Caption = "Sách";
             this.bbtnBookSearch.Id = 13;
             this.bbtnBookSearch.Name = "bbtnBookSearch";
-            this.bbtnBookSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnBookSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnBookSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnBookSearch_ItemClick);
             // 
             // bbtnEmployeeSearch
@@ -264,8 +265,8 @@
             this.bbtnEmployeeSearch.Caption = "Nhân viên";
             this.bbtnEmployeeSearch.Id = 14;
             this.bbtnEmployeeSearch.Name = "bbtnEmployeeSearch";
-            this.bbtnEmployeeSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnEmployeeSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnEmployeeSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnEmployeeSearch_ItemClick);
             // 
             // bbtnCustomerSearch
@@ -273,8 +274,8 @@
             this.bbtnCustomerSearch.Caption = "Khách hàng";
             this.bbtnCustomerSearch.Id = 15;
             this.bbtnCustomerSearch.Name = "bbtnCustomerSearch";
-            this.bbtnCustomerSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnCustomerSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnCustomerSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnCustomerSearch_ItemClick);
             // 
             // bbtnNoteSearch
@@ -282,8 +283,8 @@
             this.bbtnNoteSearch.Caption = "Hóa đơn";
             this.bbtnNoteSearch.Id = 16;
             this.bbtnNoteSearch.Name = "bbtnNoteSearch";
-            this.bbtnNoteSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnNoteSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnNoteSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnNoteSearch_ItemClick);
             // 
             // bbtnSurvival
@@ -291,8 +292,8 @@
             this.bbtnSurvival.Caption = "Tồn kho";
             this.bbtnSurvival.Id = 17;
             this.bbtnSurvival.Name = "bbtnSurvival";
-            this.bbtnSurvival.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnSurvival.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnSurvival.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnSurvival_ItemClick);
             // 
             // bbtnRegulation
@@ -300,9 +301,38 @@
             this.bbtnRegulation.Caption = "Quy định\r\n";
             this.bbtnRegulation.Id = 18;
             this.bbtnRegulation.Name = "bbtnRegulation";
-            this.bbtnRegulation.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnRegulation.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnRegulation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnRegulation_ItemClick);
+            // 
+            // barStaticItem_TenNV
+            // 
+            this.barStaticItem_TenNV.Id = 19;
+            this.barStaticItem_TenNV.Name = "barStaticItem_TenNV";
+            this.barStaticItem_TenNV.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem_Time
+            // 
+            this.barStaticItem_Time.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem_Time.Id = 20;
+            this.barStaticItem_Time.Name = "barStaticItem_Time";
+            this.barStaticItem_Time.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem_Date
+            // 
+            this.barStaticItem_Date.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem_Date.Id = 21;
+            this.barStaticItem_Date.Name = "barStaticItem_Date";
+            this.barStaticItem_Date.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // bbtnLiabilities
+            // 
+            this.bbtnLiabilities.Caption = "Công nợ";
+            this.bbtnLiabilities.Id = 22;
+            this.bbtnLiabilities.Name = "bbtnLiabilities";
+            this.bbtnLiabilities.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnLiabilities.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnLiabilities_ItemClick);
             // 
             // ribpSystem
             // 
@@ -401,21 +431,16 @@
             // ribpReport
             // 
             this.ribpReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribgReport,
-            this.ribgStatistics});
+            this.ribgReport});
             this.ribpReport.Name = "ribpReport";
-            this.ribpReport.Text = "Báo cáo & Thống kê";
+            this.ribpReport.Text = "Báo cáo";
             // 
             // ribgReport
             // 
             this.ribgReport.ItemLinks.Add(this.bbtnSurvival);
+            this.ribgReport.ItemLinks.Add(this.bbtnLiabilities);
             this.ribgReport.Name = "ribgReport";
             this.ribgReport.Text = "Báo cáo";
-            // 
-            // ribgStatistics
-            // 
-            this.ribgStatistics.Name = "ribgStatistics";
-            this.ribgStatistics.Text = "Thống kê";
             // 
             // ribpHelp
             // 
@@ -503,26 +528,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(680, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 449);
             // 
-            // barStaticItem_TenNV
-            // 
-            this.barStaticItem_TenNV.Id = 19;
-            this.barStaticItem_TenNV.Name = "barStaticItem_TenNV";
-            this.barStaticItem_TenNV.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // barStaticItem_Time
-            // 
-            this.barStaticItem_Time.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem_Time.Id = 20;
-            this.barStaticItem_Time.Name = "barStaticItem_Time";
-            this.barStaticItem_Time.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // barStaticItem_Date
-            // 
-            this.barStaticItem_Date.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem_Date.Id = 21;
-            this.barStaticItem_Date.Name = "barStaticItem_Date";
-            this.barStaticItem_Date.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,7 +577,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgImportProduct;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgẼportProduct;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgReport;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgStatistics;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgHelp;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgSoftwareInfo;
         private DevExpress.XtraBars.BarButtonItem bbtnBook;
@@ -604,5 +608,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem_TenNV;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Time;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Date;
+        private DevExpress.XtraBars.BarButtonItem bbtnLiabilities;
     }
 }

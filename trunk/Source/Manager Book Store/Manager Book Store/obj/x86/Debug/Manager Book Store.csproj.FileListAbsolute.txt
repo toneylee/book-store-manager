@@ -159,3 +159,5 @@ F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Bo
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmConnectionSQL.resources
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\StoredProcdure.sql
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\ViewStructure.sql
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmLiabilitiesReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptLiabilities.resources
