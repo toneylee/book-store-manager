@@ -58,7 +58,10 @@ namespace Manager_Book_Store.Data_Access_Layer
                 }
 
             }
-            return AutoNumberedTable(m_dataResult);
+            if (m_dataResult.Rows.Count != 0)
+                return AutoNumberedTable(m_dataResult);
+            else
+                return m_dataResult;
         }
         private DataTable AutoNumberedTable(DataTable SourceTable)
         {

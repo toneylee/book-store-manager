@@ -111,8 +111,8 @@ namespace Manager_Book_Store.Presentation_Layer
             m_CustomerObject.soDienThoai    = txtCustomerPhone.Text;
             m_CustomerObject.Email          = txtCustomerEmail.Text;
             m_CustomerObject.tienNo         = (int)_sotienno;
-            m_CustomerExecute.UpdateDebitOfCustomerDataToDatabase(m_CustomerObject);
             m_CustomerExecute.UpdateLiabilitiesDataToDataBase(m_CustomerObject.maKhachHang, (int)_sotienno, DateTime.ParseExact(labCRVDateValue.Text, "dd/MM/yyyy", null));
+            m_CustomerExecute.UpdateDebitOfCustomerDataToDatabase(m_CustomerObject);  
         }
 
         private void btnView_Click(object sender, EventArgs e)

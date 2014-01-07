@@ -27,6 +27,8 @@ namespace Manager_Book_Store.Data_Access_Layer
 
             try
             {
+                CDatabase.m_DatabaseName    = xmlEle.SelectSingleNode("database").InnerText;
+                CDatabase.m_ServerName      = xmlEle.SelectSingleNode("servname").InnerText;
                 if (xmlEle.SelectSingleNode("authorities").InnerText == "true")
                 {
                     m_connecstring = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";Integrated Security=True;";
@@ -80,5 +82,10 @@ namespace Manager_Book_Store.Data_Access_Layer
         }
 
         #endregion
+    }
+    public class CDatabase
+    {
+        public static String m_DatabaseName = "";
+        public static String m_ServerName = "";
     }
 }
