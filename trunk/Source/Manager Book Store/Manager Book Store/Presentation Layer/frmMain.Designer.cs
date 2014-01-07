@@ -53,8 +53,10 @@
             this.barStaticItem_Time = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_Date = new DevExpress.XtraBars.BarStaticItem();
             this.bbtnLiabilities = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.ribpSystem = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribpgBackupAndRestore = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpRule = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpManager = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -68,9 +70,6 @@
             this.ribpgSearchGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribgReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribpHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribgHelp = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribgSoftwareInfo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -115,9 +114,11 @@
             this.barStaticItem_TenNV,
             this.barStaticItem_Time,
             this.barStaticItem_Date,
-            this.bbtnLiabilities});
+            this.bbtnLiabilities,
+            this.bbtnBackup,
+            this.bbtnRestore});
             this.ribbMain.Location = new System.Drawing.Point(0, 0);
-            this.ribbMain.MaxItemId = 23;
+            this.ribbMain.MaxItemId = 25;
             this.ribbMain.Name = "ribbMain";
             this.ribbMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribpSystem,
@@ -125,8 +126,7 @@
             this.ribpManager,
             this.ribpImportAndExport,
             this.ribpSearch,
-            this.ribpReport,
-            this.ribpHelp});
+            this.ribpReport});
             this.ribbMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1});
             this.ribbMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
@@ -149,6 +149,16 @@
             this.imgMain.Images.SetKeyName(9, "import.png");
             this.imgMain.Images.SetKeyName(10, "bill.png");
             this.imgMain.Images.SetKeyName(11, "receipts.png");
+            this.imgMain.Images.SetKeyName(12, "bookSearch.png");
+            this.imgMain.Images.SetKeyName(13, "searchCustomer.png");
+            this.imgMain.Images.SetKeyName(14, "Search-File-icon.png");
+            this.imgMain.Images.SetKeyName(15, "searchEmployee.png");
+            this.imgMain.Images.SetKeyName(16, "searchbook.png");
+            this.imgMain.Images.SetKeyName(17, "liabilites.png");
+            this.imgMain.Images.SetKeyName(18, "survival.png");
+            this.imgMain.Images.SetKeyName(19, "regulation.png");
+            this.imgMain.Images.SetKeyName(20, "backupData.png");
+            this.imgMain.Images.SetKeyName(21, "RestoreData.png");
             // 
             // bbtnBook
             // 
@@ -255,6 +265,7 @@
             // 
             this.bbtnBookSearch.Caption = "Sách";
             this.bbtnBookSearch.Id = 13;
+            this.bbtnBookSearch.ImageIndex = 16;
             this.bbtnBookSearch.Name = "bbtnBookSearch";
             this.bbtnBookSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -264,6 +275,7 @@
             // 
             this.bbtnEmployeeSearch.Caption = "Nhân viên";
             this.bbtnEmployeeSearch.Id = 14;
+            this.bbtnEmployeeSearch.ImageIndex = 15;
             this.bbtnEmployeeSearch.Name = "bbtnEmployeeSearch";
             this.bbtnEmployeeSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -273,6 +285,7 @@
             // 
             this.bbtnCustomerSearch.Caption = "Khách hàng";
             this.bbtnCustomerSearch.Id = 15;
+            this.bbtnCustomerSearch.ImageIndex = 13;
             this.bbtnCustomerSearch.Name = "bbtnCustomerSearch";
             this.bbtnCustomerSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -282,6 +295,7 @@
             // 
             this.bbtnNoteSearch.Caption = "Hóa đơn";
             this.bbtnNoteSearch.Id = 16;
+            this.bbtnNoteSearch.ImageIndex = 14;
             this.bbtnNoteSearch.Name = "bbtnNoteSearch";
             this.bbtnNoteSearch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -291,6 +305,7 @@
             // 
             this.bbtnSurvival.Caption = "Tồn kho";
             this.bbtnSurvival.Id = 17;
+            this.bbtnSurvival.ImageIndex = 18;
             this.bbtnSurvival.Name = "bbtnSurvival";
             this.bbtnSurvival.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -300,6 +315,7 @@
             // 
             this.bbtnRegulation.Caption = "Quy định\r\n";
             this.bbtnRegulation.Id = 18;
+            this.bbtnRegulation.ImageIndex = 19;
             this.bbtnRegulation.Name = "bbtnRegulation";
             this.bbtnRegulation.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -329,22 +345,45 @@
             // 
             this.bbtnLiabilities.Caption = "Công nợ";
             this.bbtnLiabilities.Id = 22;
+            this.bbtnLiabilities.ImageIndex = 17;
             this.bbtnLiabilities.Name = "bbtnLiabilities";
             this.bbtnLiabilities.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnLiabilities.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnLiabilities_ItemClick);
             // 
+            // bbtnBackup
+            // 
+            this.bbtnBackup.Caption = "Sao lưu dữ liệu";
+            this.bbtnBackup.Id = 23;
+            this.bbtnBackup.ImageIndex = 20;
+            this.bbtnBackup.Name = "bbtnBackup";
+            this.bbtnBackup.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnBackup_ItemClick);
+            // 
+            // bbtnRestore
+            // 
+            this.bbtnRestore.Caption = "Phục hồi dữ liệu";
+            this.bbtnRestore.Id = 24;
+            this.bbtnRestore.ImageIndex = 21;
+            this.bbtnRestore.Name = "bbtnRestore";
+            this.bbtnRestore.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnRestore_ItemClick);
+            // 
             // ribpSystem
             // 
             this.ribpSystem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribpgBackupAndRestore});
             this.ribpSystem.Name = "ribpSystem";
             this.ribpSystem.Text = "Hệ thống";
             // 
-            // ribbonPageGroup1
+            // ribpgBackupAndRestore
             // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribpgBackupAndRestore.ItemLinks.Add(this.bbtnBackup);
+            this.ribpgBackupAndRestore.ItemLinks.Add(this.bbtnRestore);
+            this.ribpgBackupAndRestore.Name = "ribpgBackupAndRestore";
+            this.ribpgBackupAndRestore.Text = "Sao lưu và phục hồi";
             // 
             // ribpRule
             // 
@@ -442,24 +481,6 @@
             this.ribgReport.Name = "ribgReport";
             this.ribgReport.Text = "Báo cáo";
             // 
-            // ribpHelp
-            // 
-            this.ribpHelp.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribgHelp,
-            this.ribgSoftwareInfo});
-            this.ribpHelp.Name = "ribpHelp";
-            this.ribpHelp.Text = "Trợ giúp";
-            // 
-            // ribgHelp
-            // 
-            this.ribgHelp.Name = "ribgHelp";
-            this.ribgHelp.Text = "Hướng dẫn sử dụng ";
-            // 
-            // ribgSoftwareInfo
-            // 
-            this.ribgSoftwareInfo.Name = "ribgSoftwareInfo";
-            this.ribgSoftwareInfo.Text = "Thông tin phần mềm";
-            // 
             // repositoryItemGridLookUpEdit1
             // 
             this.repositoryItemGridLookUpEdit1.AutoHeight = false;
@@ -542,6 +563,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Ribbon = this.ribbMain;
+            this.ShowIcon = false;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản Lý Nhà sách";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
@@ -561,7 +583,7 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbMain;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribpSystem;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribpgBackupAndRestore;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribpManager;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribpgMbook;
@@ -569,7 +591,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribpReport;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribpHelp;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgMCustomer;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribpRule;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
@@ -577,8 +598,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgImportProduct;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgẼportProduct;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgReport;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgHelp;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribgSoftwareInfo;
         private DevExpress.XtraBars.BarButtonItem bbtnBook;
         private DevExpress.XtraBars.BarButtonItem bbtnCategoryBook;
         private DevExpress.XtraBars.BarButtonItem bbtnAuthor;
@@ -609,5 +628,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Time;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Date;
         private DevExpress.XtraBars.BarButtonItem bbtnLiabilities;
+        private DevExpress.XtraBars.BarButtonItem bbtnBackup;
+        private DevExpress.XtraBars.BarButtonItem bbtnRestore;
     }
 }

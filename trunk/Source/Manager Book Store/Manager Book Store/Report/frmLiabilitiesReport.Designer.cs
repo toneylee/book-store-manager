@@ -310,6 +310,7 @@
             this.zoomTrackBarEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.zoomTrackBarEditItem.Edit = this.repositoryItemZoomTrackBar;
             this.zoomTrackBarEditItem.EditValue = 90;
+            this.zoomTrackBarEditItem.Enabled = false;
             this.zoomTrackBarEditItem.Id = 6;
             this.zoomTrackBarEditItem.Name = "zoomTrackBarEditItem";
             this.zoomTrackBarEditItem.Range = new int[] {
@@ -710,6 +711,7 @@
             // 
             this.ppbtZoom.Caption = "Zoom";
             this.ppbtZoom.Edit = this.printPreviewRepositoryItemComboBox;
+            this.ppbtZoom.EditValue = "100%";
             this.ppbtZoom.Enabled = false;
             this.ppbtZoom.Hint = "Zoom";
             this.ppbtZoom.Id = 21;
@@ -795,6 +797,7 @@
             this.docMgLiabilities.DockControls.Add(this.barDockControlBottom);
             this.docMgLiabilities.DockControls.Add(this.barDockControlLeft);
             this.docMgLiabilities.DockControls.Add(this.barDockControlRight);
+            this.docMgLiabilities.DocumentViewer = this.docLiabilitiesView;
             this.docMgLiabilities.Form = this;
             this.docMgLiabilities.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("docMgLiabilities.ImageStream")));
             this.docMgLiabilities.Items.AddRange(new DevExpress.XtraBars.BarItem[] {

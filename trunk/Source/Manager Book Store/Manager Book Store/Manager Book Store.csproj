@@ -83,6 +83,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
@@ -110,6 +114,7 @@
   <ItemGroup>
     <Compile Include="Business Layer\AuthorBUS.cs" />
     <Compile Include="Business Layer\AuthorDetailBUS.cs" />
+    <Compile Include="Business Layer\BackupAndRestoreDataBUS.cs" />
     <Compile Include="Business Layer\BookBUS.cs" />
     <Compile Include="Business Layer\BookGenreBUS.cs" />
     <Compile Include="Business Layer\BookTitlesBUS.cs" />
@@ -127,6 +132,7 @@
     <Compile Include="Business Layer\SurvivalBUS.cs" />
     <Compile Include="Data Access Layer\AuthorDAL.cs" />
     <Compile Include="Data Access Layer\AuthorDetailDAL.cs" />
+    <Compile Include="Data Access Layer\BackupAndRestoreDataDAL.cs" />
     <Compile Include="Data Access Layer\BookDAL.cs" />
     <Compile Include="Data Access Layer\BookGenreDAL.cs" />
     <Compile Include="Data Access Layer\BookTitlesDAL.cs" />
@@ -167,6 +173,12 @@
     <Compile Include="Data Tranfer Object\SurvivalDTO.cs" />
     <Compile Include="General\CheckInformationEntered.cs" />
     <Compile Include="General\CheckMarkSelection.cs" />
+    <Compile Include="Presentation Layer\frmBackupAndRestoreDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmBackupAndRestoreDatabase.Designer.cs">
+      <DependentUpon>frmBackupAndRestoreDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\frmBookSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +372,9 @@
     <Compile Include="Report\rptSurvival.Designer.cs">
       <DependentUpon>rptSurvival.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation Layer\frmBackupAndRestoreDatabase.resx">
+      <DependentUpon>frmBackupAndRestoreDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\frmBookSearch.resx">
       <DependentUpon>frmBookSearch.cs</DependentUpon>
     </EmbeddedResource>

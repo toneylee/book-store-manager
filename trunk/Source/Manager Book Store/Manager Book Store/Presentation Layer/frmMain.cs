@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using Manager_Book_Store.Report;
+using Manager_Book_Store.Business_Layer;
+using Manager_Book_Store.Data_Access_Layer;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
@@ -282,9 +284,47 @@ namespace Manager_Book_Store.Presentation_Layer
             else
                 m_RegulationFormObject.Activate();
         }
+        private void bbtnLiabilities_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_LiabilitiesReportObject))
+            {
+                m_LiabilitiesReportObject = new frmLiabilitiesReport();
+                xtraTabbedMdiManagerMenu.FloatForms.Add(m_LiabilitiesReportObject);
+                m_LiabilitiesReportObject.MdiParent = this;
+                m_LiabilitiesReportObject.Show();
+            }
+            else
+                m_LiabilitiesReportObject.Activate();
+        }
+        private void bbtnBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (xtraTabbedMdiManagerMenu.FloatForms.Count != 0)
+            {
+                XtraMessageBox.Show("Xin vui lòng đóng tất cả cửa sổ\ntrước khi sao lưu dữ liệu!");
+                return;
+            }
+            frmBackupAndRestoreDatabase _frmBackup = new frmBackupAndRestoreDatabase(true);
+            _frmBackup.StartPosition = FormStartPosition.CenterParent;
+            _frmBackup.ShowDialog();
+        }
+
+        private void bbtnRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (xtraTabbedMdiManagerMenu.FloatForms.Count != 0)
+            {
+                XtraMessageBox.Show("Xin vui lòng đóng tất cả cửa sổ\ntrước khi phục hồi dữ liệu!");
+                return;
+            }
+            frmBackupAndRestoreDatabase _frmRestore = new frmBackupAndRestoreDatabase(false);
+            _frmRestore._restart = new frmBackupAndRestoreDatabase.m_restartFormMain(frmMain_FormClosed);
+            _frmRestore.StartPosition = FormStartPosition.CenterParent;
+            _frmRestore.ShowDialog();
+
+        }
 
         public delegate void showLogin(object sender, FormClosedEventArgs e);
         public showLogin _loginShow;
+
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             _loginShow(null,null);
@@ -308,18 +348,6 @@ namespace Manager_Book_Store.Presentation_Layer
             barStaticItem_Time.Caption = DateTime.Now.ToShortTimeString();
         }
 
-        private void bbtnLiabilities_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_LiabilitiesReportObject))
-            {
-                m_LiabilitiesReportObject = new frmLiabilitiesReport();
-                xtraTabbedMdiManagerMenu.FloatForms.Add(m_LiabilitiesReportObject);
-                m_LiabilitiesReportObject.MdiParent = this;
-                m_LiabilitiesReportObject.Show();
-            }
-            else
-                m_LiabilitiesReportObject.Activate();
-        }
 
     }
 }
