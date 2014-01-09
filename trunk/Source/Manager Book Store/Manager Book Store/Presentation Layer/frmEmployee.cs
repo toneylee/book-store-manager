@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Manager_Book_Store.Data_Tranfer_Object;
 using Manager_Book_Store.Business_Layer;
 using DevExpress.XtraGrid.Selection;
+using Manager_Book_Store.General;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
@@ -103,12 +105,38 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            String _user = createUserName(txtEmployeeName.Text, dateBirthDay.DateTime.ToString());
+            String _pass = CodeDTO.getMD5Hash("123456789");
             m_EmployeeObject = new CEmployeeDTO(txtEmployeeId.Text, txtEmployeeName.Text, cmbEmployeeGender.Text,
-            dateBirthDay.DateTime, txtEmployeePhone.Text, txtEmployeeAddress.Text, dateToWork.DateTime, lkEmployeeCharge.EditValue.ToString(), "", "",txtEmployeeEmail.Text);
+            dateBirthDay.DateTime, txtEmployeePhone.Text, txtEmployeeAddress.Text, dateToWork.DateTime, lkEmployeeCharge.EditValue.ToString(), _user, _pass, txtEmployeeEmail.Text);
             m_EmployeeExecute.AddEmployeeToDatabase(m_EmployeeObject);
             m_EmployeeData = m_EmployeeExecute.getEmployeeDataFromDatabase();
             grdListEmployee.DataSource = m_EmployeeData;
             grdvListEmployee.FocusedRowHandle = grdvListEmployee.DataRowCount - 1;
         }
+
+        //Ham chuyen từ chuỗi có dấu sang không dấu
+        public static string convertToUnSign3(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+        //Ham tao ten dang nhap
+        private string createUserName(string str, string ngayS)
+        {
+            str = convertToUnSign3(str).Trim();
+            str = str.Substring(str.LastIndexOf(" ") + 1);
+            //lay so id cua nhan vien
+            int lenght = ngayS.LastIndexOf("/");
+            string temp = ngayS.Substring(lenght + 3, 2);
+            return (str + temp).ToLower();
+        }
+
+        private void txtEmployeePhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckInformationEntered.checkCharacterInput(e, false);
+        }
+
     }
 }

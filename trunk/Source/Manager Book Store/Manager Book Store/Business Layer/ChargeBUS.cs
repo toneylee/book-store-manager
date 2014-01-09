@@ -32,6 +32,12 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_ChargeDAL.getChargeDataFromDatabase();
         }
+
+         public String getChargeWithMaCV(CChargeDTO _ChargeObject)
+         {
+             return m_ChargeDAL.getChargeWithMaCV(_ChargeObject);
+         }
+
          public DataTable lookAtChargeDataFromDatabase(String _ChargeName)
          {
              return m_ChargeDAL.lookAtChargeDataFromDatabase(_ChargeName);

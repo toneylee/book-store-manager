@@ -60,6 +60,16 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.CommandText = "GetChargeDataFromDatabase";
             return m_ChargeExecute.getData(m_cmd);
         }
+
+        public String getChargeWithMaCV(CChargeDTO _ChargeObject)
+        {
+            m_cmd = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.Parameters.Add("MaCV", SqlDbType.NVarChar).Value = _ChargeObject.maChucVu;
+            m_cmd.CommandText = "GetChargeWithMaCV";
+            return m_ChargeExecute.getStringExecuter(m_cmd);
+        }
+
         public DataTable lookAtChargeDataFromDatabase(String _ChargeName)
         {
             m_cmd = new SqlCommand();
