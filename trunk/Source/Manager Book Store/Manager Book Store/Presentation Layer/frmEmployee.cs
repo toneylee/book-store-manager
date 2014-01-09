@@ -110,6 +110,7 @@ namespace Manager_Book_Store.Presentation_Layer
             m_EmployeeObject = new CEmployeeDTO(txtEmployeeId.Text, txtEmployeeName.Text, cmbEmployeeGender.Text,
             dateBirthDay.DateTime, txtEmployeePhone.Text, txtEmployeeAddress.Text, dateToWork.DateTime, lkEmployeeCharge.EditValue.ToString(), _user, _pass, txtEmployeeEmail.Text);
             m_EmployeeExecute.AddEmployeeToDatabase(m_EmployeeObject);
+           
             m_EmployeeData = m_EmployeeExecute.getEmployeeDataFromDatabase();
             grdListEmployee.DataSource = m_EmployeeData;
             grdvListEmployee.FocusedRowHandle = grdvListEmployee.DataRowCount - 1;

@@ -10,7 +10,7 @@ namespace Manager_Book_Store.Data_Access_Layer
 {
     class CChargeDAL
     {
-         private CChargeDTO m_ChargeObject;
+        private CChargeDTO m_ChargeObject;
         private CDataExecute  m_ChargeExecute;
         private SqlCommand    m_cmd;
 
