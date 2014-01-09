@@ -9,6 +9,7 @@ using DevExpress.XtraEditors;
 using Manager_Book_Store.Data_Tranfer_Object;
 using System.Data.SqlClient;
 using Manager_Book_Store.Data_Access_Layer;
+using Manager_Book_Store.General;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
@@ -20,7 +21,6 @@ namespace Manager_Book_Store.Presentation_Layer
         public delegate void showLogin(object sender, FormClosedEventArgs e);
         public showLogin _loginShow;
         //
-        private CodeDTO md5;
         public static CEmployeeDTO m_EmployeeObject;
         private CLoginBUS m_loginExecute;
         private DataTable          m_EmployeeData;
@@ -30,7 +30,6 @@ namespace Manager_Book_Store.Presentation_Layer
             InitializeComponent();
             m_EmployeeObject = new CEmployeeDTO();
             m_loginExecute = new CLoginBUS();
-            md5 = new CodeDTO();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -82,7 +81,7 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             try
             {
-                m_EmployeeData = m_loginExecute.getEmployee_UserName_Pass(txtUser.Text, txtPass.Text);
+                m_EmployeeData = m_loginExecute.getEmployee_UserName_Pass(txtUser.Text, _passWord);
                 if (m_EmployeeData != null)
                 {
                     String User = m_EmployeeData.Rows[0]["UserName"].ToString();
@@ -90,7 +89,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
                     if (txtUser.Text.Equals(User))
                     {
-                        if (txtPass.Text.Equals(Pass))
+                        if (_passWord.Equals(Pass))
                         {
                             m_EmployeeObject.maNhanVien = m_EmployeeData.Rows[0]["MaNV"].ToString();
                             m_EmployeeObject.tenNhanVien = m_EmployeeData.Rows[0]["TenNV"].ToString();
@@ -131,13 +130,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 }
                 else
                 {
-                    /* if (login(txtUser.Text, md5.getMD5Hash(txtpass.Text)))
-                     {
-                         frmMain _frmMain = new frmMain();
-                         _frmMain.Show();
-                     }
-                     */
-                    if (login(txtUser.Text, txtPass.Text))
+                    if (login(txtUser.Text, CodeDTO.getMD5Hash(txtPass.Text.Trim())))
                     {
                         frmMain _frmMain = new frmMain();
                         _frmMain.WindowState = FormWindowState.Maximized;

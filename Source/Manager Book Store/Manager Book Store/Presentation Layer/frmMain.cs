@@ -37,6 +37,8 @@ namespace Manager_Book_Store.Presentation_Layer
         private frmSurvivalReport m_SurvivalReportFormObject;
         private frmRegulations m_RegulationFormObject;
         private frmLiabilitiesReport m_LiabilitiesReportObject;
+        private frmInfoEmployee frmInfoEmployee;
+
         public frmMain()
         {
             InitializeComponent();
@@ -346,6 +348,19 @@ namespace Manager_Book_Store.Presentation_Layer
         void _timer_Tick(object sender, EventArgs e)
         {
             barStaticItem_Time.Caption = DateTime.Now.ToShortTimeString();
+        }
+
+        private void bbtnInfoEmployee_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(frmInfoEmployee))
+            {
+                frmInfoEmployee = new frmInfoEmployee();
+                xtraTabbedMdiManagerMenu.FloatForms.Add(frmInfoEmployee);
+                frmInfoEmployee.MdiParent = this;
+                frmInfoEmployee.Show();
+            }
+            else
+                frmInfoEmployee.Activate();
         }
 
 

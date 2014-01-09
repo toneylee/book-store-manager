@@ -30,6 +30,12 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             return m_employeeDAL.UpdateEmployeeToDatabase(_EmployeeObject);
         }
+
+        public bool UpdateEmployeeToDatabaseNotPassWord(CEmployeeDTO _EmployeeObject)
+        {
+            return m_employeeDAL.UpdateEmployeeToDatabaseNotPassWord(_EmployeeObject);
+        }
+
         public DataTable getEmployeeDataFromDatabase()
         {
             return m_employeeDAL.getEmployeeDataFromDatabase();

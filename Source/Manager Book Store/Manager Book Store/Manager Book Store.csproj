@@ -160,7 +160,7 @@
     <Compile Include="Data Tranfer Object\BookTitlesDTO.cs" />
     <Compile Include="Data Tranfer Object\CashReceiptVoucherDTO.cs" />
     <Compile Include="Data Tranfer Object\ChargeDTO.cs" />
-    <Compile Include="Data Tranfer Object\CodeDTO.cs" />
+    <Compile Include="General\CodeDTO.cs" />
     <Compile Include="Data Tranfer Object\CustomerDTO.cs" />
     <Compile Include="Data Tranfer Object\DeliveryNoteDetailDTO.cs" />
     <Compile Include="Data Tranfer Object\DeliveryNoteDTO.cs" />
@@ -203,6 +203,12 @@
     <Compile Include="Presentation Layer\frmCashReceiptVoucher.Designer.cs">
       <DependentUpon>frmCashReceiptVoucher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\frmChangsePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmChangsePassWord.Designer.cs">
+      <DependentUpon>frmChangsePassWord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\frmCharge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,12 @@
     </Compile>
     <Compile Include="Presentation Layer\frmEmployeeSearch.Designer.cs">
       <DependentUpon>frmEmployeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmInfoEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmInfoEmployee.Designer.cs">
+      <DependentUpon>frmInfoEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\frmReceiptNote.cs">
       <SubType>Form</SubType>

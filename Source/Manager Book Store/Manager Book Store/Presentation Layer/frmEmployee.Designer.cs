@@ -397,7 +397,7 @@
             this.dateToWork.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateToWork.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateToWork.Size = new System.Drawing.Size(155, 20);
-            this.dateToWork.TabIndex = 18;
+            this.dateToWork.TabIndex = 14;
             // 
             // labEmployeeDateToWork
             // 
@@ -424,7 +424,7 @@
             this.dateBirthDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateBirthDay.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateBirthDay.Size = new System.Drawing.Size(161, 20);
-            this.dateBirthDay.TabIndex = 18;
+            this.dateBirthDay.TabIndex = 13;
             // 
             // labEmployeeBirthDate
             // 
@@ -487,14 +487,15 @@
             this.txtEmployeePhone.Location = new System.Drawing.Point(103, 127);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
             this.txtEmployeePhone.Size = new System.Drawing.Size(161, 20);
-            this.txtEmployeePhone.TabIndex = 15;
+            this.txtEmployeePhone.TabIndex = 18;
+            this.txtEmployeePhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeePhone_KeyPress);
             // 
             // txtEmployeeEmail
             // 
             this.txtEmployeeEmail.Location = new System.Drawing.Point(414, 76);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
             this.txtEmployeeEmail.Size = new System.Drawing.Size(155, 20);
-            this.txtEmployeeEmail.TabIndex = 15;
+            this.txtEmployeeEmail.TabIndex = 16;
             // 
             // labEmployeeName
             // 
@@ -509,7 +510,7 @@
             this.txtEmployeeAddress.Location = new System.Drawing.Point(103, 96);
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
             this.txtEmployeeAddress.Size = new System.Drawing.Size(161, 20);
-            this.txtEmployeeAddress.TabIndex = 15;
+            this.txtEmployeeAddress.TabIndex = 17;
             // 
             // txtEmployeeId
             // 
@@ -540,7 +541,7 @@
             this.cmbEmployeeGender.Properties.PopupSizeable = true;
             this.cmbEmployeeGender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbEmployeeGender.Size = new System.Drawing.Size(161, 20);
-            this.cmbEmployeeGender.TabIndex = 17;
+            this.cmbEmployeeGender.TabIndex = 15;
             // 
             // navBarEmployeeLookAt
             // 

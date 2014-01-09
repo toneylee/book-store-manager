@@ -66,8 +66,29 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.Parameters.Add("MaCV", SqlDbType.NVarChar).Value = _EmployeeObject.maChucVu;
             m_cmd.Parameters.Add("SoDienThoai", SqlDbType.NVarChar).Value = _EmployeeObject.soDienThoai;
             m_cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = _EmployeeObject.email;
+            m_cmd.Parameters.Add("UserName", SqlDbType.NVarChar).Value = _EmployeeObject.tenDangNhap;
+            m_cmd.Parameters.Add("PassWord", SqlDbType.NVarChar).Value = _EmployeeObject.matKhau;
             return m_EmployeeExecute.updateData(m_cmd) > 0;
         }
+
+        public bool UpdateEmployeeToDatabaseNotPassWord(CEmployeeDTO _EmployeeObject)
+        {
+            m_cmd = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.CommandText = "UpdateEmployeeDataToDatabaseNotPassWord";
+            m_cmd.Parameters.Add("MaNV", SqlDbType.NVarChar).Value = _EmployeeObject.maNhanVien;
+            m_cmd.Parameters.Add("TenNV", SqlDbType.NVarChar).Value = _EmployeeObject.tenNhanVien;
+            m_cmd.Parameters.Add("GioiTinh", SqlDbType.NVarChar).Value = _EmployeeObject.gioiTinh;
+            m_cmd.Parameters.Add("NgaySinh", SqlDbType.SmallDateTime).Value = _EmployeeObject.ngaySinh;
+            m_cmd.Parameters.Add("NgayVaoLam", SqlDbType.SmallDateTime).Value = _EmployeeObject.ngayVaoLam;
+            m_cmd.Parameters.Add("DiaChi", SqlDbType.NVarChar).Value = _EmployeeObject.diaChi;
+            m_cmd.Parameters.Add("MaCV", SqlDbType.NVarChar).Value = _EmployeeObject.maChucVu;
+            m_cmd.Parameters.Add("SoDienThoai", SqlDbType.NVarChar).Value = _EmployeeObject.soDienThoai;
+            m_cmd.Parameters.Add("TenDangNhap", SqlDbType.NVarChar).Value = _EmployeeObject.tenDangNhap;
+            m_cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = _EmployeeObject.email;
+            return m_EmployeeExecute.updateData(m_cmd) > 0;
+        }
+
         public DataTable getEmployeeDataFromDatabase()
         {
             m_cmd = new SqlCommand();
