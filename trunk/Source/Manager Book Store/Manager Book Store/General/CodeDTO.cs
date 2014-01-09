@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;//thư viện hỗ trợ mã hóa MD5
 
-namespace Manager_Book_Store.Data_Tranfer_Object
+namespace Manager_Book_Store.General
 {
     class CodeDTO
     {
         //Hàm tạo mã MD5
-        public string getMD5Hash(string input)
+        public static string getMD5Hash(string input)
         {
             MD5 md5hash = MD5.Create();
             //chuyển chuỗi input thành mảng kiểu byte và tính toán để băm.
@@ -23,7 +23,7 @@ namespace Manager_Book_Store.Data_Tranfer_Object
             return strBuilder.ToString();
         }
         //Viết hàm kiểm tra lại quá trình dịch mã md5 có đung không?
-        public bool VerifyMd5Hash(string input, string hash)
+        public static bool VerifyMd5Hash(string input, string hash)
         {
             MD5 md5hash = MD5.Create();
             //Bảng băm từ input trong hàm
