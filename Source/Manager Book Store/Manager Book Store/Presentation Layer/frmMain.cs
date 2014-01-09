@@ -38,7 +38,7 @@ namespace Manager_Book_Store.Presentation_Layer
         private frmRegulations m_RegulationFormObject;
         private frmLiabilitiesReport m_LiabilitiesReportObject;
         private frmInfoEmployee frmInfoEmployee;
-
+        private frmDecentralization m_frmDecentralization;
         public frmMain()
         {
             InitializeComponent();
@@ -361,6 +361,25 @@ namespace Manager_Book_Store.Presentation_Layer
             }
             else
                 frmInfoEmployee.Activate();
+        }
+
+        private void ribbMain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bbtnDecentralization_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_frmDecentralization))
+            {
+                m_frmDecentralization = new frmDecentralization();
+                xtraTabbedMdiManagerMenu.FloatForms.Add(m_frmDecentralization);
+                m_frmDecentralization.MdiParent = this;
+                m_frmDecentralization.Show();
+
+            }
+            else
+                m_frmDecentralization.Activate();
         }
 
 

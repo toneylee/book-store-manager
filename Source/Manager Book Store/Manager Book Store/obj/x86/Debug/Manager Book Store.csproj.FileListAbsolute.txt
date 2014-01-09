@@ -207,3 +207,4 @@ G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Stor
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDecentralization.resources

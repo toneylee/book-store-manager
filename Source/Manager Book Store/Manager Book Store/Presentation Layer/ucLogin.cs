@@ -82,7 +82,7 @@ namespace Manager_Book_Store.Presentation_Layer
             try
             {
                 m_EmployeeData = m_loginExecute.getEmployee_UserName_Pass(txtUser.Text, _passWord);
-                if (m_EmployeeData != null)
+                if (m_EmployeeData.Rows.Count > 0)
                 {
                     String User = m_EmployeeData.Rows[0]["UserName"].ToString();
                     String Pass = m_EmployeeData.Rows[0]["PassWord"].ToString();

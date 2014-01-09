@@ -55,6 +55,7 @@
             this.bbtnLiabilities = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnBackup = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnRestore = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnInfoEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.ribpSystem = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribpgBackupAndRestore = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribpRule = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -79,7 +80,8 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bbtnInfoEmployee = new DevExpress.XtraBars.BarButtonItem();
+            this.ribpgDecentralizaiton = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbtnDecentralization = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
@@ -118,10 +120,11 @@
             this.bbtnLiabilities,
             this.bbtnBackup,
             this.bbtnRestore,
-            this.bbtnInfoEmployee});
+            this.bbtnInfoEmployee,
+            this.bbtnDecentralization});
             this.ribbMain.LargeImages = this.imgMain;
             this.ribbMain.Location = new System.Drawing.Point(0, 0);
-            this.ribbMain.MaxItemId = 26;
+            this.ribbMain.MaxItemId = 27;
             this.ribbMain.Name = "ribbMain";
             this.ribbMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribpSystem,
@@ -135,6 +138,7 @@
             this.ribbMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbMain.Size = new System.Drawing.Size(680, 131);
             this.ribbMain.StatusBar = this.ribbonStatusBar;
+            this.ribbMain.Click += new System.EventHandler(this.ribbMain_Click);
             // 
             // imgMain
             // 
@@ -163,6 +167,7 @@
             this.imgMain.Images.SetKeyName(20, "backupData.png");
             this.imgMain.Images.SetKeyName(21, "RestoreData.png");
             this.imgMain.Images.SetKeyName(22, "ic_change_password.png");
+            this.imgMain.Images.SetKeyName(23, "ic_decentralization.png");
             // 
             // bbtnBook
             // 
@@ -375,10 +380,19 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbtnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnRestore_ItemClick);
             // 
+            // bbtnInfoEmployee
+            // 
+            this.bbtnInfoEmployee.Caption = "Thông tin";
+            this.bbtnInfoEmployee.Id = 25;
+            this.bbtnInfoEmployee.LargeImageIndex = 22;
+            this.bbtnInfoEmployee.Name = "bbtnInfoEmployee";
+            this.bbtnInfoEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnInfoEmployee_ItemClick);
+            // 
             // ribpSystem
             // 
             this.ribpSystem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribpgBackupAndRestore});
+            this.ribpgBackupAndRestore,
+            this.ribpgDecentralizaiton});
             this.ribpSystem.Name = "ribpSystem";
             this.ribpSystem.Text = "Hệ thống";
             // 
@@ -554,13 +568,19 @@
             this.barDockControlRight.Location = new System.Drawing.Point(680, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 449);
             // 
-            // bbtnInfoEmployee
+            // ribpgDecentralizaiton
             // 
-            this.bbtnInfoEmployee.Caption = "Thông tin";
-            this.bbtnInfoEmployee.Id = 25;
-            this.bbtnInfoEmployee.LargeImageIndex = 22;
-            this.bbtnInfoEmployee.Name = "bbtnInfoEmployee";
-            this.bbtnInfoEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnInfoEmployee_ItemClick);
+            this.ribpgDecentralizaiton.ItemLinks.Add(this.bbtnDecentralization);
+            this.ribpgDecentralizaiton.Name = "ribpgDecentralizaiton";
+            this.ribpgDecentralizaiton.Text = "Phân quyền";
+            // 
+            // bbtnDecentralization
+            // 
+            this.bbtnDecentralization.Caption = "Phân quyền";
+            this.bbtnDecentralization.Id = 26;
+            this.bbtnDecentralization.LargeImageIndex = 23;
+            this.bbtnDecentralization.Name = "bbtnDecentralization";
+            this.bbtnDecentralization.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnDecentralization_ItemClick);
             // 
             // frmMain
             // 
@@ -644,5 +664,7 @@
         private DevExpress.XtraBars.BarButtonItem bbtnBackup;
         private DevExpress.XtraBars.BarButtonItem bbtnRestore;
         private DevExpress.XtraBars.BarButtonItem bbtnInfoEmployee;
+        private DevExpress.XtraBars.BarButtonItem bbtnDecentralization;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribpgDecentralizaiton;
     }
 }
