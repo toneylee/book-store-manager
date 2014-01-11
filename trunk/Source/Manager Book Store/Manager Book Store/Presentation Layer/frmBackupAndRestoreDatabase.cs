@@ -194,7 +194,7 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                     else
                     {
-                        labInfo.Text = "Chương trình sẽ được\nkhởi động lại sau 10 giây";
+                        labInfo.Text = "\tChương trình sẽ được\nkhởi động lại sau 10 giây";
                         labInfo.Refresh();
                         progressBar.Visible = false;
                         picClose.Enabled = false;

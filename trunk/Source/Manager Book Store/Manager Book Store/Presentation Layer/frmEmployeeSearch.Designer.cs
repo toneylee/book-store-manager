@@ -60,6 +60,7 @@
             this.panSearchContent = new DevExpress.XtraEditors.PanelControl();
             this.grpSearchContent = new DevExpress.XtraEditors.GroupControl();
             this.labContentSearch = new DevExpress.XtraEditors.LabelControl();
+            this.chkEnableChoseGender = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panSearchTitles)).BeginInit();
             this.panSearchTitles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtContentSearch.Properties)).BeginInit();
@@ -82,6 +83,7 @@
             this.panSearchContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSearchContent)).BeginInit();
             this.grpSearchContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panSearchTitles
@@ -111,6 +113,7 @@
             this.txtContentSearch.Size = new System.Drawing.Size(263, 20);
             this.txtContentSearch.TabIndex = 0;
             this.txtContentSearch.TextChanged += new System.EventHandler(this.txtContentSearch_TextChanged);
+            this.txtContentSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContentSearch_KeyPress);
             // 
             // panView
             // 
@@ -297,6 +300,7 @@
             // 
             // xtraScrollableControl1
             // 
+            this.xtraScrollableControl1.Controls.Add(this.chkEnableChoseGender);
             this.xtraScrollableControl1.Controls.Add(this.chkEnableChoseCharge);
             this.xtraScrollableControl1.Controls.Add(this.lkCharge);
             this.xtraScrollableControl1.Controls.Add(this.cmbGender);
@@ -424,6 +428,16 @@
             this.labContentSearch.TabIndex = 1;
             this.labContentSearch.Text = "Nhập nội dung";
             // 
+            // chkEnableChoseGender
+            // 
+            this.chkEnableChoseGender.EditValue = true;
+            this.chkEnableChoseGender.Location = new System.Drawing.Point(4, 91);
+            this.chkEnableChoseGender.Name = "chkEnableChoseGender";
+            this.chkEnableChoseGender.Properties.Caption = "checkEdit1";
+            this.chkEnableChoseGender.Size = new System.Drawing.Size(20, 19);
+            this.chkEnableChoseGender.TabIndex = 5;
+            this.chkEnableChoseGender.CheckedChanged += new System.EventHandler(this.chkEnableChoseGender_CheckedChanged);
+            // 
             // frmEmployeeSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpSearchContent)).EndInit();
             this.grpSearchContent.ResumeLayout(false);
             this.grpSearchContent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +513,6 @@
         private DevExpress.XtraEditors.LookUpEdit lkCharge;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.CheckEdit chkEnableChoseCharge;
+        private DevExpress.XtraEditors.CheckEdit chkEnableChoseGender;
     }
 }

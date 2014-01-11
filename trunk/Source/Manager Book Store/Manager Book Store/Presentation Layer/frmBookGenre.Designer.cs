@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBookGenreExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnCacelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -81,7 +81,7 @@
             // panelBookGenreExecute
             // 
             this.panelBookGenreExecute.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelBookGenreExecute.Controls.Add(this.btnCacelOfUpdate);
+            this.panelBookGenreExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panelBookGenreExecute.Controls.Add(this.btnUpdate);
             this.panelBookGenreExecute.Controls.Add(this.btnSave);
             this.panelBookGenreExecute.Controls.Add(this.btnCancel);
@@ -93,16 +93,16 @@
             this.panelBookGenreExecute.Size = new System.Drawing.Size(731, 55);
             this.panelBookGenreExecute.TabIndex = 1;
             // 
-            // btnCacelOfUpdate
+            // btnCancelOfUpdate
             // 
-            this.btnCacelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCacelOfUpdate.Location = new System.Drawing.Point(228, 12);
-            this.btnCacelOfUpdate.Name = "btnCacelOfUpdate";
-            this.btnCacelOfUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnCacelOfUpdate.TabIndex = 1;
-            this.btnCacelOfUpdate.Text = "Hủy thao tác";
-            this.btnCacelOfUpdate.Visible = false;
-            this.btnCacelOfUpdate.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(228, 12);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(75, 31);
+            this.btnCancelOfUpdate.TabIndex = 1;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -175,8 +175,10 @@
             this.bookGenreSNo,
             this.BookGenreId,
             this.BookGenreName});
+            this.grdvListBookGenre.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.grdvListBookGenre.GridControl = this.grdListBookGenre;
             this.grdvListBookGenre.Name = "grdvListBookGenre";
+            this.grdvListBookGenre.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
             this.grdvListBookGenre.OptionsView.ShowGroupPanel = false;
             this.grdvListBookGenre.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvListBookGenre_FocusedRowChanged);
             // 
@@ -324,6 +326,7 @@
             this.txtBookGenreNameLA.Size = new System.Drawing.Size(153, 20);
             this.txtBookGenreNameLA.TabIndex = 3;
             this.txtBookGenreNameLA.TextChanged += new System.EventHandler(this.txtBookGenreNameLA_TextChanged);
+            this.txtBookGenreNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookGenreNameLA_KeyPress);
             // 
             // labBookGenreNameLA
             // 
@@ -423,7 +426,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn bookGenreSNo;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxEPBookGenre;
-        private DevExpress.XtraEditors.SimpleButton btnCacelOfUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
 
     }
 }

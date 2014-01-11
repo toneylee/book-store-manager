@@ -13,6 +13,7 @@ using Manager_Book_Store.Data_Tranfer_Object;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using System.Collections;
+using Manager_Book_Store.General;
 
 namespace Manager_Book_Store.Presentation_Layer
 { 
@@ -42,6 +43,7 @@ namespace Manager_Book_Store.Presentation_Layer
             m_BookTitlesData = new DataTable();        
             m_AuthorDetailExecute = new CAuthorDetailBUS();
             BookTiltesSno.VisibleIndex = 1;
+            btnSave.Enabled = false;
         }
 
         private void frmBookTitles_Load(object sender, EventArgs e)
@@ -63,28 +65,38 @@ namespace Manager_Book_Store.Presentation_Layer
         public  ArrayList _listAuthorNameFirst;
         private void grdvListBookTitles_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            String _listAuthorNameValues = null;
-            if (e.FocusedRowHandle >= 0)
+            if (m_IsAdd)
+                return;
+            try
             {
-                _listAuthorNameValues = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, grdvListBookTitles.Columns["NhomTG"]).ToString();
-                txtBookTitlesId.Text = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, grdvListBookTitles.Columns["MaDauSach"]).ToString();
-                txtBookTitlesName.Text = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, grdvListBookTitles.Columns["TenSach"]).ToString();
-                lkBookGenreName.EditValue = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, "MaTL").ToString();
-            }
-            String[] _listAuthorName = _listAuthorNameValues.Split(',');
-            chkCmbAuthorName.RefreshEditValue();
-            chkCmbAuthorName.SetEditValue(null);
-            for (int i = 0; i < _listAuthorName.Length; i++)
-            {
-                foreach (CheckedListBoxItem _authorName in chkCmbAuthorName.Properties.Items)
+                String _listAuthorNameValues = null;
+                if (e.FocusedRowHandle >= 0)
                 {
-                    if (_authorName.Description.ToLower().Trim().Equals(_listAuthorName[i].ToLower().Trim()))
+                    _listAuthorNameValues = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, grdvListBookTitles.Columns["NhomTG"]).ToString();
+                    txtBookTitlesId.Text = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, grdvListBookTitles.Columns["MaDauSach"]).ToString();
+                    txtBookTitlesName.Text = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, grdvListBookTitles.Columns["TenSach"]).ToString();
+                    lkBookGenreName.EditValue = grdvListBookTitles.GetRowCellValue(e.FocusedRowHandle, "MaTL").ToString();
+                }
+                String[] _listAuthorName = _listAuthorNameValues.Split(',');
+                chkCmbAuthorName.RefreshEditValue();
+                chkCmbAuthorName.SetEditValue(null);
+                for (int i = 0; i < _listAuthorName.Length; i++)
+                {
+                    foreach (CheckedListBoxItem _authorName in chkCmbAuthorName.Properties.Items)
                     {
-                        _authorName.CheckState = CheckState.Checked;
+                        if (_authorName.Description.ToLower().Trim().Equals(_listAuthorName[i].ToLower().Trim()))
+                        {
+                            _authorName.CheckState = CheckState.Checked;
+                        }
                     }
                 }
+                _listAuthorNameFirst = new ArrayList(chkCmbAuthorName.EditValue.ToString().Split(new string[] { ", " }, StringSplitOptions.None));
             }
-            _listAuthorNameFirst = new ArrayList(chkCmbAuthorName.EditValue.ToString().Split(new string[] { ", " }, StringSplitOptions.None));
+            catch (System.Exception)
+            {
+            	
+            }
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -117,6 +129,10 @@ namespace Manager_Book_Store.Presentation_Layer
                             _listBookTitleObjectInDelibility.Add(_rowObjectDetail["MaDauSach"]);
                         }
                     }
+                    else
+                    {
+                        _listBookTitleObjectInDelibility.Add(_rowObjectDetail["MaDauSach"]);
+                    }
                 }
                 if (_listBookTitleObjectInDelibility.Count != 0)
                 {
@@ -127,10 +143,14 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                     XtraMessageBox.Show(_erroContent);
                 }
+                else
+                {
+                    XtraCustomMessageBox.Show("Xóa dữ liệu thành công!", "Thông báo", true);
+                }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                XtraCustomMessageBox.Show("Xóa dữ liệu thất bại!", "Lỗi", true);
             }
             finally
             {
@@ -140,25 +160,45 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!checkData())
+            {
+                return;
+            }
             try
             {
                 if (m_IsAdd)
                 {
                     m_BookTitlesObject = new CBookTitlesDTO(txtBookTitlesId.Text, lkBookGenreName.EditValue.ToString(), txtBookTitlesName.Text);
-                    m_BookTitlesExecute.AddBookTitlesToDatabase(m_BookTitlesObject);
+                    if (m_BookTitlesExecute.AddBookTitlesToDatabase(m_BookTitlesObject))
+                    {
+                        XtraCustomMessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", true);
+                    }
+                    else
+                    {
+                        XtraCustomMessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", true);
+                    }
                     foreach (CheckedListBoxItem _authorName in chkCmbAuthorName.Properties.Items)
                     {
                         if (_authorName.CheckState == CheckState.Checked)
                         {
-                            m_AuthorDetailObject = new CAuthorDetailDTO(m_BookTitlesExecute.getBookTitlesMaxIdFromDatabase(), _authorName.Value.ToString());
+                            m_AuthorDetailObject = new CAuthorDetailDTO(m_BookTitlesExecute.getBookTitlesMaxIdFromDatabase(),
+                            _authorName.Value.ToString());
                             m_AuthorDetailExecute.AddAuthorDetailToDatabase(m_AuthorDetailObject);
                         }
                     }
                 }
                 else
                 {
-                    m_BookTitlesObject = new CBookTitlesDTO(txtBookTitlesId.Text, lkBookGenreName.EditValue.ToString(), txtBookTitlesName.Text);
-                    m_BookTitlesExecute.UpdateBookTitlesToDatabase(m_BookTitlesObject);
+                    m_BookTitlesObject = new CBookTitlesDTO(txtBookTitlesId.Text,
+                        lkBookGenreName.EditValue.ToString(), txtBookTitlesName.Text);
+                    if (m_BookTitlesExecute.UpdateBookTitlesToDatabase(m_BookTitlesObject))
+                    {
+                        XtraCustomMessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", true);
+                    }
+                    else
+                    {
+                        XtraCustomMessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", true);
+                    }
                     _listAuthorNameSecond = new ArrayList(chkCmbAuthorName.EditValue.ToString().Split(new string[] { ", " }, StringSplitOptions.None));
                     foreach (object item in _listAuthorNameFirst)
                     {
@@ -177,9 +217,9 @@ namespace Manager_Book_Store.Presentation_Layer
                 }
                 //m_AuthorDetailObject = new CAuthorDetailDTO(m_BookTitlesExecute.getBookTitlesMaxIdFromDatabase(),chkCmbAuthorName.)
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                XtraCustomMessageBox.Show("Lưu dữ liệu thất bại", "Thông báo", true);
             }
             finally
             {
@@ -194,7 +234,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtBookTitlesNameLA_TextChanged(object sender, EventArgs e)
         {
-            //m_BookTitlesData = m_BookTitlesExecute.lookAtBookTitlesDataFromDatabase(txtBookTitlesNameLA.Text);
+            m_BookTitlesData = m_BookTitlesExecute.lookAtBookTitlesDataFromDatabase(txtBooktitlesNameLA.Text);
             grdListBookTitles.DataSource = m_BookTitlesData;
 
         }
@@ -234,6 +274,10 @@ namespace Manager_Book_Store.Presentation_Layer
             {
                 case "btnAdd":
                     {
+                        m_BookTitlesMulitSelect.ClearSelection();
+                        //
+                        m_IsAdd = true;
+                        //
                         btnAdd.Visible = false;
                         btnCancel.Visible = true;
                         //
@@ -246,15 +290,19 @@ namespace Manager_Book_Store.Presentation_Layer
                         txtBookTitlesName.Text = null;
                         lkBookGenreName.EditValue = null;
                         chkCmbAuthorName.SetEditValue(null);
+                        //
+                        grdvListBookTitles.OptionsSelection.EnableAppearanceFocusedRow = false;
+                        grdvListBookTitles.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = false;
+                        //
                         txtBookTitlesName.Properties.ReadOnly = false;
                         lkBookGenreName.Properties.ReadOnly = false;
                         chkCmbAuthorName.Properties.ReadOnly = false;
                         //
-                        m_IsAdd = true;
                         break;
                     }
                 case "btnCancel":
                     {
+                        m_IsAdd = false;
                         //
                         btnAdd.Visible = true;
                         btnCancel.Visible = false;
@@ -270,9 +318,15 @@ namespace Manager_Book_Store.Presentation_Layer
                         lkBookGenreName.Properties.ReadOnly = true;
                         chkCmbAuthorName.Properties.ReadOnly = true;
                         //
+                        grdvListBookTitles.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookTitles.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        //
+                        dxErrorProvider.ClearErrors();
+                        //
                         m_BookTitlesData = m_BookTitlesExecute.getBookTitlesDataFromDatabase();
                         grdListBookTitles.DataSource = m_BookTitlesData;
-                        grdvListBookTitles.FocusedRowHandle = grdvListBookTitles.DataRowCount - 1;
+                        grdvListBookTitles.FocusedRowHandle = -1;
+                        grdvListBookTitles.FocusedRowHandle = 0;
                         break;
                     }
                 case "btnCacelOfUpdate":
@@ -292,9 +346,15 @@ namespace Manager_Book_Store.Presentation_Layer
                         lkBookGenreName.Properties.ReadOnly = true;
                         chkCmbAuthorName.Properties.ReadOnly = true;
                         //
+                        grdvListBookTitles.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookTitles.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        // 
+                        dxErrorProvider.ClearErrors();
+                        //
                         m_BookTitlesData = m_BookTitlesExecute.getBookTitlesDataFromDatabase();
                         grdListBookTitles.DataSource = m_BookTitlesData;
-                        grdvListBookTitles.FocusedRowHandle = grdvListBookTitles.DataRowCount - 1;
+                        grdvListBookTitles.FocusedRowHandle = -1;
+                        grdvListBookTitles.FocusedRowHandle = 0;
                         break;
                     }
                 case "btnDelete":
@@ -305,6 +365,7 @@ namespace Manager_Book_Store.Presentation_Layer
                         //
                         m_BookTitlesData = m_BookTitlesExecute.getBookTitlesDataFromDatabase();
                         grdListBookTitles.DataSource = m_BookTitlesData;
+                        grdvListBookTitles.FocusedRowHandle = -1;
                         grdvListBookTitles.FocusedRowHandle = 0;
                         m_BookTitlesMulitSelect.ClearSelection();
                         break;
@@ -313,12 +374,17 @@ namespace Manager_Book_Store.Presentation_Layer
                     {
                         m_IsAdd = false;
                         //
+                        m_BookTitlesMulitSelect.ClearSelection();
+                        //
                         btnUpdate.Visible = false;
                         btnCancelOfUpdate.Visible = true;
                         //
                         txtBookTitlesName.Properties.ReadOnly = false;
                         lkBookGenreName.Properties.ReadOnly = false;
                         chkCmbAuthorName.Properties.ReadOnly = false;
+                        //
+                        grdvListBookTitles.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookTitles.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
                         //
                         btnDelete.Enabled = false;
                         btnAdd.Enabled = false;
@@ -327,6 +393,8 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                 case "btnSave":
                     {
+                        m_IsAdd = false;
+                        //
                         btnAdd.Enabled = true;
                         btnDelete.Enabled = true;
                         btnUpdate.Enabled = true;
@@ -344,9 +412,47 @@ namespace Manager_Book_Store.Presentation_Layer
                         m_BookTitlesData = m_BookTitlesExecute.getBookTitlesDataFromDatabase();
                         grdListBookTitles.DataSource = m_BookTitlesData;
                         grdvListBookTitles.FocusedRowHandle = grdvListBookTitles.DataRowCount - 1;
+                        //
+                        grdvListBookTitles.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookTitles.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        //
+                        dxErrorProvider.ClearErrors();
+                        //
+
                         break;
                     }
             }
+        }
+
+        private void txtBookTitlesName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckInformationEntered.checkCharacterInput(e, true);
+        }
+
+        private bool checkData()
+        {
+            if(CheckInformationEntered.checkDataInput(lkBookGenreName,"Dữ liệu không thể để trống",ref dxErrorProvider)&&
+                CheckInformationEntered.checkDataInput(chkCmbAuthorName,"Dữ liệu không thể để trống", ref dxErrorProvider) &&
+                CheckInformationEntered.checkDataInput(txtBookTitlesName, "Dữ liệu không thể để trống", ref dxErrorProvider))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void lkBookGenreName_QueryPopUp(object sender, CancelEventArgs e)
+        {
+            m_BookGenreData = m_BookGenreExecute.getBookGenreDataFromDatabase();
+            lkBookGenreName.Properties.DataSource = m_BookGenreData;
+        }
+
+        private void chkCmbAuthorName_QueryPopUp(object sender, CancelEventArgs e)
+        {
+            m_AuthorData = m_AuthorExecute.getAuthorDataFromDatabase();
+            chkCmbAuthorName.Properties.DataSource = m_AuthorData;
         }
     }
 

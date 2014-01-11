@@ -30,6 +30,7 @@ namespace Manager_Book_Store.Presentation_Layer
             m_AuthorData    = new DataTable();
             AuthorSno.VisibleIndex = 1;
             m_IsAdd = false;
+            btnSave.Enabled = false;
         }
        
         private void frmAuthor_Load(object sender, EventArgs e)
@@ -40,12 +41,24 @@ namespace Manager_Book_Store.Presentation_Layer
       
         private void grdvListAuthor_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (e.FocusedRowHandle >= 0)
+            try
             {
-                txtAuthorId.Text = grdvListAuthor.GetRowCellValue(e.FocusedRowHandle, grdvListAuthor.Columns["MaTG"]).ToString();
-                txtAuthorName.Text = grdvListAuthor.GetRowCellValue(e.FocusedRowHandle, grdvListAuthor.Columns["TenTG"]).ToString();
-                txtAuthorAddress.Text = grdvListAuthor.GetRowCellValue(e.FocusedRowHandle, grdvListAuthor.Columns["DiaChi"]).ToString();
+                if (!m_IsAdd)
+                {
+
+                    if (e.FocusedRowHandle >= 0)
+                    {
+                        txtAuthorId.Text = grdvListAuthor.GetRowCellValue(e.FocusedRowHandle, grdvListAuthor.Columns["MaTG"]).ToString();
+                        txtAuthorName.Text = grdvListAuthor.GetRowCellValue(e.FocusedRowHandle, grdvListAuthor.Columns["TenTG"]).ToString();
+                        txtAuthorAddress.Text = grdvListAuthor.GetRowCellValue(e.FocusedRowHandle, grdvListAuthor.Columns["DiaChi"]).ToString();
+                    }
+                }
             }
+            catch (System.Exception)
+            {
+            	
+            }
+
         }
         
         private void btnAdd_Click(object sender, EventArgs e)
@@ -55,9 +68,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
            updateEnableButtonAndResetValueOfControl(ref btnUpdate);
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -82,12 +93,14 @@ namespace Manager_Book_Store.Presentation_Layer
                     {
                         _erroContent += item.ToString() + "\n";
                     }
-                    XtraMessageBox.Show(_erroContent);
+                    XtraCustomMessageBox.Show(_erroContent, "Lỗi", true);
                 }
+                else
+                    XtraCustomMessageBox.Show("Xóa dữ liệu thành công", "Thông báo", true);
             }
             catch (System.Exception)
             {
-                //XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                XtraCustomMessageBox.Show("Xóa dữ liệu thất bại", "Lỗi", true);
             }
             finally
             {
@@ -97,20 +110,35 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!checkData())
+            {
+                return;
+            }
             try
             {
                 if (m_IsAdd)
                 {
                     m_AuthorObject = new CAuthorDTO(txtAuthorId.Text, txtAuthorName.Text, txtAuthorAddress.Text);
-                    m_AuthorExecute.AddAuthorToDatabase(m_AuthorObject);
+                    if (m_AuthorExecute.AddAuthorToDatabase(m_AuthorObject))
+                    {
+                        XtraCustomMessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", true);
+                    }
+                    else
+                    {
+                        XtraCustomMessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", true);
+                    }
                 }
                 else
                 {            
                     m_AuthorObject = new CAuthorDTO(txtAuthorId.Text, txtAuthorName.Text, txtAuthorAddress.Text);
-                    m_AuthorExecute.UpdateAuthorToDatabase(m_AuthorObject);
-                    m_AuthorData = m_AuthorExecute.getAuthorDataFromDatabase();
-                    grdListAuthor.DataSource = m_AuthorData;
-                    grdvListAuthor.FocusedRowHandle = grdvListAuthor.DataRowCount - 1;
+                    if (m_AuthorExecute.UpdateAuthorToDatabase(m_AuthorObject))
+                    {
+                        XtraCustomMessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", true);
+                    }
+                    else
+                    {
+                        XtraCustomMessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", true);
+                    }
                 }
 
             }
@@ -135,12 +163,15 @@ namespace Manager_Book_Store.Presentation_Layer
             m_AuthorData = m_AuthorExecute.lookAtAuthorDataFromDatabase(txtAuthorNameLA.Text);
             grdListAuthor.DataSource = m_AuthorData;
         }
+
         private void updateEnableButtonAndResetValueOfControl(ref SimpleButton _btnControl)
         {
             switch (_btnControl.Name)
             {
                 case "btnAdd":
                     {
+                        m_AuthorMulitSelect.ClearSelection();
+                        //
                         btnAdd.Visible = false;
                         btnCancel.Visible = true;
                         //
@@ -154,15 +185,20 @@ namespace Manager_Book_Store.Presentation_Layer
                         txtAuthorAddress.Properties.ReadOnly = false;
                         txtAuthorName.Properties.ReadOnly = false;
                         //
+                        grdvListAuthor.OptionsSelection.EnableAppearanceFocusedRow = false;
+                        grdvListAuthor.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = false;
+                        //
                         m_IsAdd = true;
                         break;
                     }
                 case "btnCancel":
                     {
                         //
+                        m_IsAdd = false;
+                        //
                         btnAdd.Visible = true;
                         btnCancel.Visible = false;
-                        btnCacelOfUpdate.Visible = false;
+                        btnCancelOfUpdate.Visible = false;
                         btnUpdate.Visible = true;
                         //
                         btnUpdate.Enabled = true;
@@ -173,17 +209,21 @@ namespace Manager_Book_Store.Presentation_Layer
                         txtAuthorName.Properties.ReadOnly = true;
                         txtAuthorAddress.Properties.ReadOnly = true;
                         //
+                        grdvListAuthor.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListAuthor.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        //
                         m_AuthorData = m_AuthorExecute.getAuthorDataFromDatabase();
                         grdListAuthor.DataSource = m_AuthorData;
-                        grdvListAuthor.FocusedRowHandle = grdvListAuthor.DataRowCount - 1;
+                        grdvListAuthor.FocusedRowHandle = -1;
+                        grdvListAuthor.FocusedRowHandle = 0;
                         break;
                     }
-                case "btnCacelOfUpdate":
+                case "btnCancelOfUpdate":
                     {
                         //
                         btnAdd.Visible = true;
                         btnCancel.Visible = false;
-                        btnCacelOfUpdate.Visible = false;
+                        btnCancelOfUpdate.Visible = false;
                         btnUpdate.Visible = true;
                         //
                         btnUpdate.Enabled = true;
@@ -194,9 +234,13 @@ namespace Manager_Book_Store.Presentation_Layer
                         txtAuthorName.Properties.ReadOnly = true;
                         txtAuthorAddress.Properties.ReadOnly = true;
                         //
+                        grdvListAuthor.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListAuthor.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        //
                         m_AuthorData = m_AuthorExecute.getAuthorDataFromDatabase();
                         grdListAuthor.DataSource = m_AuthorData;
-                        grdvListAuthor.FocusedRowHandle = grdvListAuthor.DataRowCount - 1;
+                        grdvListAuthor.FocusedRowHandle = -1;
+                        grdvListAuthor.FocusedRowHandle = 0;
                         break;
                     }
                 case "btnDelete":
@@ -212,13 +256,17 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                 case "btnUpdate":
                     {
+                        m_AuthorMulitSelect.ClearSelection();
                         m_IsAdd = false;
                         //
                         btnUpdate.Visible = false;
-                        btnCacelOfUpdate.Visible = true;
+                        btnCancelOfUpdate.Visible = true;
                         //
                         txtAuthorName.Properties.ReadOnly = false;
                         txtAuthorAddress.Properties.ReadOnly = false;
+                        //
+                        grdvListAuthor.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListAuthor.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = false;
                         //
                         btnDelete.Enabled = false;
                         btnAdd.Enabled = false;
@@ -227,6 +275,7 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                 case "btnSave":
                     {
+                        m_IsAdd = false;
                         btnAdd.Enabled = true;
                         btnDelete.Enabled = true;
                         btnUpdate.Enabled = true;
@@ -235,10 +284,13 @@ namespace Manager_Book_Store.Presentation_Layer
                         btnUpdate.Visible = true;
                         btnAdd.Visible = true;
                         btnCancel.Visible = false;
-                        btnCacelOfUpdate.Visible = false;
+                        btnCancelOfUpdate.Visible = false;
                         //
                         txtAuthorName.Properties.ReadOnly = true; 
                         txtAuthorAddress.Properties.ReadOnly = true;
+                        //
+                        grdvListAuthor.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListAuthor.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
                         //
                         m_AuthorData = m_AuthorExecute.getAuthorDataFromDatabase();
                         grdListAuthor.DataSource = m_AuthorData;
@@ -250,12 +302,27 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnCacelOfUpdate_Click(object sender, EventArgs e)
         {
-            updateEnableButtonAndResetValueOfControl(ref btnCacelOfUpdate);
+            updateEnableButtonAndResetValueOfControl(ref btnCancelOfUpdate);
         }
 
         private void txtAuthorName_KeyPress(object sender, KeyPressEventArgs e)
         {
             CheckInformationEntered.checkCharacterInput(e, true);
+        }
+
+        private void txtAuthorNameLA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckInformationEntered.checkCharacterInput(e, true);
+        }
+
+        private bool checkData()
+        {
+            if (CheckInformationEntered.checkDataInput(txtAuthorName, "Dữ liệu không thể để trống", ref dxErrorProvider) &&
+                CheckInformationEntered.checkDataInput(txtAuthorAddress, "Dữ liệu không thể để trống", ref dxErrorProvider))
+            {
+                return true;
+            }
+            return false;
         }
 
     }

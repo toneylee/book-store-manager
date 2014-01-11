@@ -65,12 +65,10 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.Parameters.Add("DiaChi", SqlDbType.NVarChar).Value = _EmployeeObject.diaChi;
             m_cmd.Parameters.Add("MaCV", SqlDbType.NVarChar).Value = _EmployeeObject.maChucVu;
             m_cmd.Parameters.Add("SoDienThoai", SqlDbType.NVarChar).Value = _EmployeeObject.soDienThoai;
+            m_cmd.Parameters.Add("MatKhau", SqlDbType.NVarChar).Value = _EmployeeObject.matKhau;
             m_cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = _EmployeeObject.email;
-            m_cmd.Parameters.Add("UserName", SqlDbType.NVarChar).Value = _EmployeeObject.tenDangNhap;
-            m_cmd.Parameters.Add("PassWord", SqlDbType.NVarChar).Value = _EmployeeObject.matKhau;
             return m_EmployeeExecute.updateData(m_cmd) > 0;
         }
-
         public bool UpdateEmployeeToDatabaseNotPassWord(CEmployeeDTO _EmployeeObject)
         {
             m_cmd = new SqlCommand();
@@ -84,7 +82,6 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.Parameters.Add("DiaChi", SqlDbType.NVarChar).Value = _EmployeeObject.diaChi;
             m_cmd.Parameters.Add("MaCV", SqlDbType.NVarChar).Value = _EmployeeObject.maChucVu;
             m_cmd.Parameters.Add("SoDienThoai", SqlDbType.NVarChar).Value = _EmployeeObject.soDienThoai;
-            m_cmd.Parameters.Add("TenDangNhap", SqlDbType.NVarChar).Value = _EmployeeObject.tenDangNhap;
             m_cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = _EmployeeObject.email;
             return m_EmployeeExecute.updateData(m_cmd) > 0;
         }

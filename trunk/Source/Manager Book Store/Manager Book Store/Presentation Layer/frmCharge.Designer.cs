@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelChargeTitle = new DevExpress.XtraEditors.PanelControl();
             this.labChargeTitle = new DevExpress.XtraEditors.LabelControl();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panelChargeExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.panelChargeView = new DevExpress.XtraEditors.PanelControl();
             this.grdListCharge = new DevExpress.XtraGrid.GridControl();
             this.grdvListCharge = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -54,6 +56,7 @@
             this.navBarGroupControlContainer = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.txtChargeNameLA = new DevExpress.XtraEditors.TextEdit();
             this.labChargeNameLA = new DevExpress.XtraEditors.LabelControl();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelChargeTitle)).BeginInit();
             this.panelChargeTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelChargeExecute)).BeginInit();
@@ -72,6 +75,7 @@
             this.navBarChargeLookAt.SuspendLayout();
             this.navBarGroupControlContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtChargeNameLA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChargeTitle
@@ -99,7 +103,7 @@
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.Location = new System.Drawing.Point(355, 12);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(78, 31);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -107,11 +111,11 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(231, 12);
+            this.btnCancel.Location = new System.Drawing.Point(229, 12);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 31);
+            this.btnCancel.Size = new System.Drawing.Size(98, 31);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Hủy thêm mới";
+            this.btnCancel.Text = "Hủy thao tác";
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -128,26 +132,17 @@
             // panelChargeExecute
             // 
             this.panelChargeExecute.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelChargeExecute.Controls.Add(this.btnUpdate);
             this.panelChargeExecute.Controls.Add(this.btnSave);
-            this.panelChargeExecute.Controls.Add(this.btnCancel);
-            this.panelChargeExecute.Controls.Add(this.btnAdd);
             this.panelChargeExecute.Controls.Add(this.btnDelete);
+            this.panelChargeExecute.Controls.Add(this.btnUpdate);
+            this.panelChargeExecute.Controls.Add(this.btnAdd);
+            this.panelChargeExecute.Controls.Add(this.btnCancelOfUpdate);
+            this.panelChargeExecute.Controls.Add(this.btnCancel);
             this.panelChargeExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelChargeExecute.Location = new System.Drawing.Point(0, 362);
             this.panelChargeExecute.Name = "panelChargeExecute";
             this.panelChargeExecute.Size = new System.Drawing.Size(864, 55);
             this.panelChargeExecute.TabIndex = 7;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(248, 12);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 31);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Thêm mới";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -158,6 +153,27 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Location = new System.Drawing.Point(250, 12);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(77, 31);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(355, 12);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(93, 31);
+            this.btnCancelOfUpdate.TabIndex = 5;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
             // 
             // panelChargeView
             // 
@@ -283,8 +299,10 @@
             // 
             this.txtChargeName.Location = new System.Drawing.Point(426, 6);
             this.txtChargeName.Name = "txtChargeName";
+            this.txtChargeName.Properties.ReadOnly = true;
             this.txtChargeName.Size = new System.Drawing.Size(184, 20);
             this.txtChargeName.TabIndex = 3;
+            this.txtChargeName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChargeName_KeyPress);
             // 
             // navBarChargeLookAt
             // 
@@ -324,9 +342,10 @@
             // 
             this.txtChargeNameLA.Location = new System.Drawing.Point(43, 34);
             this.txtChargeNameLA.Name = "txtChargeNameLA";
-            this.txtChargeNameLA.Size = new System.Drawing.Size(153, 20);
+            this.txtChargeNameLA.Size = new System.Drawing.Size(164, 20);
             this.txtChargeNameLA.TabIndex = 3;
             this.txtChargeNameLA.TextChanged += new System.EventHandler(this.txtChargeNameLA_TextChanged);
+            this.txtChargeNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChargeName_KeyPress);
             // 
             // labChargeNameLA
             // 
@@ -335,6 +354,10 @@
             this.labChargeNameLA.Size = new System.Drawing.Size(85, 13);
             this.labChargeNameLA.TabIndex = 2;
             this.labChargeNameLA.Text = "Nhập tên chức vụ";
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmCharge
             // 
@@ -368,6 +391,7 @@
             this.navBarGroupControlContainer.ResumeLayout(false);
             this.navBarGroupControlContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtChargeNameLA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +424,7 @@
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer;
         private DevExpress.XtraEditors.TextEdit txtChargeNameLA;
         private DevExpress.XtraEditors.LabelControl labChargeNameLA;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
     }
 }

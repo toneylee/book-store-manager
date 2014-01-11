@@ -6,6 +6,7 @@ using Manager_ReceiptNoteDetail_Store.Data_Access_Layer;
 using Manager_Book_Store.Data_Tranfer_Object;
 using System.Data;
 using Manager_Book_Store.Data_Access_Layer;
+using Manager_Book_Store.Presentation_Layer;
 
 namespace Manager_Book_Store.Business_Layer
 {
@@ -36,6 +37,14 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_ReceiptNoteDetailDAL.getReceiptNoteDetailDataFromDatabase();
         }
+
+        public int getRegulationByConsider(String _str)
+        {
+            if (m_RegulationsDAL.getRegulationsDataByRuleFromDatabase(_str) < 0)
+                return 0;
+            return m_RegulationsDAL.getRegulationsDataByRuleFromDatabase(_str);
+        }
+
         public bool checkQuantityReceipt(int _soLuongNhap, String _maSach)
         {
             if (m_BookDAL.getBookQuantityDataFromDatabase(_maSach) >= 0)
@@ -47,7 +56,7 @@ namespace Manager_Book_Store.Business_Layer
                 }
                 else
                 {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Số lượng nhập không phù hợp với quy định!");
+                    XtraCustomMessageBox.Show("Số lượng nhập không phù hợp với quy định!", "Lỗi",true);
                     return false;
                 }
             }
@@ -55,6 +64,14 @@ namespace Manager_Book_Store.Business_Layer
             {
                 return false;
             }
+        }
+
+        public bool checkSurvivalQuantity(String _idBook)
+        {
+            if ((m_BookDAL.getBookQuantityDataFromDatabase(_idBook)) > m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiDaTruocNhap"))
+                return false;
+            else
+                return true;
         }
     }
 }

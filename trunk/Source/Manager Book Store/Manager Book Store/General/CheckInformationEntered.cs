@@ -29,7 +29,7 @@ namespace Manager_Book_Store.General
         }
         public static bool checkDataInput(Control _control, String _erroContent, ref DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider _dxErroControl)
         {
-            if (String.IsNullOrEmpty(_control.Text) || String.IsNullOrWhiteSpace(_control.Text))
+            if (String.IsNullOrEmpty(_control.Text) || String.IsNullOrWhiteSpace(_control.Text) || _control.Text == "0")
             {
                 _dxErroControl.SetError(_control, _erroContent);
                 return false;

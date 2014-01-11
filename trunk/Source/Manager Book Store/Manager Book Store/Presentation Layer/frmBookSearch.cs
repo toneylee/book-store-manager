@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Manager_Book_Store.Business_Layer;
+using Manager_Book_Store.General;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
@@ -148,6 +149,11 @@ namespace Manager_Book_Store.Presentation_Layer
                 lkPublisherName.Enabled = false;
                 lkPublisherName.EditValue = null;
             }
+        }
+
+        private void txtContentSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckInformationEntered.checkCharacterInput(e, true);
         }
 
     }

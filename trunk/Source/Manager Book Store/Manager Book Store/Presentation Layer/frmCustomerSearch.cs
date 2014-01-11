@@ -98,5 +98,11 @@ namespace Manager_Book_Store.Presentation_Layer
                 grdListCustomer.DataSource = m_CustomerData;
             }
         }
+
+        private void chkEnableChoseGender_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkEnableChoseGender.Checked)
+                cmbGender.EditValue = null;
+        }
     }
 }

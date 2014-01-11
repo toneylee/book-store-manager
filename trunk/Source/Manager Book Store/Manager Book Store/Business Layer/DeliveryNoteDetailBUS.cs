@@ -42,6 +42,12 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_DeliveryNoteDetailDAL.getDeliveryNoteDetailDataByRuleFromDatabase(_maHD);
         }
+        //Ham tinh ra so sach toi da co the ban
+        public int getCountBookMaxCanSale(String _idBook)
+        {
+           return m_BookDAL.getBookCountByBookIdFromDatabase(_idBook) - m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiThieuSauBan");
+        }
+
         public bool checkQuantityDelivery(int _soLuongBan, String _maSach)
         {
             if (m_BookDAL.getBookQuantityDataFromDatabase(_maSach) >= 0)
@@ -80,6 +86,25 @@ namespace Manager_Book_Store.Business_Layer
             {
                 return false;
             }
+        }
+
+        public bool checkSurvivalQuantity(String _idBook)
+        {
+            if (m_BookDAL.getBookQuantityDataFromDatabase(_idBook) > m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiThieuSauBan"))
+                return false;
+            else
+                return true;
+        }
+
+        public int setColorBackgroundRow(String _idBook)
+        {
+            if (m_BookDAL.getBookQuantityDataFromDatabase(_idBook) < m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiThieuSauBan"))
+                return 0;//Color.Red
+            else
+                   if (m_BookDAL.getBookQuantityDataFromDatabase(_idBook) < m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiThieuSauBan") + 100)
+                    return 1;//Color.Yellow
+                else
+                    return -1;//Color.White;//Default
         }
         public decimal convertPrice(decimal _giaNhap)
         {

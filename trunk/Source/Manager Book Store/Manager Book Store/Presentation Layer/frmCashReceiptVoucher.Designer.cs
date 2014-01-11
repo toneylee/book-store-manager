@@ -60,11 +60,10 @@
             this.spPayment = new DevExpress.XtraEditors.SpinEdit();
             this.spRemain = new DevExpress.XtraEditors.SpinEdit();
             this.panCRVExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnView = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panLine = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panCRVTitle)).BeginInit();
             this.panCRVTitle.SuspendLayout();
@@ -197,6 +196,7 @@
             this.txtPaymentWord.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtPaymentWord.Size = new System.Drawing.Size(415, 20);
             this.txtPaymentWord.TabIndex = 6;
+            this.txtPaymentWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaymentWord_KeyPress);
             // 
             // txtCustomerPhone
             // 
@@ -433,7 +433,7 @@
             this.spPayment.Size = new System.Drawing.Size(227, 20);
             this.spPayment.TabIndex = 6;
             this.spPayment.TextChanged += new System.EventHandler(this.spPayment_TextChanged);
-            this.spPayment.Click += new System.EventHandler(this.spPayment_TextChanged);
+            this.spPayment.Validated += new System.EventHandler(this.spPayment_Validated);
             // 
             // spRemain
             // 
@@ -457,25 +457,15 @@
             // 
             // panCRVExecute
             // 
-            this.panCRVExecute.Controls.Add(this.btnUpdate);
             this.panCRVExecute.Controls.Add(this.btnView);
             this.panCRVExecute.Controls.Add(this.btnSave);
-            this.panCRVExecute.Controls.Add(this.btnAdd);
             this.panCRVExecute.Controls.Add(this.btnCancel);
+            this.panCRVExecute.Controls.Add(this.btnAdd);
             this.panCRVExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panCRVExecute.Location = new System.Drawing.Point(2, 384);
             this.panCRVExecute.Name = "panCRVExecute";
             this.panCRVExecute.Size = new System.Drawing.Size(737, 43);
             this.panCRVExecute.TabIndex = 11;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(408, 8);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 28);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Cập nhật";
             // 
             // btnView
             // 
@@ -488,29 +478,31 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(511, 8);
+            this.btnSave.Location = new System.Drawing.Point(504, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Lưu xuống";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(296, 8);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(89, 28);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Thêm mới";
-            // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(296, 8);
+            this.btnCancel.Location = new System.Drawing.Point(386, 8);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(89, 28);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Hủy thêm mới";
             this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(386, 8);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(89, 28);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panLine
             // 
@@ -531,6 +523,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCashReceiptVoucher";
             this.Text = "Phiếu thu tiền";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCashReceiptVoucher_FormClosing);
             this.Load += new System.EventHandler(this.frmCashReceiptVoucher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panCRVTitle)).EndInit();
             this.panCRVTitle.ResumeLayout(false);
@@ -570,7 +563,6 @@
         private DevExpress.XtraEditors.LabelControl labEmployeeTitle;
         private DevExpress.XtraEditors.PanelControl panLine;
         private DevExpress.XtraEditors.PanelControl panCRVExecute;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnView;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnAdd;

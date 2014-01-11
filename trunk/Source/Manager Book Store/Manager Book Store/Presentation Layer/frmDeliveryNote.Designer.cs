@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.spAmount = new DevExpress.XtraEditors.SpinEdit();
             this.panelDeliveryNoteDetail = new DevExpress.XtraEditors.PanelControl();
+            this.btnAddCustomer = new DevExpress.XtraEditors.SimpleButton();
             this.labDeliveryDateValue = new DevExpress.XtraEditors.LabelControl();
             this.labDeliveryNoteDate = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -46,6 +47,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnAddInListBookDetail = new DevExpress.XtraEditors.SimpleButton();
             this.grpDeliveryNoteDetail = new DevExpress.XtraEditors.GroupControl();
+            this.lblSoLuongMax = new DevExpress.XtraEditors.LabelControl();
             this.ppControlDeliveryNote = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.grdListBook = new DevExpress.XtraGrid.GridControl();
             this.grdvListBook = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -58,6 +60,12 @@
             this.Quantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelBookExecute = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnCancel1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnChose = new DevExpress.XtraEditors.SimpleButton();
             this.txtAuthorName = new DevExpress.XtraEditors.TextEdit();
@@ -76,26 +84,29 @@
             this.labImportPrice = new DevExpress.XtraEditors.LabelControl();
             this.labBookName = new DevExpress.XtraEditors.LabelControl();
             this.labBookId = new DevExpress.XtraEditors.LabelControl();
-            this.DeliveryNoteBookGenre = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DeliveryNoteAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DeliveryNoteAuthor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelDeliveryViewDetail = new DevExpress.XtraEditors.PanelControl();
+            this.grdListDeliveryBook = new DevExpress.XtraGrid.GridControl();
+            this.grdvDeliveryBook = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.DeliveryNoteId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DeliveryNoteBookName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DeliveryNoteImportPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DeliveryNoteBookGenre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DeliveryNoteAuthor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DeliveryNotePublisher = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DeliveryNoteQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DeliveryNoteId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grdvDeliveryBook = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.grdListDeliveryBook = new DevExpress.XtraGrid.GridControl();
-            this.panelDeliveryViewDetail = new DevExpress.XtraEditors.PanelControl();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.btnView = new DevExpress.XtraEditors.SimpleButton();
-            this.panelDeliveryNoteView = new DevExpress.XtraEditors.PanelControl();
+            this.DeliveryNoteImportPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DeliveryNoteAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnView = new DevExpress.XtraEditors.SimpleButton();
+            this.panelDeliveryNoteView = new DevExpress.XtraEditors.PanelControl();
             this.labEmployeeTitle = new DevExpress.XtraEditors.LabelControl();
             this.PanelReceitNoteExecute = new DevExpress.XtraEditors.PanelControl();
             this.btnCashReceiptVoucher = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnWrite = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panelDeliveryNoteTitle = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.spAmount.Properties)).BeginInit();
@@ -114,15 +125,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvListBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelBookExecute)).BeginInit();
             this.panelBookExecute.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPublisherName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookGenre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdvDeliveryBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListDeliveryBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDeliveryViewDetail)).BeginInit();
             this.panelDeliveryViewDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListDeliveryBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvDeliveryBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDeliveryNoteView)).BeginInit();
             this.panelDeliveryNoteView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelReceitNoteExecute)).BeginInit();
@@ -140,8 +156,6 @@
             0});
             this.spAmount.Location = new System.Drawing.Point(729, 90);
             this.spAmount.Name = "spAmount";
-            this.spAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.spAmount.Properties.Appearance.Options.UseBackColor = true;
             this.spAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spAmount.Properties.Mask.EditMask = "c0";
@@ -153,6 +167,7 @@
             // 
             // panelDeliveryNoteDetail
             // 
+            this.panelDeliveryNoteDetail.Controls.Add(this.btnAddCustomer);
             this.panelDeliveryNoteDetail.Controls.Add(this.labDeliveryDateValue);
             this.panelDeliveryNoteDetail.Controls.Add(this.labDeliveryNoteDate);
             this.panelDeliveryNoteDetail.Controls.Add(this.labelControl1);
@@ -164,6 +179,15 @@
             this.panelDeliveryNoteDetail.Name = "panelDeliveryNoteDetail";
             this.panelDeliveryNoteDetail.Size = new System.Drawing.Size(948, 35);
             this.panelDeliveryNoteDetail.TabIndex = 0;
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Location = new System.Drawing.Point(583, 6);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(73, 23);
+            this.btnAddCustomer.TabIndex = 4;
+            this.btnAddCustomer.Text = "Thêm mới";
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // labDeliveryDateValue
             // 
@@ -219,8 +243,9 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("STT", "STT"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenKH", "Tên khách hàng")});
             this.lkCustomerName.Properties.NullText = "";
-            this.lkCustomerName.Size = new System.Drawing.Size(227, 20);
+            this.lkCustomerName.Size = new System.Drawing.Size(185, 20);
             this.lkCustomerName.TabIndex = 1;
+            this.lkCustomerName.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.lkCustomerName_QueryPopUp);
             this.lkCustomerName.EditValueChanged += new System.EventHandler(this.lkCustomerName_EditValueChanged);
             // 
             // spPrices
@@ -232,8 +257,6 @@
             0});
             this.spPrices.Location = new System.Drawing.Point(729, 56);
             this.spPrices.Name = "spPrices";
-            this.spPrices.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.spPrices.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.spPrices.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spPrices.Properties.IsFloatValue = false;
@@ -271,6 +294,7 @@
             0,
             0,
             0});
+            this.spQuantity.Properties.ReadOnly = true;
             this.spQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.spQuantity.Size = new System.Drawing.Size(179, 20);
             this.spQuantity.TabIndex = 4;
@@ -315,7 +339,7 @@
             // 
             // btnAddInListBookDetail
             // 
-            this.btnAddInListBookDetail.Location = new System.Drawing.Point(833, 123);
+            this.btnAddInListBookDetail.Location = new System.Drawing.Point(833, 119);
             this.btnAddInListBookDetail.Name = "btnAddInListBookDetail";
             this.btnAddInListBookDetail.Size = new System.Drawing.Size(75, 23);
             this.btnAddInListBookDetail.TabIndex = 3;
@@ -326,6 +350,7 @@
             // 
             this.grpDeliveryNoteDetail.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.grpDeliveryNoteDetail.Appearance.Options.UseBackColor = true;
+            this.grpDeliveryNoteDetail.Controls.Add(this.lblSoLuongMax);
             this.grpDeliveryNoteDetail.Controls.Add(this.ppControlDeliveryNote);
             this.grpDeliveryNoteDetail.Controls.Add(this.spAmount);
             this.grpDeliveryNoteDetail.Controls.Add(this.spPrices);
@@ -350,19 +375,26 @@
             this.grpDeliveryNoteDetail.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpDeliveryNoteDetail.Location = new System.Drawing.Point(2, 2);
             this.grpDeliveryNoteDetail.Name = "grpDeliveryNoteDetail";
-            this.grpDeliveryNoteDetail.Size = new System.Drawing.Size(944, 154);
+            this.grpDeliveryNoteDetail.Size = new System.Drawing.Size(944, 147);
             this.grpDeliveryNoteDetail.TabIndex = 4;
             this.grpDeliveryNoteDetail.Text = "Thông tin chi tiểt";
+            // 
+            // lblSoLuongMax
+            // 
+            this.lblSoLuongMax.Location = new System.Drawing.Point(619, 123);
+            this.lblSoLuongMax.Name = "lblSoLuongMax";
+            this.lblSoLuongMax.Size = new System.Drawing.Size(0, 13);
+            this.lblSoLuongMax.TabIndex = 5;
             // 
             // ppControlDeliveryNote
             // 
             this.ppControlDeliveryNote.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.ppControlDeliveryNote.Controls.Add(this.grdListBook);
             this.ppControlDeliveryNote.Controls.Add(this.panelBookExecute);
-            this.ppControlDeliveryNote.Location = new System.Drawing.Point(19, 142);
+            this.ppControlDeliveryNote.Location = new System.Drawing.Point(8, 142);
             this.ppControlDeliveryNote.Manager = this.barManagerDeliveryNote;
             this.ppControlDeliveryNote.Name = "ppControlDeliveryNote";
-            this.ppControlDeliveryNote.Size = new System.Drawing.Size(732, 294);
+            this.ppControlDeliveryNote.Size = new System.Drawing.Size(800, 259);
             this.ppControlDeliveryNote.TabIndex = 4;
             this.ppControlDeliveryNote.Visible = false;
             // 
@@ -372,7 +404,7 @@
             this.grdListBook.Location = new System.Drawing.Point(0, 0);
             this.grdListBook.MainView = this.grdvListBook;
             this.grdListBook.Name = "grdListBook";
-            this.grdListBook.Size = new System.Drawing.Size(732, 255);
+            this.grdListBook.Size = new System.Drawing.Size(800, 209);
             this.grdListBook.TabIndex = 8;
             this.grdListBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListBook});
@@ -390,7 +422,10 @@
             this.Price});
             this.grdvListBook.GridControl = this.grdListBook;
             this.grdvListBook.Name = "grdvListBook";
+            this.grdvListBook.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
             this.grdvListBook.OptionsView.ShowGroupPanel = false;
+            this.grdvListBook.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.grdvListBook_RowCellClick);
+            this.grdvListBook.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grdvListBook_RowStyle);
             this.grdvListBook.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvListBook_FocusedRowChanged);
             // 
             // BookSno
@@ -467,18 +502,78 @@
             // 
             // panelBookExecute
             // 
+            this.panelBookExecute.Controls.Add(this.labelControl4);
+            this.panelBookExecute.Controls.Add(this.labelControl3);
+            this.panelBookExecute.Controls.Add(this.labelControl2);
+            this.panelBookExecute.Controls.Add(this.panelControl4);
+            this.panelBookExecute.Controls.Add(this.panelControl3);
+            this.panelBookExecute.Controls.Add(this.panelControl2);
             this.panelBookExecute.Controls.Add(this.btnCancel1);
             this.panelBookExecute.Controls.Add(this.btnChose);
             this.panelBookExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBookExecute.Location = new System.Drawing.Point(0, 255);
+            this.panelBookExecute.Location = new System.Drawing.Point(0, 209);
             this.panelBookExecute.Name = "panelBookExecute";
-            this.panelBookExecute.Size = new System.Drawing.Size(732, 39);
+            this.panelBookExecute.Size = new System.Drawing.Size(800, 50);
             this.panelBookExecute.TabIndex = 7;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(43, 34);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(129, 13);
+            this.labelControl4.TabIndex = 14;
+            this.labelControl4.Text = "Số lượng không đủ để bán.";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(43, 19);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(100, 13);
+            this.labelControl3.TabIndex = 13;
+            this.labelControl3.Text = "Số lượng sách còn ít.";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(43, 3);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(71, 13);
+            this.labelControl2.TabIndex = 12;
+            this.labelControl2.Text = "Cho phép bán.";
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Appearance.BackColor = System.Drawing.Color.Salmon;
+            this.panelControl4.Appearance.Options.UseBackColor = true;
+            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl4.Location = new System.Drawing.Point(10, 35);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(23, 11);
+            this.panelControl4.TabIndex = 11;
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Appearance.BackColor = System.Drawing.Color.Khaki;
+            this.panelControl3.Appearance.Options.UseBackColor = true;
+            this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Location = new System.Drawing.Point(10, 21);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(23, 11);
+            this.panelControl3.TabIndex = 11;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Location = new System.Drawing.Point(10, 6);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(23, 11);
+            this.panelControl2.TabIndex = 10;
             // 
             // btnCancel1
             // 
             this.btnCancel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel1.Location = new System.Drawing.Point(652, 3);
+            this.btnCancel1.Location = new System.Drawing.Point(720, 14);
             this.btnCancel1.Name = "btnCancel1";
             this.btnCancel1.Size = new System.Drawing.Size(75, 31);
             this.btnCancel1.TabIndex = 9;
@@ -487,7 +582,7 @@
             // btnChose
             // 
             this.btnChose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChose.Location = new System.Drawing.Point(547, 3);
+            this.btnChose.Location = new System.Drawing.Point(615, 14);
             this.btnChose.Name = "btnChose";
             this.btnChose.Size = new System.Drawing.Size(75, 31);
             this.btnChose.TabIndex = 7;
@@ -498,8 +593,6 @@
             // 
             this.txtAuthorName.Location = new System.Drawing.Point(118, 120);
             this.txtAuthorName.Name = "txtAuthorName";
-            this.txtAuthorName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtAuthorName.Properties.Appearance.Options.UseBackColor = true;
             this.txtAuthorName.Properties.ReadOnly = true;
             this.txtAuthorName.Size = new System.Drawing.Size(179, 20);
             this.txtAuthorName.TabIndex = 1;
@@ -552,8 +645,6 @@
             // 
             this.txtPublisherName.Location = new System.Drawing.Point(434, 90);
             this.txtPublisherName.Name = "txtPublisherName";
-            this.txtPublisherName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtPublisherName.Properties.Appearance.Options.UseBackColor = true;
             this.txtPublisherName.Properties.ReadOnly = true;
             this.txtPublisherName.Size = new System.Drawing.Size(179, 20);
             this.txtPublisherName.TabIndex = 1;
@@ -562,8 +653,6 @@
             // 
             this.txtBookGenre.Location = new System.Drawing.Point(118, 90);
             this.txtBookGenre.Name = "txtBookGenre";
-            this.txtBookGenre.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBookGenre.Properties.Appearance.Options.UseBackColor = true;
             this.txtBookGenre.Properties.ReadOnly = true;
             this.txtBookGenre.Size = new System.Drawing.Size(179, 20);
             this.txtBookGenre.TabIndex = 1;
@@ -596,8 +685,6 @@
             // 
             this.txtBookName.Location = new System.Drawing.Point(434, 60);
             this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBookName.Properties.Appearance.Options.UseBackColor = true;
             this.txtBookName.Properties.ReadOnly = true;
             this.txtBookName.Size = new System.Drawing.Size(179, 20);
             this.txtBookName.TabIndex = 1;
@@ -606,8 +693,6 @@
             // 
             this.txtBookId.Location = new System.Drawing.Point(118, 60);
             this.txtBookId.Name = "txtBookId";
-            this.txtBookId.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBookId.Properties.Appearance.Options.UseBackColor = true;
             this.txtBookId.Properties.ReadOnly = true;
             this.txtBookId.Size = new System.Drawing.Size(179, 20);
             this.txtBookId.TabIndex = 1;
@@ -636,34 +721,56 @@
             this.labBookId.TabIndex = 2;
             this.labBookId.Text = "Mã sách";
             // 
-            // DeliveryNoteBookGenre
+            // panelDeliveryViewDetail
             // 
-            this.DeliveryNoteBookGenre.Caption = "Thể loại";
-            this.DeliveryNoteBookGenre.FieldName = "TenTL";
-            this.DeliveryNoteBookGenre.Name = "DeliveryNoteBookGenre";
-            this.DeliveryNoteBookGenre.Visible = true;
-            this.DeliveryNoteBookGenre.VisibleIndex = 2;
-            this.DeliveryNoteBookGenre.Width = 140;
+            this.panelDeliveryViewDetail.Controls.Add(this.grdListDeliveryBook);
+            this.panelDeliveryViewDetail.Controls.Add(this.panelControl1);
+            this.panelDeliveryViewDetail.Controls.Add(this.grpDeliveryNoteDetail);
+            this.panelDeliveryViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDeliveryViewDetail.Location = new System.Drawing.Point(2, 37);
+            this.panelDeliveryViewDetail.Name = "panelDeliveryViewDetail";
+            this.panelDeliveryViewDetail.Size = new System.Drawing.Size(948, 355);
+            this.panelDeliveryViewDetail.TabIndex = 5;
             // 
-            // DeliveryNoteAmount
+            // grdListDeliveryBook
             // 
-            this.DeliveryNoteAmount.Caption = "Thành tiền";
-            this.DeliveryNoteAmount.FieldName = "ThanhTien";
-            this.DeliveryNoteAmount.Name = "DeliveryNoteAmount";
-            this.DeliveryNoteAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
-            this.DeliveryNoteAmount.Visible = true;
-            this.DeliveryNoteAmount.VisibleIndex = 7;
-            this.DeliveryNoteAmount.Width = 122;
+            this.grdListDeliveryBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdListDeliveryBook.Location = new System.Drawing.Point(2, 149);
+            this.grdListDeliveryBook.MainView = this.grdvDeliveryBook;
+            this.grdListDeliveryBook.Name = "grdListDeliveryBook";
+            this.grdListDeliveryBook.Size = new System.Drawing.Size(899, 204);
+            this.grdListDeliveryBook.TabIndex = 8;
+            this.grdListDeliveryBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvDeliveryBook});
             // 
-            // DeliveryNoteAuthor
+            // grdvDeliveryBook
             // 
-            this.DeliveryNoteAuthor.Caption = "Tác giả";
-            this.DeliveryNoteAuthor.FieldName = "NhomTG";
-            this.DeliveryNoteAuthor.Name = "DeliveryNoteAuthor";
-            this.DeliveryNoteAuthor.Visible = true;
-            this.DeliveryNoteAuthor.VisibleIndex = 3;
-            this.DeliveryNoteAuthor.Width = 132;
+            this.grdvDeliveryBook.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.DeliveryNoteId,
+            this.DeliveryNoteBookName,
+            this.DeliveryNoteBookGenre,
+            this.DeliveryNoteAuthor,
+            this.DeliveryNotePublisher,
+            this.DeliveryNoteQuantity,
+            this.DeliveryNoteImportPrice,
+            this.DeliveryNoteAmount});
+            this.grdvDeliveryBook.GridControl = this.grdListDeliveryBook;
+            this.grdvDeliveryBook.Name = "grdvDeliveryBook";
+            this.grdvDeliveryBook.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
+            this.grdvDeliveryBook.OptionsBehavior.ReadOnly = true;
+            this.grdvDeliveryBook.OptionsView.ShowFooter = true;
+            this.grdvDeliveryBook.OptionsView.ShowGroupPanel = false;
+            this.grdvDeliveryBook.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.grdvDeliveryBook_CustomDrawFooterCell);
+            this.grdvDeliveryBook.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvDeliveryBook_FocusedRowChanged);
+            // 
+            // DeliveryNoteId
+            // 
+            this.DeliveryNoteId.Caption = "Mã sách";
+            this.DeliveryNoteId.FieldName = "MaSach";
+            this.DeliveryNoteId.Name = "DeliveryNoteId";
+            this.DeliveryNoteId.Visible = true;
+            this.DeliveryNoteId.VisibleIndex = 0;
+            this.DeliveryNoteId.Width = 116;
             // 
             // DeliveryNoteBookName
             // 
@@ -674,16 +781,23 @@
             this.DeliveryNoteBookName.VisibleIndex = 1;
             this.DeliveryNoteBookName.Width = 134;
             // 
-            // DeliveryNoteImportPrice
+            // DeliveryNoteBookGenre
             // 
-            this.DeliveryNoteImportPrice.Caption = "Đơn giá";
-            this.DeliveryNoteImportPrice.FieldName = "DonGia";
-            this.DeliveryNoteImportPrice.Name = "DeliveryNoteImportPrice";
-            this.DeliveryNoteImportPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
-            this.DeliveryNoteImportPrice.Visible = true;
-            this.DeliveryNoteImportPrice.VisibleIndex = 6;
-            this.DeliveryNoteImportPrice.Width = 110;
+            this.DeliveryNoteBookGenre.Caption = "Thể loại";
+            this.DeliveryNoteBookGenre.FieldName = "TenTL";
+            this.DeliveryNoteBookGenre.Name = "DeliveryNoteBookGenre";
+            this.DeliveryNoteBookGenre.Visible = true;
+            this.DeliveryNoteBookGenre.VisibleIndex = 2;
+            this.DeliveryNoteBookGenre.Width = 140;
+            // 
+            // DeliveryNoteAuthor
+            // 
+            this.DeliveryNoteAuthor.Caption = "Tác giả";
+            this.DeliveryNoteAuthor.FieldName = "NhomTG";
+            this.DeliveryNoteAuthor.Name = "DeliveryNoteAuthor";
+            this.DeliveryNoteAuthor.Visible = true;
+            this.DeliveryNoteAuthor.VisibleIndex = 3;
+            this.DeliveryNoteAuthor.Width = 132;
             // 
             // DeliveryNotePublisher
             // 
@@ -707,72 +821,89 @@
             this.DeliveryNoteQuantity.VisibleIndex = 5;
             this.DeliveryNoteQuantity.Width = 125;
             // 
-            // DeliveryNoteId
+            // DeliveryNoteImportPrice
             // 
-            this.DeliveryNoteId.Caption = "Mã sách";
-            this.DeliveryNoteId.FieldName = "MaSach";
-            this.DeliveryNoteId.Name = "DeliveryNoteId";
-            this.DeliveryNoteId.Visible = true;
-            this.DeliveryNoteId.VisibleIndex = 0;
-            this.DeliveryNoteId.Width = 116;
+            this.DeliveryNoteImportPrice.Caption = "Đơn giá";
+            this.DeliveryNoteImportPrice.FieldName = "DonGia";
+            this.DeliveryNoteImportPrice.Name = "DeliveryNoteImportPrice";
+            this.DeliveryNoteImportPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
+            this.DeliveryNoteImportPrice.Visible = true;
+            this.DeliveryNoteImportPrice.VisibleIndex = 6;
+            this.DeliveryNoteImportPrice.Width = 110;
             // 
-            // grdvDeliveryBook
+            // DeliveryNoteAmount
             // 
-            this.grdvDeliveryBook.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.DeliveryNoteId,
-            this.DeliveryNoteBookName,
-            this.DeliveryNoteBookGenre,
-            this.DeliveryNoteAuthor,
-            this.DeliveryNotePublisher,
-            this.DeliveryNoteQuantity,
-            this.DeliveryNoteImportPrice,
-            this.DeliveryNoteAmount});
-            this.grdvDeliveryBook.GridControl = this.grdListDeliveryBook;
-            this.grdvDeliveryBook.Name = "grdvDeliveryBook";
-            this.grdvDeliveryBook.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
-            this.grdvDeliveryBook.OptionsBehavior.ReadOnly = true;
-            this.grdvDeliveryBook.OptionsView.ShowFooter = true;
-            this.grdvDeliveryBook.OptionsView.ShowGroupPanel = false;
-            this.grdvDeliveryBook.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.grdvDeliveryBook_RowCellClick);
-            this.grdvDeliveryBook.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.grdvDeliveryBook_CustomDrawFooterCell);
-            this.grdvDeliveryBook.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvDeliveryBook_FocusedRowChanged);
+            this.DeliveryNoteAmount.Caption = "Thành tiền";
+            this.DeliveryNoteAmount.FieldName = "ThanhTien";
+            this.DeliveryNoteAmount.Name = "DeliveryNoteAmount";
+            this.DeliveryNoteAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
+            this.DeliveryNoteAmount.Visible = true;
+            this.DeliveryNoteAmount.VisibleIndex = 7;
+            this.DeliveryNoteAmount.Width = 122;
             // 
-            // grdListDeliveryBook
+            // panelControl1
             // 
-            this.grdListDeliveryBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdListDeliveryBook.Location = new System.Drawing.Point(2, 156);
-            this.grdListDeliveryBook.MainView = this.grdvDeliveryBook;
-            this.grdListDeliveryBook.Name = "grdListDeliveryBook";
-            this.grdListDeliveryBook.Size = new System.Drawing.Size(944, 197);
-            this.grdListDeliveryBook.TabIndex = 5;
-            this.grdListDeliveryBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdvDeliveryBook});
+            this.panelControl1.Controls.Add(this.btnSave);
+            this.panelControl1.Controls.Add(this.btnDelete);
+            this.panelControl1.Controls.Add(this.btnUpdate);
+            this.panelControl1.Controls.Add(this.btnCancelOfUpdate);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl1.Location = new System.Drawing.Point(901, 149);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(45, 204);
+            this.panelControl1.TabIndex = 7;
             // 
-            // panelDeliveryViewDetail
+            // btnSave
             // 
-            this.panelDeliveryViewDetail.Controls.Add(this.grdListDeliveryBook);
-            this.panelDeliveryViewDetail.Controls.Add(this.grpDeliveryNoteDetail);
-            this.panelDeliveryViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDeliveryViewDetail.Location = new System.Drawing.Point(2, 37);
-            this.panelDeliveryViewDetail.Name = "panelDeliveryViewDetail";
-            this.panelDeliveryViewDetail.Size = new System.Drawing.Size(948, 355);
-            this.panelDeliveryViewDetail.TabIndex = 5;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(5, 160);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(35, 38);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Lưu\r\n";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(5, 112);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(35, 35);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Xóa \r\nbỏ";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(367, 8);
+            this.btnUpdate.Location = new System.Drawing.Point(5, 60);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(35, 36);
             this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Text = "Cập\r\nnhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(5, 60);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(35, 37);
+            this.btnCancelOfUpdate.TabIndex = 6;
+            this.btnCancelOfUpdate.Text = "Hủy";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(687, 8);
+            this.btnView.Enabled = false;
+            this.btnView.Location = new System.Drawing.Point(660, 8);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(101, 31);
             this.btnView.TabIndex = 8;
@@ -789,26 +920,6 @@
             this.panelDeliveryNoteView.Size = new System.Drawing.Size(952, 394);
             this.panelDeliveryNoteView.TabIndex = 6;
             // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(585, 8);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 31);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Lưu xuống";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(476, 8);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 31);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Xóa bỏ";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // labEmployeeTitle
             // 
             this.labEmployeeTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -822,13 +933,11 @@
             // 
             // PanelReceitNoteExecute
             // 
-            this.PanelReceitNoteExecute.Controls.Add(this.btnUpdate);
             this.PanelReceitNoteExecute.Controls.Add(this.btnCashReceiptVoucher);
             this.PanelReceitNoteExecute.Controls.Add(this.btnView);
-            this.PanelReceitNoteExecute.Controls.Add(this.btnSave);
             this.PanelReceitNoteExecute.Controls.Add(this.btnCancel);
+            this.PanelReceitNoteExecute.Controls.Add(this.btnWrite);
             this.PanelReceitNoteExecute.Controls.Add(this.btnAdd);
-            this.PanelReceitNoteExecute.Controls.Add(this.btnDelete);
             this.PanelReceitNoteExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelReceitNoteExecute.Location = new System.Drawing.Point(0, 428);
             this.PanelReceitNoteExecute.Name = "PanelReceitNoteExecute";
@@ -838,7 +947,8 @@
             // btnCashReceiptVoucher
             // 
             this.btnCashReceiptVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCashReceiptVoucher.Location = new System.Drawing.Point(822, 8);
+            this.btnCashReceiptVoucher.Enabled = false;
+            this.btnCashReceiptVoucher.Location = new System.Drawing.Point(787, 8);
             this.btnCashReceiptVoucher.Name = "btnCashReceiptVoucher";
             this.btnCashReceiptVoucher.Size = new System.Drawing.Size(116, 31);
             this.btnCashReceiptVoucher.TabIndex = 8;
@@ -848,21 +958,32 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(244, 8);
+            this.btnCancel.Location = new System.Drawing.Point(423, 8);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 31);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Hủy thêm mới";
-            this.btnCancel.Visible = false;
+            this.btnCancel.Size = new System.Drawing.Size(96, 31);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Hủy thao tác";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnWrite
+            // 
+            this.btnWrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWrite.Location = new System.Drawing.Point(549, 8);
+            this.btnWrite.Name = "btnWrite";
+            this.btnWrite.Size = new System.Drawing.Size(87, 31);
+            this.btnWrite.TabIndex = 12;
+            this.btnWrite.Text = "Ghi hóa đơn";
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(261, 8);
+            this.btnAdd.Location = new System.Drawing.Point(423, 8);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 31);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Size = new System.Drawing.Size(96, 31);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Lập hóa đơn";
+            this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelDeliveryNoteTitle
@@ -888,6 +1009,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmDeliveryNote";
             this.Text = "Quản lý bán sách";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDeliveryNote_FormClosing);
             this.Load += new System.EventHandler(this.frmDeliveryNote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDeliveryNoteDetail)).EndInit();
@@ -907,15 +1029,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvListBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelBookExecute)).EndInit();
             this.panelBookExecute.ResumeLayout(false);
+            this.panelBookExecute.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPublisherName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookGenre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdvDeliveryBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListDeliveryBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDeliveryViewDetail)).EndInit();
             this.panelDeliveryViewDetail.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdListDeliveryBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvDeliveryBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDeliveryNoteView)).EndInit();
             this.panelDeliveryNoteView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PanelReceitNoteExecute)).EndInit();
@@ -958,16 +1086,6 @@
         private DevExpress.XtraEditors.PanelControl panelBookExecute;
         private DevExpress.XtraEditors.SimpleButton btnCancel1;
         private DevExpress.XtraEditors.SimpleButton btnChose;
-        private DevExpress.XtraGrid.GridControl grdListDeliveryBook;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdvDeliveryBook;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteId;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteBookName;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteBookGenre;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteAuthor;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNotePublisher;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteQuantity;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteImportPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteAmount;
         private DevExpress.XtraEditors.GroupControl grpDeliveryNoteDetail;
         private DevExpress.XtraEditors.SimpleButton btnAddInListBookDetail;
         private DevExpress.XtraEditors.TextEdit txtAuthorName;
@@ -987,16 +1105,37 @@
         private DevExpress.XtraEditors.LabelControl labBookName;
         private DevExpress.XtraEditors.LabelControl labBookId;
         private DevExpress.XtraEditors.PanelControl PanelReceitNoteExecute;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnView;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.SimpleButton btnCancel;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.PanelControl panelDeliveryNoteTitle;
         private DevExpress.XtraEditors.LabelControl labEmployeeTitle;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LookUpEdit lkCustomerName;
         private DevExpress.XtraEditors.SimpleButton btnCashReceiptVoucher;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnAddCustomer;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.SimpleButton btnWrite;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private DevExpress.XtraGrid.GridControl grdListDeliveryBook;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvDeliveryBook;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteId;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteBookName;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteBookGenre;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteAuthor;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNotePublisher;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteImportPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn DeliveryNoteAmount;
+        private DevExpress.XtraEditors.LabelControl lblSoLuongMax;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

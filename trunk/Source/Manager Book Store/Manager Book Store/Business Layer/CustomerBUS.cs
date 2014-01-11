@@ -34,7 +34,7 @@ namespace Manager_Book_Store.Business_Layer
         }
         public DataTable lookAtCustomerDataFromDatabase(String _CustomerName)
         {
-            return m_CustomerDAL.getCustomerDataFromDatabase();
+            return m_CustomerDAL.lookAtCustomerDataFromDatabase(_CustomerName);
         }
         public bool UpdateDebitOfCustomerDataToDatabase(CCustomerDTO _CustomerObject)
         {

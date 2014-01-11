@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.AuthorID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AuthorNames = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,10 +48,10 @@
             this.panelBooTitlesT = new DevExpress.XtraEditors.PanelControl();
             this.panelBookTitlesExecute = new DevExpress.XtraEditors.PanelControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panelDataDetails = new DevExpress.XtraEditors.PanelControl();
             this.panelBookTitleView = new DevExpress.XtraEditors.PanelControl();
@@ -69,7 +70,8 @@
             this.navBarGBookTitlesLookAt = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.labBooktitlesNameLA = new DevExpress.XtraEditors.LabelControl();
-            this.txtBootitlesNameLA = new DevExpress.XtraEditors.TextEdit();
+            this.txtBooktitlesNameLA = new DevExpress.XtraEditors.TextEdit();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListBookTitles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvListBookTitles)).BeginInit();
@@ -95,7 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarBookTitlesLookAt)).BeginInit();
             this.navBarBookTitlesLookAt.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBootitlesNameLA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBooktitlesNameLA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView1
@@ -265,10 +268,10 @@
             // panelBookTitlesExecute
             // 
             this.panelBookTitlesExecute.Controls.Add(this.btnAdd);
-            this.panelBookTitlesExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panelBookTitlesExecute.Controls.Add(this.btnSave);
             this.panelBookTitlesExecute.Controls.Add(this.btnDelete);
             this.panelBookTitlesExecute.Controls.Add(this.btnUpdate);
+            this.panelBookTitlesExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panelBookTitlesExecute.Controls.Add(this.btnCancel);
             this.panelBookTitlesExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBookTitlesExecute.Location = new System.Drawing.Point(0, 386);
@@ -279,30 +282,19 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(290, 6);
+            this.btnAdd.Location = new System.Drawing.Point(216, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(93, 36);
+            this.btnAdd.Size = new System.Drawing.Size(100, 36);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnCancelOfUpdate
-            // 
-            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelOfUpdate.Location = new System.Drawing.Point(418, 6);
-            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
-            this.btnCancelOfUpdate.Size = new System.Drawing.Size(93, 37);
-            this.btnCancelOfUpdate.TabIndex = 6;
-            this.btnCancelOfUpdate.Text = "Hủy thao tác";
-            this.btnCancelOfUpdate.Visible = false;
-            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(651, 6);
+            this.btnSave.Location = new System.Drawing.Point(599, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 37);
+            this.btnSave.Size = new System.Drawing.Size(80, 37);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu xuống";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -310,9 +302,9 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(548, 6);
+            this.btnDelete.Location = new System.Drawing.Point(489, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 36);
+            this.btnDelete.Size = new System.Drawing.Size(83, 38);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -320,19 +312,30 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(418, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(351, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(93, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(99, 37);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(351, 5);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(99, 37);
+            this.btnCancelOfUpdate.TabIndex = 6;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(290, 5);
+            this.btnCancel.Location = new System.Drawing.Point(216, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(93, 38);
+            this.btnCancel.Size = new System.Drawing.Size(100, 38);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Hủy thao tác";
             this.btnCancel.Visible = false;
@@ -407,6 +410,7 @@
             this.lkBookGenreName.Properties.ReadOnly = true;
             this.lkBookGenreName.Size = new System.Drawing.Size(197, 20);
             this.lkBookGenreName.TabIndex = 8;
+            this.lkBookGenreName.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.lkBookGenreName_QueryPopUp);
             // 
             // chkCmbAuthorName
             // 
@@ -419,8 +423,7 @@
             this.chkCmbAuthorName.Properties.ReadOnly = true;
             this.chkCmbAuthorName.Size = new System.Drawing.Size(436, 20);
             this.chkCmbAuthorName.TabIndex = 7;
-            this.chkCmbAuthorName.EditValueChanged += new System.EventHandler(this.chkCmbAuthorName_EditValueChanged);
-            this.chkCmbAuthorName.TextChanged += new System.EventHandler(this.chkCmbAuthorName_TextChanged);
+            this.chkCmbAuthorName.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.chkCmbAuthorName_QueryPopUp);
             // 
             // labAuthorName
             // 
@@ -469,6 +472,7 @@
             this.txtBookTitlesName.Properties.ReadOnly = true;
             this.txtBookTitlesName.Size = new System.Drawing.Size(436, 20);
             this.txtBookTitlesName.TabIndex = 3;
+            this.txtBookTitlesName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookTitlesName_KeyPress);
             // 
             // navBarBookTitlesLookAt
             // 
@@ -498,7 +502,7 @@
             // navBarGroupControlContainer1
             // 
             this.navBarGroupControlContainer1.Controls.Add(this.labBooktitlesNameLA);
-            this.navBarGroupControlContainer1.Controls.Add(this.txtBootitlesNameLA);
+            this.navBarGroupControlContainer1.Controls.Add(this.txtBooktitlesNameLA);
             this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
             this.navBarGroupControlContainer1.Size = new System.Drawing.Size(250, 240);
             this.navBarGroupControlContainer1.TabIndex = 0;
@@ -511,12 +515,18 @@
             this.labBooktitlesNameLA.TabIndex = 2;
             this.labBooktitlesNameLA.Text = "Nhập tên sách";
             // 
-            // txtBootitlesNameLA
+            // txtBooktitlesNameLA
             // 
-            this.txtBootitlesNameLA.Location = new System.Drawing.Point(41, 38);
-            this.txtBootitlesNameLA.Name = "txtBootitlesNameLA";
-            this.txtBootitlesNameLA.Size = new System.Drawing.Size(152, 20);
-            this.txtBootitlesNameLA.TabIndex = 3;
+            this.txtBooktitlesNameLA.Location = new System.Drawing.Point(41, 38);
+            this.txtBooktitlesNameLA.Name = "txtBooktitlesNameLA";
+            this.txtBooktitlesNameLA.Size = new System.Drawing.Size(182, 20);
+            this.txtBooktitlesNameLA.TabIndex = 3;
+            this.txtBooktitlesNameLA.TextChanged += new System.EventHandler(this.txtBookTitlesNameLA_TextChanged);
+            this.txtBooktitlesNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookTitlesName_KeyPress);
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmBookTitle
             // 
@@ -557,7 +567,8 @@
             this.navBarBookTitlesLookAt.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
             this.navBarGroupControlContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBootitlesNameLA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBooktitlesNameLA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -588,7 +599,7 @@
         private DevExpress.XtraEditors.LabelControl labBookGenreName;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
         private DevExpress.XtraEditors.LabelControl labBooktitlesNameLA;
-        private DevExpress.XtraEditors.TextEdit txtBootitlesNameLA;
+        private DevExpress.XtraEditors.TextEdit txtBooktitlesNameLA;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit repositoryItemCheckedComboBoxEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn AuthorID;
@@ -606,5 +617,6 @@
         private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
         private DevExpress.XtraEditors.SimpleButton btnAddAuthor;
         private DevExpress.XtraEditors.SimpleButton btnAddBookGenre;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
     }
 }

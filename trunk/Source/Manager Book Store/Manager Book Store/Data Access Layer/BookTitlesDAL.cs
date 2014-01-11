@@ -70,5 +70,14 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.CommandText = "GetBookTitlesMaxIdFromDatabase";
             return m_bookTitlesExecute.getMaxId(m_cmd);
         }
+        public DataTable lookAtBookTitlesDataFromDatabase(String _bookTitleName)
+        {
+            m_cmd = new SqlCommand();
+            //SqlCommand sqlCommand = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.CommandText = "LookAtBookTitlesDataFromDatabase";
+            m_cmd.Parameters.Add("TenSach", SqlDbType.NVarChar).Value = _bookTitleName;
+            return m_bookTitlesExecute.getData(m_cmd);
+        }
     }
 }

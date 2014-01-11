@@ -18,7 +18,9 @@ namespace Manager_Book_Store.Report
                                     , string _totalPaymentWord
                                     , string _cashReceiptVoucherId
                                     , string _customerEmail
-                                    , string _customerPhone)
+                                    , string _customerPhone
+                                    , string _debitValue
+                                    , string _moneyPay)
         {
             //
             xrlbCashReceiptVoucherIdValue.Text   = _cashReceiptVoucherId;
@@ -28,6 +30,8 @@ namespace Manager_Book_Store.Report
             xrlbPaymentWordValue.Text       = _totalPaymentWord;
             xrlbCustomerEmailValue.Text     = _customerEmail;
             xrlbCustomerPhoneValue.Text     = _customerPhone;
+            xrLabDebitValue.Text            = _debitValue;
+            xrLabMoneyPayValue.Text         = _moneyPay;
             xrlbCashReceiptVoucherDateValue.Text = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
         }
     }

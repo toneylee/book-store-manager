@@ -38,11 +38,21 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_BookDAL.getBookDataFromDatabase();
         }
+
+        public int getBookCountByBookIdFromDatabase(String _idBook)
+        {
+            return m_BookDAL.getBookCountByBookIdFromDatabase(_idBook);
+        }
+       
         public DataTable GetBookDataByRuleFromDatabase(String _tensach, String _tenTG, String _tenTL, String _tenNXB, int _namXB, int _soLuong, int _giaNhap)
         {
             return m_BookDAL.GetBookDataByRuleFromDatabase(_tensach, _tenTG, _tenTL, _tenNXB, _namXB, _soLuong, _giaNhap);
         }
 
+        public DataTable lookAtBookDataFromDatabase(String _tenSach)
+        {
+            return m_BookDAL.lookAtBookDataFromDatabase(_tenSach);
+        }
         #endregion
     }
 }

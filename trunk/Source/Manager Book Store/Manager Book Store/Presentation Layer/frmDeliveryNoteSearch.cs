@@ -116,5 +116,18 @@ namespace Manager_Book_Store.Presentation_Layer
             m_DeliveryNoteData = m_DeliveryNoteExecute.getDeliveryDataByRuleFromDatabase(lkEmployeeName.Text, lkCustomerName.Text, txtContentSearch.Text, dateDelivery.DateTime);
             grdListDeliveryNote.DataSource = m_DeliveryNoteData;
         }
+
+        private void chkEnableChoseEmployee_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkEnableChoseEmployee.Checked)
+                lkCustomerName.EditValue = null;
+
+        }
+
+        private void chkEnableChoseCustomer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkEnableChoseCustomer.Checked)
+                lkEmployeeName.EditValue = null;
+        }
     }
 }

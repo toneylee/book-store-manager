@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using Manager_Book_Store.Business_Layer;
 using Manager_Book_Store.Data_Tranfer_Object;
+using Manager_Book_Store.Business_Layer;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
-    public partial class frmDecentralization : DevExpress.XtraEditors.XtraForm
+    public partial class frmDecentralization : Form
     {
-        #region "Variable"
+     #region "Variable"
         private DataTable m_ChargeData;
         private CChargeBUS m_ChargeExecute;
         private DataTable m_DecentralizationData;
@@ -32,32 +31,32 @@ namespace Manager_Book_Store.Presentation_Layer
             m_DecentralizationData = new DataTable();
             m_DecentralizationExecute = new DecentralizationBUS();
             m_DecentralizationObj = new DecentralizationDTO();
-            showButtonAdd = false;
-            btnSave.Visible = false;
+           
+            btnSave.Enabled= false;
         }
 
         private void frmDecentralization_Load(object sender, EventArgs e)
         {
             //
             m_ChargeData = m_ChargeExecute.getChargeDataFromDatabase();
-            grdListChucVu.DataSource = m_ChargeData;
+            grdListCharge.DataSource = m_ChargeData;
         }
 
         private void InitCheckEditDefault()
         {
-            ckbQ1.Checked = false;
-            ckbQ2.Checked = false;
-            ckbQ3.Checked = false;
-            ckbQ4.Checked = false;
-            ckbQ5.Checked = false;
-            ckbQ6.Checked = false;
-            ckbQ7.Checked = false;
-            ckbQ8.Checked = false;
-            ckbQ9.Checked = false;
-            ckbQ10.Checked = false;
-            ckbQ11.Checked = false;
-            ckbQ12.Checked = false;
-            ckbQ13.Checked = false;
+            chkQ1.Checked = false;
+            chkQ2.Checked = false;
+            chkQ3.Checked = false;
+            chkQ4.Checked = false;
+            chkQ5.Checked = false;
+            chkQ6.Checked = false;
+            chkQ7.Checked = false;
+            chkQ8.Checked = false;
+            chkQ9.Checked = false;
+            chkQ10.Checked = false;
+            chkQ11.Checked = false;
+            chkQ12.Checked = false;
+            chkQ13.Checked = false;
         }
 
         private void InitCheckEdit(DataTable m_DecentralizationData)
@@ -68,43 +67,43 @@ namespace Manager_Book_Store.Presentation_Layer
                 //
                 String temp = m_DecentralizationData.Rows[0][2].ToString();
                 if (temp.Equals("True"))
-                    ckbQ1.Checked = true;
+                    chkQ1.Checked = true;
                 temp = m_DecentralizationData.Rows[0][3].ToString();
                 if (temp.Equals("True"))
-                    ckbQ2.Checked = true;
+                    chkQ2.Checked = true;
                 temp = m_DecentralizationData.Rows[0][4].ToString();
                 if (temp.Equals("True"))
-                    ckbQ3.Checked = true;
+                    chkQ3.Checked = true;
                 temp = m_DecentralizationData.Rows[0][5].ToString();
                 if (temp.Equals("True"))
-                    ckbQ4.Checked = true;
+                    chkQ4.Checked = true;
                 temp = m_DecentralizationData.Rows[0][6].ToString();
                 if (temp.Equals("True"))
-                    ckbQ5.Checked = true;
+                    chkQ5.Checked = true;
                 temp = m_DecentralizationData.Rows[0][7].ToString();
                 if (temp.Equals("True"))
-                    ckbQ6.Checked = true;
+                    chkQ6.Checked = true;
                 temp = m_DecentralizationData.Rows[0][8].ToString();
                 if (temp.Equals("True"))
-                    ckbQ7.Checked = true;
+                    chkQ7.Checked = true;
                 temp = m_DecentralizationData.Rows[0][9].ToString();
                 if (temp.Equals("True"))
-                    ckbQ8.Checked = true;
+                    chkQ8.Checked = true;
                 temp = m_DecentralizationData.Rows[0][10].ToString();
                 if (temp.Equals("True"))
-                    ckbQ9.Checked = true;
+                    chkQ9.Checked = true;
                 temp = m_DecentralizationData.Rows[0][11].ToString();
                 if (temp.Equals("True"))
-                    ckbQ10.Checked = true;
+                    chkQ10.Checked = true;
                 temp = m_DecentralizationData.Rows[0][12].ToString();
                 if (temp.Equals("True"))
-                    ckbQ11.Checked = true;
+                    chkQ11.Checked = true;
                 temp = m_DecentralizationData.Rows[0][13].ToString();
                 if (temp.Equals("True"))
-                    ckbQ12.Checked = true;
+                    chkQ12.Checked = true;
                 temp = m_DecentralizationData.Rows[0][14].ToString();
                 if (temp.Equals("True"))
-                    ckbQ13.Checked = true;
+                    chkQ13.Checked = true;
             }
             else
                 showButtonAdd = false;
@@ -121,11 +120,11 @@ namespace Manager_Book_Store.Presentation_Layer
             InitCheckEdit(m_DecentralizationData);
         }
 
-        private void grdvListBook_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void grdvListCharge_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (e.FocusedRowHandle >= 0)
             {
-                m_DecentralizationObj.maChucVu = grdvListCV.GetRowCellValue(e.FocusedRowHandle, grdvListCV.Columns["MaCV"]).ToString();
+                m_DecentralizationObj.maChucVu = grdvListCharge.GetRowCellValue(e.FocusedRowHandle, grdvListCharge.Columns["MaCV"]).ToString();
 
                 InitDecentralizationObect(m_DecentralizationObj.maChucVu);
 
@@ -133,14 +132,17 @@ namespace Manager_Book_Store.Presentation_Layer
                {
                    btnAdd.Visible = false;
                    btnUpdate.Visible = true;
+                   btnSave.Enabled = false;
+                   btnCancel.Visible = false;
+                   setCheckEditReadOnly(false);
                }
                else
                {
-                   btnAdd.Visible = true;
                    btnCancel.Visible = false;
                    btnAdd.Visible = true;
                    btnUpdate.Visible = false;
-                   setCheckEditReadOnly(showButtonAdd);
+                   btnSave.Enabled = false;
+                   setCheckEditReadOnly(false);
                }
             }
         }
@@ -148,20 +150,18 @@ namespace Manager_Book_Store.Presentation_Layer
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             isAddOrUpdate = true;
-            btnSave.Visible = true;
+            btnSave.Enabled = true;
             btnUpdate.Visible = false;
-            canEditCheck = true;
-            setCheckEditReadOnly(canEditCheck);
+            setCheckEditReadOnly(true);
             btnCancel.Visible = true;
             btnCancel.Text = "Hủy cập nhật";
-        }
 
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             isAddOrUpdate = false;
-            canEditCheck = true;
-            setCheckEditReadOnly(canEditCheck);
-            btnSave.Visible = true;
+            setCheckEditReadOnly(true);
+            btnSave.Enabled = true;
             btnCancel.Visible = true;
             btnCancel.Text = "Hủy thêm mới";
         }
@@ -170,34 +170,34 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             if (!_b)
             {
-                ckbQ1.Properties.ReadOnly = true;
-                ckbQ2.Properties.ReadOnly = true;
-                ckbQ3.Properties.ReadOnly = true;
-                ckbQ4.Properties.ReadOnly = true;
-                ckbQ5.Properties.ReadOnly = true;
-                ckbQ6.Properties.ReadOnly = true;
-                ckbQ7.Properties.ReadOnly = true;
-                ckbQ8.Properties.ReadOnly = true;
-                ckbQ9.Properties.ReadOnly = true;
-                ckbQ10.Properties.ReadOnly = true;
-                ckbQ11.Properties.ReadOnly = true;
-                ckbQ12.Properties.ReadOnly = true;
-                ckbQ13.Properties.ReadOnly = true;
+                chkQ1.Properties.ReadOnly = true;
+                chkQ2.Properties.ReadOnly = true;
+                chkQ3.Properties.ReadOnly = true;
+                chkQ4.Properties.ReadOnly = true;
+                chkQ5.Properties.ReadOnly = true;
+                chkQ6.Properties.ReadOnly = true;
+                chkQ7.Properties.ReadOnly = true;
+                chkQ8.Properties.ReadOnly = true;
+                chkQ9.Properties.ReadOnly = true;
+                chkQ10.Properties.ReadOnly = true;
+                chkQ11.Properties.ReadOnly = true;
+                chkQ12.Properties.ReadOnly = true;
+                chkQ13.Properties.ReadOnly = true;
             }
             else {
-                ckbQ1.Properties.ReadOnly = false;
-                ckbQ2.Properties.ReadOnly = false;
-                ckbQ3.Properties.ReadOnly = false;
-                ckbQ4.Properties.ReadOnly = false;
-                ckbQ5.Properties.ReadOnly = false;
-                ckbQ6.Properties.ReadOnly = false;
-                ckbQ7.Properties.ReadOnly = false;
-                ckbQ8.Properties.ReadOnly = false;
-                ckbQ9.Properties.ReadOnly = false;
-                ckbQ10.Properties.ReadOnly = false;
-                ckbQ11.Properties.ReadOnly = false;
-                ckbQ12.Properties.ReadOnly = false;
-                ckbQ13.Properties.ReadOnly = false;
+                chkQ1.Properties.ReadOnly = false;
+                chkQ2.Properties.ReadOnly = false;
+                chkQ3.Properties.ReadOnly = false;
+                chkQ4.Properties.ReadOnly = false;
+                chkQ5.Properties.ReadOnly = false;
+                chkQ6.Properties.ReadOnly = false;
+                chkQ7.Properties.ReadOnly = false;
+                chkQ8.Properties.ReadOnly = false;
+                chkQ9.Properties.ReadOnly = false;
+                chkQ10.Properties.ReadOnly = false;
+                chkQ11.Properties.ReadOnly = false;
+                chkQ12.Properties.ReadOnly = false;
+                chkQ13.Properties.ReadOnly = false;
             }
         }
 
@@ -205,13 +205,13 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             canEditCheck = false;
             setCheckEditReadOnly(canEditCheck);
-            btnSave.Visible = false;
+            btnSave.Enabled = false;
             btnUpdate.Visible = true;
+            btnAdd.Visible = true;
             btnCancel.Visible = false;
             if (isAddOrUpdate == true && showButtonAdd == false)
             {
                 //Cap nhat
-              
                 btnAdd.Visible = false;
             }
             else 
@@ -223,23 +223,19 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            canEditCheck = false;
-            setCheckEditReadOnly(canEditCheck);
-            btnSave.Visible = false;
+            setCheckEditReadOnly(false);
+            btnSave.Enabled = false;
             btnAdd.Visible = false;
             btnUpdate.Visible = true;
             btnCancel.Visible = false;
 
             setCheckEditValue();
-
             if (isAddOrUpdate)
             {
-                //Cap nhat
                 updateDecentralization();
             }
             else
             {
-                //Them moi
                 addDecentralization();
             }
         }
@@ -255,14 +251,15 @@ namespace Manager_Book_Store.Presentation_Layer
                 }
                 else
                 {
-                    XtraMessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    XtraCustomMessageBox.Show("Cập nhật thất bại!", "Thông báo",true);
                 }
             }
             catch (System.Exception ex)
             {
-                XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+              
             }
         }
+
         private void addDecentralization()
         {
             try
@@ -273,30 +270,30 @@ namespace Manager_Book_Store.Presentation_Layer
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thêm mới thất bại!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    XtraCustomMessageBox.Show("Thêm mới thất bại!", "Thông báo",true);
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+               
             }
         }
 
         private void setCheckEditValue()
         {
-            m_DecentralizationObj.ThietLapHeThong = ckbQ1.Checked;
-            m_DecentralizationObj.ThayDoiQuyDinh = ckbQ2.Checked;
-            m_DecentralizationObj.QuanLySach = ckbQ3.Checked;
-            m_DecentralizationObj.QuanLyNhanVien = ckbQ4.Checked;
-            m_DecentralizationObj.QuanLyKhachHang = ckbQ5.Checked;
-            m_DecentralizationObj.LapPhieuNhapSach = ckbQ6.Checked;
-            m_DecentralizationObj.LapHoaDonBanSach = ckbQ7.Checked;
-            m_DecentralizationObj.LapPhieuThuTien = ckbQ8.Checked;
-            m_DecentralizationObj.TraCuuSach = ckbQ9.Checked;
-            m_DecentralizationObj.TraCuuNhanVien = ckbQ10.Checked;
-            m_DecentralizationObj.TraCuuHoaDon = ckbQ11.Checked;
-            m_DecentralizationObj.TraCuuKhachHang = ckbQ12.Checked;
-            m_DecentralizationObj.LapBaoCaoThang = ckbQ13.Checked;
+            m_DecentralizationObj.ThietLapHeThong = chkQ1.Checked;
+            m_DecentralizationObj.ThayDoiQuyDinh = chkQ2.Checked;
+            m_DecentralizationObj.QuanLySach = chkQ3.Checked;
+            m_DecentralizationObj.QuanLyNhanVien = chkQ4.Checked;
+            m_DecentralizationObj.QuanLyKhachHang = chkQ5.Checked;
+            m_DecentralizationObj.LapPhieuNhapSach = chkQ6.Checked;
+            m_DecentralizationObj.LapHoaDonBanSach = chkQ7.Checked;
+            m_DecentralizationObj.LapPhieuThuTien = chkQ8.Checked;
+            m_DecentralizationObj.TraCuuSach = chkQ9.Checked;
+            m_DecentralizationObj.TraCuuNhanVien = chkQ10.Checked;
+            m_DecentralizationObj.TraCuuHoaDon = chkQ11.Checked;
+            m_DecentralizationObj.TraCuuKhachHang = chkQ12.Checked;
+            m_DecentralizationObj.LapBaoCaoThang = chkQ13.Checked;
         }
     }
 }

@@ -32,14 +32,30 @@
             this.panelReceiptNoteTitle = new DevExpress.XtraEditors.PanelControl();
             this.labEmployeeTitle = new DevExpress.XtraEditors.LabelControl();
             this.PanelReceitNoteExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnView = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnWrite = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.panelReceiptNoteView = new DevExpress.XtraEditors.PanelControl();
             this.panelReceiptViewDetail = new DevExpress.XtraEditors.PanelControl();
+            this.grdListReceiptBook = new DevExpress.XtraGrid.GridControl();
+            this.grdvReceiptBook = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ReceiptNoteId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNoteBookName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNoteBookGenre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNoteAuthor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNotePublisher = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNoteQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNoteImportPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReceiptNoteAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.grpReceiptNoteDetail = new DevExpress.XtraEditors.GroupControl();
+            this.lblSoLuongMax = new DevExpress.XtraEditors.LabelControl();
+            this.btnAddNewBook = new DevExpress.XtraEditors.SimpleButton();
             this.ppControlReceiptNote = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.grdListBook = new DevExpress.XtraGrid.GridControl();
             this.grdvListBook = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -59,17 +75,6 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.grdListReceiptBook = new DevExpress.XtraGrid.GridControl();
-            this.grdvReceiptBook = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ReceiptNoteId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNoteBookName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNoteBookGenre = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNoteAuthor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNotePublisher = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNoteQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNoteImportPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReceiptNoteAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grpReceiptNoteDetail = new DevExpress.XtraEditors.GroupControl();
             this.spAmount = new DevExpress.XtraEditors.SpinEdit();
             this.spPrices = new DevExpress.XtraEditors.SpinEdit();
             this.spQuantity = new DevExpress.XtraEditors.SpinEdit();
@@ -103,6 +108,12 @@
             this.panelReceiptNoteView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelReceiptViewDetail)).BeginInit();
             this.panelReceiptViewDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListReceiptBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvReceiptBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpReceiptNoteDetail)).BeginInit();
+            this.grpReceiptNoteDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ppControlReceiptNote)).BeginInit();
             this.ppControlReceiptNote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdListBook)).BeginInit();
@@ -110,10 +121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelBookExecute)).BeginInit();
             this.panelBookExecute.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerReceiptNote)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListReceiptBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdvReceiptBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpReceiptNoteDetail)).BeginInit();
-            this.grpReceiptNoteDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spQuantity.Properties)).BeginInit();
@@ -133,7 +140,7 @@
             this.panelReceiptNoteTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelReceiptNoteTitle.Location = new System.Drawing.Point(0, 0);
             this.panelReceiptNoteTitle.Name = "panelReceiptNoteTitle";
-            this.panelReceiptNoteTitle.Size = new System.Drawing.Size(950, 34);
+            this.panelReceiptNoteTitle.Size = new System.Drawing.Size(957, 34);
             this.panelReceiptNoteTitle.TabIndex = 0;
             // 
             // labEmployeeTitle
@@ -141,7 +148,7 @@
             this.labEmployeeTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labEmployeeTitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.labEmployeeTitle.Appearance.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labEmployeeTitle.Location = new System.Drawing.Point(363, 0);
+            this.labEmployeeTitle.Location = new System.Drawing.Point(366, 0);
             this.labEmployeeTitle.Name = "labEmployeeTitle";
             this.labEmployeeTitle.Size = new System.Drawing.Size(217, 32);
             this.labEmployeeTitle.TabIndex = 2;
@@ -149,77 +156,78 @@
             // 
             // PanelReceitNoteExecute
             // 
-            this.PanelReceitNoteExecute.Controls.Add(this.btnUpdate);
             this.PanelReceitNoteExecute.Controls.Add(this.btnView);
-            this.PanelReceitNoteExecute.Controls.Add(this.btnSave);
+            this.PanelReceitNoteExecute.Controls.Add(this.btnWrite);
             this.PanelReceitNoteExecute.Controls.Add(this.btnCancel);
             this.PanelReceitNoteExecute.Controls.Add(this.btnAdd);
-            this.PanelReceitNoteExecute.Controls.Add(this.btnDelete);
             this.PanelReceitNoteExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelReceitNoteExecute.Location = new System.Drawing.Point(0, 458);
+            this.PanelReceitNoteExecute.Location = new System.Drawing.Point(0, 409);
             this.PanelReceitNoteExecute.Name = "PanelReceitNoteExecute";
-            this.PanelReceitNoteExecute.Size = new System.Drawing.Size(950, 51);
+            this.PanelReceitNoteExecute.Size = new System.Drawing.Size(957, 51);
             this.PanelReceitNoteExecute.TabIndex = 1;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(522, 8);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(846, 8);
+            this.btnView.Enabled = false;
+            this.btnView.Location = new System.Drawing.Point(816, 10);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(92, 31);
             this.btnView.TabIndex = 8;
             this.btnView.Text = "Xem hóa đơn";
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // btnSave
+            // btnWrite
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(737, 8);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 31);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Lưu xuống";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnWrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWrite.Location = new System.Drawing.Point(697, 11);
+            this.btnWrite.Name = "btnWrite";
+            this.btnWrite.Size = new System.Drawing.Size(87, 31);
+            this.btnWrite.TabIndex = 8;
+            this.btnWrite.Text = "Ghi hóa đơn";
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(398, 8);
+            this.btnCancel.Location = new System.Drawing.Point(567, 11);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 31);
+            this.btnCancel.Size = new System.Drawing.Size(96, 31);
             this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Hủy thêm mới";
-            this.btnCancel.Visible = false;
+            this.btnCancel.Text = "Hủy thao tác";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(415, 8);
+            this.btnAdd.Location = new System.Drawing.Point(567, 11);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 31);
+            this.btnAdd.Size = new System.Drawing.Size(96, 31);
             this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Text = "Lập hóa đơn";
+            this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Location = new System.Drawing.Point(4, 6);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(37, 56);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Cập\r\nnhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(634, 8);
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(5, 67);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 31);
+            this.btnDelete.Size = new System.Drawing.Size(35, 52);
             this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Xóa bỏ";
+            this.btnDelete.Text = "Xóa \r\nbỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panelReceiptNoteView
@@ -229,26 +237,222 @@
             this.panelReceiptNoteView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelReceiptNoteView.Location = new System.Drawing.Point(0, 34);
             this.panelReceiptNoteView.Name = "panelReceiptNoteView";
-            this.panelReceiptNoteView.Size = new System.Drawing.Size(950, 424);
+            this.panelReceiptNoteView.Size = new System.Drawing.Size(957, 375);
             this.panelReceiptNoteView.TabIndex = 2;
             // 
             // panelReceiptViewDetail
             // 
-            this.panelReceiptViewDetail.Controls.Add(this.ppControlReceiptNote);
             this.panelReceiptViewDetail.Controls.Add(this.grdListReceiptBook);
+            this.panelReceiptViewDetail.Controls.Add(this.panelControl1);
             this.panelReceiptViewDetail.Controls.Add(this.grpReceiptNoteDetail);
             this.panelReceiptViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelReceiptViewDetail.Location = new System.Drawing.Point(2, 37);
             this.panelReceiptViewDetail.Name = "panelReceiptViewDetail";
-            this.panelReceiptViewDetail.Size = new System.Drawing.Size(946, 385);
+            this.panelReceiptViewDetail.Size = new System.Drawing.Size(953, 336);
             this.panelReceiptViewDetail.TabIndex = 5;
+            // 
+            // grdListReceiptBook
+            // 
+            this.grdListReceiptBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdListReceiptBook.Location = new System.Drawing.Point(2, 142);
+            this.grdListReceiptBook.MainView = this.grdvReceiptBook;
+            this.grdListReceiptBook.Name = "grdListReceiptBook";
+            this.grdListReceiptBook.Size = new System.Drawing.Size(904, 192);
+            this.grdListReceiptBook.TabIndex = 7;
+            this.grdListReceiptBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvReceiptBook});
+            // 
+            // grdvReceiptBook
+            // 
+            this.grdvReceiptBook.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ReceiptNoteId,
+            this.ReceiptNoteBookName,
+            this.ReceiptNoteBookGenre,
+            this.ReceiptNoteAuthor,
+            this.ReceiptNotePublisher,
+            this.ReceiptNoteQuantity,
+            this.ReceiptNoteImportPrice,
+            this.ReceiptNoteAmount});
+            this.grdvReceiptBook.GridControl = this.grdListReceiptBook;
+            this.grdvReceiptBook.Name = "grdvReceiptBook";
+            this.grdvReceiptBook.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
+            this.grdvReceiptBook.OptionsBehavior.ReadOnly = true;
+            this.grdvReceiptBook.OptionsView.ShowFooter = true;
+            this.grdvReceiptBook.OptionsView.ShowGroupPanel = false;
+            this.grdvReceiptBook.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.grdvReceiptBook_CustomDrawFooterCell);
+            this.grdvReceiptBook.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvReceiptBook_FocusedRowChanged);
+            // 
+            // ReceiptNoteId
+            // 
+            this.ReceiptNoteId.Caption = "Mã sách";
+            this.ReceiptNoteId.FieldName = "MaSach";
+            this.ReceiptNoteId.Name = "ReceiptNoteId";
+            this.ReceiptNoteId.Visible = true;
+            this.ReceiptNoteId.VisibleIndex = 0;
+            this.ReceiptNoteId.Width = 119;
+            // 
+            // ReceiptNoteBookName
+            // 
+            this.ReceiptNoteBookName.Caption = "Tên sách";
+            this.ReceiptNoteBookName.FieldName = "TenSach";
+            this.ReceiptNoteBookName.Name = "ReceiptNoteBookName";
+            this.ReceiptNoteBookName.Visible = true;
+            this.ReceiptNoteBookName.VisibleIndex = 1;
+            this.ReceiptNoteBookName.Width = 138;
+            // 
+            // ReceiptNoteBookGenre
+            // 
+            this.ReceiptNoteBookGenre.Caption = "Thể loại";
+            this.ReceiptNoteBookGenre.FieldName = "TenTL";
+            this.ReceiptNoteBookGenre.Name = "ReceiptNoteBookGenre";
+            this.ReceiptNoteBookGenre.Visible = true;
+            this.ReceiptNoteBookGenre.VisibleIndex = 2;
+            this.ReceiptNoteBookGenre.Width = 144;
+            // 
+            // ReceiptNoteAuthor
+            // 
+            this.ReceiptNoteAuthor.Caption = "Tác giả";
+            this.ReceiptNoteAuthor.FieldName = "NhomTG";
+            this.ReceiptNoteAuthor.Name = "ReceiptNoteAuthor";
+            this.ReceiptNoteAuthor.Visible = true;
+            this.ReceiptNoteAuthor.VisibleIndex = 3;
+            this.ReceiptNoteAuthor.Width = 125;
+            // 
+            // ReceiptNotePublisher
+            // 
+            this.ReceiptNotePublisher.Caption = "Nhà xuất bản";
+            this.ReceiptNotePublisher.FieldName = "TenNXB";
+            this.ReceiptNotePublisher.Name = "ReceiptNotePublisher";
+            this.ReceiptNotePublisher.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
+            this.ReceiptNotePublisher.Visible = true;
+            this.ReceiptNotePublisher.VisibleIndex = 4;
+            this.ReceiptNotePublisher.Width = 129;
+            // 
+            // ReceiptNoteQuantity
+            // 
+            this.ReceiptNoteQuantity.Caption = "Số lượng";
+            this.ReceiptNoteQuantity.FieldName = "SoLuong";
+            this.ReceiptNoteQuantity.Name = "ReceiptNoteQuantity";
+            this.ReceiptNoteQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
+            this.ReceiptNoteQuantity.Visible = true;
+            this.ReceiptNoteQuantity.VisibleIndex = 5;
+            this.ReceiptNoteQuantity.Width = 138;
+            // 
+            // ReceiptNoteImportPrice
+            // 
+            this.ReceiptNoteImportPrice.Caption = "Đơn giá";
+            this.ReceiptNoteImportPrice.FieldName = "DonGia";
+            this.ReceiptNoteImportPrice.Name = "ReceiptNoteImportPrice";
+            this.ReceiptNoteImportPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
+            this.ReceiptNoteImportPrice.Visible = true;
+            this.ReceiptNoteImportPrice.VisibleIndex = 6;
+            this.ReceiptNoteImportPrice.Width = 137;
+            // 
+            // ReceiptNoteAmount
+            // 
+            this.ReceiptNoteAmount.Caption = "Thành tiền";
+            this.ReceiptNoteAmount.FieldName = "ThanhTien";
+            this.ReceiptNoteAmount.Name = "ReceiptNoteAmount";
+            this.ReceiptNoteAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
+            this.ReceiptNoteAmount.Visible = true;
+            this.ReceiptNoteAmount.VisibleIndex = 7;
+            this.ReceiptNoteAmount.Width = 126;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnSave);
+            this.panelControl1.Controls.Add(this.btnDelete);
+            this.panelControl1.Controls.Add(this.btnCancelOfUpdate);
+            this.panelControl1.Controls.Add(this.btnUpdate);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl1.Location = new System.Drawing.Point(906, 142);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(45, 192);
+            this.panelControl1.TabIndex = 6;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(5, 124);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(37, 56);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Lưu\r\n";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(4, 6);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(36, 55);
+            this.btnCancelOfUpdate.TabIndex = 6;
+            this.btnCancelOfUpdate.Text = "Hủy";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
+            // 
+            // grpReceiptNoteDetail
+            // 
+            this.grpReceiptNoteDetail.Appearance.BackColor = System.Drawing.Color.Gainsboro;
+            this.grpReceiptNoteDetail.Appearance.Options.UseBackColor = true;
+            this.grpReceiptNoteDetail.Controls.Add(this.lblSoLuongMax);
+            this.grpReceiptNoteDetail.Controls.Add(this.btnAddNewBook);
+            this.grpReceiptNoteDetail.Controls.Add(this.ppControlReceiptNote);
+            this.grpReceiptNoteDetail.Controls.Add(this.spAmount);
+            this.grpReceiptNoteDetail.Controls.Add(this.spPrices);
+            this.grpReceiptNoteDetail.Controls.Add(this.spQuantity);
+            this.grpReceiptNoteDetail.Controls.Add(this.btnAddInListBookDetail);
+            this.grpReceiptNoteDetail.Controls.Add(this.txtAuthorName);
+            this.grpReceiptNoteDetail.Controls.Add(this.labMoneyStyle3);
+            this.grpReceiptNoteDetail.Controls.Add(this.labMoneyStyle2);
+            this.grpReceiptNoteDetail.Controls.Add(this.labQuantity);
+            this.grpReceiptNoteDetail.Controls.Add(this.labAuthorName);
+            this.grpReceiptNoteDetail.Controls.Add(this.drbtnReceiptNoteChose);
+            this.grpReceiptNoteDetail.Controls.Add(this.txtPublisherName);
+            this.grpReceiptNoteDetail.Controls.Add(this.txtBookGenre);
+            this.grpReceiptNoteDetail.Controls.Add(this.labAmount);
+            this.grpReceiptNoteDetail.Controls.Add(this.labPublisher);
+            this.grpReceiptNoteDetail.Controls.Add(this.labBookGenre);
+            this.grpReceiptNoteDetail.Controls.Add(this.txtBookName);
+            this.grpReceiptNoteDetail.Controls.Add(this.txtBookId);
+            this.grpReceiptNoteDetail.Controls.Add(this.labImportPrice);
+            this.grpReceiptNoteDetail.Controls.Add(this.labBookName);
+            this.grpReceiptNoteDetail.Controls.Add(this.labBookId);
+            this.grpReceiptNoteDetail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpReceiptNoteDetail.Location = new System.Drawing.Point(2, 2);
+            this.grpReceiptNoteDetail.Name = "grpReceiptNoteDetail";
+            this.grpReceiptNoteDetail.Size = new System.Drawing.Size(949, 140);
+            this.grpReceiptNoteDetail.TabIndex = 4;
+            this.grpReceiptNoteDetail.Text = "Thông tin chi tiểt";
+            // 
+            // lblSoLuongMax
+            // 
+            this.lblSoLuongMax.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblSoLuongMax.Location = new System.Drawing.Point(619, 112);
+            this.lblSoLuongMax.Name = "lblSoLuongMax";
+            this.lblSoLuongMax.Size = new System.Drawing.Size(0, 13);
+            this.lblSoLuongMax.TabIndex = 6;
+            // 
+            // btnAddNewBook
+            // 
+            this.btnAddNewBook.Location = new System.Drawing.Point(188, 27);
+            this.btnAddNewBook.Name = "btnAddNewBook";
+            this.btnAddNewBook.Size = new System.Drawing.Size(109, 24);
+            this.btnAddNewBook.TabIndex = 5;
+            this.btnAddNewBook.Text = "Thêm sách mới";
+            this.btnAddNewBook.Click += new System.EventHandler(this.btnAddNewBook_Click);
             // 
             // ppControlReceiptNote
             // 
             this.ppControlReceiptNote.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.ppControlReceiptNote.Controls.Add(this.grdListBook);
             this.ppControlReceiptNote.Controls.Add(this.panelBookExecute);
-            this.ppControlReceiptNote.Location = new System.Drawing.Point(20, 148);
+            this.ppControlReceiptNote.Location = new System.Drawing.Point(3, 131);
             this.ppControlReceiptNote.Manager = this.barManagerReceiptNote;
             this.ppControlReceiptNote.Name = "ppControlReceiptNote";
             this.ppControlReceiptNote.Size = new System.Drawing.Size(732, 332);
@@ -279,7 +483,9 @@
             this.Price});
             this.grdvListBook.GridControl = this.grdListBook;
             this.grdvListBook.Name = "grdvListBook";
+            this.grdvListBook.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
             this.grdvListBook.OptionsView.ShowGroupPanel = false;
+            this.grdvListBook.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.grdvListBook_RowCellClick);
             this.grdvListBook.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvListBook_FocusedRowChanged);
             // 
             // BookSno
@@ -397,171 +603,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(950, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(957, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 509);
-            this.barDockControlBottom.Size = new System.Drawing.Size(950, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 460);
+            this.barDockControlBottom.Size = new System.Drawing.Size(957, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 509);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 460);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(950, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 509);
-            // 
-            // grdListReceiptBook
-            // 
-            this.grdListReceiptBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdListReceiptBook.Location = new System.Drawing.Point(2, 142);
-            this.grdListReceiptBook.MainView = this.grdvReceiptBook;
-            this.grdListReceiptBook.Name = "grdListReceiptBook";
-            this.grdListReceiptBook.Size = new System.Drawing.Size(942, 241);
-            this.grdListReceiptBook.TabIndex = 5;
-            this.grdListReceiptBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdvReceiptBook});
-            // 
-            // grdvReceiptBook
-            // 
-            this.grdvReceiptBook.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.ReceiptNoteId,
-            this.ReceiptNoteBookName,
-            this.ReceiptNoteBookGenre,
-            this.ReceiptNoteAuthor,
-            this.ReceiptNotePublisher,
-            this.ReceiptNoteQuantity,
-            this.ReceiptNoteImportPrice,
-            this.ReceiptNoteAmount});
-            this.grdvReceiptBook.GridControl = this.grdListReceiptBook;
-            this.grdvReceiptBook.Name = "grdvReceiptBook";
-            this.grdvReceiptBook.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
-            this.grdvReceiptBook.OptionsBehavior.ReadOnly = true;
-            this.grdvReceiptBook.OptionsView.ShowFooter = true;
-            this.grdvReceiptBook.OptionsView.ShowGroupPanel = false;
-            this.grdvReceiptBook.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.grdvReceiptBook_RowCellClick);
-            this.grdvReceiptBook.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.grdvReceiptBook_CustomDrawFooterCell);
-            this.grdvReceiptBook.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvReceiptBook_FocusedRowChanged);
-            // 
-            // ReceiptNoteId
-            // 
-            this.ReceiptNoteId.Caption = "Mã sách";
-            this.ReceiptNoteId.FieldName = "MaSach";
-            this.ReceiptNoteId.Name = "ReceiptNoteId";
-            this.ReceiptNoteId.Visible = true;
-            this.ReceiptNoteId.VisibleIndex = 0;
-            this.ReceiptNoteId.Width = 116;
-            // 
-            // ReceiptNoteBookName
-            // 
-            this.ReceiptNoteBookName.Caption = "Tên sách";
-            this.ReceiptNoteBookName.FieldName = "TenSach";
-            this.ReceiptNoteBookName.Name = "ReceiptNoteBookName";
-            this.ReceiptNoteBookName.Visible = true;
-            this.ReceiptNoteBookName.VisibleIndex = 1;
-            this.ReceiptNoteBookName.Width = 134;
-            // 
-            // ReceiptNoteBookGenre
-            // 
-            this.ReceiptNoteBookGenre.Caption = "Thể loại";
-            this.ReceiptNoteBookGenre.FieldName = "TenTL";
-            this.ReceiptNoteBookGenre.Name = "ReceiptNoteBookGenre";
-            this.ReceiptNoteBookGenre.Visible = true;
-            this.ReceiptNoteBookGenre.VisibleIndex = 2;
-            this.ReceiptNoteBookGenre.Width = 140;
-            // 
-            // ReceiptNoteAuthor
-            // 
-            this.ReceiptNoteAuthor.Caption = "Tác giả";
-            this.ReceiptNoteAuthor.FieldName = "NhomTG";
-            this.ReceiptNoteAuthor.Name = "ReceiptNoteAuthor";
-            this.ReceiptNoteAuthor.Visible = true;
-            this.ReceiptNoteAuthor.VisibleIndex = 3;
-            this.ReceiptNoteAuthor.Width = 132;
-            // 
-            // ReceiptNotePublisher
-            // 
-            this.ReceiptNotePublisher.Caption = "Nhà xuất bản";
-            this.ReceiptNotePublisher.FieldName = "TenNXB";
-            this.ReceiptNotePublisher.Name = "ReceiptNotePublisher";
-            this.ReceiptNotePublisher.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
-            this.ReceiptNotePublisher.Visible = true;
-            this.ReceiptNotePublisher.VisibleIndex = 4;
-            this.ReceiptNotePublisher.Width = 142;
-            // 
-            // ReceiptNoteQuantity
-            // 
-            this.ReceiptNoteQuantity.Caption = "Số lượng";
-            this.ReceiptNoteQuantity.FieldName = "SoLuong";
-            this.ReceiptNoteQuantity.Name = "ReceiptNoteQuantity";
-            this.ReceiptNoteQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
-            this.ReceiptNoteQuantity.Visible = true;
-            this.ReceiptNoteQuantity.VisibleIndex = 5;
-            this.ReceiptNoteQuantity.Width = 125;
-            // 
-            // ReceiptNoteImportPrice
-            // 
-            this.ReceiptNoteImportPrice.Caption = "Đơn giá";
-            this.ReceiptNoteImportPrice.FieldName = "DonGia";
-            this.ReceiptNoteImportPrice.Name = "ReceiptNoteImportPrice";
-            this.ReceiptNoteImportPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
-            this.ReceiptNoteImportPrice.Visible = true;
-            this.ReceiptNoteImportPrice.VisibleIndex = 6;
-            this.ReceiptNoteImportPrice.Width = 110;
-            // 
-            // ReceiptNoteAmount
-            // 
-            this.ReceiptNoteAmount.Caption = "Thành tiền";
-            this.ReceiptNoteAmount.FieldName = "ThanhTien";
-            this.ReceiptNoteAmount.Name = "ReceiptNoteAmount";
-            this.ReceiptNoteAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
-            this.ReceiptNoteAmount.Visible = true;
-            this.ReceiptNoteAmount.VisibleIndex = 7;
-            this.ReceiptNoteAmount.Width = 122;
-            // 
-            // grpReceiptNoteDetail
-            // 
-            this.grpReceiptNoteDetail.Appearance.BackColor = System.Drawing.Color.Gainsboro;
-            this.grpReceiptNoteDetail.Appearance.Options.UseBackColor = true;
-            this.grpReceiptNoteDetail.Controls.Add(this.spAmount);
-            this.grpReceiptNoteDetail.Controls.Add(this.spPrices);
-            this.grpReceiptNoteDetail.Controls.Add(this.spQuantity);
-            this.grpReceiptNoteDetail.Controls.Add(this.btnAddInListBookDetail);
-            this.grpReceiptNoteDetail.Controls.Add(this.txtAuthorName);
-            this.grpReceiptNoteDetail.Controls.Add(this.labMoneyStyle3);
-            this.grpReceiptNoteDetail.Controls.Add(this.labMoneyStyle2);
-            this.grpReceiptNoteDetail.Controls.Add(this.labQuantity);
-            this.grpReceiptNoteDetail.Controls.Add(this.labAuthorName);
-            this.grpReceiptNoteDetail.Controls.Add(this.drbtnReceiptNoteChose);
-            this.grpReceiptNoteDetail.Controls.Add(this.txtPublisherName);
-            this.grpReceiptNoteDetail.Controls.Add(this.txtBookGenre);
-            this.grpReceiptNoteDetail.Controls.Add(this.labAmount);
-            this.grpReceiptNoteDetail.Controls.Add(this.labPublisher);
-            this.grpReceiptNoteDetail.Controls.Add(this.labBookGenre);
-            this.grpReceiptNoteDetail.Controls.Add(this.txtBookName);
-            this.grpReceiptNoteDetail.Controls.Add(this.txtBookId);
-            this.grpReceiptNoteDetail.Controls.Add(this.labImportPrice);
-            this.grpReceiptNoteDetail.Controls.Add(this.labBookName);
-            this.grpReceiptNoteDetail.Controls.Add(this.labBookId);
-            this.grpReceiptNoteDetail.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpReceiptNoteDetail.Location = new System.Drawing.Point(2, 2);
-            this.grpReceiptNoteDetail.Name = "grpReceiptNoteDetail";
-            this.grpReceiptNoteDetail.Size = new System.Drawing.Size(942, 140);
-            this.grpReceiptNoteDetail.TabIndex = 4;
-            this.grpReceiptNoteDetail.Text = "Thông tin chi tiểt";
+            this.barDockControlRight.Location = new System.Drawing.Point(957, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 460);
             // 
             // spAmount
             // 
@@ -572,8 +635,6 @@
             0});
             this.spAmount.Location = new System.Drawing.Point(719, 83);
             this.spAmount.Name = "spAmount";
-            this.spAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.spAmount.Properties.Appearance.Options.UseBackColor = true;
             this.spAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spAmount.Properties.Mask.EditMask = "c0";
@@ -602,6 +663,7 @@
             0,
             0,
             0});
+            this.spPrices.Properties.ReadOnly = true;
             this.spPrices.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.spPrices.Size = new System.Drawing.Size(179, 20);
             this.spPrices.TabIndex = 4;
@@ -627,6 +689,7 @@
             0,
             0,
             0});
+            this.spQuantity.Properties.ReadOnly = true;
             this.spQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.spQuantity.Size = new System.Drawing.Size(179, 20);
             this.spQuantity.TabIndex = 4;
@@ -635,7 +698,7 @@
             // 
             // btnAddInListBookDetail
             // 
-            this.btnAddInListBookDetail.Location = new System.Drawing.Point(823, 106);
+            this.btnAddInListBookDetail.Location = new System.Drawing.Point(823, 111);
             this.btnAddInListBookDetail.Name = "btnAddInListBookDetail";
             this.btnAddInListBookDetail.Size = new System.Drawing.Size(75, 23);
             this.btnAddInListBookDetail.TabIndex = 3;
@@ -646,8 +709,6 @@
             // 
             this.txtAuthorName.Location = new System.Drawing.Point(118, 109);
             this.txtAuthorName.Name = "txtAuthorName";
-            this.txtAuthorName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtAuthorName.Properties.Appearance.Options.UseBackColor = true;
             this.txtAuthorName.Properties.ReadOnly = true;
             this.txtAuthorName.Size = new System.Drawing.Size(179, 20);
             this.txtAuthorName.TabIndex = 1;
@@ -700,8 +761,6 @@
             // 
             this.txtPublisherName.Location = new System.Drawing.Point(434, 83);
             this.txtPublisherName.Name = "txtPublisherName";
-            this.txtPublisherName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtPublisherName.Properties.Appearance.Options.UseBackColor = true;
             this.txtPublisherName.Properties.ReadOnly = true;
             this.txtPublisherName.Size = new System.Drawing.Size(179, 20);
             this.txtPublisherName.TabIndex = 1;
@@ -710,8 +769,6 @@
             // 
             this.txtBookGenre.Location = new System.Drawing.Point(118, 83);
             this.txtBookGenre.Name = "txtBookGenre";
-            this.txtBookGenre.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBookGenre.Properties.Appearance.Options.UseBackColor = true;
             this.txtBookGenre.Properties.ReadOnly = true;
             this.txtBookGenre.Size = new System.Drawing.Size(179, 20);
             this.txtBookGenre.TabIndex = 1;
@@ -744,8 +801,6 @@
             // 
             this.txtBookName.Location = new System.Drawing.Point(434, 57);
             this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBookName.Properties.Appearance.Options.UseBackColor = true;
             this.txtBookName.Properties.ReadOnly = true;
             this.txtBookName.Size = new System.Drawing.Size(179, 20);
             this.txtBookName.TabIndex = 1;
@@ -754,8 +809,6 @@
             // 
             this.txtBookId.Location = new System.Drawing.Point(118, 57);
             this.txtBookId.Name = "txtBookId";
-            this.txtBookId.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBookId.Properties.Appearance.Options.UseBackColor = true;
             this.txtBookId.Properties.ReadOnly = true;
             this.txtBookId.Size = new System.Drawing.Size(179, 20);
             this.txtBookId.TabIndex = 1;
@@ -770,6 +823,7 @@
             // 
             // labBookName
             // 
+            this.labBookName.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.labBookName.Location = new System.Drawing.Point(335, 60);
             this.labBookName.Name = "labBookName";
             this.labBookName.Size = new System.Drawing.Size(43, 13);
@@ -793,7 +847,7 @@
             this.panelReceiptNoteDetail.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelReceiptNoteDetail.Location = new System.Drawing.Point(2, 2);
             this.panelReceiptNoteDetail.Name = "panelReceiptNoteDetail";
-            this.panelReceiptNoteDetail.Size = new System.Drawing.Size(946, 35);
+            this.panelReceiptNoteDetail.Size = new System.Drawing.Size(953, 35);
             this.panelReceiptNoteDetail.TabIndex = 0;
             // 
             // labReceiptDateValue
@@ -823,8 +877,6 @@
             // 
             this.txtReceiptNoteId.Location = new System.Drawing.Point(120, 8);
             this.txtReceiptNoteId.Name = "txtReceiptNoteId";
-            this.txtReceiptNoteId.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtReceiptNoteId.Properties.Appearance.Options.UseBackColor = true;
             this.txtReceiptNoteId.Properties.ReadOnly = true;
             this.txtReceiptNoteId.Size = new System.Drawing.Size(179, 20);
             this.txtReceiptNoteId.TabIndex = 1;
@@ -833,7 +885,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 509);
+            this.ClientSize = new System.Drawing.Size(957, 460);
             this.Controls.Add(this.panelReceiptNoteView);
             this.Controls.Add(this.PanelReceitNoteExecute);
             this.Controls.Add(this.panelReceiptNoteTitle);
@@ -853,6 +905,13 @@
             this.panelReceiptNoteView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelReceiptViewDetail)).EndInit();
             this.panelReceiptViewDetail.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdListReceiptBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvReceiptBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpReceiptNoteDetail)).EndInit();
+            this.grpReceiptNoteDetail.ResumeLayout(false);
+            this.grpReceiptNoteDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ppControlReceiptNote)).EndInit();
             this.ppControlReceiptNote.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdListBook)).EndInit();
@@ -860,11 +919,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelBookExecute)).EndInit();
             this.panelBookExecute.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barManagerReceiptNote)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListReceiptBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdvReceiptBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpReceiptNoteDetail)).EndInit();
-            this.grpReceiptNoteDetail.ResumeLayout(false);
-            this.grpReceiptNoteDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spQuantity.Properties)).EndInit();
@@ -907,23 +961,13 @@
         private DevExpress.XtraEditors.LabelControl labBookId;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnView;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnWrite;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.LabelControl labAmount;
         private DevExpress.XtraEditors.LabelControl labImportPrice;
         private DevExpress.XtraEditors.LabelControl labReceiptDateValue;
-        private DevExpress.XtraGrid.GridControl grdListReceiptBook;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdvReceiptBook;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteId;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteBookName;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteBookGenre;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteAuthor;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNotePublisher;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteQuantity;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteImportPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteAmount;
         private DevExpress.XtraBars.PopupControlContainer ppControlReceiptNote;
         private DevExpress.XtraGrid.GridControl grdListBook;
         private DevExpress.XtraGrid.Views.Grid.GridView grdvListBook;
@@ -949,5 +993,20 @@
         private DevExpress.XtraEditors.SpinEdit spQuantity;
         private DevExpress.XtraEditors.LabelControl labMoneyStyle3;
         private DevExpress.XtraEditors.LabelControl labMoneyStyle2;
+        private DevExpress.XtraGrid.GridControl grdListReceiptBook;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvReceiptBook;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteId;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteBookName;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteBookGenre;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteAuthor;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNotePublisher;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteImportPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn ReceiptNoteAmount;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnAddNewBook;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.LabelControl lblSoLuongMax;
     }
 }

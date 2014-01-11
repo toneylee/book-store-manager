@@ -58,6 +58,7 @@
             this.CustomerEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CustomerPhonNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CustomerDebit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.chkEnableChoseGender = new DevExpress.XtraEditors.CheckEdit();
             this.navBarGroupControlContainer.SuspendLayout();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender.Properties)).BeginInit();
@@ -79,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvListCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarGroup
@@ -99,6 +101,7 @@
             // 
             // xtraScrollableControl1
             // 
+            this.xtraScrollableControl1.Controls.Add(this.chkEnableChoseGender);
             this.xtraScrollableControl1.Controls.Add(this.cmbGender);
             this.xtraScrollableControl1.Controls.Add(this.raGChose);
             this.xtraScrollableControl1.Controls.Add(this.spDebits);
@@ -113,7 +116,7 @@
             // 
             // cmbGender
             // 
-            this.cmbGender.Location = new System.Drawing.Point(6, 37);
+            this.cmbGender.Location = new System.Drawing.Point(50, 29);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -402,6 +405,16 @@
             this.CustomerDebit.Visible = true;
             this.CustomerDebit.VisibleIndex = 8;
             // 
+            // chkEnableChoseGender
+            // 
+            this.chkEnableChoseGender.EditValue = true;
+            this.chkEnableChoseGender.Location = new System.Drawing.Point(10, 30);
+            this.chkEnableChoseGender.Name = "chkEnableChoseGender";
+            this.chkEnableChoseGender.Properties.Caption = "checkEdit1";
+            this.chkEnableChoseGender.Size = new System.Drawing.Size(20, 19);
+            this.chkEnableChoseGender.TabIndex = 6;
+            this.chkEnableChoseGender.CheckedChanged += new System.EventHandler(this.chkEnableChoseGender_CheckedChanged);
+            // 
             // frmCustomerSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +450,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvListCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,5 +487,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn CustomerEmail;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerPhonNumber;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerDebit;
+        private DevExpress.XtraEditors.CheckEdit chkEnableChoseGender;
     }
 }
