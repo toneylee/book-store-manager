@@ -10,7 +10,7 @@ namespace Manager_Book_Store.Data_Access_Layer
 {
     class CChargeDAL
     {
-        private CChargeDTO m_ChargeObject;
+         private CChargeDTO m_ChargeObject;
         private CDataExecute  m_ChargeExecute;
         private SqlCommand    m_cmd;
 
@@ -60,7 +60,6 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.CommandText = "GetChargeDataFromDatabase";
             return m_ChargeExecute.getData(m_cmd);
         }
-
         public String getChargeWithMaCV(CChargeDTO _ChargeObject)
         {
             m_cmd = new SqlCommand();

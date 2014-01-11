@@ -10,6 +10,7 @@ using DevExpress.XtraEditors;
 using Manager_Book_Store.Report;
 using Manager_Book_Store.Business_Layer;
 using Manager_Book_Store.Data_Access_Layer;
+using Manager_Book_Store.Data_Tranfer_Object;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
@@ -37,8 +38,8 @@ namespace Manager_Book_Store.Presentation_Layer
         private frmSurvivalReport m_SurvivalReportFormObject;
         private frmRegulations m_RegulationFormObject;
         private frmLiabilitiesReport m_LiabilitiesReportObject;
-        private frmInfoEmployee frmInfoEmployee;
-        private frmDecentralization m_frmDecentralization;
+        private frmInfoEmployee m_InfoEmployeeFormObject;
+        private frmDecentralization m_DecentralizationFormObect;
         public frmMain()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             barStaticItem_TenNV.Caption = "Nhân viên: " + ucLogin.m_EmployeeObject.tenNhanVien;
             barStaticItem_Date.Caption = "   " + DateTime.Now.ToShortDateString();
+            LoadDecentralization();
             setTime();
         }
 
@@ -56,6 +58,8 @@ namespace Manager_Book_Store.Presentation_Layer
             if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_BookFormObject))
             {
                 m_BookFormObject = new frmBook();
+                m_BookFormObject._setpublisher = new frmBook.m_setPublisher(bbtnPublisher_ItemClick);
+                m_BookFormObject._setBookTitle = new frmBook.m_setBookTitle(bbtnBookTitles_ItemClick);
                 xtraTabbedMdiManagerMenu.FloatForms.Add(m_BookFormObject);
                 m_BookFormObject.MdiParent = this;
                 m_BookFormObject.Show();
@@ -65,6 +69,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 m_BookFormObject.Activate();
 
         }
+
         private void bbtnCategoryBook_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_BookGenreFormObject))
@@ -78,6 +83,7 @@ namespace Manager_Book_Store.Presentation_Layer
             else
                 m_BookGenreFormObject.Activate();
         }
+
         private void bbtnAuthor_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_AuthorFormObject))
@@ -91,6 +97,7 @@ namespace Manager_Book_Store.Presentation_Layer
             else
                 m_AuthorFormObject.Activate();
         }
+
         private void bbtnBookTitles_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_BookTitleFormObject))
@@ -121,12 +128,13 @@ namespace Manager_Book_Store.Presentation_Layer
                 m_PublisherFormObject.Activate();
         }
 
-        private void bbtnemploye_ItemClick(object sender, ItemClickEventArgs e)
+        private void bbtnEmployee_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_EmployeeFormObject))
             {
                 m_EmployeeFormObject = new frmEmployee();
                 xtraTabbedMdiManagerMenu.FloatForms.Add(m_EmployeeFormObject);
+                m_EmployeeFormObject._setFormObject = new frmEmployee.setFormObject(bbtnOffice_ItemClick);
                 m_EmployeeFormObject.MdiParent = this;
                 m_EmployeeFormObject.Show();
 
@@ -171,6 +179,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 xtraTabbedMdiManagerMenu.FloatForms.Add(m_ReceiptNoteFormObject);
                 m_ReceiptNoteFormObject.MdiParent = this;
                 m_ReceiptNoteFormObject.Show();
+                m_ReceiptNoteFormObject._setFormObject = new frmReceiptNote.setFormObject(bbtnBook_ItemClick);
 
             }
             else
@@ -184,6 +193,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 m_DeliveryNoteFormObject = new frmDeliveryNote();
                 xtraTabbedMdiManagerMenu.FloatForms.Add(m_DeliveryNoteFormObject);
                 m_DeliveryNoteFormObject.MdiParent = this;
+                m_DeliveryNoteFormObject.setFormObject = new frmDeliveryNote.m_setFormObject(bbtnCustomer_ItemClick);
                 m_DeliveryNoteFormObject.Show();
 
             }
@@ -286,6 +296,7 @@ namespace Manager_Book_Store.Presentation_Layer
             else
                 m_RegulationFormObject.Activate();
         }
+
         private void bbtnLiabilities_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_LiabilitiesReportObject))
@@ -298,6 +309,7 @@ namespace Manager_Book_Store.Presentation_Layer
             else
                 m_LiabilitiesReportObject.Activate();
         }
+
         private void bbtnBackup_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (xtraTabbedMdiManagerMenu.FloatForms.Count != 0)
@@ -350,38 +362,107 @@ namespace Manager_Book_Store.Presentation_Layer
             barStaticItem_Time.Caption = DateTime.Now.ToShortTimeString();
         }
 
-        private void bbtnInfoEmployee_ItemClick(object sender, ItemClickEventArgs e)
+        private void bbtnLogOut_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(frmInfoEmployee))
+            if (xtraTabbedMdiManagerMenu.FloatForms.Count != 0)
             {
-                frmInfoEmployee = new frmInfoEmployee();
-                xtraTabbedMdiManagerMenu.FloatForms.Add(frmInfoEmployee);
-                frmInfoEmployee.MdiParent = this;
-                frmInfoEmployee.Show();
+                XtraCustomMessageBox.Show("Xin vui lòng đóng tất cả các của sổ trước khi đăng xuất!", "Thông báo", true);
             }
             else
-                frmInfoEmployee.Activate();
-        }
-
-        private void ribbMain_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bbtnDecentralization_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_frmDecentralization))
             {
-                m_frmDecentralization = new frmDecentralization();
-                xtraTabbedMdiManagerMenu.FloatForms.Add(m_frmDecentralization);
-                m_frmDecentralization.MdiParent = this;
-                m_frmDecentralization.Show();
+                _loginShow(null, null);
+                this.Dispose();
+                this.Close();
+            }
+        }
+
+        private void bbtnInfoLogin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_InfoEmployeeFormObject))
+            {
+                m_InfoEmployeeFormObject = new frmInfoEmployee();
+                xtraTabbedMdiManagerMenu.FloatForms.Add(m_InfoEmployeeFormObject);
+                m_InfoEmployeeFormObject.MdiParent = this;
+                m_InfoEmployeeFormObject.Show();
 
             }
             else
-                m_frmDecentralization.Activate();
+                m_InfoEmployeeFormObject.Activate();
         }
 
+        private void bbtnDecentization_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!xtraTabbedMdiManagerMenu.FloatForms.Contains(m_DecentralizationFormObect))
+            {
+                m_DecentralizationFormObect = new frmDecentralization();
+                xtraTabbedMdiManagerMenu.FloatForms.Add(m_DecentralizationFormObect);
+                m_DecentralizationFormObect.MdiParent = this;
+                m_DecentralizationFormObect.Show();
+
+            }
+        }
+        private void LoadDecentralization()
+        {
+            DecentralizationDTO _decentralizationObject  = new DecentralizationDTO();
+            DecentralizationBUS _decentralizationExecute = new DecentralizationBUS();
+            DataTable _decentralizationData              = new DataTable();
+            _decentralizationObject.maChucVu             = ucLogin.m_EmployeeObject.maChucVu;
+            _decentralizationData = _decentralizationExecute.getDecentralizationWithMaCV(_decentralizationObject);
+            if (_decentralizationData.Rows[0][2].ToString().Equals("False"))
+            {
+                ribpgBackupAndRestore.Enabled = false;
+                ribpgDecentralization.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][3].ToString().Equals("False"))
+            {
+                ribpgRegulation.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][4].ToString().Equals("False"))
+            {
+                ribpgbook.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][5].ToString().Equals("False"))
+            {
+                ribpgemployee.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][6].ToString().Equals("False"))
+            {
+                ribpgCustomer.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][7].ToString().Equals("False"))
+            {
+                ribgImportProduct.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][8].ToString().Equals("False"))
+            {
+                bbtnExportProduct.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][9].ToString().Equals("False"))
+            {
+                bbtnReceipts.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][10].ToString().Equals("False"))
+            {
+                bbtnBookSearch.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][11].ToString().Equals("False"))
+            {
+                bbtnEmployeeSearch.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][12].ToString().Equals("False"))
+            {
+                bbtnCustomerSearch.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][13].ToString().Equals("False"))
+            {
+                bbtnNoteSearch.Enabled = false;
+            }
+            if (_decentralizationData.Rows[0][14].ToString().Equals("False"))
+            {
+                bbtnSurvival.Enabled = false;
+                bbtnLiabilities.Enabled = false;
+            }
+        }
 
     }
 }

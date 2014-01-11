@@ -121,6 +121,7 @@
             this.txtContentSearch.Size = new System.Drawing.Size(263, 20);
             this.txtContentSearch.TabIndex = 0;
             this.txtContentSearch.TextChanged += new System.EventHandler(this.txtContentSearch_TextChanged);
+            this.txtContentSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContentSearch_KeyPress);
             // 
             // labContentSearch
             // 

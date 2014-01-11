@@ -15,7 +15,6 @@ namespace Manager_Book_Store.Presentation_Layer
     public partial class frmInfoEmployee : DevExpress.XtraEditors.XtraForm
     {
         #region "Valiable"
-        private bool m_Update = false;
         private CEmployeeDTO m_EmployeeObject;
         private CEmployeeBUS m_EmployeeExecute;
         private frmChangePassWord frmChangePass;
@@ -38,7 +37,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 this.txtEmployeePhone.Properties.ReadOnly = false;
                 this.txtEmployeeEmail.Properties.ReadOnly = false;
                 this.txtEmployeeAddress.Properties.ReadOnly = false;
-                this.txtUser.Properties.ReadOnly = false;
+                this.txtUser.Properties.ReadOnly = true;
                 this.dateBirthDay.Properties.ReadOnly = false;
                 this.dateToWork.Properties.ReadOnly = false;
                 this.cmbEmployeeGender.Properties.ReadOnly = false;
@@ -84,7 +83,7 @@ namespace Manager_Book_Store.Presentation_Layer
         private void frmInfoEmployee_Load(object sender, EventArgs e)
         {
             InitfrmInfoEmployee();
-            InitDisplay(m_Update);
+            InitDisplay(false);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -100,8 +99,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            m_Update = true;
-            InitDisplay(m_Update);
+            InitDisplay(true);
             sbtnDetroyUpdate.Visible = true;
             sbtnSave.Visible = true;
             btnUpdate.Visible = false;
@@ -110,8 +108,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void sbtnDetroyUpdate_Click(object sender, EventArgs e)
         {
-            m_Update = false;
-            InitDisplay(m_Update);
+            InitDisplay(false);
             sbtnDetroyUpdate.Visible = false;
             sbtnSave.Visible = false;
             btnUpdate.Visible = true;
@@ -121,15 +118,14 @@ namespace Manager_Book_Store.Presentation_Layer
         private void sbtnSave_Click(object sender, EventArgs e)
         {
             m_EmployeeObject = new CEmployeeDTO(ucLogin.m_EmployeeObject.maNhanVien, this.txtEmployeeName.Text, cmbEmployeeGender.Text,
-                  Convert.ToDateTime(dateBirthDay.Text), this.txtEmployeePhone.Text, this.txtEmployeeAddress.Text, 
-                  Convert.ToDateTime(this.dateToWork.Text), ucLogin.m_EmployeeObject.maChucVu, txtUser.Text, 
+                  Convert.ToDateTime(dateBirthDay.Text), this.txtEmployeePhone.Text, this.txtEmployeeAddress.Text,
+                  Convert.ToDateTime(this.dateToWork.Text), ucLogin.m_EmployeeObject.maChucVu, txtUser.Text,
                   this.txtEmployeeEmail.Text);
             if (m_EmployeeExecute.UpdateEmployeeToDatabaseNotPassWord(m_EmployeeObject))
             {
                 m_EmployeeObject.matKhau = ucLogin.m_EmployeeObject.matKhau;
                 ucLogin.m_EmployeeObject = m_EmployeeObject;
-                m_Update = false;
-                InitDisplay(m_Update);
+                InitDisplay(false);
                 XtraMessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

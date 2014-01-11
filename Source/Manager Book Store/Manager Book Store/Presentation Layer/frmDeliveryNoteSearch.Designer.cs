@@ -402,6 +402,7 @@
             this.chkEnableChoseEmployee.Properties.Caption = "";
             this.chkEnableChoseEmployee.Size = new System.Drawing.Size(24, 19);
             this.chkEnableChoseEmployee.TabIndex = 8;
+            this.chkEnableChoseEmployee.CheckedChanged += new System.EventHandler(this.chkEnableChoseEmployee_CheckedChanged);
             // 
             // chkEnableChoseCustomer
             // 
@@ -411,6 +412,7 @@
             this.chkEnableChoseCustomer.Properties.Caption = "";
             this.chkEnableChoseCustomer.Size = new System.Drawing.Size(24, 19);
             this.chkEnableChoseCustomer.TabIndex = 8;
+            this.chkEnableChoseCustomer.CheckedChanged += new System.EventHandler(this.chkEnableChoseCustomer_CheckedChanged);
             // 
             // lkEmployeeName
             // 

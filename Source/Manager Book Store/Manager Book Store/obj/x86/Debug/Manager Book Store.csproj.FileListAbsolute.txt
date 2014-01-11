@@ -78,45 +78,6 @@ G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manage
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\New Verson\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\ResolveAssemblyReference.cache
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmHome.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.read.1.tlog
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.write.1.tlog
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
@@ -155,56 +116,358 @@ G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager 
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
 G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\ManagerBook\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\TableStructure.sql
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmConnectionSQL.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\StoredProcdure.sql
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\ViewStructure.sql
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmLiabilitiesReport.resources
-F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptLiabilities.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\ResolveAssemblyReference.cache
 F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBackupAndRestoreDatabase.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.csprojResolveAssemblyReference.cache
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBackupAndRestoreDatabase.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmConnectionSQL.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmHome.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmLiabilitiesReport.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptLiabilities.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.csproj.GenerateResource.Cache
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\StoredProcdure.sql
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\TableStructure.sql
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\ViewStructure.sql
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
-G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\QLNS_CPMP\Manager Book Store v9\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDecentralization.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmConnectionSQL.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDecentralization.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.XtraCustomMessageBox.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmLiabilitiesReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptLiabilities.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\StoredProcdure.sql
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\TableStructure.sql
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\ViewStructure.sql
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmInfoEmployee.resources
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.BonusSkins.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Charts.v13.2.Core.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Data.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Office.v13.2.Core.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.PivotGrid.v13.2.Core.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Printing.v13.2.Core.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.RichEdit.v13.2.Core.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Sparkline.v13.2.Core.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.UI.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Xpf.RichEdit.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraBars.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraCharts.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraEditors.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraGrid.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraLayout.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraNavBar.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraPrinting.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.Extensions.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraWizard.v13.2.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.CSharp.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.Smo.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Data.DataSetExtensions.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Data.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Deployment.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Drawing.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Runtime.Remoting.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Windows.Forms.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Xml.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Xml.Linq.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Data.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Office.v13.2.Core.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.PivotGrid.v13.2.Core.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Printing.v13.2.Core.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.RichEdit.v13.2.Core.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Sparkline.v13.2.Core.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.UI.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Xpf.RichEdit.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraBars.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraCharts.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraEditors.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraNavBar.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraPrinting.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraGrid.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraLayout.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.Extensions.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraWizard.v13.2.xml
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Data.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Data.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Data.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Data.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Office.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Office.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Office.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Office.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.PivotGrid.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.PivotGrid.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.PivotGrid.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.PivotGrid.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Printing.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Printing.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Printing.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Printing.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.RichEdit.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.RichEdit.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.RichEdit.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.RichEdit.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Sparkline.v13.2.Core.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Utils.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Utils.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Utils.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Utils.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Utils.v13.2.UI.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Utils.v13.2.UI.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Utils.v13.2.UI.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Utils.v13.2.UI.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraBars.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraBars.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraBars.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraBars.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraCharts.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraCharts.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraCharts.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraCharts.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraEditors.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraEditors.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraEditors.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraEditors.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraNavBar.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraNavBar.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraNavBar.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraNavBar.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraPrinting.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraPrinting.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraPrinting.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraPrinting.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraGrid.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraGrid.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraGrid.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraGrid.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraLayout.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraLayout.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraLayout.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraLayout.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraReports.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraReports.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraReports.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraReports.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraWizard.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraWizard.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraWizard.v13.2.resources.dll
+F:\THESIS\Do An Nhap Mon\Manager Book Store\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraWizard.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe.config
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.pdb
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.csprojResolveAssemblyReference.cache
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBackupAndRestoreDatabase.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookTitle.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBookGenre.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCashReceiptVoucher.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCharge.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmConnectionSQL.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomer.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmCustomerSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDecentralization.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployee.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmEmployeeSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmInfoEmployee.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmReceiptNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmDeliveryNoteSearch.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmRegulations.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.ucLogin.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMain.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmBook.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmAuthor.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmMenu.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.frmPublisher.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Presentation_Layer.XtraCustomMessageBox.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.PrintRibbonControllerResources.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Properties.Resources.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmCashReceiptVoucherReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmDeliveryReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmLiabilitiesReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmReceiptNoteReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.frmSurvivalReport.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptCashReceiptVoucher.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\QUANLYCUAHANGSACH.Report.rptDeliveryNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptLiabilities.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptReceiptNote.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager_Book_Store.Report.rptSurvival.resources
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.csproj.GenerateResource.Cache
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\StoredProcdure.sql
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\TableStructure.sql
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Database\ViewStructure.sql
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.exe
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Manager Book Store.pdb
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.BonusSkins.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Charts.v13.2.Core.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Data.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Office.v13.2.Core.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.PivotGrid.v13.2.Core.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Printing.v13.2.Core.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.RichEdit.v13.2.Core.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Sparkline.v13.2.Core.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.UI.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Xpf.RichEdit.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraBars.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraCharts.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraEditors.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraGrid.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraLayout.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraNavBar.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraPrinting.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.Extensions.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraWizard.v13.2.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.CSharp.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.Smo.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Data.DataSetExtensions.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Data.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Deployment.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Drawing.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Runtime.Remoting.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Windows.Forms.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Xml.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\System.Xml.Linq.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Data.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Office.v13.2.Core.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.PivotGrid.v13.2.Core.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Printing.v13.2.Core.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.RichEdit.v13.2.Core.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Sparkline.v13.2.Core.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Utils.v13.2.UI.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.Xpf.RichEdit.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraBars.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraCharts.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraEditors.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraNavBar.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraPrinting.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraGrid.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraLayout.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraReports.v13.2.Extensions.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\DevExpress.XtraWizard.v13.2.xml
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Data.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Data.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Data.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Data.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Office.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Office.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Office.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Office.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.PivotGrid.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.PivotGrid.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.PivotGrid.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.PivotGrid.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Printing.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Printing.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Printing.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Printing.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.RichEdit.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.RichEdit.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.RichEdit.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.RichEdit.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Sparkline.v13.2.Core.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Utils.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Utils.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Utils.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Utils.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Utils.v13.2.UI.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Utils.v13.2.UI.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Utils.v13.2.UI.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Utils.v13.2.UI.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.Xpf.RichEdit.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraBars.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraBars.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraBars.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraBars.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraCharts.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraCharts.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraCharts.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraCharts.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraEditors.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraEditors.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraEditors.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraEditors.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraNavBar.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraNavBar.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraNavBar.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraNavBar.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraPrinting.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraPrinting.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraPrinting.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraPrinting.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraGrid.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraGrid.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraGrid.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraGrid.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraLayout.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraLayout.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraLayout.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraLayout.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraReports.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraReports.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraReports.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraReports.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraReports.v13.2.Extensions.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\de\DevExpress.XtraWizard.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\es\DevExpress.XtraWizard.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ja\DevExpress.XtraWizard.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\bin\Debug\ru\DevExpress.XtraWizard.v13.2.resources.dll
+G:\TAI LIEU HOC TAP\HK V\Nhap Mon Cong Nghe Phan Mem\DoAn\Source\Manager Book Store\Manager Book Store\obj\x86\Debug\Manager Book Store.exe.licenses

@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.panBookTitles = new DevExpress.XtraEditors.PanelControl();
             this.labBookTitles = new DevExpress.XtraEditors.LabelControl();
             this.panBookExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.popupControlContainerBook = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.grdListBookView = new DevExpress.XtraGrid.GridControl();
             this.grdvListBookView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -67,12 +69,10 @@
             this.labBookTitlesName = new DevExpress.XtraEditors.LabelControl();
             this.panBookView = new DevExpress.XtraEditors.PanelControl();
             this.grpBookDetail = new DevExpress.XtraEditors.GroupControl();
-            this.spBookCount = new DevExpress.XtraEditors.SpinEdit();
-            this.spBookRealeaseYear = new DevExpress.XtraEditors.SpinEdit();
             this.lkBookTitlesName = new DevExpress.XtraEditors.LookUpEdit();
+            this.btnAddBookTitles = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddPublisher = new DevExpress.XtraEditors.SimpleButton();
             this.lkPublisherName = new DevExpress.XtraEditors.LookUpEdit();
-            this.spBookPrices = new DevExpress.XtraEditors.SpinEdit();
             this.labBookId = new DevExpress.XtraEditors.LabelControl();
             this.labBooTitlesName = new DevExpress.XtraEditors.LabelControl();
             this.labBookCount = new DevExpress.XtraEditors.LabelControl();
@@ -85,8 +85,12 @@
             this.labCoinStyle = new DevExpress.XtraEditors.LabelControl();
             this.labPricesBook = new DevExpress.XtraEditors.LabelControl();
             this.txtBookId = new DevExpress.XtraEditors.TextEdit();
+            this.txtBookRealeaseYear = new DevExpress.XtraEditors.TextEdit();
+            this.txtBookCount = new DevExpress.XtraEditors.TextEdit();
+            this.txtBookPrices = new DevExpress.XtraEditors.TextEdit();
             this.panListBookView = new DevExpress.XtraEditors.PanelControl();
             this.drBtnShowListBook = new DevExpress.XtraEditors.DropDownButton();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panBookTitles)).BeginInit();
             this.panBookTitles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panBookExecute)).BeginInit();
@@ -109,16 +113,17 @@
             this.panBookView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpBookDetail)).BeginInit();
             this.grpBookDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spBookCount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spBookRealeaseYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkBookTitlesName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkPublisherName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spBookPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookGenre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBookRealeaseYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBookCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBookPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panListBookView)).BeginInit();
             this.panListBookView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panBookTitles
@@ -143,26 +148,17 @@
             // 
             // panBookExecute
             // 
-            this.panBookExecute.Controls.Add(this.btnUpdate);
             this.panBookExecute.Controls.Add(this.btnSave);
+            this.panBookExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panBookExecute.Controls.Add(this.btnCancel);
             this.panBookExecute.Controls.Add(this.btnAdd);
             this.panBookExecute.Controls.Add(this.btnDelete);
+            this.panBookExecute.Controls.Add(this.btnUpdate);
             this.panBookExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panBookExecute.Location = new System.Drawing.Point(2, 350);
             this.panBookExecute.Name = "panBookExecute";
             this.panBookExecute.Size = new System.Drawing.Size(725, 57);
             this.panBookExecute.TabIndex = 1;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(405, 13);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnUpdate.TabIndex = 14;
-            this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -174,22 +170,34 @@
             this.btnSave.Text = "Lưu xuống";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(400, 13);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(80, 31);
+            this.btnCancelOfUpdate.TabIndex = 11;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Location = new System.Drawing.Point(280, 13);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(93, 31);
+            this.btnCancel.Size = new System.Drawing.Size(80, 31);
             this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Hủy thêm mới";
+            this.btnCancel.Text = "Hủy thao tác";
             this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Location = new System.Drawing.Point(280, 13);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(93, 31);
+            this.btnAdd.Size = new System.Drawing.Size(80, 31);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -203,6 +211,16 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Location = new System.Drawing.Point(400, 13);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(80, 31);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // popupControlContainerBook
             // 
@@ -218,6 +236,9 @@
             // grdListBookView
             // 
             this.grdListBookView.Dock = System.Windows.Forms.DockStyle.Fill;
+            gridLevelNode1.RelationName = "Level1";
+            this.grdListBookView.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.grdListBookView.Location = new System.Drawing.Point(0, 0);
             this.grdListBookView.MainView = this.grdvListBookView;
             this.grdListBookView.MenuManager = this.barManagerBook;
@@ -456,8 +477,10 @@
             // 
             this.txtBookTitlesNameLA.Location = new System.Drawing.Point(43, 61);
             this.txtBookTitlesNameLA.Name = "txtBookTitlesNameLA";
-            this.txtBookTitlesNameLA.Size = new System.Drawing.Size(139, 20);
+            this.txtBookTitlesNameLA.Size = new System.Drawing.Size(231, 20);
             this.txtBookTitlesNameLA.TabIndex = 1;
+            this.txtBookTitlesNameLA.TextChanged += new System.EventHandler(this.txtBookTitlesNameLA_TextChanged);
+            this.txtBookTitlesNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookTitlesNameLA_KeyPress);
             // 
             // labBookTitlesName
             // 
@@ -480,12 +503,10 @@
             // 
             // grpBookDetail
             // 
-            this.grpBookDetail.Controls.Add(this.spBookCount);
-            this.grpBookDetail.Controls.Add(this.spBookRealeaseYear);
             this.grpBookDetail.Controls.Add(this.lkBookTitlesName);
+            this.grpBookDetail.Controls.Add(this.btnAddBookTitles);
             this.grpBookDetail.Controls.Add(this.btnAddPublisher);
             this.grpBookDetail.Controls.Add(this.lkPublisherName);
-            this.grpBookDetail.Controls.Add(this.spBookPrices);
             this.grpBookDetail.Controls.Add(this.labBookId);
             this.grpBookDetail.Controls.Add(this.labBooTitlesName);
             this.grpBookDetail.Controls.Add(this.labBookCount);
@@ -498,6 +519,9 @@
             this.grpBookDetail.Controls.Add(this.labCoinStyle);
             this.grpBookDetail.Controls.Add(this.labPricesBook);
             this.grpBookDetail.Controls.Add(this.txtBookId);
+            this.grpBookDetail.Controls.Add(this.txtBookRealeaseYear);
+            this.grpBookDetail.Controls.Add(this.txtBookCount);
+            this.grpBookDetail.Controls.Add(this.txtBookPrices);
             this.grpBookDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpBookDetail.Location = new System.Drawing.Point(2, 39);
             this.grpBookDetail.LookAndFeel.SkinName = "Office 2013 Light Gray";
@@ -505,47 +529,6 @@
             this.grpBookDetail.Size = new System.Drawing.Size(725, 311);
             this.grpBookDetail.TabIndex = 3;
             this.grpBookDetail.Text = "Thông tin sách chi tiết";
-            // 
-            // spBookCount
-            // 
-            this.spBookCount.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spBookCount.Location = new System.Drawing.Point(119, 239);
-            this.spBookCount.Name = "spBookCount";
-            this.spBookCount.Properties.AccessibleDescription = "";
-            this.spBookCount.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.spBookCount.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.spBookCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spBookCount.Properties.Mask.EditMask = "n0";
-            this.spBookCount.Properties.Mask.PlaceHolder = '-';
-            this.spBookCount.Properties.ReadOnly = true;
-            this.spBookCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.spBookCount.Size = new System.Drawing.Size(156, 20);
-            this.spBookCount.TabIndex = 6;
-            // 
-            // spBookRealeaseYear
-            // 
-            this.spBookRealeaseYear.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spBookRealeaseYear.Location = new System.Drawing.Point(119, 208);
-            this.spBookRealeaseYear.MenuManager = this.barManagerBook;
-            this.spBookRealeaseYear.Name = "spBookRealeaseYear";
-            this.spBookRealeaseYear.Properties.AccessibleDescription = "";
-            this.spBookRealeaseYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spBookRealeaseYear.Properties.IsFloatValue = false;
-            this.spBookRealeaseYear.Properties.Mask.EditMask = "d";
-            this.spBookRealeaseYear.Properties.Mask.PlaceHolder = '-';
-            this.spBookRealeaseYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.spBookRealeaseYear.Size = new System.Drawing.Size(156, 20);
-            this.spBookRealeaseYear.TabIndex = 6;
             // 
             // lkBookTitlesName
             // 
@@ -560,7 +543,17 @@
             this.lkBookTitlesName.Properties.NullText = "";
             this.lkBookTitlesName.Size = new System.Drawing.Size(413, 20);
             this.lkBookTitlesName.TabIndex = 5;
+            this.lkBookTitlesName.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.lkBookTitlesName_QueryPopUp);
             this.lkBookTitlesName.EditValueChanged += new System.EventHandler(this.lkBookTitlesName_EditValueChanged);
+            // 
+            // btnAddBookTitles
+            // 
+            this.btnAddBookTitles.Location = new System.Drawing.Point(569, 58);
+            this.btnAddBookTitles.Name = "btnAddBookTitles";
+            this.btnAddBookTitles.Size = new System.Drawing.Size(113, 23);
+            this.btnAddBookTitles.TabIndex = 4;
+            this.btnAddBookTitles.Text = "Thêm mới đầu sách";
+            this.btnAddBookTitles.Click += new System.EventHandler(this.btnAddBookTitles_Click);
             // 
             // btnAddPublisher
             // 
@@ -569,6 +562,7 @@
             this.btnAddPublisher.Size = new System.Drawing.Size(75, 23);
             this.btnAddPublisher.TabIndex = 4;
             this.btnAddPublisher.Text = "Thêm mới";
+            this.btnAddPublisher.Click += new System.EventHandler(this.btnAddPublisher_Click);
             // 
             // lkPublisherName
             // 
@@ -583,28 +577,7 @@
             this.lkPublisherName.Properties.NullText = "";
             this.lkPublisherName.Size = new System.Drawing.Size(413, 20);
             this.lkPublisherName.TabIndex = 3;
-            // 
-            // spBookPrices
-            // 
-            this.spBookPrices.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spBookPrices.Location = new System.Drawing.Point(119, 278);
-            this.spBookPrices.MenuManager = this.barManagerBook;
-            this.spBookPrices.Name = "spBookPrices";
-            this.spBookPrices.Properties.AccessibleDescription = "";
-            this.spBookPrices.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.spBookPrices.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.spBookPrices.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spBookPrices.Properties.Mask.EditMask = "c0";
-            this.spBookPrices.Properties.Mask.PlaceHolder = '-';
-            this.spBookPrices.Properties.ReadOnly = true;
-            this.spBookPrices.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.spBookPrices.Size = new System.Drawing.Size(156, 20);
-            this.spBookPrices.TabIndex = 2;
+            this.lkPublisherName.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.lkPublisherName_QueryPopUp);
             // 
             // labBookId
             // 
@@ -658,8 +631,6 @@
             // 
             this.txtAuthorName.Location = new System.Drawing.Point(119, 95);
             this.txtAuthorName.Name = "txtAuthorName";
-            this.txtAuthorName.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtAuthorName.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtAuthorName.Properties.ReadOnly = true;
             this.txtAuthorName.Size = new System.Drawing.Size(413, 20);
             this.txtAuthorName.TabIndex = 1;
@@ -676,8 +647,6 @@
             // 
             this.txtBookGenre.Location = new System.Drawing.Point(119, 130);
             this.txtBookGenre.Name = "txtBookGenre";
-            this.txtBookGenre.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtBookGenre.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtBookGenre.Properties.ReadOnly = true;
             this.txtBookGenre.Size = new System.Drawing.Size(413, 20);
             this.txtBookGenre.TabIndex = 1;
@@ -703,11 +672,68 @@
             // 
             this.txtBookId.Location = new System.Drawing.Point(119, 26);
             this.txtBookId.Name = "txtBookId";
-            this.txtBookId.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtBookId.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtBookId.Properties.ReadOnly = true;
             this.txtBookId.Size = new System.Drawing.Size(156, 20);
             this.txtBookId.TabIndex = 1;
+            // 
+            // txtBookRealeaseYear
+            // 
+            this.txtBookRealeaseYear.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtBookRealeaseYear.Location = new System.Drawing.Point(119, 208);
+            this.txtBookRealeaseYear.MenuManager = this.barManagerBook;
+            this.txtBookRealeaseYear.Name = "txtBookRealeaseYear";
+            this.txtBookRealeaseYear.Properties.AccessibleDescription = "";
+            this.txtBookRealeaseYear.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.txtBookRealeaseYear.Properties.Mask.EditMask = "d";
+            this.txtBookRealeaseYear.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtBookRealeaseYear.Properties.Mask.PlaceHolder = '-';
+            this.txtBookRealeaseYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBookRealeaseYear.Size = new System.Drawing.Size(156, 20);
+            this.txtBookRealeaseYear.TabIndex = 6;
+            this.txtBookRealeaseYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookRealeaseYear_KeyPress);
+            // 
+            // txtBookCount
+            // 
+            this.txtBookCount.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtBookCount.Location = new System.Drawing.Point(119, 239);
+            this.txtBookCount.Name = "txtBookCount";
+            this.txtBookCount.Properties.AccessibleDescription = "";
+            this.txtBookCount.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.txtBookCount.Properties.Mask.EditMask = "n0";
+            this.txtBookCount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtBookCount.Properties.Mask.PlaceHolder = '-';
+            this.txtBookCount.Properties.ReadOnly = true;
+            this.txtBookCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBookCount.Size = new System.Drawing.Size(156, 20);
+            this.txtBookCount.TabIndex = 6;
+            // 
+            // txtBookPrices
+            // 
+            this.txtBookPrices.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtBookPrices.Location = new System.Drawing.Point(119, 278);
+            this.txtBookPrices.MenuManager = this.barManagerBook;
+            this.txtBookPrices.Name = "txtBookPrices";
+            this.txtBookPrices.Properties.AccessibleDescription = "";
+            this.txtBookPrices.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.txtBookPrices.Properties.Mask.EditMask = "c0";
+            this.txtBookPrices.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtBookPrices.Properties.Mask.PlaceHolder = '-';
+            this.txtBookPrices.Properties.ReadOnly = true;
+            this.txtBookPrices.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBookPrices.Size = new System.Drawing.Size(156, 20);
+            this.txtBookPrices.TabIndex = 2;
             // 
             // panListBookView
             // 
@@ -729,6 +755,10 @@
             this.drBtnShowListBook.TabIndex = 2;
             this.drBtnShowListBook.Text = "Hiển thị danh sách chi tiết\r\n";
             this.drBtnShowListBook.Click += new System.EventHandler(this.drBtnShowListBook_Click);
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmBook
             // 
@@ -770,16 +800,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpBookDetail)).EndInit();
             this.grpBookDetail.ResumeLayout(false);
             this.grpBookDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spBookCount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spBookRealeaseYear.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkBookTitlesName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkPublisherName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spBookPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookGenre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBookId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBookRealeaseYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBookCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBookPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panListBookView)).EndInit();
             this.panListBookView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -834,15 +865,18 @@
         private DevExpress.XtraGrid.Columns.GridColumn BookRealeaseYear;
         private DevExpress.XtraGrid.Columns.GridColumn BookPrices;
         private DevExpress.XtraGrid.Columns.GridColumn BookCount;
-        private DevExpress.XtraEditors.SpinEdit spBookPrices;
         private DevExpress.XtraEditors.LabelControl labCoinStyle;
         private DevExpress.XtraEditors.LookUpEdit lkPublisherName;
         private DevExpress.XtraEditors.LookUpEdit lkBookTitlesName;
         private DevExpress.XtraEditors.SimpleButton btnAddPublisher;
-        private DevExpress.XtraEditors.SpinEdit spBookRealeaseYear;
-        private DevExpress.XtraEditors.SpinEdit spBookCount;
         private DevExpress.XtraGrid.Columns.GridColumn BooksSno;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rtxtBookId;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rxtBookName;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
+        private DevExpress.XtraEditors.TextEdit txtBookRealeaseYear;
+        private DevExpress.XtraEditors.TextEdit txtBookCount;
+        private DevExpress.XtraEditors.TextEdit txtBookPrices;
+        private DevExpress.XtraEditors.SimpleButton btnAddBookTitles;
     }
 }

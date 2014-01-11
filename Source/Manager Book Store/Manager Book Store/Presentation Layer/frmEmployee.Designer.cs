@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelEmployeeTitles = new DevExpress.XtraEditors.PanelControl();
             this.labEmployeeTitle = new DevExpress.XtraEditors.LabelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -36,6 +37,7 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.panelEmployeeView = new DevExpress.XtraEditors.PanelControl();
             this.grdListEmployee = new DevExpress.XtraGrid.GridControl();
             this.grdvListEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -51,6 +53,7 @@
             this.EmployeePhonNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmployeeDebit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panEmployeeViewDatail = new DevExpress.XtraEditors.PanelControl();
+            this.btnAddCharge = new DevExpress.XtraEditors.SimpleButton();
             this.lkEmployeeCharge = new DevExpress.XtraEditors.LookUpEdit();
             this.dateToWork = new DevExpress.XtraEditors.DateEdit();
             this.labEmployeeDateToWork = new DevExpress.XtraEditors.LabelControl();
@@ -74,6 +77,7 @@
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.labEmployeeNameLA = new DevExpress.XtraEditors.LabelControl();
             this.txtEmployeeNameLA = new DevExpress.XtraEditors.TextEdit();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelEmployeeTitles)).BeginInit();
             this.panelEmployeeTitles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelEmployeeExecute)).BeginInit();
@@ -101,6 +105,7 @@
             this.navBarEmployeeLookAt.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeNameLA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEmployeeTitles
@@ -109,7 +114,7 @@
             this.panelEmployeeTitles.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEmployeeTitles.Location = new System.Drawing.Point(0, 0);
             this.panelEmployeeTitles.Name = "panelEmployeeTitles";
-            this.panelEmployeeTitles.Size = new System.Drawing.Size(853, 35);
+            this.panelEmployeeTitles.Size = new System.Drawing.Size(956, 35);
             this.panelEmployeeTitles.TabIndex = 3;
             // 
             // labEmployeeTitle
@@ -117,7 +122,7 @@
             this.labEmployeeTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labEmployeeTitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.labEmployeeTitle.Appearance.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labEmployeeTitle.Location = new System.Drawing.Point(291, 1);
+            this.labEmployeeTitle.Location = new System.Drawing.Point(343, 1);
             this.labEmployeeTitle.Name = "labEmployeeTitle";
             this.labEmployeeTitle.Size = new System.Drawing.Size(285, 32);
             this.labEmployeeTitle.TabIndex = 1;
@@ -126,7 +131,8 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(549, 9);
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(652, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 13;
@@ -136,30 +142,31 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(354, 9);
+            this.btnUpdate.Location = new System.Drawing.Point(428, 9);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(93, 31);
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panelEmployeeExecute
             // 
-            this.panelEmployeeExecute.Controls.Add(this.btnUpdate);
             this.panelEmployeeExecute.Controls.Add(this.btnSave);
             this.panelEmployeeExecute.Controls.Add(this.btnCancel);
             this.panelEmployeeExecute.Controls.Add(this.btnAdd);
             this.panelEmployeeExecute.Controls.Add(this.btnDelete);
+            this.panelEmployeeExecute.Controls.Add(this.btnCancelOfUpdate);
+            this.panelEmployeeExecute.Controls.Add(this.btnUpdate);
             this.panelEmployeeExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEmployeeExecute.Location = new System.Drawing.Point(0, 436);
             this.panelEmployeeExecute.Name = "panelEmployeeExecute";
-            this.panelEmployeeExecute.Size = new System.Drawing.Size(853, 58);
+            this.panelEmployeeExecute.Size = new System.Drawing.Size(956, 58);
             this.panelEmployeeExecute.TabIndex = 4;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(239, 9);
+            this.btnCancel.Location = new System.Drawing.Point(302, 9);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 31);
             this.btnCancel.TabIndex = 11;
@@ -170,7 +177,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(239, 9);
+            this.btnAdd.Location = new System.Drawing.Point(302, 9);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(93, 31);
             this.btnAdd.TabIndex = 10;
@@ -180,12 +187,23 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(447, 9);
+            this.btnDelete.Location = new System.Drawing.Point(550, 9);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 31);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(428, 9);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(93, 31);
+            this.btnCancelOfUpdate.TabIndex = 16;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
             // 
             // panelEmployeeView
             // 
@@ -195,7 +213,7 @@
             this.panelEmployeeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEmployeeView.Location = new System.Drawing.Point(0, 35);
             this.panelEmployeeView.Name = "panelEmployeeView";
-            this.panelEmployeeView.Size = new System.Drawing.Size(853, 401);
+            this.panelEmployeeView.Size = new System.Drawing.Size(956, 401);
             this.panelEmployeeView.TabIndex = 6;
             // 
             // grdListEmployee
@@ -206,7 +224,7 @@
             this.grdListEmployee.Name = "grdListEmployee";
             this.grdListEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rdateEmployeeBirthday});
-            this.grdListEmployee.Size = new System.Drawing.Size(620, 235);
+            this.grdListEmployee.Size = new System.Drawing.Size(683, 235);
             this.grdListEmployee.TabIndex = 2;
             this.grdListEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListEmployee});
@@ -343,6 +361,7 @@
             // 
             // panEmployeeViewDatail
             // 
+            this.panEmployeeViewDatail.Controls.Add(this.btnAddCharge);
             this.panEmployeeViewDatail.Controls.Add(this.lkEmployeeCharge);
             this.panEmployeeViewDatail.Controls.Add(this.dateToWork);
             this.panEmployeeViewDatail.Controls.Add(this.labEmployeeDateToWork);
@@ -364,12 +383,21 @@
             this.panEmployeeViewDatail.Dock = System.Windows.Forms.DockStyle.Top;
             this.panEmployeeViewDatail.Location = new System.Drawing.Point(2, 2);
             this.panEmployeeViewDatail.Name = "panEmployeeViewDatail";
-            this.panEmployeeViewDatail.Size = new System.Drawing.Size(620, 162);
+            this.panEmployeeViewDatail.Size = new System.Drawing.Size(683, 162);
             this.panEmployeeViewDatail.TabIndex = 1;
+            // 
+            // btnAddCharge
+            // 
+            this.btnAddCharge.Location = new System.Drawing.Point(605, 130);
+            this.btnAddCharge.Name = "btnAddCharge";
+            this.btnAddCharge.Size = new System.Drawing.Size(53, 18);
+            this.btnAddCharge.TabIndex = 20;
+            this.btnAddCharge.Text = "Thêm ";
+            this.btnAddCharge.Click += new System.EventHandler(this.btnAddCharge_Click);
             // 
             // lkEmployeeCharge
             // 
-            this.lkEmployeeCharge.Location = new System.Drawing.Point(414, 106);
+            this.lkEmployeeCharge.Location = new System.Drawing.Point(450, 128);
             this.lkEmployeeCharge.Name = "lkEmployeeCharge";
             this.lkEmployeeCharge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -377,13 +405,15 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("STT", "STT"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenCV", "Tên chức vụ")});
             this.lkEmployeeCharge.Properties.NullText = "";
-            this.lkEmployeeCharge.Size = new System.Drawing.Size(155, 20);
+            this.lkEmployeeCharge.Properties.ReadOnly = true;
+            this.lkEmployeeCharge.Size = new System.Drawing.Size(141, 20);
             this.lkEmployeeCharge.TabIndex = 19;
+            this.lkEmployeeCharge.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.lkEmployeeCharge_QueryPopUp);
             // 
             // dateToWork
             // 
             this.dateToWork.EditValue = null;
-            this.dateToWork.Location = new System.Drawing.Point(414, 44);
+            this.dateToWork.Location = new System.Drawing.Point(450, 44);
             this.dateToWork.Name = "dateToWork";
             this.dateToWork.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -396,12 +426,13 @@
             this.dateToWork.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateToWork.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateToWork.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateToWork.Size = new System.Drawing.Size(155, 20);
-            this.dateToWork.TabIndex = 14;
+            this.dateToWork.Properties.ReadOnly = true;
+            this.dateToWork.Size = new System.Drawing.Size(208, 20);
+            this.dateToWork.TabIndex = 18;
             // 
             // labEmployeeDateToWork
             // 
-            this.labEmployeeDateToWork.Location = new System.Drawing.Point(303, 47);
+            this.labEmployeeDateToWork.Location = new System.Drawing.Point(339, 47);
             this.labEmployeeDateToWork.Name = "labEmployeeDateToWork";
             this.labEmployeeDateToWork.Size = new System.Drawing.Size(65, 13);
             this.labEmployeeDateToWork.TabIndex = 14;
@@ -423,8 +454,9 @@
             this.dateBirthDay.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateBirthDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateBirthDay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateBirthDay.Size = new System.Drawing.Size(161, 20);
-            this.dateBirthDay.TabIndex = 13;
+            this.dateBirthDay.Properties.ReadOnly = true;
+            this.dateBirthDay.Size = new System.Drawing.Size(206, 20);
+            this.dateBirthDay.TabIndex = 18;
             // 
             // labEmployeeBirthDate
             // 
@@ -444,7 +476,7 @@
             // 
             // labEmployeeCharge
             // 
-            this.labEmployeeCharge.Location = new System.Drawing.Point(303, 106);
+            this.labEmployeeCharge.Location = new System.Drawing.Point(339, 130);
             this.labEmployeeCharge.Name = "labEmployeeCharge";
             this.labEmployeeCharge.Size = new System.Drawing.Size(44, 13);
             this.labEmployeeCharge.TabIndex = 13;
@@ -460,7 +492,7 @@
             // 
             // labEmployeeEmail
             // 
-            this.labEmployeeEmail.Location = new System.Drawing.Point(303, 79);
+            this.labEmployeeEmail.Location = new System.Drawing.Point(339, 79);
             this.labEmployeeEmail.Name = "labEmployeeEmail";
             this.labEmployeeEmail.Size = new System.Drawing.Size(28, 13);
             this.labEmployeeEmail.TabIndex = 13;
@@ -486,20 +518,22 @@
             // 
             this.txtEmployeePhone.Location = new System.Drawing.Point(103, 127);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(161, 20);
-            this.txtEmployeePhone.TabIndex = 18;
-            this.txtEmployeePhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeePhone_KeyPress);
+            this.txtEmployeePhone.Properties.ReadOnly = true;
+            this.txtEmployeePhone.Size = new System.Drawing.Size(206, 20);
+            this.txtEmployeePhone.TabIndex = 15;
+            this.txtEmployeePhone.EditValueChanged += new System.EventHandler(this.txtEmployeeNameLA_TextChanged);
             // 
             // txtEmployeeEmail
             // 
-            this.txtEmployeeEmail.Location = new System.Drawing.Point(414, 76);
+            this.txtEmployeeEmail.Location = new System.Drawing.Point(450, 70);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
-            this.txtEmployeeEmail.Size = new System.Drawing.Size(155, 20);
-            this.txtEmployeeEmail.TabIndex = 16;
+            this.txtEmployeeEmail.Properties.ReadOnly = true;
+            this.txtEmployeeEmail.Size = new System.Drawing.Size(208, 20);
+            this.txtEmployeeEmail.TabIndex = 15;
             // 
             // labEmployeeName
             // 
-            this.labEmployeeName.Location = new System.Drawing.Point(303, 18);
+            this.labEmployeeName.Location = new System.Drawing.Point(339, 18);
             this.labEmployeeName.Name = "labEmployeeName";
             this.labEmployeeName.Size = new System.Drawing.Size(72, 13);
             this.labEmployeeName.TabIndex = 10;
@@ -507,27 +541,28 @@
             // 
             // txtEmployeeAddress
             // 
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(103, 96);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(103, 99);
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(161, 20);
-            this.txtEmployeeAddress.TabIndex = 17;
+            this.txtEmployeeAddress.Properties.ReadOnly = true;
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(555, 20);
+            this.txtEmployeeAddress.TabIndex = 15;
             // 
             // txtEmployeeId
             // 
             this.txtEmployeeId.Location = new System.Drawing.Point(103, 15);
             this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtEmployeeId.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtEmployeeId.Properties.ReadOnly = true;
-            this.txtEmployeeId.Size = new System.Drawing.Size(161, 20);
+            this.txtEmployeeId.Size = new System.Drawing.Size(206, 20);
             this.txtEmployeeId.TabIndex = 15;
             // 
             // txtEmployeeName
             // 
-            this.txtEmployeeName.Location = new System.Drawing.Point(414, 15);
+            this.txtEmployeeName.Location = new System.Drawing.Point(450, 15);
             this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(155, 20);
+            this.txtEmployeeName.Properties.ReadOnly = true;
+            this.txtEmployeeName.Size = new System.Drawing.Size(208, 20);
             this.txtEmployeeName.TabIndex = 12;
+            this.txtEmployeeName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeNameLA_KeyPress);
             // 
             // cmbEmployeeGender
             // 
@@ -539,9 +574,10 @@
             "Nam",
             "Nữ"});
             this.cmbEmployeeGender.Properties.PopupSizeable = true;
+            this.cmbEmployeeGender.Properties.ReadOnly = true;
             this.cmbEmployeeGender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbEmployeeGender.Size = new System.Drawing.Size(161, 20);
-            this.cmbEmployeeGender.TabIndex = 15;
+            this.cmbEmployeeGender.Size = new System.Drawing.Size(206, 20);
+            this.cmbEmployeeGender.TabIndex = 17;
             // 
             // navBarEmployeeLookAt
             // 
@@ -550,11 +586,11 @@
             this.navBarEmployeeLookAt.Dock = System.Windows.Forms.DockStyle.Right;
             this.navBarEmployeeLookAt.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGEmployeeLookAt});
-            this.navBarEmployeeLookAt.Location = new System.Drawing.Point(622, 2);
+            this.navBarEmployeeLookAt.Location = new System.Drawing.Point(685, 2);
             this.navBarEmployeeLookAt.Name = "navBarEmployeeLookAt";
-            this.navBarEmployeeLookAt.OptionsNavPane.ExpandedWidth = 229;
+            this.navBarEmployeeLookAt.OptionsNavPane.ExpandedWidth = 269;
             this.navBarEmployeeLookAt.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarEmployeeLookAt.Size = new System.Drawing.Size(229, 397);
+            this.navBarEmployeeLookAt.Size = new System.Drawing.Size(269, 397);
             this.navBarEmployeeLookAt.TabIndex = 0;
             this.navBarEmployeeLookAt.Text = "navBarControl1";
             // 
@@ -572,7 +608,7 @@
             this.navBarGroupControlContainer1.Controls.Add(this.labEmployeeNameLA);
             this.navBarGroupControlContainer1.Controls.Add(this.txtEmployeeNameLA);
             this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(229, 294);
+            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(269, 294);
             this.navBarGroupControlContainer1.TabIndex = 0;
             // 
             // labEmployeeNameLA
@@ -587,14 +623,20 @@
             // 
             this.txtEmployeeNameLA.Location = new System.Drawing.Point(43, 32);
             this.txtEmployeeNameLA.Name = "txtEmployeeNameLA";
-            this.txtEmployeeNameLA.Size = new System.Drawing.Size(148, 20);
+            this.txtEmployeeNameLA.Size = new System.Drawing.Size(202, 20);
             this.txtEmployeeNameLA.TabIndex = 12;
+            this.txtEmployeeNameLA.TextChanged += new System.EventHandler(this.txtEmployeeNameLA_TextChanged);
+            this.txtEmployeeNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeNameLA_KeyPress);
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 494);
+            this.ClientSize = new System.Drawing.Size(956, 494);
             this.Controls.Add(this.panelEmployeeView);
             this.Controls.Add(this.panelEmployeeTitles);
             this.Controls.Add(this.panelEmployeeExecute);
@@ -631,6 +673,7 @@
             this.navBarGroupControlContainer1.ResumeLayout(false);
             this.navBarGroupControlContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeNameLA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -683,5 +726,8 @@
         private DevExpress.XtraEditors.LookUpEdit lkEmployeeCharge;
         private DevExpress.XtraEditors.DateEdit dateToWork;
         private DevExpress.XtraEditors.LabelControl labEmployeeDateToWork;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnAddCharge;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
     }
 }

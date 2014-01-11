@@ -338,9 +338,9 @@
             // panelEmployeeExecute
             // 
             this.panelEmployeeExecute.Controls.Add(this.sbtnSave);
-            this.panelEmployeeExecute.Controls.Add(this.sbtnDetroyUpdate);
             this.panelEmployeeExecute.Controls.Add(this.btnUpdate);
             this.panelEmployeeExecute.Controls.Add(this.btnCancel);
+            this.panelEmployeeExecute.Controls.Add(this.sbtnDetroyUpdate);
             this.panelEmployeeExecute.Location = new System.Drawing.Point(2, 345);
             this.panelEmployeeExecute.Name = "panelEmployeeExecute";
             this.panelEmployeeExecute.Size = new System.Drawing.Size(644, 58);

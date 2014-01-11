@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelAuthorExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnCacelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -59,6 +60,7 @@
             this.txtAuthorNameLA = new DevExpress.XtraEditors.TextEdit();
             this.labAuthorNameLA = new DevExpress.XtraEditors.LabelControl();
             this.panelAuthorView = new DevExpress.XtraEditors.PanelControl();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelAuthorExecute)).BeginInit();
             this.panelAuthorExecute.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelAuthorDetail)).BeginInit();
@@ -79,11 +81,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorNameLA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelAuthorView)).BeginInit();
             this.panelAuthorView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAuthorExecute
             // 
-            this.panelAuthorExecute.Controls.Add(this.btnCacelOfUpdate);
+            this.panelAuthorExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panelAuthorExecute.Controls.Add(this.btnUpdate);
             this.panelAuthorExecute.Controls.Add(this.btnCancel);
             this.panelAuthorExecute.Controls.Add(this.btnSave);
@@ -95,16 +98,16 @@
             this.panelAuthorExecute.Size = new System.Drawing.Size(760, 54);
             this.panelAuthorExecute.TabIndex = 0;
             // 
-            // btnCacelOfUpdate
+            // btnCancelOfUpdate
             // 
-            this.btnCacelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCacelOfUpdate.Location = new System.Drawing.Point(252, 9);
-            this.btnCacelOfUpdate.Name = "btnCacelOfUpdate";
-            this.btnCacelOfUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnCacelOfUpdate.TabIndex = 6;
-            this.btnCacelOfUpdate.Text = "Hủy thao tác";
-            this.btnCacelOfUpdate.Visible = false;
-            this.btnCacelOfUpdate.Click += new System.EventHandler(this.btnCacelOfUpdate_Click);
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(252, 9);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(75, 31);
+            this.btnCancelOfUpdate.TabIndex = 6;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCacelOfUpdate_Click);
             // 
             // btnUpdate
             // 
@@ -123,7 +126,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 34);
             this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Hủy thêm mới";
+            this.btnCancel.Text = "Hủy thao tác";
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -360,11 +363,12 @@
             // 
             // txtAuthorNameLA
             // 
-            this.txtAuthorNameLA.Location = new System.Drawing.Point(77, 37);
+            this.txtAuthorNameLA.Location = new System.Drawing.Point(54, 37);
             this.txtAuthorNameLA.Name = "txtAuthorNameLA";
-            this.txtAuthorNameLA.Size = new System.Drawing.Size(138, 20);
+            this.txtAuthorNameLA.Size = new System.Drawing.Size(161, 20);
             this.txtAuthorNameLA.TabIndex = 2;
             this.txtAuthorNameLA.TextChanged += new System.EventHandler(this.txtAuthorNameLA_TextChanged);
+            this.txtAuthorNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAuthorNameLA_KeyPress);
             // 
             // labAuthorNameLA
             // 
@@ -384,6 +388,10 @@
             this.panelAuthorView.Name = "panelAuthorView";
             this.panelAuthorView.Size = new System.Drawing.Size(760, 320);
             this.panelAuthorView.TabIndex = 4;
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmAuthor
             // 
@@ -419,6 +427,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorNameLA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelAuthorView)).EndInit();
             this.panelAuthorView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,6 +464,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rtxtAuthorId;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rtxtAuthorName;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rtxtAuthorAddress;
-        private DevExpress.XtraEditors.SimpleButton btnCacelOfUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
     }
 }

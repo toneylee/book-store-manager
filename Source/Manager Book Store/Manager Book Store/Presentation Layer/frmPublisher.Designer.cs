@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelPublisherTitle = new DevExpress.XtraEditors.PanelControl();
             this.labPublisherTitle = new DevExpress.XtraEditors.LabelControl();
             this.panelPublisherExecute = new DevExpress.XtraEditors.PanelControl();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -59,6 +61,7 @@
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.labPublisherNameLA = new DevExpress.XtraEditors.LabelControl();
             this.txtPublisherNameLA = new DevExpress.XtraEditors.TextEdit();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelPublisherTitle)).BeginInit();
             this.panelPublisherTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPublisherExecute)).BeginInit();
@@ -81,6 +84,7 @@
             this.navBarPublisherLookAt.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPublisherNameLA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPublisherTitle
@@ -89,7 +93,7 @@
             this.panelPublisherTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPublisherTitle.Location = new System.Drawing.Point(0, 0);
             this.panelPublisherTitle.Name = "panelPublisherTitle";
-            this.panelPublisherTitle.Size = new System.Drawing.Size(735, 41);
+            this.panelPublisherTitle.Size = new System.Drawing.Size(853, 41);
             this.panelPublisherTitle.TabIndex = 0;
             // 
             // labPublisherTitle
@@ -97,7 +101,7 @@
             this.labPublisherTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labPublisherTitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.labPublisherTitle.Appearance.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labPublisherTitle.Location = new System.Drawing.Point(210, 4);
+            this.labPublisherTitle.Location = new System.Drawing.Point(269, 4);
             this.labPublisherTitle.Name = "labPublisherTitle";
             this.labPublisherTitle.Size = new System.Drawing.Size(332, 32);
             this.labPublisherTitle.TabIndex = 1;
@@ -105,6 +109,7 @@
             // 
             // panelPublisherExecute
             // 
+            this.panelPublisherExecute.Controls.Add(this.btnCancelOfUpdate);
             this.panelPublisherExecute.Controls.Add(this.btnUpdate);
             this.panelPublisherExecute.Controls.Add(this.btnCancel);
             this.panelPublisherExecute.Controls.Add(this.btnSave);
@@ -113,13 +118,24 @@
             this.panelPublisherExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPublisherExecute.Location = new System.Drawing.Point(0, 387);
             this.panelPublisherExecute.Name = "panelPublisherExecute";
-            this.panelPublisherExecute.Size = new System.Drawing.Size(735, 57);
+            this.panelPublisherExecute.Size = new System.Drawing.Size(853, 57);
             this.panelPublisherExecute.TabIndex = 1;
+            // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(330, 11);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(89, 34);
+            this.btnCancelOfUpdate.TabIndex = 11;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(230, 14);
+            this.btnUpdate.Location = new System.Drawing.Point(344, 14);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 31);
             this.btnUpdate.TabIndex = 10;
@@ -129,20 +145,20 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(124, 11);
+            this.btnCancel.Location = new System.Drawing.Point(216, 11);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 34);
+            this.btnCancel.Size = new System.Drawing.Size(89, 34);
             this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "Hủy thêm mới";
+            this.btnCancel.Text = "Hủy thao tác";
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(436, 12);
+            this.btnSave.Location = new System.Drawing.Point(547, 11);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 33);
+            this.btnSave.Size = new System.Drawing.Size(82, 34);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu xuống";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -150,9 +166,9 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(331, 12);
+            this.btnDelete.Location = new System.Drawing.Point(445, 11);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 33);
+            this.btnDelete.Size = new System.Drawing.Size(80, 34);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -160,7 +176,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(124, 12);
+            this.btnAdd.Location = new System.Drawing.Point(230, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 33);
             this.btnAdd.TabIndex = 6;
@@ -175,7 +191,7 @@
             this.panelPublisherView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPublisherView.Location = new System.Drawing.Point(0, 41);
             this.panelPublisherView.Name = "panelPublisherView";
-            this.panelPublisherView.Size = new System.Drawing.Size(735, 346);
+            this.panelPublisherView.Size = new System.Drawing.Size(853, 346);
             this.panelPublisherView.TabIndex = 2;
             // 
             // panelPublisherViewData
@@ -184,7 +200,7 @@
             this.panelPublisherViewData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPublisherViewData.Location = new System.Drawing.Point(2, 73);
             this.panelPublisherViewData.Name = "panelPublisherViewData";
-            this.panelPublisherViewData.Size = new System.Drawing.Size(511, 271);
+            this.panelPublisherViewData.Size = new System.Drawing.Size(629, 271);
             this.panelPublisherViewData.TabIndex = 2;
             // 
             // grdListPublisher
@@ -197,7 +213,7 @@
             this.rtxtPublisherId,
             this.rtxtPublisherName,
             this.rtxtPublisherAddress});
-            this.grdListPublisher.Size = new System.Drawing.Size(507, 267);
+            this.grdListPublisher.Size = new System.Drawing.Size(625, 267);
             this.grdListPublisher.TabIndex = 1;
             this.grdListPublisher.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListPublisher});
@@ -284,7 +300,7 @@
             this.panelPublisherDetail.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPublisherDetail.Location = new System.Drawing.Point(2, 2);
             this.panelPublisherDetail.Name = "panelPublisherDetail";
-            this.panelPublisherDetail.Size = new System.Drawing.Size(511, 71);
+            this.panelPublisherDetail.Size = new System.Drawing.Size(629, 71);
             this.panelPublisherDetail.TabIndex = 1;
             // 
             // labPublisherId
@@ -305,7 +321,7 @@
             // 
             // labPublisherName
             // 
-            this.labPublisherName.Location = new System.Drawing.Point(263, 14);
+            this.labPublisherName.Location = new System.Drawing.Point(294, 14);
             this.labPublisherName.Name = "labPublisherName";
             this.labPublisherName.Size = new System.Drawing.Size(89, 13);
             this.labPublisherName.TabIndex = 6;
@@ -313,27 +329,30 @@
             // 
             // txtPublisherId
             // 
-            this.txtPublisherId.Location = new System.Drawing.Point(108, 11);
+            this.txtPublisherId.Location = new System.Drawing.Point(126, 11);
             this.txtPublisherId.Name = "txtPublisherId";
             this.txtPublisherId.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtPublisherId.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtPublisherId.Properties.ReadOnly = true;
-            this.txtPublisherId.Size = new System.Drawing.Size(137, 20);
+            this.txtPublisherId.Size = new System.Drawing.Size(149, 20);
             this.txtPublisherId.TabIndex = 9;
             // 
             // txtPublisherAddress
             // 
-            this.txtPublisherAddress.Location = new System.Drawing.Point(108, 41);
+            this.txtPublisherAddress.Location = new System.Drawing.Point(126, 40);
             this.txtPublisherAddress.Name = "txtPublisherAddress";
-            this.txtPublisherAddress.Size = new System.Drawing.Size(387, 20);
+            this.txtPublisherAddress.Properties.ReadOnly = true;
+            this.txtPublisherAddress.Size = new System.Drawing.Size(446, 20);
             this.txtPublisherAddress.TabIndex = 7;
             // 
             // txtPublisherName
             // 
-            this.txtPublisherName.Location = new System.Drawing.Point(358, 11);
+            this.txtPublisherName.Location = new System.Drawing.Point(421, 11);
             this.txtPublisherName.Name = "txtPublisherName";
-            this.txtPublisherName.Size = new System.Drawing.Size(137, 20);
+            this.txtPublisherName.Properties.ReadOnly = true;
+            this.txtPublisherName.Size = new System.Drawing.Size(151, 20);
             this.txtPublisherName.TabIndex = 7;
+            this.txtPublisherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPublisherName_KeyPress);
             // 
             // navBarPublisherLookAt
             // 
@@ -342,7 +361,7 @@
             this.navBarPublisherLookAt.Dock = System.Windows.Forms.DockStyle.Right;
             this.navBarPublisherLookAt.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGPublisherLookAt});
-            this.navBarPublisherLookAt.Location = new System.Drawing.Point(513, 2);
+            this.navBarPublisherLookAt.Location = new System.Drawing.Point(631, 2);
             this.navBarPublisherLookAt.Name = "navBarPublisherLookAt";
             this.navBarPublisherLookAt.OptionsNavPane.ExpandedWidth = 220;
             this.navBarPublisherLookAt.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
@@ -379,15 +398,20 @@
             // 
             this.txtPublisherNameLA.Location = new System.Drawing.Point(36, 37);
             this.txtPublisherNameLA.Name = "txtPublisherNameLA";
-            this.txtPublisherNameLA.Size = new System.Drawing.Size(149, 20);
+            this.txtPublisherNameLA.Size = new System.Drawing.Size(174, 20);
             this.txtPublisherNameLA.TabIndex = 7;
             this.txtPublisherNameLA.TextChanged += new System.EventHandler(this.txtPublisherNameLA_TextChanged);
+            this.txtPublisherNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPublisherName_KeyPress);
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmPublisher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 444);
+            this.ClientSize = new System.Drawing.Size(853, 444);
             this.Controls.Add(this.panelPublisherView);
             this.Controls.Add(this.panelPublisherExecute);
             this.Controls.Add(this.panelPublisherTitle);
@@ -419,6 +443,7 @@
             this.navBarGroupControlContainer1.ResumeLayout(false);
             this.navBarGroupControlContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPublisherNameLA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,5 +481,7 @@
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
         private DevExpress.XtraEditors.LabelControl labPublisherNameLA;
         private DevExpress.XtraEditors.TextEdit txtPublisherNameLA;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
     }
 }

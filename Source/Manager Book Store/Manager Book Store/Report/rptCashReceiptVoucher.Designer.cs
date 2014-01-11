@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrlbPaymentWord = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrlbPaymentWordValue = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlbPayment = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlbPaymentValue = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlbMoneyStyle = new DevExpress.XtraReports.UI.XRLabel();
@@ -55,22 +57,52 @@
             this.xrlbEmployee = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlSecond = new DevExpress.XtraReports.UI.XRLine();
             this.xrlbCustomer = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrlbPaymentWordValue = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrlbPaymentWord = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabDebit = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabDebitValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabMoneyPayValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabMoneyPay = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabMoneyPay,
+            this.xrLabMoneyPayValue,
+            this.xrLabel4,
+            this.xrLabel3,
+            this.xrLabDebitValue,
+            this.xrLabDebit,
             this.xrlbPaymentWord,
             this.xrlbPaymentWordValue,
             this.xrlbPayment,
             this.xrlbPaymentValue,
             this.xrlbMoneyStyle});
-            this.Detail.HeightF = 51.04167F;
+            this.Detail.HeightF = 112.5F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrlbPaymentWord
+            // 
+            this.xrlbPaymentWord.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrlbPaymentWord.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 25.08335F);
+            this.xrlbPaymentWord.Name = "xrlbPaymentWord";
+            this.xrlbPaymentWord.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlbPaymentWord.SizeF = new System.Drawing.SizeF(166.6666F, 25.08334F);
+            this.xrlbPaymentWord.StylePriority.UseFont = false;
+            this.xrlbPaymentWord.Text = "Số tiền thu(bằng chữ):";
+            // 
+            // xrlbPaymentWordValue
+            // 
+            this.xrlbPaymentWordValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic);
+            this.xrlbPaymentWordValue.LocationFloat = new DevExpress.Utils.PointFloat(176.6666F, 25.08329F);
+            this.xrlbPaymentWordValue.Name = "xrlbPaymentWordValue";
+            this.xrlbPaymentWordValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlbPaymentWordValue.SizeF = new System.Drawing.SizeF(227.9167F, 25.08337F);
+            this.xrlbPaymentWordValue.StylePriority.UseFont = false;
+            this.xrlbPaymentWordValue.Text = "Mười  triệu đồng chẵn";
             // 
             // xrlbPayment
             // 
@@ -318,7 +350,7 @@
             // xrlbEmployee
             // 
             this.xrlbEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.xrlbEmployee.LocationFloat = new DevExpress.Utils.PointFloat(156.3023F, 85.75007F);
+            this.xrlbEmployee.LocationFloat = new DevExpress.Utils.PointFloat(156.3023F, 41.24997F);
             this.xrlbEmployee.Name = "xrlbEmployee";
             this.xrlbEmployee.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrlbEmployee.SizeF = new System.Drawing.SizeF(117.7083F, 25.08333F);
@@ -329,14 +361,14 @@
             // 
             // xrlSecond
             // 
-            this.xrlSecond.LocationFloat = new DevExpress.Utils.PointFloat(96.875F, 45.91675F);
+            this.xrlSecond.LocationFloat = new DevExpress.Utils.PointFloat(96.875F, 9.999974F);
             this.xrlSecond.Name = "xrlSecond";
             this.xrlSecond.SizeF = new System.Drawing.SizeF(457.2917F, 23F);
             // 
             // xrlbCustomer
             // 
             this.xrlbCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.xrlbCustomer.LocationFloat = new DevExpress.Utils.PointFloat(378.3856F, 85.75007F);
+            this.xrlbCustomer.LocationFloat = new DevExpress.Utils.PointFloat(375.2606F, 41.24997F);
             this.xrlbCustomer.Name = "xrlbCustomer";
             this.xrlbCustomer.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrlbCustomer.SizeF = new System.Drawing.SizeF(117.7083F, 25.08333F);
@@ -345,25 +377,69 @@
             this.xrlbCustomer.Text = "Khách hàng";
             this.xrlbCustomer.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrlbPaymentWordValue
+            // xrLabDebit
             // 
-            this.xrlbPaymentWordValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic);
-            this.xrlbPaymentWordValue.LocationFloat = new DevExpress.Utils.PointFloat(176.6666F, 25.08329F);
-            this.xrlbPaymentWordValue.Name = "xrlbPaymentWordValue";
-            this.xrlbPaymentWordValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrlbPaymentWordValue.SizeF = new System.Drawing.SizeF(227.9167F, 25.08337F);
-            this.xrlbPaymentWordValue.StylePriority.UseFont = false;
-            this.xrlbPaymentWordValue.Text = "Mười  triệu đồng chẵn";
+            this.xrLabDebit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabDebit.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 50.1667F);
+            this.xrLabDebit.Name = "xrLabDebit";
+            this.xrLabDebit.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabDebit.SizeF = new System.Drawing.SizeF(111.4583F, 25.08334F);
+            this.xrLabDebit.StylePriority.UseFont = false;
+            this.xrLabDebit.Text = "Còn nợ:";
             // 
-            // xrlbPaymentWord
+            // xrLabDebitValue
             // 
-            this.xrlbPaymentWord.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.xrlbPaymentWord.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 25.08335F);
-            this.xrlbPaymentWord.Name = "xrlbPaymentWord";
-            this.xrlbPaymentWord.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrlbPaymentWord.SizeF = new System.Drawing.SizeF(166.6666F, 25.08334F);
-            this.xrlbPaymentWord.StylePriority.UseFont = false;
-            this.xrlbPaymentWord.Text = "Số tiền thu(bằng chữ):";
+            this.xrLabDebitValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic);
+            this.xrLabDebitValue.LocationFloat = new DevExpress.Utils.PointFloat(121.4583F, 50.1667F);
+            this.xrLabDebitValue.Name = "xrLabDebitValue";
+            this.xrLabDebitValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabDebitValue.SizeF = new System.Drawing.SizeF(227.9167F, 25.08337F);
+            this.xrLabDebitValue.StylePriority.UseFont = false;
+            this.xrLabDebitValue.Text = "10000000";
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.ForeColor = System.Drawing.Color.Red;
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(349.375F, 50.1667F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(46.45837F, 25.08336F);
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UseForeColor = false;
+            this.xrLabel3.Text = "VND";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel4.ForeColor = System.Drawing.Color.Red;
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(349.375F, 77.41667F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(46.45837F, 25.08336F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UseForeColor = false;
+            this.xrLabel4.Text = "VND";
+            // 
+            // xrLabMoneyPayValue
+            // 
+            this.xrLabMoneyPayValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic);
+            this.xrLabMoneyPayValue.LocationFloat = new DevExpress.Utils.PointFloat(121.4583F, 77.41667F);
+            this.xrLabMoneyPayValue.Name = "xrLabMoneyPayValue";
+            this.xrLabMoneyPayValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabMoneyPayValue.SizeF = new System.Drawing.SizeF(227.9167F, 25.08337F);
+            this.xrLabMoneyPayValue.StylePriority.UseFont = false;
+            this.xrLabMoneyPayValue.Text = "10000000";
+            // 
+            // xrLabMoneyPay
+            // 
+            this.xrLabMoneyPay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabMoneyPay.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 77.41667F);
+            this.xrLabMoneyPay.Name = "xrLabMoneyPay";
+            this.xrLabMoneyPay.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabMoneyPay.SizeF = new System.Drawing.SizeF(111.4583F, 25.08334F);
+            this.xrLabMoneyPay.StylePriority.UseFont = false;
+            this.xrLabMoneyPay.Text = "Trả lại:";
             // 
             // rptCashReceiptVoucher
             // 
@@ -409,5 +485,11 @@
         private DevExpress.XtraReports.UI.XRLabel xrlbCustomer;
         private DevExpress.XtraReports.UI.XRLabel xrlbPaymentWord;
         private DevExpress.XtraReports.UI.XRLabel xrlbPaymentWordValue;
+        private DevExpress.XtraReports.UI.XRLabel xrLabMoneyPay;
+        private DevExpress.XtraReports.UI.XRLabel xrLabMoneyPayValue;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabDebitValue;
+        private DevExpress.XtraReports.UI.XRLabel xrLabDebit;
     }
 }

@@ -155,7 +155,25 @@ namespace Manager_Book_Store.Data_Access_Layer
                 return null;
             }
         }
-
+        //Ham tra ve mot so co parameter
+        public int getIntExecuter(SqlCommand _sqlCommand)
+        {
+            try
+            {
+                int temp = 0;
+                if (this.openConnection())
+                {
+                    this.m_cmd = _sqlCommand;
+                    this.m_cmd.Connection = this.m_conn;
+                    temp = int.Parse(this.m_cmd.ExecuteScalar().ToString());
+                }
+                return temp;
+            }
+            catch (SqlException)
+            {
+                return -1;
+            }
+        }
         #endregion
 
     }

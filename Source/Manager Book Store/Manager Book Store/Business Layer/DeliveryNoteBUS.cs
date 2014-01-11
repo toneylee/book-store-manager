@@ -18,7 +18,6 @@ namespace Manager_Book_Store.Business_Layer
         }
         public bool AddDeliveryNoteToDatabase(CDeliveryNoteDTO _DeliveryNoteObject)
         {
-
             return m_DeliveryNoteDAL.AddDeliveryNoteToDatabase(_DeliveryNoteObject);
         }
         public bool DeleteDeliveryNoteToDatabase(CDeliveryNoteDTO _DeliveryNoteObject)
@@ -45,5 +44,6 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_DeliveryNoteDAL.getDeliveryDataByRuleFromDatabase(_tenNV, _tenKH, _soHD, _ngayHD);
         }
+
     }
 }

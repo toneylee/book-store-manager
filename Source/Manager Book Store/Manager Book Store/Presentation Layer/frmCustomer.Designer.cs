@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelCustomerTitles = new DevExpress.XtraEditors.PanelControl();
             this.labCustomerTitles = new DevExpress.XtraEditors.LabelControl();
             this.panelCustomerExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelOfUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.panelCustomerView = new DevExpress.XtraEditors.PanelControl();
             this.grdListCustomer = new DevExpress.XtraGrid.GridControl();
             this.grdvListCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -72,6 +74,7 @@
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.labCustomerNameLA = new DevExpress.XtraEditors.LabelControl();
             this.txtCustomerNameLA = new DevExpress.XtraEditors.TextEdit();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelCustomerTitles)).BeginInit();
             this.panelCustomerTitles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelCustomerExecute)).BeginInit();
@@ -97,6 +100,7 @@
             this.navBarCustomerLookAt.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerNameLA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCustomerTitles
@@ -105,7 +109,7 @@
             this.panelCustomerTitles.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCustomerTitles.Location = new System.Drawing.Point(0, 0);
             this.panelCustomerTitles.Name = "panelCustomerTitles";
-            this.panelCustomerTitles.Size = new System.Drawing.Size(832, 35);
+            this.panelCustomerTitles.Size = new System.Drawing.Size(935, 35);
             this.panelCustomerTitles.TabIndex = 0;
             // 
             // labCustomerTitles
@@ -113,7 +117,7 @@
             this.labCustomerTitles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labCustomerTitles.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.labCustomerTitles.Appearance.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labCustomerTitles.Location = new System.Drawing.Point(281, 1);
+            this.labCustomerTitles.Location = new System.Drawing.Point(332, 1);
             this.labCustomerTitles.Name = "labCustomerTitles";
             this.labCustomerTitles.Size = new System.Drawing.Size(311, 32);
             this.labCustomerTitles.TabIndex = 1;
@@ -121,52 +125,32 @@
             // 
             // panelCustomerExecute
             // 
-            this.panelCustomerExecute.Controls.Add(this.btnUpdate);
             this.panelCustomerExecute.Controls.Add(this.btnSave);
-            this.panelCustomerExecute.Controls.Add(this.btnCancel);
             this.panelCustomerExecute.Controls.Add(this.btnAdd);
             this.panelCustomerExecute.Controls.Add(this.btnDelete);
+            this.panelCustomerExecute.Controls.Add(this.btnCancelOfUpdate);
+            this.panelCustomerExecute.Controls.Add(this.btnCancel);
+            this.panelCustomerExecute.Controls.Add(this.btnUpdate);
             this.panelCustomerExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCustomerExecute.Location = new System.Drawing.Point(0, 400);
+            this.panelCustomerExecute.Location = new System.Drawing.Point(0, 403);
             this.panelCustomerExecute.Name = "panelCustomerExecute";
-            this.panelCustomerExecute.Size = new System.Drawing.Size(832, 58);
+            this.panelCustomerExecute.Size = new System.Drawing.Size(935, 58);
             this.panelCustomerExecute.TabIndex = 1;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(333, 9);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 31);
-            this.btnUpdate.TabIndex = 14;
-            this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(528, 9);
+            this.btnSave.Location = new System.Drawing.Point(631, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Lưu xuống";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(218, 9);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(93, 31);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Hủy thêm mới";
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(218, 9);
+            this.btnAdd.Location = new System.Drawing.Point(300, 9);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(93, 31);
             this.btnAdd.TabIndex = 10;
@@ -176,12 +160,44 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(426, 9);
+            this.btnDelete.Location = new System.Drawing.Point(529, 9);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 31);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Xóa bỏ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnCancelOfUpdate
+            // 
+            this.btnCancelOfUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOfUpdate.Location = new System.Drawing.Point(410, 9);
+            this.btnCancelOfUpdate.Name = "btnCancelOfUpdate";
+            this.btnCancelOfUpdate.Size = new System.Drawing.Size(93, 31);
+            this.btnCancelOfUpdate.TabIndex = 15;
+            this.btnCancelOfUpdate.Text = "Hủy thao tác";
+            this.btnCancelOfUpdate.Visible = false;
+            this.btnCancelOfUpdate.Click += new System.EventHandler(this.btnCancelOfUpdate_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.Location = new System.Drawing.Point(300, 9);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(93, 31);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Hủy thao tác";
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Location = new System.Drawing.Point(415, 9);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(88, 31);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panelCustomerView
             // 
@@ -191,18 +207,18 @@
             this.panelCustomerView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCustomerView.Location = new System.Drawing.Point(0, 35);
             this.panelCustomerView.Name = "panelCustomerView";
-            this.panelCustomerView.Size = new System.Drawing.Size(832, 365);
+            this.panelCustomerView.Size = new System.Drawing.Size(935, 368);
             this.panelCustomerView.TabIndex = 2;
             // 
             // grdListCustomer
             // 
             this.grdListCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdListCustomer.Location = new System.Drawing.Point(2, 129);
+            this.grdListCustomer.Location = new System.Drawing.Point(2, 170);
             this.grdListCustomer.MainView = this.grdvListCustomer;
             this.grdListCustomer.Name = "grdListCustomer";
             this.grdListCustomer.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rdateCustomerBirthday});
-            this.grdListCustomer.Size = new System.Drawing.Size(609, 234);
+            this.grdListCustomer.Size = new System.Drawing.Size(675, 196);
             this.grdListCustomer.TabIndex = 2;
             this.grdListCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListCustomer});
@@ -223,6 +239,7 @@
             this.grdvListCustomer.Name = "grdvListCustomer";
             this.grdvListCustomer.OptionsView.ShowGroupPanel = false;
             this.grdvListCustomer.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvListCustomer_FocusedRowChanged);
+            this.grdvListCustomer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.grdvListCustomer_MouseDown);
             // 
             // CustomerSno
             // 
@@ -350,7 +367,7 @@
             this.panCustomerViewDatail.Dock = System.Windows.Forms.DockStyle.Top;
             this.panCustomerViewDatail.Location = new System.Drawing.Point(2, 2);
             this.panCustomerViewDatail.Name = "panCustomerViewDatail";
-            this.panCustomerViewDatail.Size = new System.Drawing.Size(609, 127);
+            this.panCustomerViewDatail.Size = new System.Drawing.Size(675, 168);
             this.panCustomerViewDatail.TabIndex = 1;
             // 
             // spCustomerDebit
@@ -360,13 +377,15 @@
             0,
             0,
             0});
-            this.spCustomerDebit.Location = new System.Drawing.Point(414, 100);
+            this.spCustomerDebit.Location = new System.Drawing.Point(103, 127);
             this.spCustomerDebit.Name = "spCustomerDebit";
             this.spCustomerDebit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spCustomerDebit.Properties.Mask.EditMask = "c0";
+            this.spCustomerDebit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.spCustomerDebit.Properties.ReadOnly = true;
             this.spCustomerDebit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.spCustomerDebit.Size = new System.Drawing.Size(155, 20);
+            this.spCustomerDebit.Size = new System.Drawing.Size(210, 20);
             this.spCustomerDebit.TabIndex = 19;
             // 
             // dateBirthDay
@@ -385,7 +404,8 @@
             this.dateBirthDay.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateBirthDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateBirthDay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateBirthDay.Size = new System.Drawing.Size(161, 20);
+            this.dateBirthDay.Properties.ReadOnly = true;
+            this.dateBirthDay.Size = new System.Drawing.Size(210, 20);
             this.dateBirthDay.TabIndex = 18;
             // 
             // labCustomerBirthDate
@@ -398,7 +418,7 @@
             // 
             // labBookGenreName
             // 
-            this.labBookGenreName.Location = new System.Drawing.Point(303, 41);
+            this.labBookGenreName.Location = new System.Drawing.Point(349, 41);
             this.labBookGenreName.Name = "labBookGenreName";
             this.labBookGenreName.Size = new System.Drawing.Size(42, 13);
             this.labBookGenreName.TabIndex = 11;
@@ -407,7 +427,7 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl1.Location = new System.Drawing.Point(578, 106);
+            this.labelControl1.Location = new System.Drawing.Point(324, 130);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(20, 13);
             this.labelControl1.TabIndex = 13;
@@ -415,7 +435,7 @@
             // 
             // labCustomerDebit
             // 
-            this.labCustomerDebit.Location = new System.Drawing.Point(303, 99);
+            this.labCustomerDebit.Location = new System.Drawing.Point(7, 130);
             this.labCustomerDebit.Name = "labCustomerDebit";
             this.labCustomerDebit.Size = new System.Drawing.Size(39, 13);
             this.labCustomerDebit.TabIndex = 13;
@@ -423,7 +443,7 @@
             // 
             // labCustomerPhone
             // 
-            this.labCustomerPhone.Location = new System.Drawing.Point(6, 103);
+            this.labCustomerPhone.Location = new System.Drawing.Point(349, 100);
             this.labCustomerPhone.Name = "labCustomerPhone";
             this.labCustomerPhone.Size = new System.Drawing.Size(66, 13);
             this.labCustomerPhone.TabIndex = 13;
@@ -431,7 +451,7 @@
             // 
             // labCustomerEmail
             // 
-            this.labCustomerEmail.Location = new System.Drawing.Point(303, 72);
+            this.labCustomerEmail.Location = new System.Drawing.Point(6, 100);
             this.labCustomerEmail.Name = "labCustomerEmail";
             this.labCustomerEmail.Size = new System.Drawing.Size(28, 13);
             this.labCustomerEmail.TabIndex = 13;
@@ -455,21 +475,24 @@
             // 
             // txtCustomerPhone
             // 
-            this.txtCustomerPhone.Location = new System.Drawing.Point(103, 100);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(462, 97);
             this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(161, 20);
+            this.txtCustomerPhone.Properties.ReadOnly = true;
+            this.txtCustomerPhone.Size = new System.Drawing.Size(195, 20);
             this.txtCustomerPhone.TabIndex = 15;
+            this.txtCustomerPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerPhone_KeyPress);
             // 
             // txtCustomerEmail
             // 
-            this.txtCustomerEmail.Location = new System.Drawing.Point(414, 69);
+            this.txtCustomerEmail.Location = new System.Drawing.Point(103, 97);
             this.txtCustomerEmail.Name = "txtCustomerEmail";
-            this.txtCustomerEmail.Size = new System.Drawing.Size(155, 20);
+            this.txtCustomerEmail.Properties.ReadOnly = true;
+            this.txtCustomerEmail.Size = new System.Drawing.Size(210, 20);
             this.txtCustomerEmail.TabIndex = 15;
             // 
             // labCustomeName
             // 
-            this.labCustomeName.Location = new System.Drawing.Point(303, 12);
+            this.labCustomeName.Location = new System.Drawing.Point(349, 12);
             this.labCustomeName.Name = "labCustomeName";
             this.labCustomeName.Size = new System.Drawing.Size(80, 13);
             this.labCustomeName.TabIndex = 10;
@@ -477,31 +500,32 @@
             // 
             // txtCustomerAddress
             // 
-            this.txtCustomerAddress.Location = new System.Drawing.Point(103, 69);
+            this.txtCustomerAddress.Location = new System.Drawing.Point(103, 68);
             this.txtCustomerAddress.Name = "txtCustomerAddress";
-            this.txtCustomerAddress.Size = new System.Drawing.Size(161, 20);
+            this.txtCustomerAddress.Properties.ReadOnly = true;
+            this.txtCustomerAddress.Size = new System.Drawing.Size(554, 20);
             this.txtCustomerAddress.TabIndex = 15;
             // 
             // txtCustomerId
             // 
             this.txtCustomerId.Location = new System.Drawing.Point(103, 9);
             this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtCustomerId.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtCustomerId.Properties.ReadOnly = true;
-            this.txtCustomerId.Size = new System.Drawing.Size(161, 20);
+            this.txtCustomerId.Size = new System.Drawing.Size(210, 20);
             this.txtCustomerId.TabIndex = 15;
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(414, 9);
+            this.txtCustomerName.Location = new System.Drawing.Point(460, 9);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(155, 20);
+            this.txtCustomerName.Properties.ReadOnly = true;
+            this.txtCustomerName.Size = new System.Drawing.Size(197, 20);
             this.txtCustomerName.TabIndex = 12;
+            this.txtCustomerName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerName_KeyPress);
             // 
             // cmbCustomerGender
             // 
-            this.cmbCustomerGender.Location = new System.Drawing.Point(414, 38);
+            this.cmbCustomerGender.Location = new System.Drawing.Point(460, 38);
             this.cmbCustomerGender.Name = "cmbCustomerGender";
             this.cmbCustomerGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -509,8 +533,9 @@
             "Nam",
             "Nữ"});
             this.cmbCustomerGender.Properties.PopupSizeable = true;
+            this.cmbCustomerGender.Properties.ReadOnly = true;
             this.cmbCustomerGender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbCustomerGender.Size = new System.Drawing.Size(155, 20);
+            this.cmbCustomerGender.Size = new System.Drawing.Size(197, 20);
             this.cmbCustomerGender.TabIndex = 17;
             // 
             // navBarCustomerLookAt
@@ -520,11 +545,11 @@
             this.navBarCustomerLookAt.Dock = System.Windows.Forms.DockStyle.Right;
             this.navBarCustomerLookAt.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGCustomerLookAt});
-            this.navBarCustomerLookAt.Location = new System.Drawing.Point(611, 2);
+            this.navBarCustomerLookAt.Location = new System.Drawing.Point(677, 2);
             this.navBarCustomerLookAt.Name = "navBarCustomerLookAt";
-            this.navBarCustomerLookAt.OptionsNavPane.ExpandedWidth = 219;
+            this.navBarCustomerLookAt.OptionsNavPane.ExpandedWidth = 256;
             this.navBarCustomerLookAt.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarCustomerLookAt.Size = new System.Drawing.Size(219, 361);
+            this.navBarCustomerLookAt.Size = new System.Drawing.Size(256, 364);
             this.navBarCustomerLookAt.TabIndex = 0;
             this.navBarCustomerLookAt.Text = "navBarControl1";
             // 
@@ -542,7 +567,7 @@
             this.navBarGroupControlContainer1.Controls.Add(this.labCustomerNameLA);
             this.navBarGroupControlContainer1.Controls.Add(this.txtCustomerNameLA);
             this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(219, 258);
+            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(256, 261);
             this.navBarGroupControlContainer1.TabIndex = 0;
             // 
             // labCustomerNameLA
@@ -557,14 +582,20 @@
             // 
             this.txtCustomerNameLA.Location = new System.Drawing.Point(43, 32);
             this.txtCustomerNameLA.Name = "txtCustomerNameLA";
-            this.txtCustomerNameLA.Size = new System.Drawing.Size(148, 20);
+            this.txtCustomerNameLA.Size = new System.Drawing.Size(203, 20);
             this.txtCustomerNameLA.TabIndex = 12;
+            this.txtCustomerNameLA.TextChanged += new System.EventHandler(this.txtCustomerNameLA_TextChanged);
+            this.txtCustomerNameLA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerName_KeyPress);
+            // 
+            // dxErrorProvider
+            // 
+            this.dxErrorProvider.ContainerControl = this;
             // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 458);
+            this.ClientSize = new System.Drawing.Size(935, 461);
             this.Controls.Add(this.panelCustomerView);
             this.Controls.Add(this.panelCustomerExecute);
             this.Controls.Add(this.panelCustomerTitles);
@@ -599,6 +630,7 @@
             this.navBarGroupControlContainer1.ResumeLayout(false);
             this.navBarGroupControlContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerNameLA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -649,5 +681,7 @@
         private DevExpress.XtraEditors.LabelControl labCustomerDebit;
         private DevExpress.XtraEditors.SpinEdit spCustomerDebit;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnCancelOfUpdate;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
     }
 }

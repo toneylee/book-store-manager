@@ -103,9 +103,8 @@ namespace Manager_Book_Store.Data_Tranfer_Object
             this.m_matKhau      = _matKhau;
             this.m_email        = _email;
         }
-
         public CEmployeeDTO(String _maNhanVien, String _tenNhanVien, String _gioiTinh, DateTime _ngaySinh,
-          String _soDienThoai, String _diaChi, DateTime _ngayVaoLam, String _maChucVu, String _tenDangNhap, String _email)
+        String _soDienThoai, String _diaChi, DateTime _ngayVaoLam, String _maChucVu, String _tenDangNhap, String _email)
         {
             this.m_maNhanVien = _maNhanVien;
             this.m_tenNhanVien = _tenNhanVien;

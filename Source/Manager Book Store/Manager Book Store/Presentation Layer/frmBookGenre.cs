@@ -12,6 +12,7 @@ using Manager_Book_Store.Data_Tranfer_Object;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Selection;
 using System.Collections;
+using DevExpress.XtraEditors.Repository;
 
 namespace Manager_Book_Store.Presentation_Layer
 {
@@ -22,7 +23,7 @@ namespace Manager_Book_Store.Presentation_Layer
         private DataTable     m_bookGenreData;
         private CBookGenreBUS m_bookGenreBus;
         private GridCheckMarksSelection m_bookGenreMultiSelectItem;
-        private bool          m_IsUpdate;
+        private bool          m_IsAdd;
         #endregion
         public frmBookGenre()
         {
@@ -31,7 +32,7 @@ namespace Manager_Book_Store.Presentation_Layer
             m_bookGenreBus  = new CBookGenreBUS();
             m_bookGenreData = new DataTable();
             m_bookGenreMultiSelectItem  = new GridCheckMarksSelection(grdvListBookGenre);
-            m_IsUpdate = false;
+            m_IsAdd = false;
             btnSave.Enabled = false;
         }
 
@@ -42,35 +43,40 @@ namespace Manager_Book_Store.Presentation_Layer
             m_bookGenreData                     = m_bookGenreBus.getBookGenreDataFromDatabase();
             grdListBookGenre.DataSource         = m_bookGenreData;
             grdvListBookGenre.FocusedRowHandle  = 0;
+            
         }
-        //Lấy thông tin chi tiết của thê loại.
+
         private void grdvListBookGenre_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (e.FocusedRowHandle >= 0)
+
+            try
             {
-                txtBookGenreName.Text   = grdvListBookGenre.GetRowCellValue(e.FocusedRowHandle, grdvListBookGenre.Columns["TenTL"]).ToString();
-                txtBookGenreId.Text     = grdvListBookGenre.GetRowCellValue(e.FocusedRowHandle, grdvListBookGenre.Columns["MaTL"]).ToString();
-                //btnAdd.Enabled = false;
-                btnCancel.Visible = false;
-                btnCacelOfUpdate.Visible = false;
-                btnUpdate.Visible = true;
-                btnDelete.Visible = true;
-                btnDelete.Enabled = true;
-                btnUpdate.Enabled = true;
-                //btnSave.Enabled = true;
+                if (!m_IsAdd)
+                {
+                    if (e.FocusedRowHandle >= 0)
+                    {
+                        txtBookGenreName.Text = grdvListBookGenre.GetRowCellValue(e.FocusedRowHandle, grdvListBookGenre.Columns["TenTL"]).ToString();
+                        txtBookGenreId.Text = grdvListBookGenre.GetRowCellValue(e.FocusedRowHandle, grdvListBookGenre.Columns["MaTL"]).ToString();
+                    }
+                }
+
             }
+            catch (System.Exception)
+            {
+            }
+            	
+
         }
-        //Thêm mới một thể loại vào cơ sở dữ liệu
+   
         private void btnAdd_Click(object sender, EventArgs e)
         {
             updateEnableButtonAndResetValueOfControl(ref btnAdd);
         }
-        //Cập nhật lại thông tin chi tiết thể loại
+     
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             updateEnableButtonAndResetValueOfControl(ref btnUpdate);
         }
-        //Xóa thông tin của thể loại
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -92,7 +98,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 }
                 if (_listBookObjectInDelibility.Count == 0)
                 {
-                    XtraMessageBox.Show("Xóa dữ liệu thành công!");
+                    XtraCustomMessageBox.Show("Xóa dữ liệu thành công!", "Thông báo", true);
                 }
                 else
                 {
@@ -101,12 +107,12 @@ namespace Manager_Book_Store.Presentation_Layer
                     {
                         _erroContent += item.ToString() + "\n";
                     }
-                    XtraMessageBox.Show(_erroContent);
+                    XtraCustomMessageBox.Show(_erroContent, "Lỗi", true);
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                XtraMessageBox.Show(ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                XtraCustomMessageBox.Show("Xóa dữ liệu thất bại", "Lỗi",true);
             }
             finally
             {
@@ -116,41 +122,41 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!CheckInformationEntered.checkDataInput(txtBookGenreName, "Dữ liệu không thể để trống !", ref dxEPBookGenre))
+            {
+                txtBookGenreName.Focus();
+                return;
+            }
             try
             {
                 DataRow _rowValue = m_bookGenreData.AsEnumerable().FirstOrDefault(tt => tt.Field<string>("TenTL") == txtBookGenreName.Text);
                 if (_rowValue != null)
                 {
-                    XtraMessageBox.Show("Dữ liệu đã tồn tại");
+                    XtraCustomMessageBox.Show("Dữ liệu đã tồn tại", "Thông báo", true);
                     return;
                 }
-                if (!CheckInformationEntered.checkDataInput(txtBookGenreName, "Dữ liệu không thể để trống !", ref dxEPBookGenre))
-                {
-                    txtBookGenreName.Focus();
-                    return;
-                }
-                if (!m_IsUpdate)
+                if (!m_IsAdd)
                 {
                     m_bookGenre = new CBookGenreDTO(txtBookGenreName.Text);
                     m_bookGenre.maTheLoai = txtBookGenreId.Text;
                     if (!m_bookGenreBus.UpdateBookGenreToDatabase(m_bookGenre))
-                        XtraMessageBox.Show("Cập nhật dữ liệu thất bại!");
+                        XtraCustomMessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", true);
                     else
-                        XtraMessageBox.Show("Cập nhật dữ liệu thành công!");
+                        XtraCustomMessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", true);
                 }
                 else
                 {
                     m_bookGenre = new CBookGenreDTO("TL0000000", txtBookGenreName.Text);
                     if (!m_bookGenreBus.AddBookGenreToDatabase(m_bookGenre))
-                        XtraMessageBox.Show("Thêm dữ liệu thất bại!");
+                        XtraCustomMessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi",true);
                     else
-                        XtraMessageBox.Show("Thêm dữ liệu thành công!");
+                        XtraCustomMessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", true);
 
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                XtraMessageBox.Show("Không thể lưu!\n" + ex.ToString(), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                XtraCustomMessageBox.Show("Không thể lưu!\n", "Thông báo",true);
             }
             finally
             {
@@ -176,6 +182,8 @@ namespace Manager_Book_Store.Presentation_Layer
             {
                 case "btnAdd":
                     {
+                        m_bookGenreMultiSelectItem.ClearSelection();
+                        //
                         btnAdd.Visible      = false;
                         btnCancel.Visible   = true;
                         //
@@ -186,16 +194,20 @@ namespace Manager_Book_Store.Presentation_Layer
                         txtBookGenreId.Text     = "TL0000**";
                         txtBookGenreName.Text   = null;
                         txtBookGenreName.Properties.ReadOnly = false;
+                        grdvListBookGenre.OptionsSelection.EnableAppearanceFocusedRow = false;
+                        grdvListBookGenre.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = false;
                         //
-                        m_IsUpdate = true;
+                        m_IsAdd = true;
                         break;
                     }
                 case "btnCancel":
                     {
                         //
+                        m_IsAdd = false;
+                        //
                         btnAdd.Visible              = true;
                         btnCancel.Visible           = false;
-                        btnCacelOfUpdate.Visible    = false;
+                        btnCancelOfUpdate.Visible    = false;
                         btnUpdate.Visible           = true;
                         //
                         btnUpdate.Enabled           = true;
@@ -205,9 +217,14 @@ namespace Manager_Book_Store.Presentation_Layer
                         //
                         txtBookGenreName.Properties.ReadOnly = true;
                         //
+                        grdvListBookGenre.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookGenre.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        //
                         m_bookGenreData             = m_bookGenreBus.getBookGenreDataFromDatabase();
                         grdListBookGenre.DataSource = m_bookGenreData;
-                        grdvListBookGenre.FocusedRowHandle = grdvListBookGenre.DataRowCount - 1;
+                        grdvListBookGenre.FocusedRowHandle = - 1;
+                        grdvListBookGenre.FocusedRowHandle = 0;
+                        //
                         break;
                     }
                 case "btnCancelOfUpdate":
@@ -215,7 +232,7 @@ namespace Manager_Book_Store.Presentation_Layer
                         //
                         btnAdd.Visible           = true;
                         btnCancel.Visible        = false;
-                        btnCacelOfUpdate.Visible = false;
+                        btnCancelOfUpdate.Visible = false;
                         btnUpdate.Visible        = true;
                         //
                         btnUpdate.Enabled        = true;
@@ -225,9 +242,12 @@ namespace Manager_Book_Store.Presentation_Layer
                         //
                         txtBookGenreName.Properties.ReadOnly = true;
                         //
+                        grdvListBookGenre.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookGenre.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
+                        //
                         m_bookGenreData             = m_bookGenreBus.getBookGenreDataFromDatabase();
-                        grdListBookGenre.DataSource = m_bookGenreData;
-                        grdvListBookGenre.FocusedRowHandle = grdvListBookGenre.DataRowCount - 1;
+                        grdvListBookGenre.FocusedRowHandle = -1;
+                        grdvListBookGenre.FocusedRowHandle = 0;
                         break;
                     }
                 case "btnDelete":
@@ -242,12 +262,17 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                 case "btnUpdate":
                     {
-                        m_IsUpdate                  = false;
+                        m_bookGenreMultiSelectItem.ClearSelection();
+                        //
+                        m_IsAdd                      = false;
                         //
                         btnUpdate.Visible           = false;
-                        btnCacelOfUpdate.Visible    = true;
+                        btnCancelOfUpdate.Visible    = true;
                         //
                         txtBookGenreName.Properties.ReadOnly = false;
+                        //
+                        grdvListBookGenre.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookGenre.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = false;
                         //
                         btnDelete.Enabled           = false;
                         btnAdd.Enabled              = false;
@@ -256,17 +281,24 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
                 case "btnSave":
                     {
+                        //
+                        m_IsAdd = false;
+                        //
                         btnUpdate.Visible = true;
-                        btnAdd.Enabled              = true;
-                        btnDelete.Enabled = false;
-                        btnUpdate.Enabled = false;
+                        btnAdd.Enabled    = true;
+                        btnSave.Enabled   = false;
+                        btnDelete.Enabled = true;
+                        btnUpdate.Enabled = true;
                         btnUpdate.Visible = true;
                         //
                         btnAdd.Visible              = true;
                         btnCancel.Visible           = false;
-                        btnCacelOfUpdate.Visible    = false;
+                        btnCancelOfUpdate.Visible    = false;
                         //
-                        txtBookGenreName.Properties.ReadOnly = false;
+                        txtBookGenreName.Properties.ReadOnly = true;
+                        //
+                        grdvListBookGenre.OptionsSelection.EnableAppearanceFocusedRow = true;
+                        grdvListBookGenre.Columns["CheckMarkSelection"].OptionsColumn.AllowEdit = true;
                         //
                         m_bookGenreData             = m_bookGenreBus.getBookGenreDataFromDatabase();
                         grdListBookGenre.DataSource = m_bookGenreData;
@@ -277,6 +309,11 @@ namespace Manager_Book_Store.Presentation_Layer
         }
 
         private void txtBookGenreName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckInformationEntered.checkCharacterInput(e, true);
+        }
+
+        private void txtBookGenreNameLA_KeyPress(object sender, KeyPressEventArgs e)
         {
             CheckInformationEntered.checkCharacterInput(e, true);
         }

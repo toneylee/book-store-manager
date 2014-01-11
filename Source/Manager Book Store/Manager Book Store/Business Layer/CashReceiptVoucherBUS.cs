@@ -11,10 +11,12 @@ namespace Manager_Book_Store.Business_Layer
     class CCashReceiptVoucherBUS
     {
         private CCashReceiptVoucherDAL m_CashReceiptVoucherDAL;
+        private CRegulationsDAL m_RegulationDAL;
 
         public CCashReceiptVoucherBUS()
         {
             m_CashReceiptVoucherDAL = new CCashReceiptVoucherDAL();
+            m_RegulationDAL = new CRegulationsDAL();
         }
         public bool AddCashReceiptVoucherToDatabase(CCashReceiptVoucherDTO _CashReceiptVoucherObject)
         {
@@ -39,6 +41,15 @@ namespace Manager_Book_Store.Business_Layer
         public String getCashReceiptVoucherMaxIdFromDatabase()
         {
             return m_CashReceiptVoucherDAL.getCashReceiptVoucherMaxIdFromDatabase();
+        }
+        public bool checkRegulation()
+        {
+            if (m_RegulationDAL.getRegulationsDataByRuleFromDatabase("SuDungQuyDinh4") == 1)
+                return true;
+            else
+            {
+                return false;
+            }
         }
     }
 }

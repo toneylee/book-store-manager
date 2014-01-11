@@ -82,6 +82,16 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.Parameters.Add("NamXB", SqlDbType.Int).Value = _namXB;
             return m_bookExecute.getData(m_cmd);
         }
+
+        public int getBookCountByBookIdFromDatabase(String _idBook)
+        {
+            m_cmd = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.Parameters.Add("MaSach", SqlDbType.NVarChar).Value = _idBook;
+            m_cmd.CommandText = "GetBookCountDataByBookIdFromDatabase";
+            return m_bookExecute.getIntExecuter(m_cmd);
+        }
+
         public int getBookQuantityDataFromDatabase(String _maSach)
         {
             m_cmd = new SqlCommand();
@@ -96,6 +106,14 @@ namespace Manager_Book_Store.Data_Access_Layer
                 return -1;
             }
 
+        }
+        public DataTable lookAtBookDataFromDatabase(String _tenSach)
+        {
+            m_cmd = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.CommandText = "LookAtBookDataFromDatabase";
+            m_cmd.Parameters.Add("TenSach", SqlDbType.NVarChar).Value = _tenSach;
+            return m_bookExecute.getData(m_cmd);
         }
     }
 }

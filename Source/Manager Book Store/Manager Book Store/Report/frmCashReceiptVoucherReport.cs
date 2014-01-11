@@ -16,7 +16,7 @@ namespace Manager_Book_Store.Report
         {
             InitializeComponent();
         }
-        public frmCashReceiptVoucherReport(CCustomerDTO _customerObject, String _ReceiptNoteId, decimal _totalPayment, String _totalPaymentWord)
+        public frmCashReceiptVoucherReport(CCustomerDTO _customerObject, String _ReceiptNoteId, decimal _totalPayment, String _totalPaymentWord, String _debitValue, String _moneyPay)
         {
             rptCashReceiptVoucher _rptCashReceiptVoucher = new rptCashReceiptVoucher();
             InitializeComponent();
@@ -27,7 +27,9 @@ namespace Manager_Book_Store.Report
                                               _totalPaymentWord.ToString(),
                                               _ReceiptNoteId,
                                               _customerObject.Email,
-                                              _customerObject.soDienThoai);
+                                              _customerObject.soDienThoai,
+                                              _debitValue,
+                                              _moneyPay);
             docCRVView.PrintingSystem = _rptCashReceiptVoucher.PrintingSystem;
             _rptCashReceiptVoucher.CreateDocument();
         }

@@ -36,5 +36,9 @@ namespace Manager_Book_Store.Business_Layer
         {
             return m_BookTitlesDAL.getBookTitlesMaxIdFromDatabase();
         }
+        public DataTable lookAtBookTitlesDataFromDatabase(String _bookTitleName)
+        {
+            return m_BookTitlesDAL.lookAtBookTitlesDataFromDatabase(_bookTitleName);
+        }
     }
 }
