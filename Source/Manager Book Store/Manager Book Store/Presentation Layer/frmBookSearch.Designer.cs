@@ -377,6 +377,7 @@
             this.spYear.Size = new System.Drawing.Size(104, 20);
             this.spYear.TabIndex = 0;
             this.spYear.TextChanged += new System.EventHandler(this.spYear_TextChanged);
+            this.spYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuatityLimit_KeyPress);
             // 
             // spPrice
             // 
@@ -392,6 +393,7 @@
             this.spPrice.Size = new System.Drawing.Size(104, 20);
             this.spPrice.TabIndex = 0;
             this.spPrice.TextChanged += new System.EventHandler(this.spPrice_TextChanged);
+            this.spPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuatityLimit_KeyPress);
             // 
             // spQuatityLimit
             // 
@@ -407,6 +409,7 @@
             this.spQuatityLimit.Size = new System.Drawing.Size(104, 20);
             this.spQuatityLimit.TabIndex = 0;
             this.spQuatityLimit.TextChanged += new System.EventHandler(this.spQuatityLimit_TextChanged);
+            this.spQuatityLimit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuatityLimit_KeyPress);
             // 
             // lkPublisherName
             // 

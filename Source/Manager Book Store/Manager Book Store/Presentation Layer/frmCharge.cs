@@ -164,7 +164,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtChargeName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, true);
+            CheckInformationEntered.checkCharacterInput(e, 0);
         }
         private bool m_IsAdd = false;
         private void updateEnableButtonAndResetValueOfControl(ref SimpleButton _btnControl)
@@ -308,6 +308,18 @@ namespace Manager_Book_Store.Presentation_Layer
         private void btnCancelOfUpdate_Click(object sender, EventArgs e)
         {
             updateEnableButtonAndResetValueOfControl(ref btnCancelOfUpdate);
+        }
+
+        private void frmCharge_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnSave.Enabled)
+            {
+                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
         }
     }
 }

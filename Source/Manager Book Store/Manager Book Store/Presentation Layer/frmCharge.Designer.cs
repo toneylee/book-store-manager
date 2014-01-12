@@ -369,6 +369,7 @@
             this.Controls.Add(this.panelChargeExecute);
             this.Name = "frmCharge";
             this.Text = "Quản lý chức vụ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCharge_FormClosing);
             this.Load += new System.EventHandler(this.frmForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelChargeTitle)).EndInit();
             this.panelChargeTitle.ResumeLayout(false);

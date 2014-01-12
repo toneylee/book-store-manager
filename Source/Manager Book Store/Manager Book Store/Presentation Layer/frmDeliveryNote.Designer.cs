@@ -299,6 +299,7 @@
             this.spQuantity.Size = new System.Drawing.Size(179, 20);
             this.spQuantity.TabIndex = 4;
             this.spQuantity.TextChanged += new System.EventHandler(this.spQuantity_TextChanged);
+            this.spQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuantity_KeyPress);
             // 
             // barManagerDeliveryNote
             // 

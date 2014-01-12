@@ -370,6 +370,7 @@
             this.Controls.Add(this.panelBookGenreExecute);
             this.Name = "frmBookGenre";
             this.Text = "Quản lý thể loại";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBookGenre_FormClosing);
             this.Load += new System.EventHandler(this.frmForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelBookGenreExecute)).EndInit();
             this.panelBookGenreExecute.ResumeLayout(false);

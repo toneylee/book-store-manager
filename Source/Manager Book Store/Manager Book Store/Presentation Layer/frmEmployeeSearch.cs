@@ -109,7 +109,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtContentSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, true);
+            CheckInformationEntered.checkCharacterInput(e, 0);
         }
 
         private void chkEnableChoseGender_CheckedChanged(object sender, EventArgs e)

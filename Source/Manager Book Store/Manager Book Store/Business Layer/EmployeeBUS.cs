@@ -52,10 +52,15 @@ namespace Manager_Book_Store.Presentation_Layer
                 return true;
             else
             {
-                XtraMessageBox.Show("Độ tuổi không hợp lệ!\nXin vui lòng kiểm tra lại quy định");
                 return false;
             }
         }
 
+        public int getAgeToRegulation(bool isMaxAge)
+        {
+            if (isMaxAge)
+                return m_RegulationDAL.getRegulationsDataByRuleFromDatabase("DoTuoiNhanVienToiDa");
+            return m_RegulationDAL.getRegulationsDataByRuleFromDatabase("DoTuoiNhanVienToiThieu");
+        }
     }
 }

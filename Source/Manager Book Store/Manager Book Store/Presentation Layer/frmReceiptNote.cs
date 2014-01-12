@@ -567,5 +567,26 @@ namespace Manager_Book_Store.Presentation_Layer
                     }
             }
         }
+
+        private void frmReceiptNote_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnSave.Enabled)
+            {
+                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+        }
+
+        private void spQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-' || e.KeyChar == '.')
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }
