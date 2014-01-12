@@ -12,11 +12,13 @@ namespace Manager_Book_Store.Business_Layer
     {
         private CCashReceiptVoucherDAL m_CashReceiptVoucherDAL;
         private CRegulationsDAL m_RegulationDAL;
+        private CCustomerDAL m_CustomerDAL;
 
         public CCashReceiptVoucherBUS()
         {
             m_CashReceiptVoucherDAL = new CCashReceiptVoucherDAL();
             m_RegulationDAL = new CRegulationsDAL();
+            m_CustomerDAL = new CCustomerDAL();
         }
         public bool AddCashReceiptVoucherToDatabase(CCashReceiptVoucherDTO _CashReceiptVoucherObject)
         {
@@ -50,6 +52,16 @@ namespace Manager_Book_Store.Business_Layer
             {
                 return false;
             }
+        }
+
+        public bool checkDebitsQuantity(String _idCustomer)
+        {
+            if (m_CustomerDAL.getCustomerDebitsDataFromDatabase(_idCustomer) > 0)
+            {
+                return false;//co no
+            }
+            else
+                return true;//khong no
         }
     }
 }

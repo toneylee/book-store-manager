@@ -601,7 +601,6 @@
             this.Controls.Add(this.panelCustomerTitles);
             this.Name = "frmCustomer";
             this.Text = "Quản lý khách hàng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCustomer_FormClosing);
             this.Load += new System.EventHandler(this.frmCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelCustomerTitles)).EndInit();
             this.panelCustomerTitles.ResumeLayout(false);

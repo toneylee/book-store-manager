@@ -68,13 +68,35 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void lkCustomerName_EditValueChanged(object sender, EventArgs e)
         {
-            DevExpress.XtraEditors.LookUpEdit lkCustomer    = (sender as DevExpress.XtraEditors.LookUpEdit);
-            DataRowView row                                 = lkCustomer.Properties.GetDataSourceRowByKeyValue(lkCustomer.EditValue) as DataRowView;
-            txtCustomerAddress.Text                         = row["DiaChi"].ToString();
-            txtCustomerEmail.Text                           = row["Email"].ToString();
-            txtCustomerPhone.Text                           = row["SoDienThoai"].ToString();
-            spDebitOld.EditValue                            = row["TienNo"];
+            if (lkCustomerName.EditValue != null)
+            {
+                DevExpress.XtraEditors.LookUpEdit lkCustomer = (sender as DevExpress.XtraEditors.LookUpEdit);
+                DataRowView row = lkCustomer.Properties.GetDataSourceRowByKeyValue(lkCustomer.EditValue) as DataRowView;
+                if (!m_CashReceiptVoucherExecute.checkDebitsQuantity(lkCustomer.EditValue.ToString()))
+                {
+                    txtCustomerAddress.Text = row["DiaChi"].ToString();
+                    txtCustomerEmail.Text = row["Email"].ToString();
+                    txtCustomerPhone.Text = row["SoDienThoai"].ToString();
+                    spDebitOld.EditValue = row["TienNo"];
+                }
+                else
+                {
+                    lkCustomerName.EditValue = null;
+                    txtCRVId.Text = null;
+                    txtCustomerAddress.Text = null;
+                    txtCustomerEmail.Text = null;
+                    txtCustomerPhone.Text = null;
+                    txtPaymentWord.Text = null;
+                    //
+                    spDebitOld.EditValue = 0;
+                    spMoneyShouldPay.EditValue = 0;
+                    spPayment.EditValue = 0;
+                    spPurchases.EditValue = 0;
+                    spRemain.EditValue = 0;
 
+                    XtraCustomMessageBox.Show("Khách hàng này không có tiền nợ!\nXin vui lòng chọn khách hàng khác!", "Thông báo", true);
+                }
+            }
         }
 
         private void spPurchases_TextChanged(object sender, EventArgs e)
@@ -202,16 +224,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtPaymentWord_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, 0);
-        }
-
-        private void spPurchases_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '-' || e.KeyChar == '.')
-            {
-                e.Handled = true;
-                return;
-            }
+            CheckInformationEntered.checkCharacterInput(e, true);
         }
 
     }

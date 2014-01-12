@@ -32,9 +32,9 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.labInfo = new DevExpress.XtraEditors.LabelControl();
             this.panelExecute = new DevExpress.XtraEditors.PanelControl();
-            this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.panelView = new DevExpress.XtraEditors.PanelControl();
             this.panelLine = new DevExpress.XtraEditors.PanelControl();
+            this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelExecute)).BeginInit();
             this.panelExecute.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelView)).BeginInit();
@@ -66,9 +66,9 @@
             this.labInfo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.labInfo.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Vertical;
             this.labInfo.LineVisible = true;
-            this.labInfo.Location = new System.Drawing.Point(20, 23);
+            this.labInfo.Location = new System.Drawing.Point(43, 23);
             this.labInfo.Name = "labInfo";
-            this.labInfo.Size = new System.Drawing.Size(278, 39);
+            this.labInfo.Size = new System.Drawing.Size(232, 39);
             this.labInfo.TabIndex = 1;
             this.labInfo.Text = "Nội dungnddddddddddddddddddddddddddddddddddddddddddddddddđ\r\n";
             // 
@@ -83,14 +83,6 @@
             this.panelExecute.Name = "panelExecute";
             this.panelExecute.Size = new System.Drawing.Size(324, 45);
             this.panelExecute.TabIndex = 2;
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(121, 10);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 3;
-            this.btnOK.Text = "Vâng";
             // 
             // panelView
             // 
@@ -110,6 +102,14 @@
             this.panelLine.Name = "panelLine";
             this.panelLine.Size = new System.Drawing.Size(324, 2);
             this.panelLine.TabIndex = 2;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(121, 10);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 3;
+            this.btnOK.Text = "Vâng";
             // 
             // XtraCustomMessageBox
             // 

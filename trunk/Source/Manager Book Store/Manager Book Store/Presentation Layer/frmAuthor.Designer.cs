@@ -403,7 +403,6 @@
             this.Controls.Add(this.panelAuthorExecute);
             this.Name = "frmAuthor";
             this.Text = "Quản lý tác giả";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAuthor_FormClosing);
             this.Load += new System.EventHandler(this.frmAuthor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelAuthorExecute)).EndInit();
             this.panelAuthorExecute.ResumeLayout(false);

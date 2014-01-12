@@ -41,7 +41,7 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             if (m_flag)
             {
-                CheckInformationEntered.checkCharacterInput(e, 1);
+                CheckInformationEntered.checkCharacterInput(e, !m_flag);
             }
         }
 
@@ -103,15 +103,6 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             if (!chkEnableChoseGender.Checked)
                 cmbGender.EditValue = null;
-        }
-
-        private void spDebits_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '-' || e.KeyChar == '.')
-            {
-                e.Handled = true;
-                return;
-            }
         }
     }
 }

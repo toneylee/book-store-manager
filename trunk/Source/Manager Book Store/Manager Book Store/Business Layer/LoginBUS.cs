@@ -24,5 +24,10 @@ namespace Manager_Book_Store.Data_Access_Layer
         {
             return m_LoginDAL.getStringEmployee_UserName(_userName);
         }
+
+        public DataTable getEmployeeDataFromDatabase()
+        {
+            return m_LoginDAL.getEmployeeDataFromDatabase();
+        }
     }
 }

@@ -35,5 +35,13 @@ namespace Manager_Book_Store.Data_Access_Layer
             m_cmd.Parameters.Add(new SqlParameter("UserName", SqlDbType.NVarChar)).Value = _userName;
             return m_LoginExecute.getStringExecuter(m_cmd);
         }
+        
+        public DataTable getEmployeeDataFromDatabase()
+        {
+            m_cmd = new SqlCommand();
+            m_cmd.CommandType = CommandType.StoredProcedure;
+            m_cmd.CommandText = "GetEmployeeDataFromDatabase";
+            return m_LoginExecute.getData(m_cmd);
+        }
     }
 }
