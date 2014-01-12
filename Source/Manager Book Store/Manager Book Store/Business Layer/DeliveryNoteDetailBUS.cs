@@ -78,7 +78,6 @@ namespace Manager_Book_Store.Business_Layer
                 }
                 else
                 {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Số tiền nợ của khách hàng không phù hợp với quy định!");
                     return false;
                 }
             }

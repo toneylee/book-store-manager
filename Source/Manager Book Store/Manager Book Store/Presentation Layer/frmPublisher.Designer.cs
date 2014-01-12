@@ -417,7 +417,6 @@
             this.Controls.Add(this.panelPublisherTitle);
             this.Name = "frmPublisher";
             this.Text = "Quản lý nhà xuất bản";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPublisher_FormClosing);
             this.Load += new System.EventHandler(this.frmPublisher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelPublisherTitle)).EndInit();
             this.panelPublisherTitle.ResumeLayout(false);

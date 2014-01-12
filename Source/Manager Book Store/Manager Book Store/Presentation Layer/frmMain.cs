@@ -408,59 +408,82 @@ namespace Manager_Book_Store.Presentation_Layer
             DataTable _decentralizationData              = new DataTable();
             _decentralizationObject.maChucVu             = ucLogin.m_EmployeeObject.maChucVu;
             _decentralizationData = _decentralizationExecute.getDecentralizationWithMaCV(_decentralizationObject);
-            if (_decentralizationData.Rows[0][2].ToString().Equals("False"))
+
+            if (_decentralizationData.Rows.Count <= 0)
             {
-                ribpgBackupAndRestore.Enabled = false;
-                ribpgDecentralization.Enabled = false;
+                ribpgBackupAndRestore.Enabled = true;
+                ribpgDecentralization.Enabled = true;
+                ribpgRegulation.Enabled = true;
+                ribpgbook.Enabled = true;
+                ribpgemployee.Enabled = true;
+                ribpgCustomer.Enabled = true;
+                ribgImportProduct.Enabled = true;
+                bbtnExportProduct.Enabled = true;
+                bbtnReceipts.Enabled = true;
+                bbtnBookSearch.Enabled = true;
+                bbtnEmployeeSearch.Enabled = true;
+                bbtnCustomerSearch.Enabled = true;
+                bbtnNoteSearch.Enabled = true;
+                bbtnSurvival.Enabled = true;
+                bbtnLiabilities.Enabled = true;
             }
-            if (_decentralizationData.Rows[0][3].ToString().Equals("False"))
+            else
             {
-                ribpgRegulation.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][4].ToString().Equals("False"))
-            {
-                ribpgbook.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][5].ToString().Equals("False"))
-            {
-                ribpgemployee.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][6].ToString().Equals("False"))
-            {
-                ribpgCustomer.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][7].ToString().Equals("False"))
-            {
-                ribgImportProduct.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][8].ToString().Equals("False"))
-            {
-                bbtnExportProduct.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][9].ToString().Equals("False"))
-            {
-                bbtnReceipts.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][10].ToString().Equals("False"))
-            {
-                bbtnBookSearch.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][11].ToString().Equals("False"))
-            {
-                bbtnEmployeeSearch.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][12].ToString().Equals("False"))
-            {
-                bbtnCustomerSearch.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][13].ToString().Equals("False"))
-            {
-                bbtnNoteSearch.Enabled = false;
-            }
-            if (_decentralizationData.Rows[0][14].ToString().Equals("False"))
-            {
-                bbtnSurvival.Enabled = false;
-                bbtnLiabilities.Enabled = false;
+
+                if (_decentralizationData.Rows[0][2].ToString().Equals("False"))
+                {
+                    ribpgBackupAndRestore.Enabled = false;
+                    ribpgDecentralization.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][3].ToString().Equals("False"))
+                {
+                    ribpgRegulation.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][4].ToString().Equals("False"))
+                {
+                    ribpgbook.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][5].ToString().Equals("False"))
+                {
+                    ribpgemployee.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][6].ToString().Equals("False"))
+                {
+                    ribpgCustomer.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][7].ToString().Equals("False"))
+                {
+                    ribgImportProduct.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][8].ToString().Equals("False"))
+                {
+                    bbtnExportProduct.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][9].ToString().Equals("False"))
+                {
+                    bbtnReceipts.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][10].ToString().Equals("False"))
+                {
+                    bbtnBookSearch.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][11].ToString().Equals("False"))
+                {
+                    bbtnEmployeeSearch.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][12].ToString().Equals("False"))
+                {
+                    bbtnCustomerSearch.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][13].ToString().Equals("False"))
+                {
+                    bbtnNoteSearch.Enabled = false;
+                }
+                if (_decentralizationData.Rows[0][14].ToString().Equals("False"))
+                {
+                    bbtnSurvival.Enabled = false;
+                    bbtnLiabilities.Enabled = false;
+                }
             }
         }
 

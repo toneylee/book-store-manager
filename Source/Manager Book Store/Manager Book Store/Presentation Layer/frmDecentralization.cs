@@ -254,7 +254,10 @@ namespace Manager_Book_Store.Presentation_Layer
                     XtraCustomMessageBox.Show("Cập nhật thất bại!", "Thông báo",true);
                 }
             }
-            catch (System.Exception) { }
+            catch (System.Exception)
+            {
+              
+            }
         }
 
         private void addDecentralization()

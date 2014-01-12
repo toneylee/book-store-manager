@@ -84,16 +84,16 @@ namespace Manager_Book_Store.Presentation_Layer
                 {
                     foreach (var instanceName in instanceKey.GetValueNames())
                     {
-                        if (instanceName.ToLower() == "SQLEXPRESS".ToLower())
-                        {
-                            object temp = Environment.MachineName + @"\" + instanceName;
-                            cmbServerName.Properties.Items.Add(temp);
-                        }
-                        else
-                        {
+                        //if (instanceName.ToLower() == "SQLEXPRESS".ToLower())
+                        //{
+                        //    object temp = Environment.MachineName + @"\" + instanceName;
+                        //    cmbServerName.Properties.Items.Add(temp);
+                        //}
+                        //else
+                        //{
                             object temp = Environment.MachineName;
                             cmbServerName.Properties.Items.Add(temp);
-                        }
+                        //}
                     }
                     return true;
                 }

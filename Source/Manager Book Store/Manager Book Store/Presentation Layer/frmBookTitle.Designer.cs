@@ -538,7 +538,6 @@
             this.Controls.Add(this.panelBooTitlesT);
             this.Name = "frmBookTitle";
             this.Text = "Quản lý đầu sách";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBookTitle_FormClosing);
             this.Load += new System.EventHandler(this.frmBookTitles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListBookTitles)).EndInit();

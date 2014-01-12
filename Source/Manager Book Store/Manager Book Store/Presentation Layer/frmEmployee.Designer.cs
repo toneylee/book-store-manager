@@ -429,7 +429,6 @@
             this.dateToWork.Properties.ReadOnly = true;
             this.dateToWork.Size = new System.Drawing.Size(208, 20);
             this.dateToWork.TabIndex = 18;
-            this.dateToWork.Validated += new System.EventHandler(this.dateToWork_Validated);
             // 
             // labEmployeeDateToWork
             // 
@@ -458,7 +457,6 @@
             this.dateBirthDay.Properties.ReadOnly = true;
             this.dateBirthDay.Size = new System.Drawing.Size(206, 20);
             this.dateBirthDay.TabIndex = 18;
-            this.dateBirthDay.Validated += new System.EventHandler(this.dateBirthDay_Validated);
             // 
             // labEmployeeBirthDate
             // 
@@ -524,7 +522,6 @@
             this.txtEmployeePhone.Size = new System.Drawing.Size(206, 20);
             this.txtEmployeePhone.TabIndex = 15;
             this.txtEmployeePhone.EditValueChanged += new System.EventHandler(this.txtEmployeeNameLA_TextChanged);
-            this.txtEmployeePhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeePhone_KeyPress);
             // 
             // txtEmployeeEmail
             // 
@@ -645,7 +642,6 @@
             this.Controls.Add(this.panelEmployeeExecute);
             this.Name = "frmEmployee";
             this.Text = "Quản lý nhân viên";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployee_FormClosing);
             this.Load += new System.EventHandler(this.frmEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelEmployeeTitles)).EndInit();
             this.panelEmployeeTitles.ResumeLayout(false);

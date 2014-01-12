@@ -347,11 +347,14 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void lkCustomerName_EditValueChanged(object sender, EventArgs e)
         {
-            if (!m_DeliveryNoteDetailExecute.checkCustomerDebits(lkCustomerName.EditValue.ToString()))
+            if (lkCustomerName.EditValue != null)
             {
-                lkCustomerName.EditValue = null;
-                XtraMessageBox.Show("Khách hàng này không đủ điều kiện để mua hàng !\nXin vui lòng kiểm tra lại !");
-                lkCustomerName.Focus();
+                if (!m_DeliveryNoteDetailExecute.checkCustomerDebits(lkCustomerName.EditValue.ToString()))
+                {
+                    lkCustomerName.EditValue = null;
+                    XtraMessageBox.Show("Khách hàng này không đủ điều kiện để mua hàng !\nXin vui lòng kiểm tra lại !");
+                    lkCustomerName.Focus();
+                }
             }
         }
 
@@ -594,14 +597,6 @@ namespace Manager_Book_Store.Presentation_Layer
                 XtraCustomMessageBox.Show("Bạn chưa lập phiếu thu tiền!\nXin vui lòng lập phiếu thu trước khi thoát!", "Thông", true);
                 e.Cancel = true;
             }
-            if (btnWrite.Enabled)
-            {
-                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-            }
 
         }
 
@@ -630,15 +625,6 @@ namespace Manager_Book_Store.Presentation_Layer
                 else    
                     if (m_DeliveryNoteDetailExecute.setColorBackgroundRow(strBookId) == 1)
                         e.Appearance.BackColor = Color.Khaki;
-            }
-        }
-
-        private void spQuantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '-' || e.KeyChar == '.')
-            {
-                e.Handled = true;
-                return;
             }
         }
 

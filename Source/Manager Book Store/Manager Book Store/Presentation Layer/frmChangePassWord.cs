@@ -15,7 +15,6 @@ namespace Manager_Book_Store.Presentation_Layer
 {
     public partial class frmChangePassWord : DevExpress.XtraEditors.XtraForm
     {
-        private CEmployeeDTO m_EmployeeObject;
         private CEmployeeBUS m_EmployeeExecute;
 
 

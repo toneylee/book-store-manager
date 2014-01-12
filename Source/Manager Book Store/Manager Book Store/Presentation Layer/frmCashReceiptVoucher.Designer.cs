@@ -32,20 +32,6 @@
             this.labEmployeeTitle = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.grpCRVview = new DevExpress.XtraEditors.GroupControl();
-            this.labCustomerName = new DevExpress.XtraEditors.LabelControl();
-            this.lkCustomerName = new DevExpress.XtraEditors.LookUpEdit();
-            this.labCRVDate = new DevExpress.XtraEditors.LabelControl();
-            this.txtCRVId = new DevExpress.XtraEditors.TextEdit();
-            this.txtPaymentWord = new DevExpress.XtraEditors.TextEdit();
-            this.txtCustomerPhone = new DevExpress.XtraEditors.TextEdit();
-            this.labCRVDateValue = new DevExpress.XtraEditors.LabelControl();
-            this.labCRVId = new DevExpress.XtraEditors.LabelControl();
-            this.labCustomerAddress = new DevExpress.XtraEditors.LabelControl();
-            this.txtCustomerEmail = new DevExpress.XtraEditors.TextEdit();
-            this.txtCustomerAddress = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labPhoneNumber = new DevExpress.XtraEditors.LabelControl();
-            this.labCustomerEmail = new DevExpress.XtraEditors.LabelControl();
             this.panCRVDetail = new DevExpress.XtraEditors.PanelControl();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
@@ -65,18 +51,27 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panLine = new DevExpress.XtraEditors.PanelControl();
+            this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this.labCustomerEmail = new DevExpress.XtraEditors.LabelControl();
+            this.labPhoneNumber = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCustomerAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtCustomerEmail = new DevExpress.XtraEditors.TextEdit();
+            this.labCustomerAddress = new DevExpress.XtraEditors.LabelControl();
+            this.labCRVId = new DevExpress.XtraEditors.LabelControl();
+            this.labCRVDateValue = new DevExpress.XtraEditors.LabelControl();
+            this.txtCustomerPhone = new DevExpress.XtraEditors.TextEdit();
+            this.txtPaymentWord = new DevExpress.XtraEditors.TextEdit();
+            this.txtCRVId = new DevExpress.XtraEditors.TextEdit();
+            this.labCRVDate = new DevExpress.XtraEditors.LabelControl();
+            this.lkCustomerName = new DevExpress.XtraEditors.LookUpEdit();
+            this.labCustomerName = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panCRVTitle)).BeginInit();
             this.panCRVTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpCRVview)).BeginInit();
             this.grpCRVview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkCustomerName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCRVId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentWord.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerPhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panCRVDetail)).BeginInit();
             this.panCRVDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
@@ -89,6 +84,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panCRVExecute)).BeginInit();
             this.panCRVExecute.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panLine)).BeginInit();
+            this.xtraScrollableControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentWord.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCRVId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkCustomerName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panCRVTitle
@@ -125,156 +127,13 @@
             // 
             // grpCRVview
             // 
-            this.grpCRVview.Controls.Add(this.labCustomerName);
-            this.grpCRVview.Controls.Add(this.lkCustomerName);
-            this.grpCRVview.Controls.Add(this.labCRVDate);
-            this.grpCRVview.Controls.Add(this.txtCRVId);
-            this.grpCRVview.Controls.Add(this.txtPaymentWord);
-            this.grpCRVview.Controls.Add(this.txtCustomerPhone);
-            this.grpCRVview.Controls.Add(this.labCRVDateValue);
-            this.grpCRVview.Controls.Add(this.labCRVId);
-            this.grpCRVview.Controls.Add(this.labCustomerAddress);
-            this.grpCRVview.Controls.Add(this.txtCustomerEmail);
-            this.grpCRVview.Controls.Add(this.txtCustomerAddress);
-            this.grpCRVview.Controls.Add(this.labelControl1);
-            this.grpCRVview.Controls.Add(this.labPhoneNumber);
-            this.grpCRVview.Controls.Add(this.labCustomerEmail);
+            this.grpCRVview.Controls.Add(this.xtraScrollableControl1);
             this.grpCRVview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpCRVview.Location = new System.Drawing.Point(2, 2);
             this.grpCRVview.Name = "grpCRVview";
             this.grpCRVview.Size = new System.Drawing.Size(737, 205);
             this.grpCRVview.TabIndex = 13;
             this.grpCRVview.Text = "Thông tin chi tiết";
-            // 
-            // labCustomerName
-            // 
-            this.labCustomerName.Location = new System.Drawing.Point(29, 64);
-            this.labCustomerName.Name = "labCustomerName";
-            this.labCustomerName.Size = new System.Drawing.Size(76, 13);
-            this.labCustomerName.TabIndex = 0;
-            this.labCustomerName.Text = "Tên khách hàng";
-            // 
-            // lkCustomerName
-            // 
-            this.lkCustomerName.Location = new System.Drawing.Point(178, 61);
-            this.lkCustomerName.Name = "lkCustomerName";
-            this.lkCustomerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkCustomerName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("STT", "STT"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenKH", "Tên khách hàng")});
-            this.lkCustomerName.Properties.NullText = "";
-            this.lkCustomerName.Size = new System.Drawing.Size(169, 20);
-            this.lkCustomerName.TabIndex = 1;
-            this.lkCustomerName.EditValueChanged += new System.EventHandler(this.lkCustomerName_EditValueChanged);
-            // 
-            // labCRVDate
-            // 
-            this.labCRVDate.Location = new System.Drawing.Point(581, 29);
-            this.labCRVDate.Name = "labCRVDate";
-            this.labCRVDate.Size = new System.Drawing.Size(44, 13);
-            this.labCRVDate.TabIndex = 0;
-            this.labCRVDate.Text = "Ngày thu";
-            // 
-            // txtCRVId
-            // 
-            this.txtCRVId.Location = new System.Drawing.Point(386, 26);
-            this.txtCRVId.Name = "txtCRVId";
-            this.txtCRVId.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtCRVId.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Red;
-            this.txtCRVId.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.txtCRVId.Properties.AppearanceReadOnly.Options.UseForeColor = true;
-            this.txtCRVId.Properties.ReadOnly = true;
-            this.txtCRVId.Size = new System.Drawing.Size(169, 20);
-            this.txtCRVId.TabIndex = 6;
-            // 
-            // txtPaymentWord
-            // 
-            this.txtPaymentWord.Location = new System.Drawing.Point(178, 179);
-            this.txtPaymentWord.Name = "txtPaymentWord";
-            this.txtPaymentWord.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtPaymentWord.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.txtPaymentWord.Size = new System.Drawing.Size(415, 20);
-            this.txtPaymentWord.TabIndex = 6;
-            this.txtPaymentWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaymentWord_KeyPress);
-            // 
-            // txtCustomerPhone
-            // 
-            this.txtCustomerPhone.Location = new System.Drawing.Point(178, 150);
-            this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtCustomerPhone.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.txtCustomerPhone.Properties.ReadOnly = true;
-            this.txtCustomerPhone.Size = new System.Drawing.Size(169, 20);
-            this.txtCustomerPhone.TabIndex = 6;
-            // 
-            // labCRVDateValue
-            // 
-            this.labCRVDateValue.Location = new System.Drawing.Point(655, 29);
-            this.labCRVDateValue.Name = "labCRVDateValue";
-            this.labCRVDateValue.Size = new System.Drawing.Size(60, 13);
-            this.labCRVDateValue.TabIndex = 0;
-            this.labCRVDateValue.Text = "Số phiếu thu";
-            // 
-            // labCRVId
-            // 
-            this.labCRVId.Location = new System.Drawing.Point(280, 29);
-            this.labCRVId.Name = "labCRVId";
-            this.labCRVId.Size = new System.Drawing.Size(60, 13);
-            this.labCRVId.TabIndex = 0;
-            this.labCRVId.Text = "Số phiếu thu";
-            // 
-            // labCustomerAddress
-            // 
-            this.labCustomerAddress.Location = new System.Drawing.Point(29, 94);
-            this.labCustomerAddress.Name = "labCustomerAddress";
-            this.labCustomerAddress.Size = new System.Drawing.Size(32, 13);
-            this.labCustomerAddress.TabIndex = 3;
-            this.labCustomerAddress.Text = "Địa chỉ";
-            // 
-            // txtCustomerEmail
-            // 
-            this.txtCustomerEmail.Location = new System.Drawing.Point(178, 120);
-            this.txtCustomerEmail.Name = "txtCustomerEmail";
-            this.txtCustomerEmail.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtCustomerEmail.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.txtCustomerEmail.Properties.ReadOnly = true;
-            this.txtCustomerEmail.Size = new System.Drawing.Size(415, 20);
-            this.txtCustomerEmail.TabIndex = 6;
-            // 
-            // txtCustomerAddress
-            // 
-            this.txtCustomerAddress.Location = new System.Drawing.Point(178, 91);
-            this.txtCustomerAddress.Name = "txtCustomerAddress";
-            this.txtCustomerAddress.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.txtCustomerAddress.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.txtCustomerAddress.Properties.ReadOnly = true;
-            this.txtCustomerAddress.Size = new System.Drawing.Size(415, 20);
-            this.txtCustomerAddress.TabIndex = 4;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 182);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(105, 13);
-            this.labelControl1.TabIndex = 5;
-            this.labelControl1.Text = "Số tiền thu(bằng chữ)";
-            // 
-            // labPhoneNumber
-            // 
-            this.labPhoneNumber.Location = new System.Drawing.Point(29, 153);
-            this.labPhoneNumber.Name = "labPhoneNumber";
-            this.labPhoneNumber.Size = new System.Drawing.Size(62, 13);
-            this.labPhoneNumber.TabIndex = 5;
-            this.labPhoneNumber.Text = "Số điện thoại";
-            // 
-            // labCustomerEmail
-            // 
-            this.labCustomerEmail.Location = new System.Drawing.Point(29, 123);
-            this.labCustomerEmail.Name = "labCustomerEmail";
-            this.labCustomerEmail.Size = new System.Drawing.Size(24, 13);
-            this.labCustomerEmail.TabIndex = 5;
-            this.labCustomerEmail.Text = "Email";
             // 
             // panCRVDetail
             // 
@@ -369,7 +228,6 @@
             this.spPurchases.TabIndex = 2;
             this.spPurchases.TextChanged += new System.EventHandler(this.spPurchases_TextChanged);
             this.spPurchases.Click += new System.EventHandler(this.spPurchases_TextChanged);
-            this.spPurchases.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spPurchases_KeyPress);
             // 
             // spDebitOld
             // 
@@ -434,7 +292,6 @@
             this.spPayment.Size = new System.Drawing.Size(227, 20);
             this.spPayment.TabIndex = 6;
             this.spPayment.TextChanged += new System.EventHandler(this.spPayment_TextChanged);
-            this.spPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spPurchases_KeyPress);
             this.spPayment.Validated += new System.EventHandler(this.spPayment_Validated);
             // 
             // spRemain
@@ -515,6 +372,158 @@
             this.panLine.Size = new System.Drawing.Size(296, 425);
             this.panLine.TabIndex = 13;
             // 
+            // xtraScrollableControl1
+            // 
+            this.xtraScrollableControl1.Controls.Add(this.labCustomerName);
+            this.xtraScrollableControl1.Controls.Add(this.lkCustomerName);
+            this.xtraScrollableControl1.Controls.Add(this.labCustomerEmail);
+            this.xtraScrollableControl1.Controls.Add(this.labCRVDate);
+            this.xtraScrollableControl1.Controls.Add(this.labPhoneNumber);
+            this.xtraScrollableControl1.Controls.Add(this.txtCRVId);
+            this.xtraScrollableControl1.Controls.Add(this.labelControl1);
+            this.xtraScrollableControl1.Controls.Add(this.txtPaymentWord);
+            this.xtraScrollableControl1.Controls.Add(this.txtCustomerAddress);
+            this.xtraScrollableControl1.Controls.Add(this.txtCustomerPhone);
+            this.xtraScrollableControl1.Controls.Add(this.txtCustomerEmail);
+            this.xtraScrollableControl1.Controls.Add(this.labCRVDateValue);
+            this.xtraScrollableControl1.Controls.Add(this.labCustomerAddress);
+            this.xtraScrollableControl1.Controls.Add(this.labCRVId);
+            this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl1.Location = new System.Drawing.Point(2, 21);
+            this.xtraScrollableControl1.Name = "xtraScrollableControl1";
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(733, 182);
+            this.xtraScrollableControl1.TabIndex = 0;
+            // 
+            // labCustomerEmail
+            // 
+            this.labCustomerEmail.Location = new System.Drawing.Point(16, 103);
+            this.labCustomerEmail.Name = "labCustomerEmail";
+            this.labCustomerEmail.Size = new System.Drawing.Size(24, 13);
+            this.labCustomerEmail.TabIndex = 5;
+            this.labCustomerEmail.Text = "Email";
+            // 
+            // labPhoneNumber
+            // 
+            this.labPhoneNumber.Location = new System.Drawing.Point(16, 133);
+            this.labPhoneNumber.Name = "labPhoneNumber";
+            this.labPhoneNumber.Size = new System.Drawing.Size(62, 13);
+            this.labPhoneNumber.TabIndex = 5;
+            this.labPhoneNumber.Text = "Số điện thoại";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(16, 162);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(105, 13);
+            this.labelControl1.TabIndex = 5;
+            this.labelControl1.Text = "Số tiền thu(bằng chữ)";
+            // 
+            // txtCustomerAddress
+            // 
+            this.txtCustomerAddress.Location = new System.Drawing.Point(165, 71);
+            this.txtCustomerAddress.Name = "txtCustomerAddress";
+            this.txtCustomerAddress.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.txtCustomerAddress.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.txtCustomerAddress.Properties.ReadOnly = true;
+            this.txtCustomerAddress.Size = new System.Drawing.Size(415, 20);
+            this.txtCustomerAddress.TabIndex = 4;
+            // 
+            // txtCustomerEmail
+            // 
+            this.txtCustomerEmail.Location = new System.Drawing.Point(165, 100);
+            this.txtCustomerEmail.Name = "txtCustomerEmail";
+            this.txtCustomerEmail.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.txtCustomerEmail.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.txtCustomerEmail.Properties.ReadOnly = true;
+            this.txtCustomerEmail.Size = new System.Drawing.Size(415, 20);
+            this.txtCustomerEmail.TabIndex = 6;
+            // 
+            // labCustomerAddress
+            // 
+            this.labCustomerAddress.Location = new System.Drawing.Point(16, 74);
+            this.labCustomerAddress.Name = "labCustomerAddress";
+            this.labCustomerAddress.Size = new System.Drawing.Size(32, 13);
+            this.labCustomerAddress.TabIndex = 3;
+            this.labCustomerAddress.Text = "Địa chỉ";
+            // 
+            // labCRVId
+            // 
+            this.labCRVId.Location = new System.Drawing.Point(267, 9);
+            this.labCRVId.Name = "labCRVId";
+            this.labCRVId.Size = new System.Drawing.Size(60, 13);
+            this.labCRVId.TabIndex = 0;
+            this.labCRVId.Text = "Số phiếu thu";
+            // 
+            // labCRVDateValue
+            // 
+            this.labCRVDateValue.Location = new System.Drawing.Point(642, 9);
+            this.labCRVDateValue.Name = "labCRVDateValue";
+            this.labCRVDateValue.Size = new System.Drawing.Size(60, 13);
+            this.labCRVDateValue.TabIndex = 0;
+            this.labCRVDateValue.Text = "Số phiếu thu";
+            // 
+            // txtCustomerPhone
+            // 
+            this.txtCustomerPhone.Location = new System.Drawing.Point(165, 130);
+            this.txtCustomerPhone.Name = "txtCustomerPhone";
+            this.txtCustomerPhone.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.txtCustomerPhone.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.txtCustomerPhone.Properties.ReadOnly = true;
+            this.txtCustomerPhone.Size = new System.Drawing.Size(169, 20);
+            this.txtCustomerPhone.TabIndex = 6;
+            // 
+            // txtPaymentWord
+            // 
+            this.txtPaymentWord.Location = new System.Drawing.Point(165, 159);
+            this.txtPaymentWord.Name = "txtPaymentWord";
+            this.txtPaymentWord.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.txtPaymentWord.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.txtPaymentWord.Size = new System.Drawing.Size(415, 20);
+            this.txtPaymentWord.TabIndex = 6;
+            this.txtPaymentWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaymentWord_KeyPress);
+            // 
+            // txtCRVId
+            // 
+            this.txtCRVId.Location = new System.Drawing.Point(373, 6);
+            this.txtCRVId.Name = "txtCRVId";
+            this.txtCRVId.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.txtCRVId.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Red;
+            this.txtCRVId.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.txtCRVId.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.txtCRVId.Properties.ReadOnly = true;
+            this.txtCRVId.Size = new System.Drawing.Size(169, 20);
+            this.txtCRVId.TabIndex = 6;
+            // 
+            // labCRVDate
+            // 
+            this.labCRVDate.Location = new System.Drawing.Point(568, 9);
+            this.labCRVDate.Name = "labCRVDate";
+            this.labCRVDate.Size = new System.Drawing.Size(44, 13);
+            this.labCRVDate.TabIndex = 0;
+            this.labCRVDate.Text = "Ngày thu";
+            // 
+            // lkCustomerName
+            // 
+            this.lkCustomerName.Location = new System.Drawing.Point(165, 41);
+            this.lkCustomerName.Name = "lkCustomerName";
+            this.lkCustomerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkCustomerName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("STT", "STT"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenKH", "Tên khách hàng")});
+            this.lkCustomerName.Properties.NullText = "";
+            this.lkCustomerName.Size = new System.Drawing.Size(169, 20);
+            this.lkCustomerName.TabIndex = 1;
+            this.lkCustomerName.EditValueChanged += new System.EventHandler(this.lkCustomerName_EditValueChanged);
+            // 
+            // labCustomerName
+            // 
+            this.labCustomerName.Location = new System.Drawing.Point(16, 44);
+            this.labCustomerName.Name = "labCustomerName";
+            this.labCustomerName.Size = new System.Drawing.Size(76, 13);
+            this.labCustomerName.TabIndex = 0;
+            this.labCustomerName.Text = "Tên khách hàng";
+            // 
             // frmCashReceiptVoucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,13 +543,6 @@
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpCRVview)).EndInit();
             this.grpCRVview.ResumeLayout(false);
-            this.grpCRVview.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkCustomerName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCRVId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentWord.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerPhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panCRVDetail)).EndInit();
             this.panCRVDetail.ResumeLayout(false);
             this.panCRVDetail.PerformLayout();
@@ -554,6 +556,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panCRVExecute)).EndInit();
             this.panCRVExecute.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panLine)).EndInit();
+            this.xtraScrollableControl1.ResumeLayout(false);
+            this.xtraScrollableControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentWord.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCRVId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkCustomerName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,19 +593,20 @@
         private DevExpress.XtraEditors.SpinEdit spPayment;
         private DevExpress.XtraEditors.SpinEdit spRemain;
         private DevExpress.XtraEditors.GroupControl grpCRVview;
+        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
         private DevExpress.XtraEditors.LabelControl labCustomerName;
         private DevExpress.XtraEditors.LookUpEdit lkCustomerName;
-        private DevExpress.XtraEditors.LabelControl labCRVDate;
-        private DevExpress.XtraEditors.TextEdit txtCRVId;
-        private DevExpress.XtraEditors.TextEdit txtPaymentWord;
-        private DevExpress.XtraEditors.TextEdit txtCustomerPhone;
-        private DevExpress.XtraEditors.LabelControl labCRVDateValue;
-        private DevExpress.XtraEditors.LabelControl labCRVId;
-        private DevExpress.XtraEditors.LabelControl labCustomerAddress;
-        private DevExpress.XtraEditors.TextEdit txtCustomerEmail;
-        private DevExpress.XtraEditors.TextEdit txtCustomerAddress;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labPhoneNumber;
         private DevExpress.XtraEditors.LabelControl labCustomerEmail;
+        private DevExpress.XtraEditors.LabelControl labCRVDate;
+        private DevExpress.XtraEditors.LabelControl labPhoneNumber;
+        private DevExpress.XtraEditors.TextEdit txtCRVId;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtPaymentWord;
+        private DevExpress.XtraEditors.TextEdit txtCustomerAddress;
+        private DevExpress.XtraEditors.TextEdit txtCustomerPhone;
+        private DevExpress.XtraEditors.TextEdit txtCustomerEmail;
+        private DevExpress.XtraEditors.LabelControl labCRVDateValue;
+        private DevExpress.XtraEditors.LabelControl labCustomerAddress;
+        private DevExpress.XtraEditors.LabelControl labCRVId;
     }
 }

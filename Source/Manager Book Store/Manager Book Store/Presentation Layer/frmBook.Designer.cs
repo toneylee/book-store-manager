@@ -774,7 +774,6 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmBook";
             this.Text = "Quản lý sách";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBook_FormClosing);
             this.Load += new System.EventHandler(this.frmBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panBookTitles)).EndInit();
             this.panBookTitles.ResumeLayout(false);

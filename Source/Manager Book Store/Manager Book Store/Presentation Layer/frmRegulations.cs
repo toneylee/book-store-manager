@@ -95,14 +95,5 @@ namespace Manager_Book_Store.Presentation_Layer
             grpCustomerRelations.Visible = false;
             grpEmployeeRelations.Visible = true;
         }
-
-        private void spMinimumAge_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '-' || e.KeyChar == '.')
-            {
-                e.Handled = true;
-                return;
-            }
-        }
     }
 }

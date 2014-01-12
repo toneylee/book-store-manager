@@ -73,5 +73,15 @@ namespace Manager_Book_Store.Business_Layer
             else
                 return true;
         }
+
+        public int setBackgroundColorRow(String _idBook)
+        {
+            if (m_BookDAL.getBookQuantityDataFromDatabase(_idBook) <= m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiDaTruocNhap"))
+                return -1;//Color.White//Duoc phep nhap sach
+            else
+                if (m_BookDAL.getBookQuantityDataFromDatabase(_idBook) <= m_RegulationsDAL.getRegulationsDataByRuleFromDatabase("SoLuongTonToiDaTruocNhap")+100)
+                    return 1;//Color.Khaki sap het
+            return 0;//Color.Salmon ko dc nhap
+        }
     }
 }

@@ -491,7 +491,6 @@
             this.dateDelivery.Size = new System.Drawing.Size(136, 20);
             this.dateDelivery.TabIndex = 7;
             this.dateDelivery.EditValueChanged += new System.EventHandler(this.dateDelivery_EditValueChanged);
-            this.dateDelivery.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateDelivery_KeyPress);
             // 
             // btnSearch
             // 

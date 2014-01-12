@@ -118,21 +118,11 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             if (m_ReceiptNoteDetailExecute.checkSurvivalQuantity(m_listBookObject["MaSach"].ToString()))
                 chooseBookAddInReceiptNote();
-            else
-            {
-                drbtnReceiptNoteChose.HideDropDown();
-                XtraCustomMessageBox.Show("Không thể nhập thêm sách này.\nSố lượng tồn nhiều hơn số lượng quy định.", "Thông báo", true);
-            }
         }
         private void grdvListBook_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             if (m_ReceiptNoteDetailExecute.checkSurvivalQuantity(grdvListBook.GetRowCellValue(e.RowHandle, "MaSach").ToString()))
                 chooseBookAddInReceiptNote();
-            else
-            {
-                drbtnReceiptNoteChose.HideDropDown();
-                XtraCustomMessageBox.Show("Không thể nhập thêm sách này.\nSố lượng sách tồn nhiều hơn số lượng quy định.", "Thông báo", true);
-            }
         }
 
         private void chooseBookAddInReceiptNote()
@@ -148,7 +138,6 @@ namespace Manager_Book_Store.Presentation_Layer
                     txtAuthorName.Text = m_listBookObject["NhomTG"].ToString();
                     //txtPrices.Text = m_listBookObject["GiaNhap"].ToString();
                     lblSoLuongMax.Text = "Số lượng >= " + m_ReceiptNoteDetailExecute.getRegulationByConsider("SoLuongNhapToiThieu");
-                    //spQuantity.Properties.MaxValue = m_ReceiptNoteDetailExecute.getRegulationByConsider("SoLuongNhapToiThieu");
                     ppControlReceiptNote.HidePopup();
 
                 }
@@ -568,24 +557,16 @@ namespace Manager_Book_Store.Presentation_Layer
             }
         }
 
-        private void frmReceiptNote_FormClosing(object sender, FormClosingEventArgs e)
+        private void grdvListBook_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
         {
-            if (btnSave.Enabled)
+            if (e.RowHandle >= 0)
             {
-                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-            }
-        }
-
-        private void spQuantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '-' || e.KeyChar == '.')
-            {
-                e.Handled = true;
-                return;
+                string strBookId = grdvListBook.GetRowCellValue(e.RowHandle, "MaSach").ToString();
+                if (m_ReceiptNoteDetailExecute.setBackgroundColorRow(strBookId) == 0)
+                    e.Appearance.BackColor = Color.Salmon;
+                else
+                    if (m_ReceiptNoteDetailExecute.setBackgroundColorRow(strBookId) == 1)
+                        e.Appearance.BackColor = Color.Khaki;
             }
         }
     }

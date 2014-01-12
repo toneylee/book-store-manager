@@ -310,24 +310,12 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtBookGenreName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, 0);
+            CheckInformationEntered.checkCharacterInput(e, true);
         }
 
         private void txtBookGenreNameLA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, 0);
-        }
-
-        private void frmBookGenre_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (btnSave.Enabled)
-            {
-                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-            }
+            CheckInformationEntered.checkCharacterInput(e, true);
         }
 
 

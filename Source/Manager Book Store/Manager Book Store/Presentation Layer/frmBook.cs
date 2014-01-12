@@ -132,7 +132,7 @@ namespace Manager_Book_Store.Presentation_Layer
             {
                 try
                 {
-                    m_BookObject = new CBookDTO(txtBookId.Text,
+                    m_BookObject = new CBookDTO("SA0000000",
                             lkBookTitlesName.EditValue.ToString(),
                             lkPublisherName.EditValue.ToString(),
                             int.Parse(txtBookRealeaseYear.Text),
@@ -415,7 +415,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtBookRealeaseYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, 1);
+            CheckInformationEntered.checkCharacterInput(e, false);
         }
 
         public delegate void m_setBookTitle(object sender, ItemClickEventArgs e);
@@ -446,19 +446,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtBookTitlesNameLA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, 0);
-        }
-
-        private void frmBook_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (btnSave.Enabled)
-            {
-                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-            }
+            CheckInformationEntered.checkCharacterInput(e, true);
         }
     }
 }

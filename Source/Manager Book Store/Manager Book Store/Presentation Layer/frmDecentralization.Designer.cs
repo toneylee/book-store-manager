@@ -44,10 +44,13 @@
             this.ChargeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rxtChargeName = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
-            this.xtraScrollableControl5 = new DevExpress.XtraEditors.XtraScrollableControl();
-            this.chkQ13 = new DevExpress.XtraEditors.CheckEdit();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroupControlContainer4 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
+            this.xtraScrollableControl4 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this.chkQ11 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkQ10 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkQ12 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkQ9 = new DevExpress.XtraEditors.CheckEdit();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.chkQ2 = new DevExpress.XtraEditors.CheckEdit();
@@ -60,15 +63,12 @@
             this.chkQ8 = new DevExpress.XtraEditors.CheckEdit();
             this.chkQ7 = new DevExpress.XtraEditors.CheckEdit();
             this.chkQ6 = new DevExpress.XtraEditors.CheckEdit();
-            this.navBarGroupControlContainer4 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
-            this.xtraScrollableControl4 = new DevExpress.XtraEditors.XtraScrollableControl();
-            this.chkQ11 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkQ10 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkQ12 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkQ9 = new DevExpress.XtraEditors.CheckEdit();
+            this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
+            this.xtraScrollableControl5 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this.chkQ13 = new DevExpress.XtraEditors.CheckEdit();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.xtraScrollableControl2 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
@@ -90,9 +90,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.rxtChargeName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.navBarControl1.SuspendLayout();
-            this.navBarGroupControlContainer2.SuspendLayout();
-            this.xtraScrollableControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ13.Properties)).BeginInit();
+            this.navBarGroupControlContainer4.SuspendLayout();
+            this.xtraScrollableControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ9.Properties)).BeginInit();
             this.navBarGroupControlContainer1.SuspendLayout();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkQ2.Properties)).BeginInit();
@@ -105,12 +108,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkQ8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkQ7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkQ6.Properties)).BeginInit();
-            this.navBarGroupControlContainer4.SuspendLayout();
-            this.xtraScrollableControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ9.Properties)).BeginInit();
+            this.navBarGroupControlContainer2.SuspendLayout();
+            this.xtraScrollableControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ13.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
@@ -274,7 +274,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup4;
+            this.navBarControl1.ActiveGroup = this.navBarGroup5;
             this.navBarControl1.Controls.Add(this.navBarGroupControlContainer1);
             this.navBarControl1.Controls.Add(this.navBarGroupControlContainer3);
             this.navBarControl1.Controls.Add(this.navBarGroupControlContainer4);
@@ -293,37 +293,64 @@
             this.navBarControl1.TabIndex = 11;
             this.navBarControl1.Text = "navBarControl1";
             // 
-            // navBarGroup5
+            // navBarGroup4
             // 
-            this.navBarGroup5.Caption = "Báo cáo";
-            this.navBarGroup5.ControlContainer = this.navBarGroupControlContainer2;
-            this.navBarGroup5.GroupClientHeight = 80;
-            this.navBarGroup5.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
-            this.navBarGroup5.Name = "navBarGroup5";
+            this.navBarGroup4.Caption = "Tra cứu";
+            this.navBarGroup4.ControlContainer = this.navBarGroupControlContainer4;
+            this.navBarGroup4.GroupClientHeight = 80;
+            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
+            this.navBarGroup4.Name = "navBarGroup4";
             // 
-            // navBarGroupControlContainer2
+            // navBarGroupControlContainer4
             // 
-            this.navBarGroupControlContainer2.Controls.Add(this.xtraScrollableControl5);
-            this.navBarGroupControlContainer2.Name = "navBarGroupControlContainer2";
-            this.navBarGroupControlContainer2.Size = new System.Drawing.Size(537, 174);
-            this.navBarGroupControlContainer2.TabIndex = 4;
+            this.navBarGroupControlContainer4.Controls.Add(this.xtraScrollableControl4);
+            this.navBarGroupControlContainer4.Name = "navBarGroupControlContainer4";
+            this.navBarGroupControlContainer4.Size = new System.Drawing.Size(537, 174);
+            this.navBarGroupControlContainer4.TabIndex = 3;
             // 
-            // xtraScrollableControl5
+            // xtraScrollableControl4
             // 
-            this.xtraScrollableControl5.Controls.Add(this.chkQ13);
-            this.xtraScrollableControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraScrollableControl5.Location = new System.Drawing.Point(0, 0);
-            this.xtraScrollableControl5.Name = "xtraScrollableControl5";
-            this.xtraScrollableControl5.Size = new System.Drawing.Size(537, 174);
-            this.xtraScrollableControl5.TabIndex = 0;
+            this.xtraScrollableControl4.Controls.Add(this.chkQ11);
+            this.xtraScrollableControl4.Controls.Add(this.chkQ10);
+            this.xtraScrollableControl4.Controls.Add(this.chkQ12);
+            this.xtraScrollableControl4.Controls.Add(this.chkQ9);
+            this.xtraScrollableControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl4.Location = new System.Drawing.Point(0, 0);
+            this.xtraScrollableControl4.Name = "xtraScrollableControl4";
+            this.xtraScrollableControl4.Size = new System.Drawing.Size(537, 174);
+            this.xtraScrollableControl4.TabIndex = 1;
             // 
-            // chkQ13
+            // chkQ11
             // 
-            this.chkQ13.Location = new System.Drawing.Point(27, 24);
-            this.chkQ13.Name = "chkQ13";
-            this.chkQ13.Properties.Caption = "Lập báo cáo tháng(báo cáo công nợ, báo cáo tồn)";
-            this.chkQ13.Size = new System.Drawing.Size(354, 19);
-            this.chkQ13.TabIndex = 6;
+            this.chkQ11.Location = new System.Drawing.Point(33, 85);
+            this.chkQ11.Name = "chkQ11";
+            this.chkQ11.Properties.Caption = "Tra cứu thông tin hóa đơn";
+            this.chkQ11.Size = new System.Drawing.Size(315, 19);
+            this.chkQ11.TabIndex = 10;
+            // 
+            // chkQ10
+            // 
+            this.chkQ10.Location = new System.Drawing.Point(33, 54);
+            this.chkQ10.Name = "chkQ10";
+            this.chkQ10.Properties.Caption = "Tra cứu thông tin nhân viên";
+            this.chkQ10.Size = new System.Drawing.Size(315, 19);
+            this.chkQ10.TabIndex = 9;
+            // 
+            // chkQ12
+            // 
+            this.chkQ12.Location = new System.Drawing.Point(33, 119);
+            this.chkQ12.Name = "chkQ12";
+            this.chkQ12.Properties.Caption = "Tra cứu thông tin khách hàng";
+            this.chkQ12.Size = new System.Drawing.Size(315, 19);
+            this.chkQ12.TabIndex = 7;
+            // 
+            // chkQ9
+            // 
+            this.chkQ9.Location = new System.Drawing.Point(33, 23);
+            this.chkQ9.Name = "chkQ9";
+            this.chkQ9.Properties.Caption = "Tra cứu thông tin(theo sách, thể loại, tác giả)";
+            this.chkQ9.Size = new System.Drawing.Size(405, 19);
+            this.chkQ9.TabIndex = 6;
             // 
             // navBarGroupControlContainer1
             // 
@@ -427,56 +454,29 @@
             this.chkQ6.Size = new System.Drawing.Size(315, 19);
             this.chkQ6.TabIndex = 3;
             // 
-            // navBarGroupControlContainer4
+            // navBarGroupControlContainer2
             // 
-            this.navBarGroupControlContainer4.Controls.Add(this.xtraScrollableControl4);
-            this.navBarGroupControlContainer4.Name = "navBarGroupControlContainer4";
-            this.navBarGroupControlContainer4.Size = new System.Drawing.Size(537, 174);
-            this.navBarGroupControlContainer4.TabIndex = 3;
+            this.navBarGroupControlContainer2.Controls.Add(this.xtraScrollableControl5);
+            this.navBarGroupControlContainer2.Name = "navBarGroupControlContainer2";
+            this.navBarGroupControlContainer2.Size = new System.Drawing.Size(537, 174);
+            this.navBarGroupControlContainer2.TabIndex = 4;
             // 
-            // xtraScrollableControl4
+            // xtraScrollableControl5
             // 
-            this.xtraScrollableControl4.Controls.Add(this.chkQ11);
-            this.xtraScrollableControl4.Controls.Add(this.chkQ10);
-            this.xtraScrollableControl4.Controls.Add(this.chkQ12);
-            this.xtraScrollableControl4.Controls.Add(this.chkQ9);
-            this.xtraScrollableControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraScrollableControl4.Location = new System.Drawing.Point(0, 0);
-            this.xtraScrollableControl4.Name = "xtraScrollableControl4";
-            this.xtraScrollableControl4.Size = new System.Drawing.Size(537, 174);
-            this.xtraScrollableControl4.TabIndex = 1;
+            this.xtraScrollableControl5.Controls.Add(this.chkQ13);
+            this.xtraScrollableControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl5.Location = new System.Drawing.Point(0, 0);
+            this.xtraScrollableControl5.Name = "xtraScrollableControl5";
+            this.xtraScrollableControl5.Size = new System.Drawing.Size(537, 174);
+            this.xtraScrollableControl5.TabIndex = 0;
             // 
-            // chkQ11
+            // chkQ13
             // 
-            this.chkQ11.Location = new System.Drawing.Point(33, 85);
-            this.chkQ11.Name = "chkQ11";
-            this.chkQ11.Properties.Caption = "Tra cứu thông tin hóa đơn";
-            this.chkQ11.Size = new System.Drawing.Size(315, 19);
-            this.chkQ11.TabIndex = 10;
-            // 
-            // chkQ10
-            // 
-            this.chkQ10.Location = new System.Drawing.Point(33, 54);
-            this.chkQ10.Name = "chkQ10";
-            this.chkQ10.Properties.Caption = "Tra cứu thông tin nhân viên";
-            this.chkQ10.Size = new System.Drawing.Size(315, 19);
-            this.chkQ10.TabIndex = 9;
-            // 
-            // chkQ12
-            // 
-            this.chkQ12.Location = new System.Drawing.Point(33, 119);
-            this.chkQ12.Name = "chkQ12";
-            this.chkQ12.Properties.Caption = "Tra cứu thông tin khách hàng";
-            this.chkQ12.Size = new System.Drawing.Size(315, 19);
-            this.chkQ12.TabIndex = 7;
-            // 
-            // chkQ9
-            // 
-            this.chkQ9.Location = new System.Drawing.Point(33, 23);
-            this.chkQ9.Name = "chkQ9";
-            this.chkQ9.Properties.Caption = "Tra cứu thông tin(theo sách, thể loại, tác giả)";
-            this.chkQ9.Size = new System.Drawing.Size(405, 19);
-            this.chkQ9.TabIndex = 6;
+            this.chkQ13.Location = new System.Drawing.Point(27, 24);
+            this.chkQ13.Name = "chkQ13";
+            this.chkQ13.Properties.Caption = "Lập báo cáo tháng(báo cáo công nợ, báo cáo tồn)";
+            this.chkQ13.Size = new System.Drawing.Size(354, 19);
+            this.chkQ13.TabIndex = 6;
             // 
             // navBarGroup1
             // 
@@ -494,14 +494,14 @@
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup3.Name = "navBarGroup3";
             // 
-            // navBarGroup4
+            // navBarGroup5
             // 
-            this.navBarGroup4.Caption = "Tra cứu";
-            this.navBarGroup4.ControlContainer = this.navBarGroupControlContainer4;
-            this.navBarGroup4.Expanded = true;
-            this.navBarGroup4.GroupClientHeight = 80;
-            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
-            this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup5.Caption = "Báo cáo";
+            this.navBarGroup5.ControlContainer = this.navBarGroupControlContainer2;
+            this.navBarGroup5.Expanded = true;
+            this.navBarGroup5.GroupClientHeight = 80;
+            this.navBarGroup5.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
+            this.navBarGroup5.Name = "navBarGroup5";
             // 
             // xtraScrollableControl2
             // 
@@ -599,9 +599,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.rxtChargeName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.navBarControl1.ResumeLayout(false);
-            this.navBarGroupControlContainer2.ResumeLayout(false);
-            this.xtraScrollableControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ13.Properties)).EndInit();
+            this.navBarGroupControlContainer4.ResumeLayout(false);
+            this.xtraScrollableControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ9.Properties)).EndInit();
             this.navBarGroupControlContainer1.ResumeLayout(false);
             this.xtraScrollableControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chkQ2.Properties)).EndInit();
@@ -614,12 +617,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkQ8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkQ7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkQ6.Properties)).EndInit();
-            this.navBarGroupControlContainer4.ResumeLayout(false);
-            this.xtraScrollableControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkQ9.Properties)).EndInit();
+            this.navBarGroupControlContainer2.ResumeLayout(false);
+            this.xtraScrollableControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chkQ13.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();

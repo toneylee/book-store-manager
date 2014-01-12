@@ -66,7 +66,6 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.btnCancel1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnChose = new DevExpress.XtraEditors.SimpleButton();
             this.txtAuthorName = new DevExpress.XtraEditors.TextEdit();
             this.labMoneyStyle3 = new DevExpress.XtraEditors.LabelControl();
@@ -299,7 +298,6 @@
             this.spQuantity.Size = new System.Drawing.Size(179, 20);
             this.spQuantity.TabIndex = 4;
             this.spQuantity.TextChanged += new System.EventHandler(this.spQuantity_TextChanged);
-            this.spQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuantity_KeyPress);
             // 
             // barManagerDeliveryNote
             // 
@@ -392,10 +390,10 @@
             this.ppControlDeliveryNote.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.ppControlDeliveryNote.Controls.Add(this.grdListBook);
             this.ppControlDeliveryNote.Controls.Add(this.panelBookExecute);
-            this.ppControlDeliveryNote.Location = new System.Drawing.Point(8, 142);
+            this.ppControlDeliveryNote.Location = new System.Drawing.Point(8, 141);
             this.ppControlDeliveryNote.Manager = this.barManagerDeliveryNote;
             this.ppControlDeliveryNote.Name = "ppControlDeliveryNote";
-            this.ppControlDeliveryNote.Size = new System.Drawing.Size(800, 259);
+            this.ppControlDeliveryNote.Size = new System.Drawing.Size(819, 204);
             this.ppControlDeliveryNote.TabIndex = 4;
             this.ppControlDeliveryNote.Visible = false;
             // 
@@ -405,7 +403,7 @@
             this.grdListBook.Location = new System.Drawing.Point(0, 0);
             this.grdListBook.MainView = this.grdvListBook;
             this.grdListBook.Name = "grdListBook";
-            this.grdListBook.Size = new System.Drawing.Size(800, 209);
+            this.grdListBook.Size = new System.Drawing.Size(819, 154);
             this.grdListBook.TabIndex = 8;
             this.grdListBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListBook});
@@ -509,12 +507,11 @@
             this.panelBookExecute.Controls.Add(this.panelControl4);
             this.panelBookExecute.Controls.Add(this.panelControl3);
             this.panelBookExecute.Controls.Add(this.panelControl2);
-            this.panelBookExecute.Controls.Add(this.btnCancel1);
             this.panelBookExecute.Controls.Add(this.btnChose);
             this.panelBookExecute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBookExecute.Location = new System.Drawing.Point(0, 209);
+            this.panelBookExecute.Location = new System.Drawing.Point(0, 154);
             this.panelBookExecute.Name = "panelBookExecute";
-            this.panelBookExecute.Size = new System.Drawing.Size(800, 50);
+            this.panelBookExecute.Size = new System.Drawing.Size(819, 50);
             this.panelBookExecute.TabIndex = 7;
             // 
             // labelControl4
@@ -571,19 +568,10 @@
             this.panelControl2.Size = new System.Drawing.Size(23, 11);
             this.panelControl2.TabIndex = 10;
             // 
-            // btnCancel1
-            // 
-            this.btnCancel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel1.Location = new System.Drawing.Point(720, 14);
-            this.btnCancel1.Name = "btnCancel1";
-            this.btnCancel1.Size = new System.Drawing.Size(75, 31);
-            this.btnCancel1.TabIndex = 9;
-            this.btnCancel1.Text = "Hủy bỏ";
-            // 
             // btnChose
             // 
             this.btnChose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChose.Location = new System.Drawing.Point(615, 14);
+            this.btnChose.Location = new System.Drawing.Point(710, 9);
             this.btnChose.Name = "btnChose";
             this.btnChose.Size = new System.Drawing.Size(75, 31);
             this.btnChose.TabIndex = 7;
@@ -1085,7 +1073,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Quantity;
         private DevExpress.XtraGrid.Columns.GridColumn Price;
         private DevExpress.XtraEditors.PanelControl panelBookExecute;
-        private DevExpress.XtraEditors.SimpleButton btnCancel1;
         private DevExpress.XtraEditors.SimpleButton btnChose;
         private DevExpress.XtraEditors.GroupControl grpDeliveryNoteDetail;
         private DevExpress.XtraEditors.SimpleButton btnAddInListBookDetail;

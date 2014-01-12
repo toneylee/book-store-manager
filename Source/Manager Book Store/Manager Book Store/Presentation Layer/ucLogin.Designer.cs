@@ -126,6 +126,7 @@
             this.DoubleBuffered = true;
             this.Name = "ucLogin";
             this.Size = new System.Drawing.Size(687, 447);
+            this.Load += new System.EventHandler(this.ucLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             this.ResumeLayout(false);

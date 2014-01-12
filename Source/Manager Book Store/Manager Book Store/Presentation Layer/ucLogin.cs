@@ -24,7 +24,7 @@ namespace Manager_Book_Store.Presentation_Layer
         public static CEmployeeDTO m_EmployeeObject;
         private CLoginBUS m_loginExecute;
         private DataTable          m_EmployeeData;
-
+        private bool m_checkTypeLogin; 
         public ucLogin()
         {
             InitializeComponent();
@@ -32,16 +32,38 @@ namespace Manager_Book_Store.Presentation_Layer
             m_loginExecute = new CLoginBUS();
         }
 
+        private void ucLogin_Load(object sender, EventArgs e)
+        {
+            if (m_loginExecute.getEmployeeDataFromDatabase().Rows.Count > 0)
+                m_checkTypeLogin = true;
+            else
+            {
+                m_checkTypeLogin = false;
+                XtraCustomMessageBox.Show("Chưa có nhân viên nào trong cơ sở dữ liệu.\nVui lòng đăng nhập với tài khoản 'admin'!", "Thông báo!", true);
+                txtUser.Text = "admin";
+            }
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
-            actionLogin();
+            if (m_checkTypeLogin)
+                actionLogin();
+            else
+            {
+                loginWithAdmin(txtUser.Text, txtPass.Text);
+            }
         }
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                actionLogin();
+                if (m_checkTypeLogin)
+                    actionLogin();
+                else
+                {
+                    loginWithAdmin(txtUser.Text, txtPass.Text);
+                }
             }
         }
         
@@ -146,6 +168,44 @@ namespace Manager_Book_Store.Presentation_Layer
             }
         }
 
+        //Login neu chua co nhan vien nao trong co so du lieu
+        private void loginWithAdmin(String _userName, String _passWord)
+        {
+            if (_userName.Equals("admin"))
+            {
+                if (_passWord.Equals("123456789"))
+                {
+                    m_EmployeeObject.maNhanVien = "NV0000000";
+                    m_EmployeeObject.tenNhanVien = "Admin";
+                    m_EmployeeObject.gioiTinh = "";
+                    m_EmployeeObject.ngaySinh = DateTime.Now;
+                    m_EmployeeObject.email = "vovantinhpy@gmail.com";
+                    m_EmployeeObject.soDienThoai = "0993379109";
+                    m_EmployeeObject.diaChi = "HCM city";
+                    m_EmployeeObject.ngayVaoLam = DateTime.Now;
+                    m_EmployeeObject.maChucVu = "CV0000003";
+                    m_EmployeeObject.tenDangNhap = "admin";
+                    m_EmployeeObject.matKhau = "123456789";
+                    //
+                    frmMain _frmMain = new frmMain();
+                    _frmMain.WindowState = FormWindowState.Maximized;
+                    _frmMain.Show();
+                    _frmMain._loginShow = new frmMain.showLogin(loginShow);
+                    _loginHide();
+                }
+                else
+                {
+                    txtPass.Text = null;
+                    XtraCustomMessageBox.Show("Sai mật khẩu. Vui lòng nhập lại!", "Thông báo", true);
+                }
+            }
+            else
+            {
+                txtUser.Text = null;
+                txtPass.Text = null;
+                XtraCustomMessageBox.Show("Tên đăng nhập không đúng. Vui lòng nhập lại!", "Thông báo", true);
+            }
+        }
     }
 }
 
