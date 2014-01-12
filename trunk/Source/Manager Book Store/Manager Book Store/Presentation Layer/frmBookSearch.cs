@@ -153,7 +153,16 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtContentSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, true);
+            CheckInformationEntered.checkCharacterInput(e, 0);
+        }
+
+        private void spQuatityLimit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-' || e.KeyChar == '.')
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
     }

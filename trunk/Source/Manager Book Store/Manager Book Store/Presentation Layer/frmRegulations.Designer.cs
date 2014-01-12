@@ -182,13 +182,14 @@
             0,
             0,
             0});
-            this.spMinimumAge.Location = new System.Drawing.Point(266, 34);
+            this.spMinimumAge.Location = new System.Drawing.Point(266, 69);
             this.spMinimumAge.Name = "spMinimumAge";
             this.spMinimumAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spMinimumAge.Properties.Mask.EditMask = "n0";
             this.spMinimumAge.Size = new System.Drawing.Size(241, 20);
             this.spMinimumAge.TabIndex = 14;
+            this.spMinimumAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spMinimumAge_KeyPress);
             // 
             // spMaximumAge
             // 
@@ -197,13 +198,14 @@
             0,
             0,
             0});
-            this.spMaximumAge.Location = new System.Drawing.Point(266, 69);
+            this.spMaximumAge.Location = new System.Drawing.Point(266, 36);
             this.spMaximumAge.Name = "spMaximumAge";
             this.spMaximumAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spMaximumAge.Properties.Mask.EditMask = "n0";
             this.spMaximumAge.Size = new System.Drawing.Size(241, 20);
             this.spMaximumAge.TabIndex = 16;
+            this.spMaximumAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spMinimumAge_KeyPress);
             // 
             // labMaximumAge
             // 
@@ -277,6 +279,7 @@
             this.spMaximumSurvival.Properties.Mask.EditMask = "n0";
             this.spMaximumSurvival.Size = new System.Drawing.Size(241, 20);
             this.spMaximumSurvival.TabIndex = 16;
+            this.spMaximumSurvival.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spMinimumAge_KeyPress);
             // 
             // spMinimumQuantityImport
             // 
@@ -292,6 +295,7 @@
             this.spMinimumQuantityImport.Properties.Mask.EditMask = "n0";
             this.spMinimumQuantityImport.Size = new System.Drawing.Size(241, 20);
             this.spMinimumQuantityImport.TabIndex = 15;
+            this.spMinimumQuantityImport.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spMinimumAge_KeyPress);
             // 
             // labProfit
             // 
@@ -331,6 +335,7 @@
             this.spMinimumSurvival.Properties.Mask.EditMask = "n0";
             this.spMinimumSurvival.Size = new System.Drawing.Size(241, 20);
             this.spMinimumSurvival.TabIndex = 14;
+            this.spMinimumSurvival.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spMinimumAge_KeyPress);
             // 
             // grpCustomerRelations
             // 
@@ -366,6 +371,7 @@
             this.spDebitMaximum.Properties.Mask.EditMask = "n0";
             this.spDebitMaximum.Size = new System.Drawing.Size(241, 20);
             this.spDebitMaximum.TabIndex = 14;
+            this.spDebitMaximum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spMinimumAge_KeyPress);
             // 
             // navBarCRegulations
             // 

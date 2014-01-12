@@ -369,6 +369,7 @@
             this.spPurchases.TabIndex = 2;
             this.spPurchases.TextChanged += new System.EventHandler(this.spPurchases_TextChanged);
             this.spPurchases.Click += new System.EventHandler(this.spPurchases_TextChanged);
+            this.spPurchases.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spPurchases_KeyPress);
             // 
             // spDebitOld
             // 
@@ -433,6 +434,7 @@
             this.spPayment.Size = new System.Drawing.Size(227, 20);
             this.spPayment.TabIndex = 6;
             this.spPayment.TextChanged += new System.EventHandler(this.spPayment_TextChanged);
+            this.spPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spPurchases_KeyPress);
             this.spPayment.Validated += new System.EventHandler(this.spPayment_Validated);
             // 
             // spRemain

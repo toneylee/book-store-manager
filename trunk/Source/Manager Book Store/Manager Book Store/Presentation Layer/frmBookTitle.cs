@@ -168,7 +168,7 @@ namespace Manager_Book_Store.Presentation_Layer
             {
                 if (m_IsAdd)
                 {
-                    m_BookTitlesObject = new CBookTitlesDTO(txtBookTitlesId.Text, lkBookGenreName.EditValue.ToString(), txtBookTitlesName.Text);
+                    m_BookTitlesObject = new CBookTitlesDTO("DS0000000", lkBookGenreName.EditValue.ToString(), txtBookTitlesName.Text);
                     if (m_BookTitlesExecute.AddBookTitlesToDatabase(m_BookTitlesObject))
                     {
                         XtraCustomMessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", true);
@@ -426,7 +426,7 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtBookTitlesName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, true);
+            CheckInformationEntered.checkCharacterInput(e, 2);
         }
 
         private bool checkData()
@@ -453,6 +453,18 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             m_AuthorData = m_AuthorExecute.getAuthorDataFromDatabase();
             chkCmbAuthorName.Properties.DataSource = m_AuthorData;
+        }
+
+        private void frmBookTitle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnSave.Enabled)
+            {
+                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
         }
     }
 

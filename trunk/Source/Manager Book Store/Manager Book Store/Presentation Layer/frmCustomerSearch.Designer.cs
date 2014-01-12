@@ -31,6 +31,7 @@
             this.navBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this.chkEnableChoseGender = new DevExpress.XtraEditors.CheckEdit();
             this.cmbGender = new DevExpress.XtraEditors.ComboBoxEdit();
             this.raGChose = new DevExpress.XtraEditors.RadioGroup();
             this.spDebits = new DevExpress.XtraEditors.SpinEdit();
@@ -58,9 +59,9 @@
             this.CustomerEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CustomerPhonNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CustomerDebit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.chkEnableChoseGender = new DevExpress.XtraEditors.CheckEdit();
             this.navBarGroupControlContainer.SuspendLayout();
             this.xtraScrollableControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raGChose.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spDebits.Properties)).BeginInit();
@@ -80,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvListCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarGroup
@@ -113,6 +113,16 @@
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
             this.xtraScrollableControl1.Size = new System.Drawing.Size(263, 285);
             this.xtraScrollableControl1.TabIndex = 0;
+            // 
+            // chkEnableChoseGender
+            // 
+            this.chkEnableChoseGender.EditValue = true;
+            this.chkEnableChoseGender.Location = new System.Drawing.Point(10, 30);
+            this.chkEnableChoseGender.Name = "chkEnableChoseGender";
+            this.chkEnableChoseGender.Properties.Caption = "checkEdit1";
+            this.chkEnableChoseGender.Size = new System.Drawing.Size(20, 19);
+            this.chkEnableChoseGender.TabIndex = 6;
+            this.chkEnableChoseGender.CheckedChanged += new System.EventHandler(this.chkEnableChoseGender_CheckedChanged);
             // 
             // cmbGender
             // 
@@ -156,6 +166,7 @@
             this.spDebits.Size = new System.Drawing.Size(104, 20);
             this.spDebits.TabIndex = 0;
             this.spDebits.TextChanged += new System.EventHandler(this.spDebits_TextChanged);
+            this.spDebits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spDebits_KeyPress);
             // 
             // labGender
             // 
@@ -405,16 +416,6 @@
             this.CustomerDebit.Visible = true;
             this.CustomerDebit.VisibleIndex = 8;
             // 
-            // chkEnableChoseGender
-            // 
-            this.chkEnableChoseGender.EditValue = true;
-            this.chkEnableChoseGender.Location = new System.Drawing.Point(10, 30);
-            this.chkEnableChoseGender.Name = "chkEnableChoseGender";
-            this.chkEnableChoseGender.Properties.Caption = "checkEdit1";
-            this.chkEnableChoseGender.Size = new System.Drawing.Size(20, 19);
-            this.chkEnableChoseGender.TabIndex = 6;
-            this.chkEnableChoseGender.CheckedChanged += new System.EventHandler(this.chkEnableChoseGender_CheckedChanged);
-            // 
             // frmCustomerSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +430,7 @@
             this.navBarGroupControlContainer.ResumeLayout(false);
             this.xtraScrollableControl1.ResumeLayout(false);
             this.xtraScrollableControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.raGChose.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spDebits.Properties)).EndInit();
@@ -450,7 +452,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdvListCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdateCustomerBirthday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkEnableChoseGender.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

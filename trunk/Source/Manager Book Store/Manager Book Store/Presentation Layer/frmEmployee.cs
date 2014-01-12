@@ -152,8 +152,8 @@ namespace Manager_Book_Store.Presentation_Layer
                     String _user = createUserName(txtEmployeeName.Text, dateBirthDay.DateTime.ToString());
                     String _pass = CodeDTO.getMD5Hash("123456789");
                     m_EmployeeObject = new CEmployeeDTO(txtEmployeeId.Text, txtEmployeeName.Text, cmbEmployeeGender.Text,
-            dateBirthDay.DateTime, txtEmployeePhone.Text, txtEmployeeAddress.Text, dateToWork.DateTime, 
-            lkEmployeeCharge.EditValue.ToString(),_user, _pass, txtEmployeeEmail.Text);
+                    dateBirthDay.DateTime, txtEmployeePhone.Text, txtEmployeeAddress.Text, dateToWork.DateTime, 
+                    lkEmployeeCharge.EditValue.ToString(),_user, _pass, txtEmployeeEmail.Text);
                     if (m_EmployeeExecute.AddEmployeeToDatabase(m_EmployeeObject))
                     {
                         XtraCustomMessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", true);
@@ -168,7 +168,7 @@ namespace Manager_Book_Store.Presentation_Layer
                     m_EmployeeObject = new CEmployeeDTO(txtEmployeeId.Text, txtEmployeeName.Text, cmbEmployeeGender.Text,
                                         dateBirthDay.DateTime, txtEmployeePhone.Text, txtEmployeeAddress.Text,
                                         dateToWork.DateTime, lkEmployeeCharge.EditValue.ToString(), txtEmployeeName.Text, null, txtEmployeeEmail.Text);
-                    if (m_EmployeeExecute.UpdateEmployeeToDatabase(m_EmployeeObject))
+                    if (m_EmployeeExecute.UpdateEmployeeToDatabaseNotPassWord(m_EmployeeObject))
                     {
                         XtraCustomMessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", true);
                     }
@@ -379,14 +379,14 @@ namespace Manager_Book_Store.Presentation_Layer
         {
             if (dateBirthDay.DateTime < DateTime.Now && dateToWork.DateTime <= DateTime.Now)
             {
-                if (!m_EmployeeExecute.checkAge(dateBirthDay.DateTime, dateToWork.DateTime))
-                {
-                    dateBirthDay.Focus();
-                    dateToWork.EditValue = null;
-                    dateBirthDay.EditValue = null;
-                    XtraCustomMessageBox.Show("Độ tuổi không phù hợp với quy định!\nXin vui lòng kiểm tra lại!", "Lỗi", true);
-                    return false;
-                }
+                //if (!m_EmployeeExecute.checkAge(dateBirthDay.DateTime, dateToWork.DateTime))
+                //{
+                //    dateBirthDay.Focus();
+                //    dateToWork.EditValue = null;
+                //    dateBirthDay.EditValue = null;
+                //    XtraCustomMessageBox.Show("Độ tuổi không phù hợp với quy định!\nXin vui lòng kiểm tra lại!", "Lỗi", true);
+                //    return false;
+                //}
 
             }
             else
@@ -422,7 +422,72 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtEmployeeNameLA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, true);
+            CheckInformationEntered.checkCharacterInput(e, 0);
+        }
+
+        private void frmEmployee_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnSave.Enabled)
+            {
+                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+        }
+
+        private void txtEmployeePhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckInformationEntered.checkCharacterInput(e, 1);
+        }
+
+        private void dateBirthDay_Validated(object sender, EventArgs e)
+        {
+            if (dateBirthDay.DateTime > DateTime.Now)
+            {
+                dateBirthDay.Focus();
+                dxErrorProvider.SetError(dateBirthDay, "Ngày sinh không thể lớn hơn ngày hiện tại!");
+            }
+            else if (dateBirthDay.DateTime.AddYears(m_EmployeeExecute.getAgeToRegulation(false)) > DateTime.Now)
+                {
+                    dateBirthDay.Focus();
+                    dxErrorProvider.SetError(dateBirthDay, "Độ tuổi không đúng với quy định!");
+                    //dateBirthDay.EditValue = null;
+                }
+            else
+                dxErrorProvider.ClearErrors();
+        }
+
+        private void dateToWork_Validated(object sender, EventArgs e)
+        {
+            if (dateToWork.DateTime > DateTime.Now)
+            {
+                dateToWork.Focus();
+                dxErrorProvider.SetError(dateToWork, "Ngày vào làm không thể lớn hơn ngày hiện tại!");
+                return;
+            }
+            else
+            {
+                if (dateBirthDay.DateTime.AddYears(m_EmployeeExecute.getAgeToRegulation(false)) > DateTime.Now)
+                {
+                    dateBirthDay.Focus();
+                    dxErrorProvider.SetError(dateBirthDay, "Độ tuổi không đúng với quy định!");
+                    return;
+                }
+            }
+            if (!String.IsNullOrEmpty(dateBirthDay.Text))
+            {
+                if (!m_EmployeeExecute.checkAge(dateBirthDay.DateTime, dateToWork.DateTime))
+                {
+                    dateBirthDay.Focus();
+                    dateToWork.EditValue = null;
+                    dateToWork.Focus();
+                    dxErrorProvider.SetError(dateToWork, "Độ tuổi không đúng với quy định!");
+                }
+                else
+                    dxErrorProvider.ClearErrors();
+            }
         }
     }
 }

@@ -594,6 +594,14 @@ namespace Manager_Book_Store.Presentation_Layer
                 XtraCustomMessageBox.Show("Bạn chưa lập phiếu thu tiền!\nXin vui lòng lập phiếu thu trước khi thoát!", "Thông", true);
                 e.Cancel = true;
             }
+            if (btnWrite.Enabled)
+            {
+                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
 
         }
 
@@ -622,6 +630,15 @@ namespace Manager_Book_Store.Presentation_Layer
                 else    
                     if (m_DeliveryNoteDetailExecute.setColorBackgroundRow(strBookId) == 1)
                         e.Appearance.BackColor = Color.Khaki;
+            }
+        }
+
+        private void spQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-' || e.KeyChar == '.')
+            {
+                e.Handled = true;
+                return;
             }
         }
 

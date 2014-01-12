@@ -65,7 +65,7 @@ namespace Manager_Book_Store.Presentation_Layer
                 {
                     m_CustomerObject = new CCustomerDTO();
                     m_CustomerObject.maKhachHang = _rowData["MaKH"].ToString();
-                    if (m_CustomerExecute.DeleteCustomerToDatabase(m_CustomerObject))
+                    if (!m_CustomerExecute.DeleteCustomerToDatabase(m_CustomerObject))
                     {
                         _listCustomerId.Add(_rowData["MaKH"]);
                     }
@@ -365,12 +365,24 @@ namespace Manager_Book_Store.Presentation_Layer
 
         private void txtCustomerName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, true);
+            CheckInformationEntered.checkCharacterInput(e, 0);
         }
 
         private void txtCustomerPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CheckInformationEntered.checkCharacterInput(e, false);
+            CheckInformationEntered.checkCharacterInput(e, 1);
+        }
+
+        private void frmCustomer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnSave.Enabled)
+            {
+                if (XtraCustomMessageBox.Show("Dữ liệu chưa được lưu!\nBạn có thực sự muốn thoát hay không?", "Thông báo", false) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
         }
     }
 }

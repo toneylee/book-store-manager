@@ -8,24 +8,36 @@ namespace Manager_Book_Store.General
 {
     class CheckInformationEntered
     {
-        public static void checkCharacterInput(KeyPressEventArgs _event, bool _allow)
+        public static void checkCharacterInput(KeyPressEventArgs _event, int _allow)
         {
-            if (_allow)
+            switch (_allow)
             {
-                if (char.IsDigit(_event.KeyChar) || char.IsSymbol(_event.KeyChar) || char.IsPunctuation(_event.KeyChar))
-                {
-                    _event.Handled = true;
-                    return;
-                }
+                case 0:
+                    {
+                        if (char.IsDigit(_event.KeyChar) || char.IsSymbol(_event.KeyChar) || char.IsPunctuation(_event.KeyChar))
+                        {
+                            _event.Handled = true;
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        if ((char.IsLetter(_event.KeyChar) && _event.KeyChar != '.') || char.IsSymbol(_event.KeyChar) || char.IsPunctuation(_event.KeyChar))
+                        {
+                            _event.Handled = true;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (char.IsSymbol(_event.KeyChar) || char.IsPunctuation(_event.KeyChar))
+                        {
+                            _event.Handled = true;
+                        }
+                        break;
+                    }
             }
-            else
-            {
-                if ((char.IsLetter(_event.KeyChar) && _event.KeyChar != '.') || char.IsSymbol(_event.KeyChar) || char.IsPunctuation(_event.KeyChar))
-                {
-                    _event.Handled = true;
-                    return;
-                }
-            }
+
         }
         public static bool checkDataInput(Control _control, String _erroContent, ref DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider _dxErroControl)
         {

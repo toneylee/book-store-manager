@@ -669,6 +669,7 @@
             this.spPrices.TabIndex = 4;
             this.spPrices.EditValueChanged += new System.EventHandler(this.spPrices_EditValueChanged);
             this.spPrices.TextChanged += new System.EventHandler(this.spPrices_TextChanged);
+            this.spPrices.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuantity_KeyPress);
             // 
             // spQuantity
             // 
@@ -695,6 +696,7 @@
             this.spQuantity.TabIndex = 4;
             this.spQuantity.EditValueChanged += new System.EventHandler(this.spQuantity_EditValueChanged);
             this.spQuantity.TextChanged += new System.EventHandler(this.spQuantity_TextChanged);
+            this.spQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spQuantity_KeyPress);
             // 
             // btnAddInListBookDetail
             // 
@@ -895,6 +897,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmReceiptNote";
             this.Text = "Quản lý nhập sách";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReceiptNote_FormClosing);
             this.Load += new System.EventHandler(this.frmReceiptNote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelReceiptNoteTitle)).EndInit();
             this.panelReceiptNoteTitle.ResumeLayout(false);

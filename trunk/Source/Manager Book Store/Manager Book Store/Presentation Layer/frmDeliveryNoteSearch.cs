@@ -129,5 +129,14 @@ namespace Manager_Book_Store.Presentation_Layer
             if (!chkEnableChoseCustomer.Checked)
                 lkEmployeeName.EditValue = null;
         }
+
+        private void dateDelivery_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-' || e.KeyChar == '.')
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }
